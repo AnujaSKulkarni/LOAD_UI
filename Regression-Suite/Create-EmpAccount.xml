@@ -280,7 +280,7 @@ if (API_Name != TestCaseName){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Unique_Email_ID" id="a0dc052f-de21-4b6b-b6fe-c69a0b12db29" disabled="true">
+  <con:testStep type="groovy" name="Unique_Email_ID" id="a0dc052f-de21-4b6b-b6fe-c69a0b12db29">
     <con:settings/>
     <con:config>
       <script>String date = new Date()
@@ -300,7 +300,7 @@ testRunner.testCase.testSuite.setPropertyValue("Alternate_Email", Alternate_Emai
 testRunner.testCase.testSuite.setPropertyValue("Alternate_Email_String", Alternate_Email_ID_String)</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Test_Data_Setup" id="15718b2f-c327-47e1-bec1-4e8e92db71e3" disabled="true">
+  <con:testStep type="groovy" name="Test_Data_Setup" id="15718b2f-c327-47e1-bec1-4e8e92db71e3">
     <con:settings/>
     <con:config>
       <script>def Company_ID_Property = context.expand( '${#[Regression Suite#Register Company#JDBC]#BLUADMIN_COMPANY_COMPANY_ID}' )
@@ -321,7 +321,7 @@ if(Data_Combination == "Positive"){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Create EmpAccount_Positive" id="aef96297-77fb-410c-920f-28f05f802665" disabled="true">
+  <con:testStep type="restrequest" name="Create EmpAccount_Positive" id="aef96297-77fb-410c-920f-28f05f802665">
     <con:settings/>
     <con:config service="Create EmpAccount" resourcePath="/createCompanyEmpAccount/${#[Regression Suite#Create Group#Create Group_Positive]#Response#$['groupId']}" methodName="Create EmpAccount" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Create EmpAccount_Positive" id="b27e3d39-49a4-43d5-a326-9ab0e958f261" mediaType="application/json" postQueryString="false">

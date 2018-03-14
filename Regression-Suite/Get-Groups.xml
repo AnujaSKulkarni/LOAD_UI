@@ -305,7 +305,7 @@ if (API_Name != TestCaseName){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Get Groups" id="1d026305-db6d-4c66-849a-6164090b672d" disabled="true">
+  <con:testStep type="restrequest" name="Get Groups" id="1d026305-db6d-4c66-849a-6164090b672d">
     <con:settings/>
     <con:config service="Get Groups" resourcePath="/get_groups/${#TestCase#Group_ID}" methodName="Get Groups" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Get Groups" id="9ba659de-9a48-4e05-92a7-553d4d254391" mediaType="application/json">

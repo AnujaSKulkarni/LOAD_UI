@@ -307,7 +307,7 @@ if (API_Name != TestCaseName){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Test_Data_Setup" id="114db595-b0bd-4ba4-a6cc-01fcd6f1ca9e" disabled="true">
+  <con:testStep type="groovy" name="Test_Data_Setup" id="114db595-b0bd-4ba4-a6cc-01fcd6f1ca9e">
     <con:settings/>
     <con:config>
       <script>def data_Combination = context.expand( '${DataSource#Data_Combination}' )
@@ -329,7 +329,7 @@ if (data_Combination == "Negative"){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="get location_Positive" id="b7ffb01c-9838-4a04-8b53-9a3d935e0c07" disabled="true">
+  <con:testStep type="restrequest" name="get location_Positive" id="b7ffb01c-9838-4a04-8b53-9a3d935e0c07">
     <con:settings/>
     <con:config service="get location" resourcePath="/locations/location/${#[Regression Suite#Create Location#Create Location_Positive]#Response#$['LOCATION_ID']}" methodName="get location" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="get location_Positive" id="6d4d7cac-0d08-4709-bc6c-9176997138c9" mediaType="application/json">

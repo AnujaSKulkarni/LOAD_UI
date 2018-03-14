@@ -307,7 +307,7 @@ if (API_Name != TestCaseName){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Test_Data_Setup" id="b4a8070a-4074-4f86-89f3-39b4ade5847d" disabled="true">
+  <con:testStep type="groovy" name="Test_Data_Setup" id="b4a8070a-4074-4f86-89f3-39b4ade5847d">
     <con:settings/>
     <con:config>
       <script>def data_Combination = context.expand( '${DataSource#Data_Combination}' )
@@ -339,7 +339,7 @@ if (data_Combination == "Negative"){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Update Location_Positive" id="7ca88082-afa8-408e-bdd5-15967428613f" disabled="true">
+  <con:testStep type="restrequest" name="Update Location_Positive" id="7ca88082-afa8-408e-bdd5-15967428613f">
     <con:settings/>
     <con:config service="Update location" resourcePath="/location" methodName="Update location" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Update Location_Positive" id="6d4fe3b7-7bf1-421d-a116-38f2401d4425" mediaType="application/json" postQueryString="false">

@@ -322,7 +322,7 @@ if (API_Name != TestCaseName){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Test_Data_Setup" id="275deee6-eddd-4d7d-a54d-42989a6eb45f" disabled="true">
+  <con:testStep type="groovy" name="Test_Data_Setup" id="275deee6-eddd-4d7d-a54d-42989a6eb45f">
     <con:settings/>
     <con:config>
       <script>def data_Combination = context.expand( '${DataSource#Data_Combination}' )
@@ -341,7 +341,7 @@ def tC_Number = context.expand( '${DataSource#TC_Number}' )
 log.info tC_Number</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Create_Group_Name" id="10a588dd-f86d-415b-b77b-05d16b47730e" disabled="true">
+  <con:testStep type="groovy" name="Create_Group_Name" id="10a588dd-f86d-415b-b77b-05d16b47730e">
     <con:settings/>
     <con:config>
       <script>String date = new Date()
@@ -355,7 +355,7 @@ testRunner.testCase.testSuite.setPropertyValue("Group_Name", Email_ID)
 testRunner.testCase.testSuite.setPropertyValue("Group_Name_string", Email_ID_string)</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Create Group_Positive" id="78e1437a-0797-4f62-901a-7af0c9dd6e76" disabled="true">
+  <con:testStep type="restrequest" name="Create Group_Positive" id="78e1437a-0797-4f62-901a-7af0c9dd6e76">
     <con:settings/>
     <con:config service="Create Group" resourcePath="/account/create_group" methodName="Create Group" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Create Group_Positive" id="93151322-6bb7-4ae4-8774-4341e25f8a4c" mediaType="application/json" postQueryString="false">

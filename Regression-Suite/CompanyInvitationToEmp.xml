@@ -283,7 +283,7 @@ if (API_Name != TestCaseName){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Unique_Email_ID" id="204c3ab0-3846-4263-b69a-4511dcd3a09d" disabled="true">
+  <con:testStep type="groovy" name="Unique_Email_ID" id="204c3ab0-3846-4263-b69a-4511dcd3a09d">
     <con:settings/>
     <con:config>
       <script>String date = new Date()
@@ -303,7 +303,7 @@ testRunner.testCase.testSuite.setPropertyValue("Alternate_Email", Alternate_Emai
 testRunner.testCase.testSuite.setPropertyValue("Alternate_Email_String", Alternate_Email_ID_String)</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Test_Data_Setup" id="772d4099-984f-4780-8f37-b345c117ec83" disabled="true">
+  <con:testStep type="groovy" name="Test_Data_Setup" id="772d4099-984f-4780-8f37-b345c117ec83">
     <con:settings/>
     <con:config>
       <script>def Email_ID_Property = context.expand( '${#TestSuite#Email_ID_string}' )
@@ -341,13 +341,7 @@ if(Data_Combination == "Positive"){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="delay" name="Delay" id="02f91ef3-a5db-4ca1-9419-431979a94fe0" disabled="true">
-    <con:settings/>
-    <con:config>
-      <delay>1000</delay>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="restrequest" name="CompanyInvitationToEmp_Positive" id="dc3f575f-6b9c-433f-a482-5c110fc1c231" disabled="true">
+  <con:testStep type="restrequest" name="CompanyInvitationToEmp_Positive" id="dc3f575f-6b9c-433f-a482-5c110fc1c231">
     <con:settings/>
     <con:config service="CompanyInvitationToEmp" resourcePath="/sendCompanyInvitationToEmp/${#TestCase#Email_ID}/${#TestCase#Alternate_Email_ID}/${#TestCase#Company_ID}" methodName="CompanyInvitationToEmp" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="CompanyInvitationToEmp_Positive" id="85d0b916-25f5-499d-a15d-8018b5707f0e" mediaType="application/json" postQueryString="false">

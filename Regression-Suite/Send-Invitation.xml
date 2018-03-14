@@ -379,7 +379,7 @@ if (API_Name != TestCaseName){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Send Invitation" id="d2805acd-ecf1-4dea-a920-46c71646c25d" disabled="true">
+  <con:testStep type="restrequest" name="Send Invitation" id="d2805acd-ecf1-4dea-a920-46c71646c25d">
     <con:settings/>
     <con:config service="Send Invitation" resourcePath="/invitation" methodName="Send Invitation" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Send Invitation" id="998055dd-af0d-42e1-a884-d37b7d3871ef" mediaType="application/json" postQueryString="false">
