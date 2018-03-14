@@ -357,7 +357,7 @@ if (API_Name != TestCaseName){
     </con:property>
     <con:property>
       <con:name>id</con:name>
-      <con:value>"Refrigerator123-DHYR"</con:value>
+      <con:value>"Refrigerator123-16DI"</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

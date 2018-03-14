@@ -359,7 +359,7 @@ if (API_Name != TestCaseName){
   <con:properties>
     <con:property>
       <con:name>Client_Version_Notice</con:name>
-      <con:value>309</con:value>
+      <con:value>487</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

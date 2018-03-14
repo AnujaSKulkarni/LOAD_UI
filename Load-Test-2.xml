@@ -23,10 +23,10 @@
       <con1:property propagates="true" key="ModelItem.remoteMode" type="java.lang.String"/>
     </con1:properties>
     <con1:attributes>
-      <con1:property key="limits">Time=900;</con1:property>
+      <con1:property key="limits">Time=300;</con1:property>
     </con1:attributes>
     <con1:addons/>
-    <con1:scene label="New Scenario" id="4879d6d1-3856-4f7d-83f0-04b9794ff5b5" version="27431">
+    <con1:scene label="New Scenario" id="4879d6d1-3856-4f7d-83f0-04b9794ff5b5" version="27633">
       <con1:properties>
         <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
         <con1:property propagates="true" key="CanvasItem.abortOnFinish" type="java.lang.Boolean">true</con1:property>
@@ -35,7 +35,7 @@
         <con1:property propagates="true" key="SceneItem.scenarioRateSpecific" type="java.lang.Long">10</con1:property>
       </con1:properties>
       <con1:attributes>
-        <con1:property key="limits">Time=900;</con1:property>
+        <con1:property key="limits">Time=300;</con1:property>
       </con1:attributes>
       <con1:addons/>
       <con1:component type="com.eviware.loadui.impl.component.IntervalComponent" label="Interval 1" id="053974d1-bafe-456c-a214-36bc7ed419f0" category="Scheduler">
@@ -2234,7 +2234,7 @@
       <con1:component type="com.eviware.loadui.impl.component.generators.FixedVU" label="Fixed Load 1" id="5de01442-29c6-4df2-b915-90f0212294a0" category="Generators">
         <con1:properties>
           <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
-          <con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">true</con1:property>
+          <con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">false</con1:property>
           <con1:property propagates="true" key="limitVU" type="java.lang.Long">9223372036854775807</con1:property>
           <con1:property propagates="true" key="load" type="java.lang.Long">1</con1:property>
           <con1:property propagates="true" key="interval" type="java.lang.Long">1000</con1:property>

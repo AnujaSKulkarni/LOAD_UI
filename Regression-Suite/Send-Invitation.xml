@@ -468,11 +468,11 @@ if (API_Name != TestCaseName){
     </con:property>
     <con:property>
       <con:name>Email_ID</con:name>
-      <con:value>"TUE_MAR_13_18_25_51_IST_2018@MAILINATOR.COM"</con:value>
+      <con:value>"TUE_MAR_13_20_31_32_IST_2018@MAILINATOR.COM"</con:value>
     </con:property>
     <con:property>
       <con:name>Email_ID_string</con:name>
-      <con:value>TUE_MAR_13_18_25_51_IST_2018@MAILINATOR.COM</con:value>
+      <con:value>TUE_MAR_13_20_31_32_IST_2018@MAILINATOR.COM</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>
