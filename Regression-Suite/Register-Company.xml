@@ -355,7 +355,7 @@ if (API_Name != TestCaseName){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Register Company_Positive" id="cee52fae-858c-4a1a-8a29-94642346b9df" disabled="true">
+  <con:testStep type="restrequest" name="Register Company_Positive" id="cee52fae-858c-4a1a-8a29-94642346b9df">
     <con:settings/>
     <con:config service="Register Company" resourcePath="/registerCompany/${#TestCase#Account_ID}" methodName="Register Company" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Register Company_Positive" id="5ec84156-e162-48c1-97b3-5d6755b37f06" mediaType="application/json" postQueryString="false">

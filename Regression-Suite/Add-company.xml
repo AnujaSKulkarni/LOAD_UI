@@ -319,7 +319,7 @@ if (API_Name != TestCaseName){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Add company_Positive" id="719f5600-52c5-456e-a6d2-d7a4ea9e1ad3" disabled="true">
+  <con:testStep type="restrequest" name="Add company_Positive" id="719f5600-52c5-456e-a6d2-d7a4ea9e1ad3">
     <con:settings/>
     <con:config service="Add company" resourcePath="/addCompany" methodName="Add company" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Add company_Positive" id="e9a22655-7b2b-4a70-8c09-ea11eb145bf1" mediaType="application/json" postQueryString="false">

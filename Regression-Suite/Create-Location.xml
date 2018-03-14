@@ -369,7 +369,7 @@ Where upper(st.STATE_NAME) = upper(${#TestCase#State_Name})</query>
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Test_Data_Setup" id="2f9ba70a-5101-4e83-9c40-99a0cd617b70" disabled="true">
+  <con:testStep type="groovy" name="Test_Data_Setup" id="2f9ba70a-5101-4e83-9c40-99a0cd617b70">
     <con:settings/>
     <con:config>
       <script>def data_Combination = context.expand( '${DataSource#Data_Combination}' )
@@ -398,7 +398,7 @@ def tC_Number = context.expand( '${DataSource#TC_Number}' )
 log.info tC_Number</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Create Location_Positive" id="63e72d55-0340-4dd8-927a-46ed2b309583" disabled="true">
+  <con:testStep type="restrequest" name="Create Location_Positive" id="63e72d55-0340-4dd8-927a-46ed2b309583">
     <con:settings/>
     <con:config service="Create Location" resourcePath="/client_auth/location" methodName="Create Location" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Create Location_Positive" id="6160fb0a-7b6c-4952-b026-d37159474bbd" mediaType="application/json" postQueryString="false">
@@ -572,7 +572,7 @@ log.info tC_Number</script>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Data_Sink_Flow_Control" id="f678df91-127f-4bed-a7fa-b7bc515becc5" disabled="true">
+  <con:testStep type="groovy" name="Data_Sink_Flow_Control" id="f678df91-127f-4bed-a7fa-b7bc515becc5">
     <con:settings/>
     <con:config>
       <script>/*Get Test Case Name and Status*/
@@ -602,7 +602,7 @@ if(Status_Code.contains("200")){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Run_Time_Data_Transfer" id="4a31b7e1-496d-49ad-94ed-aea1b9b4eb45" disabled="true">
+  <con:testStep type="groovy" name="Run_Time_Data_Transfer" id="4a31b7e1-496d-49ad-94ed-aea1b9b4eb45">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream

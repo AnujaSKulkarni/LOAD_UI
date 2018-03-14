@@ -280,7 +280,7 @@ if (API_Name != TestCaseName){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Unique_Company_Email_ID" id="34db6103-16ed-4d1c-90b3-14e2d6d10aba" disabled="true">
+  <con:testStep type="groovy" name="Unique_Company_Email_ID" id="34db6103-16ed-4d1c-90b3-14e2d6d10aba">
     <con:settings/>
     <con:config>
       <script>String date = new Date()
@@ -294,7 +294,7 @@ testRunner.testCase.testSuite.setPropertyValue("Company_Email_ID", Email_ID)
 testRunner.testCase.testSuite.setPropertyValue("Company_Email_ID_string", Email_ID_string)</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Invite Company_Positive" id="804e8f8e-f67f-4347-8061-a0e7c824703d" disabled="true">
+  <con:testStep type="restrequest" name="Invite Company_Positive" id="804e8f8e-f67f-4347-8061-a0e7c824703d">
     <con:settings/>
     <con:config service="Invite Company" resourcePath="/inviteCompany/${#TestCase#Email_ID}/" methodName="Invite Company" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Invite Company_Positive" id="70ab9939-fe96-4e62-b8ef-6c0078b34984" mediaType="application/json" postQueryString="false">
@@ -354,7 +354,7 @@ testRunner.testCase.testSuite.setPropertyValue("Company_Email_ID_string", Email_
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Test_Data_Setup" id="f6590b3a-762b-44cf-8dc6-e5473f44c68b" disabled="true">
+  <con:testStep type="groovy" name="Test_Data_Setup" id="f6590b3a-762b-44cf-8dc6-e5473f44c68b">
     <con:settings/>
     <con:config>
       <script>def data_Combination = context.expand( '${DataSource#Data_Combination}' )

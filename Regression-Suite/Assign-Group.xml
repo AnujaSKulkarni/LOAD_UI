@@ -313,7 +313,7 @@ if (API_Name != TestCaseName){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Test_Data_Setup" id="401616dd-dc88-46a3-a5b9-1e920a90c0c3" disabled="true">
+  <con:testStep type="groovy" name="Test_Data_Setup" id="401616dd-dc88-46a3-a5b9-1e920a90c0c3">
     <con:settings/>
     <con:config>
       <script>def data_Combination = context.expand( '${DataSource#Data_Combination}' )
@@ -339,7 +339,7 @@ def tC_Number = context.expand( '${DataSource#TC_Number}' )
 log.info tC_Number</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Assign Group_Positive" id="0c3fe6fb-b1d4-4436-ad44-26425a51cdf8" disabled="true">
+  <con:testStep type="restrequest" name="Assign Group_Positive" id="0c3fe6fb-b1d4-4436-ad44-26425a51cdf8">
     <con:settings/>
     <con:config service="Assign Group" resourcePath="/group_assignment" methodName="Assign Group" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Assign Group_Positive" id="cd32fafb-5d56-42e1-83bf-714a6ee21447" mediaType="application/json" postQueryString="false">
