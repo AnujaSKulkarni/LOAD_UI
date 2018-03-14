@@ -4,6 +4,11 @@
     <con:setting id="soapUIObjectSourceId">4d9b8d24-cdbf-470c-926c-ce1cd761a7a0</con:setting>
     <con:setting id="soapUIObjectSourceType">soapUIObjectSourceType_RestRequest</con:setting>
     <con:setting id="05a939dd-d913-4156-b5a1-4d662178868dfileName">Load-Test-4_AllAPI</con:setting>
+    <con:setting id="IncludeScenarioResults">true</con:setting>
+    <con:setting id="IncludeStatistics">true</con:setting>
+    <con:setting id="IncludeTestStepsHistory">false</con:setting>
+    <con:setting id="IncludeStatisticHistory">false</con:setting>
+    <con:setting id="IncludeHelp">true</con:setting>
   </con:settings>
   <con1:loadui-project id="9603f5d5-7062-4625-95b0-7e2525ca50c0" label="Load Test 4_AllAPI" xmlns:con1="http://eviware.com/loadui/config">
     <con1:properties>
@@ -18,19 +23,19 @@
       <con1:property propagates="true" key="ModelItem.remoteMode" type="java.lang.String"/>
     </con1:properties>
     <con1:attributes>
-      <con1:property key="limits">Time=600;</con1:property>
+      <con1:property key="limits">Time=900;</con1:property>
     </con1:attributes>
     <con1:addons/>
-    <con1:scene label="New Scenario" id="433708a0-f132-47bd-9ee7-d5ea8d95f914" version="5359">
+    <con1:scene label="New Scenario" id="433708a0-f132-47bd-9ee7-d5ea8d95f914" version="5590">
       <con1:properties>
         <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
-        <con1:property propagates="true" key="CanvasItem.abortOnFinish" type="java.lang.Boolean">false</con1:property>
+        <con1:property propagates="true" key="CanvasItem.abortOnFinish" type="java.lang.Boolean">true</con1:property>
         <con1:property propagates="true" key="SceneItem.followProject" type="java.lang.Boolean">true</con1:property>
         <con1:property propagates="true" key="SceneItem.scenarioRatePercentage" type="java.lang.Long">100</con1:property>
         <con1:property propagates="true" key="SceneItem.scenarioRateSpecific" type="java.lang.Long">10</con1:property>
       </con1:properties>
       <con1:attributes>
-        <con1:property key="limits">Time=600;</con1:property>
+        <con1:property key="limits">Time=900;</con1:property>
       </con1:attributes>
       <con1:addons/>
       <con1:component type="com.eviware.loadui.impl.component.IntervalComponent" label="Interval 1" id="f150aa33-e617-426d-9b7d-638d7587b857" category="Scheduler">
@@ -1271,9 +1276,21 @@
         </con1:attributes>
         <con1:addons/>
       </con1:component>
+      <con1:component type="com.eviware.loadui.impl.component.flowControls.LoopFlowComponent" label="Loop 1" id="6ea35443-f28b-4ea9-ac3c-8fb9b1bf5946" category="Flow">
+        <con1:properties>
+          <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
+          <con1:property propagates="true" key="iterations" type="java.lang.Long">2</con1:property>
+          <con1:property propagates="true" key="displayedIterations" type="java.lang.Long">2</con1:property>
+        </con1:properties>
+        <con1:attributes>
+          <con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Loop</con1:property>
+        </con1:attributes>
+        <con1:addons/>
+      </con1:component>
       <con1:connection outputTerminalId="f150aa33-e617-426d-9b7d-638d7587b857/outgoingTerminal" inputTerminalId="9f094666-e1f0-42f1-a1c3-013a9d835475/stateTerminal"/>
       <con1:connection outputTerminalId="9f094666-e1f0-42f1-a1c3-013a9d835475/triggerTerminal" inputTerminalId="ba2894ab-4eb3-41a4-a30a-92048ace9aa4/triggerTerminal"/>
-      <con1:connection outputTerminalId="ba2894ab-4eb3-41a4-a30a-92048ace9aa4/runningTerminal" inputTerminalId="593fc92b-e997-4d93-ba01-5d88a08d509e/triggerTerminal"/>
+      <con1:connection outputTerminalId="ba2894ab-4eb3-41a4-a30a-92048ace9aa4/runningTerminal" inputTerminalId="6ea35443-f28b-4ea9-ac3c-8fb9b1bf5946/incomingTerminal"/>
+      <con1:connection outputTerminalId="6ea35443-f28b-4ea9-ac3c-8fb9b1bf5946/loop" inputTerminalId="593fc92b-e997-4d93-ba01-5d88a08d509e/triggerTerminal"/>
       <con1:connection outputTerminalId="593fc92b-e997-4d93-ba01-5d88a08d509e/runningTerminal" inputTerminalId="75378c7c-e2e2-4381-bd7e-f28bf8e999c3/triggerTerminal"/>
       <con1:connection outputTerminalId="75378c7c-e2e2-4381-bd7e-f28bf8e999c3/runningTerminal" inputTerminalId="6dc22337-8c28-44f1-8a97-32d6e977f503/triggerTerminal"/>
       <con1:connection outputTerminalId="6dc22337-8c28-44f1-8a97-32d6e977f503/runningTerminal" inputTerminalId="d7d60402-7b47-4a1f-8e18-a0f94da41d43/triggerTerminal"/>
@@ -1327,7 +1344,8 @@
       <con1:connection outputTerminalId="399352a6-19e0-4096-8230-7435e0dae419/runningTerminal" inputTerminalId="8df5695c-5370-48c3-8e2a-b47c49b9028a/triggerTerminal"/>
       <con1:connection outputTerminalId="8df5695c-5370-48c3-8e2a-b47c49b9028a/runningTerminal" inputTerminalId="9f3c43f3-6825-45e2-9b9f-52d67fe39c4a/triggerTerminal"/>
       <con1:connection outputTerminalId="9f3c43f3-6825-45e2-9b9f-52d67fe39c4a/runningTerminal" inputTerminalId="f8c7ee87-055c-45c8-8204-03f27cecd204/triggerTerminal"/>
-      <con1:connection outputTerminalId="f8c7ee87-055c-45c8-8204-03f27cecd204/runningTerminal" inputTerminalId="9f094666-e1f0-42f1-a1c3-013a9d835475/Sample Count"/>
+      <con1:connection outputTerminalId="f8c7ee87-055c-45c8-8204-03f27cecd204/runningTerminal" inputTerminalId="6ea35443-f28b-4ea9-ac3c-8fb9b1bf5946/incomingTerminal"/>
+      <con1:connection outputTerminalId="6ea35443-f28b-4ea9-ac3c-8fb9b1bf5946/exit" inputTerminalId="9f094666-e1f0-42f1-a1c3-013a9d835475/Sample Count"/>
     </con1:scene>
     <con1:statistics>
       <con1:page title="DefaultLoadUIStatisticPage">
@@ -1353,7 +1371,7 @@
         </con1:chartGroup>
       </con1:page>
     </con1:statistics>
-    <con1:heatUpTime>15</con1:heatUpTime>
+    <con1:heatUpTime>5</con1:heatUpTime>
   </con1:loadui-project>
   <con:loadUITestScenario projectId="9603f5d5-7062-4625-95b0-7e2525ca50c0" scenarioId="433708a0-f132-47bd-9ee7-d5ea8d95f914" name="New Scenario" id="f9aad50c-95ba-41c3-9b71-296724c03db3">
     <con:settings/>
