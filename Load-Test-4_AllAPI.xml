@@ -5,7 +5,7 @@
     <con:setting id="soapUIObjectSourceType">soapUIObjectSourceType_RestRequest</con:setting>
     <con:setting id="05a939dd-d913-4156-b5a1-4d662178868dfileName">Load-Test-4_AllAPI</con:setting>
   </con:settings>
-  <con1:loadui-project id="9603f5d5-7062-4625-95b0-7e2525ca50c0" label="Load Test 3" xmlns:con1="http://eviware.com/loadui/config">
+  <con1:loadui-project id="9603f5d5-7062-4625-95b0-7e2525ca50c0" label="Load Test 4_AllAPI" xmlns:con1="http://eviware.com/loadui/config">
     <con1:properties>
       <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
       <con1:property propagates="true" key="CanvasItem.abortOnFinish" type="java.lang.Boolean">false</con1:property>
@@ -21,7 +21,7 @@
       <con1:property key="limits">Time=600;</con1:property>
     </con1:attributes>
     <con1:addons/>
-    <con1:scene label="New Scenario" id="433708a0-f132-47bd-9ee7-d5ea8d95f914" version="5245">
+    <con1:scene label="New Scenario" id="433708a0-f132-47bd-9ee7-d5ea8d95f914" version="5359">
       <con1:properties>
         <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
         <con1:property propagates="true" key="CanvasItem.abortOnFinish" type="java.lang.Boolean">false</con1:property>
