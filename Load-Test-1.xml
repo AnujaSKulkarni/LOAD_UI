@@ -26,7 +26,7 @@
       <con1:property key="limits">Time=60;</con1:property>
     </con1:attributes>
     <con1:addons/>
-    <con1:scene label="New Scenario" id="9b0cc878-640f-40bf-9e6e-0a509ff14ea9" version="232">
+    <con1:scene label="New Scenario" id="9b0cc878-640f-40bf-9e6e-0a509ff14ea9" version="264">
       <con1:properties>
         <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
         <con1:property propagates="true" key="CanvasItem.abortOnFinish" type="java.lang.Boolean">true</con1:property>
@@ -88,33 +88,11 @@
         </con1:attributes>
         <con1:addons/>
       </con1:component>
-      <con1:component type="com.eviware.loadui.components.soapui.SoapUISamplerComponent" label="Regression Suite:GET Client Token" id="5e3db716-ff10-4eab-a6bd-22eaa853da23" category="Runners">
+      <con1:component type="com.eviware.loadui.impl.component.flowControls.LoopFlowComponent" label="Loop 1" id="241da8eb-3863-46ff-a25f-53369aff5c66" category="Flow">
         <con1:properties>
           <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
-          <con1:property propagates="true" key="concurrentSamples" type="java.lang.Long">5000</con1:property>
-          <con1:property propagates="true" key="property_name_is_not_relevant_for_private_property" type="java.lang.Long">9223372036854775807</con1:property>
-          <con1:property propagates="true" key="maxQueueSize" type="java.lang.Long">1000</con1:property>
-          <con1:property propagates="true" key="countDiscarded" type="java.lang.Boolean">false</con1:property>
-          <con1:property propagates="true" key="disabledTestSteps" type="java.lang.String"/>
-          <con1:property propagates="true" key="_thinkTime" type="java.lang.Long">0</con1:property>
-          <con1:property propagates="true" key="ReadyApiTestCase" type="com.eviware.soapui.impl.wsdl.testcase.WsdlTestCase">4d9b8d24-cdbf-470c-926c-ce1cd761a7a0</con1:property>
-          <con1:property propagates="true" key="raiseError" type="java.lang.Boolean">true</con1:property>
-          <con1:property propagates="true" key="outputTestCaseProperties" type="java.lang.Boolean">true</con1:property>
-          <con1:property propagates="true" key="OutputLevel" type="java.lang.String">TestCase only</con1:property>
-          <con1:property propagates="true" key="closeConnectionsAfterRequest" type="java.lang.Boolean">false</con1:property>
-          <con1:property propagates="true" key="disableSoapuiAssertions" type="java.lang.Boolean">false</con1:property>
-          <con1:property propagates="true" key="forceShareDatasources" type="java.lang.Boolean">true</con1:property>
-        </con1:properties>
-        <con1:attributes>
-          <con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Ready API TestCase Runner</con1:property>
-        </con1:attributes>
-        <con1:addons/>
-      </con1:component>
-      <con1:component type="com.eviware.loadui.impl.component.flowControls.LoopFlowComponent" label="Loop 1" id="aa699a3e-b6a9-4097-b83e-a22ea15ff41e" category="Flow">
-        <con1:properties>
-          <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
-          <con1:property propagates="true" key="iterations" type="java.lang.Long">50</con1:property>
-          <con1:property propagates="true" key="displayedIterations" type="java.lang.Long">50</con1:property>
+          <con1:property propagates="true" key="iterations" type="java.lang.Long">100</con1:property>
+          <con1:property propagates="true" key="displayedIterations" type="java.lang.Long">100</con1:property>
         </con1:properties>
         <con1:attributes>
           <con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Loop</con1:property>
@@ -122,11 +100,10 @@
         <con1:addons/>
       </con1:component>
       <con1:connection outputTerminalId="0663aa83-463b-4a75-9661-7e8b1fd67b09/outgoingTerminal" inputTerminalId="84d3f189-ec81-4b7c-bb15-b8693c84ea45/stateTerminal"/>
-      <con1:connection outputTerminalId="84d3f189-ec81-4b7c-bb15-b8693c84ea45/triggerTerminal" inputTerminalId="aa699a3e-b6a9-4097-b83e-a22ea15ff41e/incomingTerminal"/>
-      <con1:connection outputTerminalId="aa699a3e-b6a9-4097-b83e-a22ea15ff41e/loop" inputTerminalId="5e3db716-ff10-4eab-a6bd-22eaa853da23/triggerTerminal"/>
-      <con1:connection outputTerminalId="5e3db716-ff10-4eab-a6bd-22eaa853da23/runningTerminal" inputTerminalId="0d1edab6-b770-433c-9f04-c8ba745249ee/triggerTerminal"/>
-      <con1:connection outputTerminalId="0d1edab6-b770-433c-9f04-c8ba745249ee/runningTerminal" inputTerminalId="aa699a3e-b6a9-4097-b83e-a22ea15ff41e/incomingTerminal"/>
-      <con1:connection outputTerminalId="aa699a3e-b6a9-4097-b83e-a22ea15ff41e/exit" inputTerminalId="84d3f189-ec81-4b7c-bb15-b8693c84ea45/Sample Count"/>
+      <con1:connection outputTerminalId="84d3f189-ec81-4b7c-bb15-b8693c84ea45/triggerTerminal" inputTerminalId="241da8eb-3863-46ff-a25f-53369aff5c66/incomingTerminal"/>
+      <con1:connection outputTerminalId="241da8eb-3863-46ff-a25f-53369aff5c66/loop" inputTerminalId="0d1edab6-b770-433c-9f04-c8ba745249ee/triggerTerminal"/>
+      <con1:connection outputTerminalId="0d1edab6-b770-433c-9f04-c8ba745249ee/runningTerminal" inputTerminalId="241da8eb-3863-46ff-a25f-53369aff5c66/incomingTerminal"/>
+      <con1:connection outputTerminalId="241da8eb-3863-46ff-a25f-53369aff5c66/exit" inputTerminalId="84d3f189-ec81-4b7c-bb15-b8693c84ea45/Sample Count"/>
     </con1:scene>
     <con1:statistics>
       <con1:page title="DefaultLoadUIStatisticPage">
@@ -136,9 +113,6 @@
           </con1:attributes>
         </con1:chartGroup>
         <con1:chartGroup type="com.eviware.loadui.api.statistics.model.chart.line.LineChartView" title="Baseline Statistics" groupType="Graph">
-          <con1:chart statisticHolder="b44fda58-ea14-415d-9f3c-d2d6cc4f013c">
-            <con1:attributes></con1:attributes>
-          </con1:chart>
           <con1:attributes>
             <con1:property key="GroupId">22e75c4a-3888-4ba9-a2d5-f229083e2537</con1:property>
           </con1:attributes>
