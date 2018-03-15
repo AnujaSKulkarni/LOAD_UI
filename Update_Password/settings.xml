@@ -4,8 +4,8 @@
     <con:setting id="c1df7be3-938a-41e7-b1a2-0d6420642bfbfileName">Update_Password</con:setting>
     <con:setting id="d616cea1-6963-4b39-b6fb-a72d3d570044fileName">Update_Password</con:setting>
   </con:settings>
-  <con:definitionCache type="TEXT" rootPart=""/>
-  <con:endpoints>
+  
+  <con:definitionCache type="TEXT" rootPart=""/><con:endpoints>
     <con:endpoint>https://{{API-Connect}}</con:endpoint>
   </con:endpoints>
 </con:interface>

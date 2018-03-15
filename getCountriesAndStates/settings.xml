@@ -4,8 +4,8 @@
     <con:setting id="62295b15-5df9-4a84-8904-9a00d9e843dbfileName">getCountriesAndStates</con:setting>
     <con:setting id="37c1ccf1-9bdf-4ac4-a63d-50b42b77536bfileName">getCountriesAndStates</con:setting>
   </con:settings>
-  <con:definitionCache type="TEXT" rootPart=""/>
-  <con:endpoints>
+  
+  <con:definitionCache type="TEXT" rootPart=""/><con:endpoints>
     <con:endpoint>https://{{API-Connect}}</con:endpoint>
   </con:endpoints>
 </con:interface>
