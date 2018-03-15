@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="56b80110-5a78-429e-809b-6be46a98721f" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Update Company" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="eea7e710-2354-4223-8620-c8b6646e782c" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Update Company" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="56b80110-5a78-429e-809b-6be46a98721ffileName">Update-Company</con:setting>
+    <con:setting id="eea7e710-2354-4223-8620-c8b6646e782cfileName">Update-Company</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="delay" name="Wait" id="55343154-4336-4e09-9560-8c6543ad9661">
-    <con:settings/>
-    <con:config>
-      <delay>1000</delay>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="datasource" name="JDBC" id="360849a9-41c5-47b6-b060-0c3b5164a6b7">
+  <con:testStep type="datasource" name="JDBC" id="89e55b94-a036-412f-94f3-354d46b969dc">
     <con:settings>
       <con:setting id="com.eviware.soapui.impl.wsdl.teststeps.datasource.DataSourceContainer@prepared-properties">&lt;xml-fragment/></con:setting>
     </con:settings>
@@ -35,7 +30,7 @@ Where BLUADMIN.STATE.STATE_CODE = 'US'</query>
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="DataSource_Setup" id="74e1cb2e-627b-4797-8ea0-820c03bf310f">
+  <con:testStep type="groovy" name="DataSource_Setup" id="ef094b71-77d6-4341-ab2b-4ac263fee78c">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream;
@@ -173,7 +168,7 @@ if(RunTimeDataSource_Flag == true){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasource" name="DataSource" id="74098cdb-644a-42e6-9843-98d9a6c2a17c">
+  <con:testStep type="datasource" name="DataSource" id="09d073bb-a8c0-48f3-af81-d2967525f34c">
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
@@ -274,7 +269,7 @@ if(RunTimeDataSource_Flag == true){
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Flow Control" id="b9d96285-f922-4e77-9f9c-136935502e30">
+  <con:testStep type="groovy" name="Flow Control" id="94c4fc3c-0b7f-4a32-a2e6-c5bd76aa4250">
     <con:settings/>
     <con:config>
       <script>def dataCombination = context.expand( '${DataSource#Data_Combination}' )
@@ -286,24 +281,24 @@ if (API_Name != TestCaseName){
 	testRunner.testCase.testSteps['Test_Data_Setup'].setDisabled(true)
 	testRunner.testCase.testSteps['Update Company_Positive'].setDisabled(true)
 	testRunner.testCase.testSteps['Update Company_Negative'].setDisabled(true)
-//	testRunner.testCase.testSteps['Report'].setDisabled(true)
+	testRunner.testCase.testSteps['Report'].setDisabled(true)
 }else{
 	if(dataCombination == "Positive"){
 		testRunner.testCase.testSteps['Test_Data_Setup'].setDisabled(false)
 		testRunner.testCase.testSteps['Update Company_Positive'].setDisabled(false)
 		testRunner.testCase.testSteps['Update Company_Negative'].setDisabled(true)
-	//	testRunner.testCase.testSteps['Report'].setDisabled(false)
+		testRunner.testCase.testSteps['Report'].setDisabled(false)
 	}
 	if(dataCombination == "Negative"){
 		testRunner.testCase.testSteps['Test_Data_Setup'].setDisabled(false)
 		testRunner.testCase.testSteps['Update Company_Positive'].setDisabled(true)
 		testRunner.testCase.testSteps['Update Company_Negative'].setDisabled(false)
-		//testRunner.testCase.testSteps['Report'].setDisabled(false)
+		testRunner.testCase.testSteps['Report'].setDisabled(false)
 	}
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Test_Data_Setup" id="58be60c7-af69-4b54-a34b-ae0e6d5d6429" disabled="true">
+  <con:testStep type="groovy" name="Test_Data_Setup" id="b62e2bb6-1e5e-4152-837c-b0bd0706468f" disabled="true">
     <con:settings/>
     <con:config>
       <script>def Company_Name = context.expand( '${DataSource#Company_Name}' )
@@ -320,7 +315,7 @@ log.info Company_Name
 testRunner.testCase.setPropertyValue("Company_Name", Company_Name)</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Update Company_Positive" id="57c80a62-ce22-48b5-a54a-b331b6279e98" disabled="true">
+  <con:testStep type="restrequest" name="Update Company_Positive" id="bb4811e2-d0a1-4cca-b176-665c845eff05" disabled="true">
     <con:settings/>
     <con:config service="Update Company" resourcePath="/updateCompany" methodName="Update Company" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Update Company_Positive" id="e7ee279a-1ce6-4066-bf8b-f0f1baae2aff" mediaType="application/json" postQueryString="false">
@@ -392,7 +387,7 @@ testRunner.testCase.setPropertyValue("Company_Name", Company_Name)</script>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Update Company_Negative" id="d89d2cd8-8ad7-43cb-b447-a5544511077f" disabled="true">
+  <con:testStep type="restrequest" name="Update Company_Negative" id="ecb9304c-cab2-4760-903c-f54247cb2b41" disabled="true">
     <con:settings/>
     <con:config service="Update Company" resourcePath="/updateCompany" methodName="Update Company" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Update Company_Negative" id="e7ee279a-1ce6-4066-bf8b-f0f1baae2aff" mediaType="application/json" postQueryString="false">
@@ -457,7 +452,136 @@ testRunner.testCase.setPropertyValue("Company_Name", Company_Name)</script>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasourceloop" name="DataSource Loop" id="a74f3abf-78f2-4844-8417-6e729823c084">
+  <con:testStep type="groovy" name="Report" id="f6ea05c0-9cf2-4423-b310-be4b2cd28ff8" disabled="true">
+    <con:settings/>
+    <con:config>
+      <script>import java.io.FileInputStream
+import java.io.File
+import java.io.FileNotFoundException
+import java.io.FileOutputStream
+import java.io.IOException
+import java.util.Iterator
+import java.io.InputStream
+import java.lang.String
+import java.text.SimpleDateFormat
+import org.apache.poi.EncryptedDocumentException
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException
+import org.apache.poi.ss.util.CellReference
+import org.apache.poi.ss.usermodel.Cell
+import org.apache.poi.ss.usermodel.DateUtil
+import org.apache.poi.ss.usermodel.Row
+import org.apache.poi.ss.usermodel.Sheet
+import org.apache.poi.ss.usermodel.Workbook
+import org.apache.poi.ss.usermodel.WorkbookFactory
+import org.apache.poi.hssf.usermodel.HSSFWorkbook
+import org.apache.poi.xssf.usermodel.XSSFWorkbook
+import org.apache.poi.xssf.streaming.SXSSFWorkbook
+import org.apache.poi.xssf.usermodel.XSSFCell
+import org.apache.poi.xssf.usermodel.XSSFRow
+import org.apache.poi.xssf.usermodel.XSSFSheet
+import org.apache.poi.xssf.usermodel.XSSFWorkbook
+
+def Final_Path = com.eviware.soapui.SoapUI.globalProperties.getPropertyValue("Test_Result_Path")
+log.info Final_Path
+def final_path = new File(Final_Path)
+final_path.mkdir()
+
+/*Get Test Case Name and Status*/
+def data_combination = context.expand( '${DataSource#Data_Combination}' )
+/*Get TC Name*/
+def TCN = context.expand( '${DataSource#TC_Number}' )
+def TestCaseName = testRunner.testCase.getName()
+if(data_combination == "Positive"){
+	TestCaseName = TestCaseName + "_Positive"
+}
+if(data_combination == "Negative"){
+	TestCaseName = TestCaseName + "_Negative"
+}
+log.info TestCaseName
+
+obj = context.testCase.getTestStepByName(TestCaseName)
+assertions = obj.getAssertionList()
+def Status
+assertions.each{
+	def stat = (it.status).toString()
+	if(stat == "VALID" || stat == "PASS"){
+		Status = "Pass"
+	}
+	if(stat == "FAILED" || stat == "FAIL"){
+		Status = "Fail"
+	}
+}
+log.info(Status)
+testRunner.testCase.testSuite.setPropertyValue("Status", Status)
+
+/*Creating Txt File*/
+
+String date = new Date()
+String date_now = new Date()
+date = date.replaceAll(":","_")
+date = date.replaceAll(" ","_")
+def TCName = TestCaseName.replaceAll(" ","_")
+report_file = Final_Path + TCN + "_" + TCName + "_" + date + "_" + Status + ".txt"
+/* Writing to file */
+def file1 = new File(report_file)
+
+
+/*Get Time Taken for request*/
+
+obj = context.testCase.getTestStepByName(TestCaseName)
+assertions = obj.getAssertionList()
+def Time_Taken
+assertions.each{
+	Time_Taken = testRunner.testCase.testSteps[TestCaseName].testRequest.response.timeTaken
+	log.info(Time_Taken)
+}
+
+
+
+/*Get Status Code*/
+Header = testRunner.testCase.testSteps[TestCaseName].testRequest.response.getResponseHeaders()
+Status_Code = Header["#status#"]
+log.info Status_Code
+file1.write("Status:  " + Status + "\n")
+file1.append("Time Taken:  " + Time_Taken + " ms\n")
+file1.append("TimeStamp:  " + date_now + "\n")
+file1.append("Test Step:  " + TestCaseName + "\n\n\n\n")
+file1.append("----------------- Http Status ------------------------------\n")
+file1.append("Http Status Code:  " + Status_Code + "\n\n\n\n")
+file1.append("---------------- Request ---------------------------\n")
+
+
+/*Get request and response*/
+myRequestStep = testRunner.testCase.getTestStepByName(TestCaseName)
+def request = new String(myRequestStep.testRequest.messageExchange.rawRequestData)
+def response = new String(myRequestStep.testRequest.messageExchange.rawResponseData)
+file1.append(request + "\n\n\n\n")
+file1.append("---------------- Response --------------------------\n")
+file1.append(response)
+
+
+/* Creating Excel for test result */
+def Testresultpath = com.eviware.soapui.SoapUI.globalProperties.getPropertyValue("Test_Result_Path")
+Testresultpath = Testresultpath + "Test_Run_Results.xls"
+log.info Testresultpath
+
+FileInputStream fis = new FileInputStream(new File(Testresultpath))
+Workbook wb = WorkbookFactory.create(fis)
+Sheet sh = wb.getSheet("Test_Run_Results")
+def Row_count = sh.getLastRowNum()
+Row_count = Row_count.toInteger()
+Row_count++
+log.info Row_count
+Row row = sh.createRow(Row_count)
+Cell cell = row.createCell(0).setCellValue(TCN)
+Cell cell_1 = row.createCell(1).setCellValue(Status)
+Cell cell_2 = row.createCell(2).setCellValue(TestCaseName)
+FileOutputStream out = new FileOutputStream(Testresultpath,false)
+wb.write(out)
+out.close()</script>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasourceloop" name="DataSource Loop" id="278739fb-f89a-4e76-a12d-6e766ed879d4">
     <con:settings/>
     <con:config>
       <dataSourceStep>DataSource</dataSourceStep>
@@ -467,7 +591,7 @@ testRunner.testCase.setPropertyValue("Company_Name", Company_Name)</script>
   <con:properties>
     <con:property>
       <con:name>Company_Name</con:name>
-      <con:value>"Tue_Mar_13_20_32_28_IST_2018_Update Company"</con:value>
+      <con:value>"Thu_Mar_15_13_40_42_IST_2018_Update Company"</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>
@@ -483,11 +607,6 @@ testRunner.testCase.setPropertyValue("Company_Name", Company_Name)</script>
   </con:breakPoints>
   <con:breakPoints>
     <con:testStepId>58be60c7-af69-4b54-a34b-ae0e6d5d6429</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>55343154-4336-4e09-9560-8c6543ad9661</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>

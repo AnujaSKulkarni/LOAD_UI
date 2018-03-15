@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="91ae8eef-044e-44f5-a836-cbe274cc242e" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="searchRecipe" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="2e3423e0-791f-4d18-9c0c-f12c849d9145" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="getallinvitedmember" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="ff033a49-9cdd-4fc9-a904-c9496ffb96a2fileName">searchRecipe</con:setting>
-    <con:setting id="91ae8eef-044e-44f5-a836-cbe274cc242efileName">searchRecipe</con:setting>
+    <con:setting id="7a3c1526-5c87-48c5-956f-a7f284e31d31fileName">getallinvitedmember</con:setting>
+    <con:setting id="2e3423e0-791f-4d18-9c0c-f12c849d9145fileName">getallinvitedmember</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="groovy" name="DataSource_Setup" id="f6c1e14e-09f2-447e-a7db-117ec4229300">
+  <con:testStep type="groovy" name="DataSource_Setup" id="6a6a43fe-e0a7-4644-87b9-6e6c6435332c">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream;
@@ -143,7 +143,7 @@ if(RunTimeDataSource_Flag == true){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasource" name="DataSource" id="d8885628-f03d-40ec-a243-ba6fa966d81e">
+  <con:testStep type="datasource" name="DataSource" id="8cae6f17-a434-4744-8716-55ede3ec5b2d">
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
@@ -155,8 +155,8 @@ if(RunTimeDataSource_Flag == true){
           <evaluateFormulas>false</evaluateFormulas>
         </con:configuration>
       </con:dataSource>
-      <con:shared>true</con:shared>
-      <con:restartShared>true</con:restartShared>
+      <con:shared>false</con:shared>
+      <con:restartShared>false</con:restartShared>
       <con:property>TC_Number</con:property>
       <con:property>Service_Name</con:property>
       <con:property>Defect_ID</con:property>
@@ -244,89 +244,25 @@ if(RunTimeDataSource_Flag == true){
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Flow Control" id="96e7bf0b-f1f4-4ff5-b696-4c55aeba5c6e">
+  <con:testStep type="groovy" name="flow control" id="c2338e46-eb95-4922-a7fd-7a76d336b531">
     <con:settings/>
     <con:config>
       <script>def dataCombination = context.expand( '${DataSource#Data_Combination}' )
+log.info dataCombination
 def API_Name = context.expand( '${DataSource#API_Name}' )
 def TestCaseName = testRunner.testCase.getName()
 
 if (API_Name != TestCaseName){
-	log.info "Skipping"
-	testRunner.testCase.testSteps['searchRecipe'].setDisabled(true)
-	testRunner.testCase.testSteps['UPC_DataSource'].setDisabled(true)
-	testRunner.testCase.testSteps['UPC_DataSource Loop'].setDisabled(true)
+	testRunner.testCase.testSteps['getallinvitedmember'].setDisabled(true)
 	testRunner.testCase.testSteps['Report'].setDisabled(true)
-	}else{
-	testRunner.testCase.testSteps['searchRecipe'].setDisabled(false)
-	testRunner.testCase.testSteps['UPC_DataSource'].setDisabled(false)
-	testRunner.testCase.testSteps['UPC_DataSource Loop'].setDisabled(false)
+}else{
+	testRunner.testCase.testSteps['getallinvitedmember'].setDisabled(false)
 	testRunner.testCase.testSteps['Report'].setDisabled(false)
+	
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasource" name="UPC_DataSource" id="468eda80-bef8-439d-afba-ac9fbf87d848" disabled="true">
-    <con:settings/>
-    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:dataSource type="Excel">
-        <con:configuration>
-          <file>${Test_Data_Path}</file>
-          <worksheet>${UPC_Sheet}</worksheet>
-          <cell>A2</cell>
-          <ignoreEmpty>true</ignoreEmpty>
-          <evaluateFormulas>false</evaluateFormulas>
-        </con:configuration>
-      </con:dataSource>
-      <con:shared>true</con:shared>
-      <con:restartShared>true</con:restartShared>
-      <con:property>UPC_Codes</con:property>
-      <con:startRow/>
-      <con:endRow/>
-      <con:recordsPerIteration>1</con:recordsPerIteration>
-      <con:completeLastOperation>true</con:completeLastOperation>
-      <con:trimValues>false</con:trimValues>
-      <con:entitizeValues>false</con:entitizeValues>
-      <con:restartOnRun>true</con:restartOnRun>
-      <con:expandProperties>false</con:expandProperties>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="restrequest" name="searchRecipe" id="5b507002-c3d9-4f7d-abdd-8331593e745b" disabled="true">
-    <con:settings/>
-    <con:config service="searchRecipe" resourcePath="/searchRecipe/${UPC_DataSource#UPC_Codes}/en" methodName="searchRecipe" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:restRequest name="searchRecipe" id="d2d2db26-4f43-48d8-a10b-56ea805d8d8d" mediaType="application/json">
-        <con:settings>
-          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
-        </con:settings>
-        <con:endpoint>${#Project#API-Connect}</con:endpoint>
-        <con:request/>
-        <con:originalUri>https://api-test.whrcloud.com/api/v1%7D/searchRecipe/051000062765/en</con:originalUri>
-        <con:assertion type="Valid HTTP Status Codes" id="f232be9b-f417-4748-9965-75f5c50f46ec" name="Valid HTTP Status Codes">
-          <con:settings/>
-          <con:configuration>
-            <codes>200</codes>
-          </con:configuration>
-        </con:assertion>
-        <con:credentials>
-          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
-          <con:authType>No Authorization</con:authType>
-        </con:credentials>
-        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:parameters/>
-        <con:parameterOrder>
-          <con:entry>Authorization</con:entry>
-        </con:parameterOrder>
-        <con:environmentSpec>
-          <con:entry environmentId="f6279578-3a49-4834-9a7b-8e92ae71f8e9">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-        </con:environmentSpec>
-      </con:restRequest>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="groovy" name="Report" id="0088ad3b-700f-42ea-b61b-03f9346dd28f" disabled="true">
+  <con:testStep type="groovy" name="Report" id="c8a1042c-c771-46c5-a769-a8f0c222aa14">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream
@@ -355,15 +291,10 @@ import org.apache.poi.xssf.usermodel.XSSFRow
 import org.apache.poi.xssf.usermodel.XSSFSheet
 import org.apache.poi.xssf.usermodel.XSSFWorkbook
 
-
 def Final_Path = com.eviware.soapui.SoapUI.globalProperties.getPropertyValue("Test_Result_Path")
-//log.info Final_Path
+log.info Final_Path
 def final_path = new File(Final_Path)
 final_path.mkdir()
-Final_Path = Final_Path + "search_recipe/"
-final_path = new File(Final_Path)
-final_path.mkdir()
-
 
 /*Get Test Case Name and Status*/
 def data_combination = context.expand( '${DataSource#Data_Combination}' )
@@ -371,6 +302,7 @@ def data_combination = context.expand( '${DataSource#Data_Combination}' )
 def TCN = context.expand( '${DataSource#TC_Number}' )
 def TestCaseName = testRunner.testCase.getName()
 
+log.info TestCaseName
 
 obj = context.testCase.getTestStepByName(TestCaseName)
 assertions = obj.getAssertionList()
@@ -395,7 +327,6 @@ date = date.replaceAll(":","_")
 date = date.replaceAll(" ","_")
 def TCName = TestCaseName.replaceAll(" ","_")
 report_file = Final_Path + TCN + "_" + TCName + "_" + date + "_" + Status + ".txt"
-log.info "Report File path" + report_file
 /* Writing to file */
 def file1 = new File(report_file)
 
@@ -426,18 +357,21 @@ file1.append("---------------- Request ---------------------------\n")
 
 
 /*Get request and response*/
-myRequestStep = testRunner.testCase.getTestStepByName(TestCaseName)
 try{
-def request = new String(myRequestStep.testRequest.messageExchange.rawRequestData)
-def response = new String(myRequestStep.testRequest.messageExchange.rawResponseData)
-file1.append(request + "\n\n\n\n")
-file1.append("---------------- Response --------------------------\n")
-file1.append(response)
-}catch(Exception e){log.info "Request/Response empty"
+	myRequestStep = testRunner.testCase.getTestStepByName(TestCaseName)
+	def request = new String(myRequestStep.testRequest.messageExchange.rawRequestData)
+	def response = new String(myRequestStep.testRequest.messageExchange.rawResponseData)
+	file1.append(request + "\n\n\n\n")
+	file1.append("---------------- Response --------------------------\n")
+	file1.append(response)
+}
+catch (Exception e){
+	log.info("Empty Request Response")
 }
 
-/* Creating Excel for test result */
 
+
+/* Creating Excel for test result */
 def Testresultpath = com.eviware.soapui.SoapUI.globalProperties.getPropertyValue("Test_Result_Path")
 Testresultpath = Testresultpath + "Test_Run_Results.xls"
 log.info Testresultpath
@@ -452,56 +386,53 @@ log.info Row_count
 Row row = sh.createRow(Row_count)
 Cell cell = row.createCell(0).setCellValue(TCN)
 Cell cell_1 = row.createCell(1).setCellValue(Status)
-Cell cell_2 = row.createCell(2).setCellValue(TestCaseName)
 FileOutputStream out = new FileOutputStream(Testresultpath,false)
 wb.write(out)
-out.close()
-log.info "Report Generated"</script>
+out.close()</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="delay" name="Delay" id="71f77720-88d1-4351-8001-2752cc4a552e" disabled="true">
+  <con:testStep type="restrequest" name="getallinvitedmember" id="4a8e6344-dea6-4afc-ba5f-3d6fbbf13b9f">
     <con:settings/>
-    <con:config>
-      <delay>1000</delay>
+    <con:config service="Create Account" resourcePath="/client_auth/accounts" methodName="Create Account" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="getallinvitedmember" id="aa987182-fe19-47f6-8be5-e8a0e93ce082" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>${API-Connect}</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api-stg.whrcloud.com/api/v1/members/5522</con:originalUri>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:parameterOrder>
+          <con:entry>Authorization</con:entry>
+          <con:entry>wp-client-region</con:entry>
+          <con:entry>wp-client-country</con:entry>
+          <con:entry>wp-client-brand</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasourceloop" name="UPC_DataSource Loop" id="1bf0de38-f5aa-4524-bc26-47da327f5b2b" disabled="true">
-    <con:settings/>
-    <con:config>
-      <dataSourceStep>UPC_DataSource</dataSourceStep>
-      <targetStep>searchRecipe</targetStep>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="datasourceloop" name="DataSource Loop" id="f379ed3b-3138-40e8-b21b-527d8b810c5f">
+  <con:testStep type="datasourceloop" name="DataSource Loop" id="a4bf24a9-ddaf-4136-bd6e-3f8c0775cd23">
     <con:settings/>
     <con:config>
       <dataSourceStep>DataSource</dataSourceStep>
-      <targetStep>Flow Control</targetStep>
+      <targetStep>flow control</targetStep>
     </con:config>
   </con:testStep>
   <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>
-    <con:testStepId>a5658ccd-c8ed-470b-bb51-f8ceb0b871ac</con:testStepId>
+    <con:testStepId>3baf989e-8b38-4c2a-9112-95ddf253d4a5</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
   <con:breakPoints>
-    <con:testStepId>f42fc663-becb-4c47-b202-7ae0371f9344</con:testStepId>
+    <con:testStepId>4a8e6344-dea6-4afc-ba5f-3d6fbbf13b9f</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>b5647feb-6c27-47a3-b724-e7755d7ba406</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:environmentSpec>
-    <con:entry environmentId="f6279578-3a49-4834-9a7b-8e92ae71f8e9">
-      <con:authProfile>Inherit From Parent</con:authProfile>
-    </con:entry>
-    <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
-      <con:authProfile>Inherit From Parent</con:authProfile>
-    </con:entry>
-  </con:environmentSpec>
 </con:testCase>

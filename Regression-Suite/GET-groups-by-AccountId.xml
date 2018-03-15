@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="c7535df5-7286-4530-aef6-1144809d69e5" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="GET groups by AccountId" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="f8c74e38-5696-42ea-a3b4-f1bfa8d412eb" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="GET groups by AccountId" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="c7535df5-7286-4530-aef6-1144809d69e5fileName">GET-groups-by-AccountId</con:setting>
+    <con:setting id="f8c74e38-5696-42ea-a3b4-f1bfa8d412ebfileName">GET-groups-by-AccountId</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="delay" name="Wait" id="b0674ab5-26f9-42c2-a8f9-8354edb01c78">
-    <con:settings/>
-    <con:config>
-      <delay>1000</delay>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="groovy" name="DataSource_Setup" id="46f5ba10-beb6-4b1f-9532-0a96254a8277">
+  <con:testStep type="groovy" name="DataSource_Setup" id="38c912d1-c295-4d66-b71e-ce9ba0aa1587">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream;
@@ -148,7 +143,7 @@ if(RunTimeDataSource_Flag == true){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasource" name="DataSource" id="263b0aa5-967e-4d80-bb1e-6dbc8ba56515">
+  <con:testStep type="datasource" name="DataSource" id="8b9bf2c3-83dc-4254-8e27-4a67e7160d9d">
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
@@ -249,7 +244,7 @@ if(RunTimeDataSource_Flag == true){
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Flow Control" id="6166ae9b-239d-4e67-8c3e-d8f9e2f7c2c8">
+  <con:testStep type="groovy" name="Flow Control" id="4dccdb2c-929a-4f34-a060-85fe038e50b7">
     <con:settings/>
     <con:config>
       <script>def dataCombination = context.expand( '${DataSource#Data_Combination}' )
@@ -259,14 +254,14 @@ def TestCaseName = testRunner.testCase.getName()
 if (API_Name != TestCaseName){
 	log.info "Skipping"
 	testRunner.testCase.testSteps['GET groups by AccountId'].setDisabled(true)
-	//testRunner.testCase.testSteps['Report'].setDisabled(true)
+	testRunner.testCase.testSteps['Report'].setDisabled(true)
 }else{
 	testRunner.testCase.testSteps['GET groups by AccountId'].setDisabled(false)
-	//testRunner.testCase.testSteps['Report'].setDisabled(false)
+	testRunner.testCase.testSteps['Report'].setDisabled(false)
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="GET groups by AccountId" id="d1ba0e35-8271-41c0-90ba-9403ed3c66ff">
+  <con:testStep type="restrequest" name="GET groups by AccountId" id="03b6ac19-3155-49c1-af5d-e9b26e7e271c" disabled="true">
     <con:settings/>
     <con:config service="GET groups by AccountId" resourcePath="/get_groups/${#[Regression Suite#Create Group]#Account_ID}" methodName="GET groups by AccountId" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="GET groups by AccountId" id="0d1d98c6-502c-4d00-a6cf-bd9b009a3757" mediaType="application/json" postQueryString="false">
@@ -308,7 +303,133 @@ if (API_Name != TestCaseName){
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasourceloop" name="DataSource Loop" id="09f9bda0-9e44-4cfb-8ef0-829ab2e26b9d">
+  <con:testStep type="groovy" name="Report" id="c17e493a-9a9b-46ec-b361-5cfbf3f90649" disabled="true">
+    <con:settings/>
+    <con:config>
+      <script>import java.io.FileInputStream
+import java.io.File
+import java.io.FileNotFoundException
+import java.io.FileOutputStream
+import java.io.IOException
+import java.util.Iterator
+import java.io.InputStream
+import java.lang.String
+import java.text.SimpleDateFormat
+import org.apache.poi.EncryptedDocumentException
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException
+import org.apache.poi.ss.util.CellReference
+import org.apache.poi.ss.usermodel.Cell
+import org.apache.poi.ss.usermodel.DateUtil
+import org.apache.poi.ss.usermodel.Row
+import org.apache.poi.ss.usermodel.Sheet
+import org.apache.poi.ss.usermodel.Workbook
+import org.apache.poi.ss.usermodel.WorkbookFactory
+import org.apache.poi.hssf.usermodel.HSSFWorkbook
+import org.apache.poi.xssf.usermodel.XSSFWorkbook
+import org.apache.poi.xssf.streaming.SXSSFWorkbook
+import org.apache.poi.xssf.usermodel.XSSFCell
+import org.apache.poi.xssf.usermodel.XSSFRow
+import org.apache.poi.xssf.usermodel.XSSFSheet
+import org.apache.poi.xssf.usermodel.XSSFWorkbook
+
+def Final_Path = com.eviware.soapui.SoapUI.globalProperties.getPropertyValue("Test_Result_Path")
+log.info Final_Path
+def final_path = new File(Final_Path)
+final_path.mkdir()
+
+/*Get Test Case Name and Status*/
+def data_combination = context.expand( '${DataSource#Data_Combination}' )
+/*Get TC Name*/
+def TCN = context.expand( '${DataSource#TC_Number}' )
+def TestCaseName = testRunner.testCase.getName()
+
+log.info TestCaseName
+
+obj = context.testCase.getTestStepByName(TestCaseName)
+assertions = obj.getAssertionList()
+def Status
+assertions.each{
+	def stat = (it.status).toString()
+	if(stat == "VALID" || stat == "PASS"){
+		Status = "Pass"
+	}
+	if(stat == "FAILED" || stat == "FAIL"){
+		Status = "Fail"
+	}
+}
+log.info(Status)
+testRunner.testCase.testSuite.setPropertyValue("Status", Status)
+
+/*Creating Txt File*/
+
+String date = new Date()
+String date_now = new Date()
+date = date.replaceAll(":","_")
+date = date.replaceAll(" ","_")
+def TCName = TestCaseName.replaceAll(" ","_")
+report_file = Final_Path + TCN + "_" + TCName + "_" + date + "_" + Status + ".txt"
+/* Writing to file */
+def file1 = new File(report_file)
+
+
+/*Get Time Taken for request*/
+
+obj = context.testCase.getTestStepByName(TestCaseName)
+assertions = obj.getAssertionList()
+def Time_Taken
+assertions.each{
+	Time_Taken = testRunner.testCase.testSteps[TestCaseName].testRequest.response.timeTaken
+	log.info(Time_Taken)
+}
+
+
+
+/*Get Status Code*/
+Header = testRunner.testCase.testSteps[TestCaseName].testRequest.response.getResponseHeaders()
+Status_Code = Header["#status#"]
+log.info Status_Code
+file1.write("Status:  " + Status + "\n")
+file1.append("Time Taken:  " + Time_Taken + " ms\n")
+file1.append("TimeStamp:  " + date_now + "\n")
+file1.append("Test Step:  " + TestCaseName + "\n\n\n\n")
+file1.append("----------------- Http Status ------------------------------\n")
+file1.append("Http Status Code:  " + Status_Code + "\n\n\n\n")
+file1.append("---------------- Request ---------------------------\n")
+
+
+/*Get request and response*/
+myRequestStep = testRunner.testCase.getTestStepByName(TestCaseName)
+try{
+def request = new String(myRequestStep.testRequest.messageExchange.rawRequestData)
+def response = new String(myRequestStep.testRequest.messageExchange.rawResponseData)
+file1.append(request + "\n\n\n\n")
+file1.append("---------------- Response --------------------------\n")
+file1.append(response)
+}catch(Exception e){log.info "Request/Response empty"
+}
+
+/* Creating Excel for test result */
+def Testresultpath = com.eviware.soapui.SoapUI.globalProperties.getPropertyValue("Test_Result_Path")
+Testresultpath = Testresultpath + "Test_Run_Results.xls"
+log.info Testresultpath
+
+FileInputStream fis = new FileInputStream(new File(Testresultpath))
+Workbook wb = WorkbookFactory.create(fis)
+Sheet sh = wb.getSheet("Test_Run_Results")
+def Row_count = sh.getLastRowNum()
+Row_count = Row_count.toInteger()
+Row_count++
+log.info Row_count
+Row row = sh.createRow(Row_count)
+Cell cell = row.createCell(0).setCellValue(TCN)
+Cell cell_1 = row.createCell(1).setCellValue(Status)
+Cell cell_2 = row.createCell(2).setCellValue(TestCaseName)
+FileOutputStream out = new FileOutputStream(Testresultpath,false)
+wb.write(out)
+out.close()</script>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasourceloop" name="DataSource Loop" id="7a1a2953-7c08-4ee2-b962-9c3bacd73323">
     <con:settings/>
     <con:config>
       <dataSourceStep>DataSource</dataSourceStep>
@@ -329,11 +450,6 @@ if (API_Name != TestCaseName){
   </con:breakPoints>
   <con:breakPoints>
     <con:testStepId>6166ae9b-239d-4e67-8c3e-d8f9e2f7c2c8</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>b0674ab5-26f9-42c2-a8f9-8354edb01c78</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>

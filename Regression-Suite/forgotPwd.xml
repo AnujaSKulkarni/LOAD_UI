@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="15f644a3-f259-40e1-bbfe-a0cea3171dd4" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="forgotPwd" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="d8b29de8-33b3-42bf-a70b-9cf637ebcfa2" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="forgotPwd" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="15f644a3-f259-40e1-bbfe-a0cea3171dd4fileName">forgotPwd</con:setting>
+    <con:setting id="d8b29de8-33b3-42bf-a70b-9cf637ebcfa2fileName">forgotPwd</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="delay" name="Wait" id="cbdd1174-6999-48a8-a0c6-0b62ac54cf25">
-    <con:settings/>
-    <con:config>
-      <delay>1000</delay>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="groovy" name="DataSource_Setup" id="3ca9206f-80ad-4ea7-81f7-33a8fa1962a2">
+  <con:testStep type="groovy" name="DataSource_Setup" id="4be99baf-2808-4451-9cae-0dee5cce278f">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream;
@@ -148,7 +143,7 @@ if(RunTimeDataSource_Flag == true){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasource" name="DataSource_RunTime" id="50fdfff4-2bc9-42ea-9c51-84a2e2d4681b">
+  <con:testStep type="datasource" name="DataSource_RunTime" id="1d134404-957f-4b5a-9405-2df244f36bdb">
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
@@ -170,7 +165,7 @@ if(RunTimeDataSource_Flag == true){
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Run_Time_Data_Transfer" id="21ab17ee-d1bd-4da4-9595-397765bba2b1">
+  <con:testStep type="groovy" name="Run_Time_Data_Transfer" id="23c1f5bb-6100-473d-a4ff-d7058c724ca3">
     <con:settings/>
     <con:config>
       <script>def account_ID_Number = context.expand( '${DataSource_RunTime#Account_ID_Number}' )
@@ -184,7 +179,7 @@ testRunner.testCase.testSuite.setPropertyValue("Verification_Code", verification
 testRunner.testCase.testSuite.setPropertyValue("Account_Email", Email_ID)</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasource" name="DataSource" id="cabde410-e1d3-40d9-80f4-21969936bd39">
+  <con:testStep type="datasource" name="DataSource" id="6f8c1f4f-85a9-4088-9945-80c2f3620875">
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
@@ -285,7 +280,7 @@ testRunner.testCase.testSuite.setPropertyValue("Account_Email", Email_ID)</scrip
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Flow Control" id="f8dfb718-a257-4026-a0aa-2ee890eac080">
+  <con:testStep type="groovy" name="Flow Control" id="76e48b8f-11c5-484b-bebe-acb52811c0d3">
     <con:settings/>
     <con:config>
       <script>def dataCombination = context.expand( '${DataSource#Data_Combination}' )
@@ -296,24 +291,24 @@ if (API_Name != TestCaseName){
 	testRunner.testCase.testSteps['Test_Data_Setup'].setDisabled(true)
 	testRunner.testCase.testSteps['forgotPwd_Positive'].setDisabled(true)
 	testRunner.testCase.testSteps['forgotPwd_Negative'].setDisabled(true)
-	//testRunner.testCase.testSteps['Report'].setDisabled(true)
+	testRunner.testCase.testSteps['Report'].setDisabled(true)
 }else{
 	if(dataCombination == "Positive"){
 		testRunner.testCase.testSteps['Test_Data_Setup'].setDisabled(false)
 		testRunner.testCase.testSteps['forgotPwd_Positive'].setDisabled(false)
 		testRunner.testCase.testSteps['forgotPwd_Negative'].setDisabled(true)
-		//testRunner.testCase.testSteps['Report'].setDisabled(false)
+		testRunner.testCase.testSteps['Report'].setDisabled(false)
 	}
 	if(dataCombination == "Negative"){
 		testRunner.testCase.testSteps['Test_Data_Setup'].setDisabled(false)
 		testRunner.testCase.testSteps['forgotPwd_Positive'].setDisabled(true)
 		testRunner.testCase.testSteps['forgotPwd_Negative'].setDisabled(false)
-		//testRunner.testCase.testSteps['Report'].setDisabled(false)
+		testRunner.testCase.testSteps['Report'].setDisabled(false)
 	}
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Test_Data_Setup" id="e7852168-ef38-4e2c-a013-ce6f1426d86c">
+  <con:testStep type="groovy" name="Test_Data_Setup" id="9a1f5a48-962a-47c5-a14d-51e95ac5c1e2" disabled="true">
     <con:settings/>
     <con:config>
       <script>def data_Combination = context.expand( '${DataSource#Data_Combination}' )
@@ -330,7 +325,7 @@ if (data_Combination == "Negative"){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="forgotPwd_Positive" id="c13558ed-05fa-4de2-b37b-23a81bcfcd23">
+  <con:testStep type="restrequest" name="forgotPwd_Positive" id="93b2c960-dec0-440a-96c3-f353885771b1" disabled="true">
     <con:settings/>
     <con:config service="forgotPwd" resourcePath="/client_auth/accounts/forgotPassword/${#TestCase#Email_ID}" methodName="forgotPwd" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="forgotPwd_Positive" id="043b2d58-2080-4a90-baa9-a688fe40264f" mediaType="application/json" postQueryString="false">
@@ -393,7 +388,7 @@ if (data_Combination == "Negative"){
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="forgotPwd_Negative" id="89084bfc-9132-4df5-b283-ab00b60b5661" disabled="true">
+  <con:testStep type="restrequest" name="forgotPwd_Negative" id="fbbd5765-4a2a-4f2c-b4b3-df6f7dbd1777" disabled="true">
     <con:settings/>
     <con:config service="forgotPwd" resourcePath="/client_auth/accounts/forgotPassword/${#TestCase#Email_ID}" methodName="forgotPwd" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="forgotPwd_Negative" id="043b2d58-2080-4a90-baa9-a688fe40264f" mediaType="application/json" postQueryString="false">
@@ -457,7 +452,144 @@ if (data_Combination == "Negative"){
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasourceloop" name="DataSource Loop" id="89deb55c-a4ab-4ed5-8984-81f04c8752ab">
+  <con:testStep type="groovy" name="Report" id="2133614a-7dcf-4df3-8752-6c1ee6449e9d" disabled="true">
+    <con:settings/>
+    <con:config>
+      <script>import java.io.FileInputStream
+import java.io.File
+import java.io.FileNotFoundException
+import java.io.FileOutputStream
+import java.io.IOException
+import java.util.Iterator
+import java.io.InputStream
+import java.lang.String
+import java.text.SimpleDateFormat
+import org.apache.poi.EncryptedDocumentException
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException
+import org.apache.poi.ss.util.CellReference
+import org.apache.poi.ss.usermodel.Cell
+import org.apache.poi.ss.usermodel.DateUtil
+import org.apache.poi.ss.usermodel.Row
+import org.apache.poi.ss.usermodel.Sheet
+import org.apache.poi.ss.usermodel.Workbook
+import org.apache.poi.ss.usermodel.WorkbookFactory
+import org.apache.poi.hssf.usermodel.HSSFWorkbook
+import org.apache.poi.xssf.usermodel.XSSFWorkbook
+import org.apache.poi.xssf.streaming.SXSSFWorkbook
+import org.apache.poi.xssf.usermodel.XSSFCell
+import org.apache.poi.xssf.usermodel.XSSFRow
+import org.apache.poi.xssf.usermodel.XSSFSheet
+import org.apache.poi.xssf.usermodel.XSSFWorkbook
+
+
+def Final_Path = com.eviware.soapui.SoapUI.globalProperties.getPropertyValue("Test_Result_Path")
+log.info Final_Path
+def final_path = new File(Final_Path)
+final_path.mkdir()
+
+
+/*Get Test Case Name and Status*/
+def data_combination = context.expand( '${DataSource#Data_Combination}' )
+/*Get TC Name*/
+def TCN = context.expand( '${DataSource#TC_Number}' )
+def TestCaseName = testRunner.testCase.getName()
+if(data_combination == "Positive"){
+	TestCaseName = TestCaseName + "_Positive"
+}
+if(data_combination == "Negative"){
+	TestCaseName = TestCaseName + "_Negative"
+}
+log.info TestCaseName
+
+obj = context.testCase.getTestStepByName(TestCaseName)
+assertions = obj.getAssertionList()
+def Status
+assertions.each{
+	def stat = (it.status).toString()
+	if(stat == "VALID" || stat == "PASS"){
+		Status = "Pass"
+	}
+	if(stat == "FAILED" || stat == "FAIL"){
+		Status = "Fail"
+	}
+}
+log.info(Status)
+testRunner.testCase.testSuite.setPropertyValue("Status", Status)
+
+/*Creating Txt File*/
+
+String date = new Date()
+String date_now = new Date()
+date = date.replaceAll(":","_")
+date = date.replaceAll(" ","_")
+def TCName = TestCaseName.replaceAll(" ","_")
+report_file = Final_Path + TCN + "_" + TCName + "_" + date + "_" + Status + ".txt"
+/* Writing to file */
+def file1 = new File(report_file)
+
+
+/*Get Time Taken for request*/
+
+obj = context.testCase.getTestStepByName(TestCaseName)
+assertions = obj.getAssertionList()
+def Time_Taken
+assertions.each{
+	Time_Taken = testRunner.testCase.testSteps[TestCaseName].testRequest.response.timeTaken
+	log.info(Time_Taken)
+}
+
+
+
+/*Get Status Code*/
+Header = testRunner.testCase.testSteps[TestCaseName].testRequest.response.getResponseHeaders()
+Status_Code = Header["#status#"]
+log.info Status_Code
+file1.write("Status:  " + Status + "\n")
+file1.append("Time Taken:  " + Time_Taken + " ms\n")
+file1.append("TimeStamp:  " + date_now + "\n")
+file1.append("Test Step:  " + TestCaseName + "\n\n\n\n")
+file1.append("----------------- Http Status ------------------------------\n")
+file1.append("Http Status Code:  " + Status_Code + "\n\n\n\n")
+file1.append("---------------- Request ---------------------------\n")
+
+
+/*Get request and response*/
+myRequestStep = testRunner.testCase.getTestStepByName(TestCaseName)
+try{
+def request = new String(myRequestStep.testRequest.messageExchange.rawRequestData)
+def response = new String(myRequestStep.testRequest.messageExchange.rawResponseData)
+file1.append(request + "\n\n\n\n")
+file1.append("---------------- Response --------------------------\n")
+file1.append(response)
+}catch(Exception e){log.info "Request/Response empty"
+}
+
+/* Creating Excel for test result */
+
+def Testresultpath = com.eviware.soapui.SoapUI.globalProperties.getPropertyValue("Test_Result_Path")
+Testresultpath = Testresultpath + "Test_Run_Results.xls"
+log.info Testresultpath
+
+FileInputStream fis = new FileInputStream(new File(Testresultpath))
+Workbook wb = WorkbookFactory.create(fis)
+Sheet sh = wb.getSheet("Test_Run_Results")
+def Row_count = sh.getLastRowNum()
+Row_count = Row_count.toInteger()
+Row_count++
+log.info Row_count
+Row row = sh.createRow(Row_count)
+Cell cell = row.createCell(0).setCellValue(TCN)
+Cell cell_1 = row.createCell(1).setCellValue(Status)
+Cell cell_2 = row.createCell(2).setCellValue(TestCaseName)
+Cell cell_3 = row.createCell(3).setCellValue(date_now)
+Cell cell_4 = row.createCell(4).setCellValue(Time_Taken)
+FileOutputStream out = new FileOutputStream(Testresultpath,false)
+wb.write(out)
+out.close()
+log.info "Report Generated"</script>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasourceloop" name="DataSource Loop" id="8e4735f4-04a7-46ce-b94a-f0cde39eda80">
     <con:settings/>
     <con:config>
       <dataSourceStep>DataSource</dataSourceStep>
@@ -467,7 +599,7 @@ if (data_Combination == "Negative"){
   <con:properties>
     <con:property>
       <con:name>Email_ID</con:name>
-      <con:value>TUE_MAR_13_20_30_26_IST_2018@MAILINATOR.COM</con:value>
+      <con:value>THU_MAR_15_13_39_35_IST_2018@MAILINATOR.COM</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>
@@ -498,11 +630,6 @@ if (data_Combination == "Negative"){
   </con:breakPoints>
   <con:breakPoints>
     <con:testStepId>3ca9206f-80ad-4ea7-81f7-33a8fa1962a2</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>cbdd1174-6999-48a8-a0c6-0b62ac54cf25</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>

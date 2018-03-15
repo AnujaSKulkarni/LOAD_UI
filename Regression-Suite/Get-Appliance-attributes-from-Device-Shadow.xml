@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="d966370b-8826-4880-822a-838f979627eb" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Get Appliance attributes from Device Shadow" searchProperties="true" timeout="0" maxResults="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="bcc64e00-21ed-48fb-878d-15eb8e446305" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Get Appliance attributes from Device Shadow" searchProperties="true" timeout="0" maxResults="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="d966370b-8826-4880-822a-838f979627ebfileName">Get-Appliance-attributes-from-Device-Shadow</con:setting>
+    <con:setting id="bcc64e00-21ed-48fb-878d-15eb8e446305fileName">Get-Appliance-attributes-from-Device-Shadow</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="delay" name="Wait" id="17e24258-4f2d-4b1c-801f-a245ad1a88a8">
-    <con:settings/>
-    <con:config>
-      <delay>1000</delay>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="groovy" name="DataSource_Setup" id="38d1284d-7d70-4cbc-bb9f-0399c1754274">
+  <con:testStep type="groovy" name="DataSource_Setup" id="6bb9a329-7746-417b-b7fd-e4420177a780">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream;
@@ -148,7 +143,7 @@ if(RunTimeDataSource_Flag == true){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasource" name="DataSource" id="4addd7e3-e30e-49ac-a335-db683f167171">
+  <con:testStep type="datasource" name="DataSource" id="ebd85240-ba7d-41f7-8730-43492b2034ff">
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
@@ -249,7 +244,7 @@ if(RunTimeDataSource_Flag == true){
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Flow Control" id="41ce9c67-0d52-40a3-8371-b5f42dcb1b12">
+  <con:testStep type="groovy" name="Flow Control" id="f9bf83c1-bfda-45ed-b54c-3e3f13fbc863">
     <con:settings/>
     <con:config>
       <script>def dataCombination = context.expand( '${DataSource#Data_Combination}' )
@@ -260,24 +255,24 @@ if (API_Name != TestCaseName){
 	testRunner.testCase.testSteps['Test_Data_Setup'].setDisabled(true)
 	testRunner.testCase.testSteps['Get Appliance attributes from Device Shadow_Positive'].setDisabled(true)
 	testRunner.testCase.testSteps['Get Appliance attributes from Device Shadow_Negative'].setDisabled(true)
-	//testRunner.testCase.testSteps['Report'].setDisabled(true)
+	testRunner.testCase.testSteps['Report'].setDisabled(true)
 }else{
 	if(dataCombination == "Positive"){
 		testRunner.testCase.testSteps['Test_Data_Setup'].setDisabled(false)
 		testRunner.testCase.testSteps['Get Appliance attributes from Device Shadow_Positive'].setDisabled(false)
 		testRunner.testCase.testSteps['Get Appliance attributes from Device Shadow_Negative'].setDisabled(true)
-		//testRunner.testCase.testSteps['Report'].setDisabled(false)
+		testRunner.testCase.testSteps['Report'].setDisabled(false)
 	}
 	if(dataCombination == "Negative"){
 		testRunner.testCase.testSteps['Test_Data_Setup'].setDisabled(false)
 		testRunner.testCase.testSteps['Get Appliance attributes from Device Shadow_Positive'].setDisabled(true)
 		testRunner.testCase.testSteps['Get Appliance attributes from Device Shadow_Negative'].setDisabled(false)
-		//testRunner.testCase.testSteps['Report'].setDisabled(false)
+		testRunner.testCase.testSteps['Report'].setDisabled(false)
 	}
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Test_Data_Setup" id="54685162-3828-4ff6-bbc1-2b2a78f95e38">
+  <con:testStep type="groovy" name="Test_Data_Setup" id="3b4680ef-42de-4dca-91d5-3c5a1fb705de" disabled="true">
     <con:settings/>
     <con:config>
       <script>def Device_Shadow = context.expand( '${DataSource#Device_Shadow_Name}' )
@@ -285,7 +280,7 @@ def Device_Shadow_Name = Device_Shadow.replace("\"", "")
 testRunner.testCase.setPropertyValue("Device_Shadow_Name", Device_Shadow_Name)</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Get Appliance attributes from Device Shadow_Positive" id="07a68a7d-56f5-4d6e-9f34-81faee22c9dc">
+  <con:testStep type="restrequest" name="Get Appliance attributes from Device Shadow_Positive" id="f42acb87-9ba0-49db-b3ac-244f7ccece30" disabled="true">
     <con:settings/>
     <con:config service="Get Appliance attributes from Device Shadow" resourcePath="/appliance/${#TestCase#Device_Shadow_Name}" methodName="Get Appliance attributes from Device Shadow" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Get Appliance attributes from Device Shadow_Positive" id="dfd348bd-0a45-45bf-a2a8-9453ba48307a" mediaType="application/json">
@@ -345,7 +340,7 @@ testRunner.testCase.setPropertyValue("Device_Shadow_Name", Device_Shadow_Name)</
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Get Appliance attributes from Device Shadow_Negative" id="b400dbb0-41e1-44c8-8eb3-5c2372cd19a1" disabled="true">
+  <con:testStep type="restrequest" name="Get Appliance attributes from Device Shadow_Negative" id="5f5d526e-82d2-488d-9b66-d2590fa40582" disabled="true">
     <con:settings/>
     <con:config service="Get Appliance attributes from Device Shadow" resourcePath="/appliance/${#TestCase#Device_Shadow_Name}" methodName="Get Appliance attributes from Device Shadow" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Get Appliance attributes from Device Shadow_Negative" id="dfd348bd-0a45-45bf-a2a8-9453ba48307a" mediaType="application/json">
@@ -405,7 +400,136 @@ testRunner.testCase.setPropertyValue("Device_Shadow_Name", Device_Shadow_Name)</
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasourceloop" name="DataSource Loop" id="f55ae9bd-3eb6-434d-a6a6-8bd5496dde34">
+  <con:testStep type="groovy" name="Report" id="b03a6bdb-42b1-4142-ba42-cc91f42a3dfb" disabled="true">
+    <con:settings/>
+    <con:config>
+      <script>import java.io.FileInputStream
+import java.io.File
+import java.io.FileNotFoundException
+import java.io.FileOutputStream
+import java.io.IOException
+import java.util.Iterator
+import java.io.InputStream
+import java.lang.String
+import java.text.SimpleDateFormat
+import org.apache.poi.EncryptedDocumentException
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException
+import org.apache.poi.ss.util.CellReference
+import org.apache.poi.ss.usermodel.Cell
+import org.apache.poi.ss.usermodel.DateUtil
+import org.apache.poi.ss.usermodel.Row
+import org.apache.poi.ss.usermodel.Sheet
+import org.apache.poi.ss.usermodel.Workbook
+import org.apache.poi.ss.usermodel.WorkbookFactory
+import org.apache.poi.hssf.usermodel.HSSFWorkbook
+import org.apache.poi.xssf.usermodel.XSSFWorkbook
+import org.apache.poi.xssf.streaming.SXSSFWorkbook
+import org.apache.poi.xssf.usermodel.XSSFCell
+import org.apache.poi.xssf.usermodel.XSSFRow
+import org.apache.poi.xssf.usermodel.XSSFSheet
+import org.apache.poi.xssf.usermodel.XSSFWorkbook
+
+def Final_Path = com.eviware.soapui.SoapUI.globalProperties.getPropertyValue("Test_Result_Path")
+log.info Final_Path
+def final_path = new File(Final_Path)
+final_path.mkdir()
+
+/*Get Test Case Name and Status*/
+def data_combination = context.expand( '${DataSource#Data_Combination}' )
+/*Get TC Name*/
+def TCN = context.expand( '${DataSource#TC_Number}' )
+def TestCaseName = testRunner.testCase.getName()
+if(data_combination == "Positive"){
+	TestCaseName = TestCaseName + "_Positive"
+}
+if(data_combination == "Negative"){
+	TestCaseName = TestCaseName + "_Negative"
+}
+log.info TestCaseName
+
+obj = context.testCase.getTestStepByName(TestCaseName)
+assertions = obj.getAssertionList()
+def Status
+assertions.each{
+	def stat = (it.status).toString()
+	if(stat == "VALID" || stat == "PASS"){
+		Status = "Pass"
+	}
+	if(stat == "FAILED" || stat == "FAIL"){
+		Status = "Fail"
+	}
+}
+log.info(Status)
+testRunner.testCase.testSuite.setPropertyValue("Status", Status)
+
+/*Creating Txt File*/
+
+String date = new Date()
+String date_now = new Date()
+date = date.replaceAll(":","_")
+date = date.replaceAll(" ","_")
+def TCName = TestCaseName.replaceAll(" ","_")
+report_file = Final_Path + TCN + "_" + TCName + "_" + date + "_" + Status + ".txt"
+/* Writing to file */
+def file1 = new File(report_file)
+
+
+/*Get Time Taken for request*/
+
+obj = context.testCase.getTestStepByName(TestCaseName)
+assertions = obj.getAssertionList()
+def Time_Taken
+assertions.each{
+	Time_Taken = testRunner.testCase.testSteps[TestCaseName].testRequest.response.timeTaken
+	log.info(Time_Taken)
+}
+
+
+
+/*Get Status Code*/
+Header = testRunner.testCase.testSteps[TestCaseName].testRequest.response.getResponseHeaders()
+Status_Code = Header["#status#"]
+log.info Status_Code
+file1.write("Status:  " + Status + "\n")
+file1.append("Time Taken:  " + Time_Taken + " ms\n")
+file1.append("TimeStamp:  " + date_now + "\n")
+file1.append("Test Step:  " + TestCaseName + "\n\n\n\n")
+file1.append("----------------- Http Status ------------------------------\n")
+file1.append("Http Status Code:  " + Status_Code + "\n\n\n\n")
+file1.append("---------------- Request ---------------------------\n")
+
+
+/*Get request and response*/
+myRequestStep = testRunner.testCase.getTestStepByName(TestCaseName)
+def request = new String(myRequestStep.testRequest.messageExchange.rawRequestData)
+def response = new String(myRequestStep.testRequest.messageExchange.rawResponseData)
+file1.append(request + "\n\n\n\n")
+file1.append("---------------- Response --------------------------\n")
+file1.append(response)
+
+
+/* Creating Excel for test result */
+def Testresultpath = com.eviware.soapui.SoapUI.globalProperties.getPropertyValue("Test_Result_Path")
+Testresultpath = Testresultpath + "Test_Run_Results.xls"
+log.info Testresultpath
+
+FileInputStream fis = new FileInputStream(new File(Testresultpath))
+Workbook wb = WorkbookFactory.create(fis)
+Sheet sh = wb.getSheet("Test_Run_Results")
+def Row_count = sh.getLastRowNum()
+Row_count = Row_count.toInteger()
+Row_count++
+log.info Row_count
+Row row = sh.createRow(Row_count)
+Cell cell = row.createCell(0).setCellValue(TCN)
+Cell cell_1 = row.createCell(1).setCellValue(Status)
+Cell cell_2 = row.createCell(2).setCellValue(TestCaseName)
+FileOutputStream out = new FileOutputStream(Testresultpath,false)
+wb.write(out)
+out.close()</script>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasourceloop" name="DataSource Loop" id="59fe4505-b064-48b0-8a98-984a40a23e3e">
     <con:settings/>
     <con:config>
       <dataSourceStep>DataSource</dataSourceStep>
@@ -421,11 +545,6 @@ testRunner.testCase.setPropertyValue("Device_Shadow_Name", Device_Shadow_Name)</
   <con:reportParameters/>
   <con:breakPoints>
     <con:testStepId>38d1284d-7d70-4cbc-bb9f-0399c1754274</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>17e24258-4f2d-4b1c-801f-a245ad1a88a8</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>

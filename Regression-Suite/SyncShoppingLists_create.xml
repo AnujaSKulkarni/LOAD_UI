@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="dda84182-844e-44d9-b963-7c0a281c9a2f" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="SyncShoppingLists_create" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" disabled="true" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="1704e526-7711-427f-bfbf-11d57cdd4b1d" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="SyncShoppingLists_create" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" disabled="true" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="dda84182-844e-44d9-b963-7c0a281c9a2ffileName">SyncShoppingLists_create</con:setting>
+    <con:setting id="1704e526-7711-427f-bfbf-11d57cdd4b1dfileName">SyncShoppingLists_create</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="delay" name="Wait" id="7fe33dc3-3beb-43df-a40d-c7f1ded8bd20">
-    <con:settings/>
-    <con:config>
-      <delay>1000</delay>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="groovy" name="timestamp" id="af304781-1eef-4277-ad89-dc7d53b686b2">
+  <con:testStep type="groovy" name="timestamp" id="281f2a10-0406-4df2-a2e5-3c25a0cb32f9">
     <con:settings/>
     <con:config>
       <script>long unixTime = System.currentTimeMillis() / 1000L
@@ -19,7 +14,7 @@ log.info TimeStamp
 testRunner.testCase.setPropertyValue("TimeStamp", TimeStamp)</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="DataSource_Setup" id="489c6853-6363-47b8-bfd0-69c2f121fddb">
+  <con:testStep type="groovy" name="DataSource_Setup" id="7a4f14f4-be9c-4e33-95a0-3412c5211e69">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream;
@@ -157,7 +152,7 @@ if(RunTimeDataSource_Flag == true){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasource" name="JDBC" id="d5c19dbf-e4d5-48a7-b05d-655bc4c43e20">
+  <con:testStep type="datasource" name="JDBC" id="d125481a-07b9-463e-a156-e0c01e1ca839">
     <con:settings>
       <con:setting id="com.eviware.soapui.impl.wsdl.teststeps.datasource.DataSourceContainer@prepared-properties">&lt;xml-fragment/></con:setting>
     </con:settings>
@@ -182,7 +177,7 @@ Where BLUADMIN.SLS_USER.ACCOUNT_ID = ${#[Regression Suite#GET Member Token#DataS
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasource" name="DataSource" id="80508081-8f80-4864-8f2d-62c561bdda8f">
+  <con:testStep type="datasource" name="DataSource" id="abd01de9-cedc-4c1a-ac2b-5e4195be0832">
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
@@ -281,7 +276,7 @@ Where BLUADMIN.SLS_USER.ACCOUNT_ID = ${#[Regression Suite#GET Member Token#DataS
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="flow control" id="984620e3-9161-4ab6-9449-cc9882141c11">
+  <con:testStep type="groovy" name="flow control" id="aa20aa09-faef-4079-9d06-aba832d361e6">
     <con:settings/>
     <con:config>
       <script>def dataCombination = context.expand( '${DataSource#Data_Combination}' )
@@ -292,22 +287,22 @@ def TestCaseName = testRunner.testCase.getName()
 if (API_Name != TestCaseName){
 	testRunner.testCase.testSteps['SyncShoppingLists_create_Negative'].setDisabled(true)
 	testRunner.testCase.testSteps['SyncShoppingLists_create_Positive'].setDisabled(true)
-	//testRunner.testCase.testSteps['Report'].setDisabled(true)
+	testRunner.testCase.testSteps['Report'].setDisabled(true)
 }else{
 	if(dataCombination == "Positive"){
 		testRunner.testCase.testSteps['SyncShoppingLists_create_Negative'].setDisabled(true)
 		testRunner.testCase.testSteps['SyncShoppingLists_create_Positive'].setDisabled(false)
-	//	testRunner.testCase.testSteps['Report'].setDisabled(false)
+		testRunner.testCase.testSteps['Report'].setDisabled(false)
 	}
 	if(dataCombination == "Negative"){
 		testRunner.testCase.testSteps['SyncShoppingLists_create_Negative'].setDisabled(false)
 		testRunner.testCase.testSteps['SyncShoppingLists_create_Positive'].setDisabled(true)
-		//testRunner.testCase.testSteps['Report'].setDisabled(false)
+		testRunner.testCase.testSteps['Report'].setDisabled(false)
 	}
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="SyncShoppingLists_create_Positive" id="c2eb56b2-8985-465a-b9ae-71f3ff2d5f7a" disabled="true">
+  <con:testStep type="restrequest" name="SyncShoppingLists_create_Positive" id="3aff14ca-2703-41ca-b153-e7500a73a8ee" disabled="true">
     <con:settings/>
     <con:config service="SyncShoppingLists" resourcePath="/syncShoppingLists" methodName="SyncShoppingLists" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="SyncShoppingLists_create_Positive" id="cb783b4e-430d-454d-b87a-61a1c56fed72" mediaType="application/json" postQueryString="false">
@@ -464,7 +459,7 @@ if (API_Name != TestCaseName){
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="SyncShoppingLists_create_Negative" id="aa6cb10d-589d-4811-a9ee-32e511fc7ad2" disabled="true">
+  <con:testStep type="restrequest" name="SyncShoppingLists_create_Negative" id="9a7a20ab-35a0-4435-9498-1fd5aac196d0" disabled="true">
     <con:settings/>
     <con:config service="SyncShoppingLists" resourcePath="/syncShoppingLists" methodName="SyncShoppingLists" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="SyncShoppingLists_create_Negative" id="cb783b4e-430d-454d-b87a-61a1c56fed72" mediaType="application/json" postQueryString="false">
@@ -549,7 +544,136 @@ if (API_Name != TestCaseName){
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasourceloop" name="DataSource Loop" id="00eda007-3f4f-4d74-8d09-654fcb8bdc25">
+  <con:testStep type="groovy" name="Report" id="792e04aa-3f1a-4495-a9e5-d6eee3b48747" disabled="true">
+    <con:settings/>
+    <con:config>
+      <script>import java.io.FileInputStream
+import java.io.File
+import java.io.FileNotFoundException
+import java.io.FileOutputStream
+import java.io.IOException
+import java.util.Iterator
+import java.io.InputStream
+import java.lang.String
+import java.text.SimpleDateFormat
+import org.apache.poi.EncryptedDocumentException
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException
+import org.apache.poi.ss.util.CellReference
+import org.apache.poi.ss.usermodel.Cell
+import org.apache.poi.ss.usermodel.DateUtil
+import org.apache.poi.ss.usermodel.Row
+import org.apache.poi.ss.usermodel.Sheet
+import org.apache.poi.ss.usermodel.Workbook
+import org.apache.poi.ss.usermodel.WorkbookFactory
+import org.apache.poi.hssf.usermodel.HSSFWorkbook
+import org.apache.poi.xssf.usermodel.XSSFWorkbook
+import org.apache.poi.xssf.streaming.SXSSFWorkbook
+import org.apache.poi.xssf.usermodel.XSSFCell
+import org.apache.poi.xssf.usermodel.XSSFRow
+import org.apache.poi.xssf.usermodel.XSSFSheet
+import org.apache.poi.xssf.usermodel.XSSFWorkbook
+
+def Final_Path = com.eviware.soapui.SoapUI.globalProperties.getPropertyValue("Test_Result_Path")
+log.info Final_Path
+def final_path = new File(Final_Path)
+final_path.mkdir()
+
+/*Get Test Case Name and Status*/
+def data_combination = context.expand( '${DataSource#Data_Combination}' )
+/*Get TC Name*/
+def TCN = context.expand( '${DataSource#TC_Number}' )
+def TestCaseName = testRunner.testCase.getName()
+if(data_combination == "Positive"){
+	TestCaseName = TestCaseName + "_Positive"
+}
+if(data_combination == "Negative"){
+	TestCaseName = TestCaseName + "_Negative"
+}
+log.info TestCaseName
+
+obj = context.testCase.getTestStepByName(TestCaseName)
+assertions = obj.getAssertionList()
+def Status
+assertions.each{
+	def stat = (it.status).toString()
+	if(stat == "VALID" || stat == "PASS"){
+		Status = "Pass"
+	}
+	if(stat == "FAILED" || stat == "FAIL"){
+		Status = "Fail"
+	}
+}
+log.info(Status)
+testRunner.testCase.testSuite.setPropertyValue("Status", Status)
+
+/*Creating Txt File*/
+
+String date = new Date()
+String date_now = new Date()
+date = date.replaceAll(":","_")
+date = date.replaceAll(" ","_")
+def TCName = TestCaseName.replaceAll(" ","_")
+report_file = Final_Path + TCN + "_" + TCName + "_" + date + "_" + Status + ".txt"
+/* Writing to file */
+def file1 = new File(report_file)
+
+
+/*Get Time Taken for request*/
+
+obj = context.testCase.getTestStepByName(TestCaseName)
+assertions = obj.getAssertionList()
+def Time_Taken
+assertions.each{
+	Time_Taken = testRunner.testCase.testSteps[TestCaseName].testRequest.response.timeTaken
+	log.info(Time_Taken)
+}
+
+
+
+/*Get Status Code*/
+Header = testRunner.testCase.testSteps[TestCaseName].testRequest.response.getResponseHeaders()
+Status_Code = Header["#status#"]
+log.info Status_Code
+file1.write("Status:  " + Status + "\n")
+file1.append("Time Taken:  " + Time_Taken + " ms\n")
+file1.append("TimeStamp:  " + date_now + "\n")
+file1.append("Test Step:  " + TestCaseName + "\n\n\n\n")
+file1.append("----------------- Http Status ------------------------------\n")
+file1.append("Http Status Code:  " + Status_Code + "\n\n\n\n")
+file1.append("---------------- Request ---------------------------\n")
+
+
+/*Get request and response*/
+myRequestStep = testRunner.testCase.getTestStepByName(TestCaseName)
+def request = new String(myRequestStep.testRequest.messageExchange.rawRequestData)
+def response = new String(myRequestStep.testRequest.messageExchange.rawResponseData)
+file1.append(request + "\n\n\n\n")
+file1.append("---------------- Response --------------------------\n")
+file1.append(response)
+
+
+/* Creating Excel for test result */
+def Testresultpath = com.eviware.soapui.SoapUI.globalProperties.getPropertyValue("Test_Result_Path")
+Testresultpath = Testresultpath + "Test_Run_Results.xls"
+log.info Testresultpath
+
+FileInputStream fis = new FileInputStream(new File(Testresultpath))
+Workbook wb = WorkbookFactory.create(fis)
+Sheet sh = wb.getSheet("Test_Run_Results")
+def Row_count = sh.getLastRowNum()
+Row_count = Row_count.toInteger()
+Row_count++
+log.info Row_count
+Row row = sh.createRow(Row_count)
+Cell cell = row.createCell(0).setCellValue(TCN)
+Cell cell_1 = row.createCell(1).setCellValue(Status)
+Cell cell_2 = row.createCell(2).setCellValue(TestCaseName)
+FileOutputStream out = new FileOutputStream(Testresultpath,false)
+wb.write(out)
+out.close()</script>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasourceloop" name="DataSource Loop" id="6b109704-42ae-4ae5-9dea-e83d262e4495">
     <con:settings/>
     <con:config>
       <dataSourceStep>DataSource</dataSourceStep>
@@ -559,7 +683,7 @@ if (API_Name != TestCaseName){
   <con:properties>
     <con:property>
       <con:name>TimeStamp</con:name>
-      <con:value>1520863963</con:value>
+      <con:value>1521096000</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>
@@ -575,11 +699,6 @@ if (API_Name != TestCaseName){
   </con:breakPoints>
   <con:breakPoints>
     <con:testStepId>98afeba5-5a65-4666-8a72-96bc0ae68184</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>7fe33dc3-3beb-43df-a40d-c7f1ded8bd20</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>

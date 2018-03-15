@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="7026bea1-9c34-446c-8319-d9c3af471c0e" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GET Member Token" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="e59c73aa-5daa-4617-9ab4-ff38f5ff45d3" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GET Member Token" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="7026bea1-9c34-446c-8319-d9c3af471c0efileName">GET-Member-Token</con:setting>
+    <con:setting id="e59c73aa-5daa-4617-9ab4-ff38f5ff45d3fileName">GET-Member-Token</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="delay" name="Copy of Delay" id="7105307e-26be-4c55-a28c-ed42fa0cade7" disabled="true">
-    <con:settings/>
-    <con:config>
-      <delay>500</delay>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="groovy" name="DataSource_Setup" id="0401e430-2634-44be-a1d9-991e7c6aca20">
+  <con:testStep type="groovy" name="DataSource_Setup" id="3b53115a-c0b1-4c1c-9bb5-b402663ece4e">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream;
@@ -148,7 +143,7 @@ if(RunTimeDataSource_Flag == true){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasource" name="DataSource_RunTime" id="352d69d0-0221-438c-a94f-541885c255eb">
+  <con:testStep type="datasource" name="DataSource_RunTime" id="5fa49d09-12fb-4cdd-8a57-0a9083736706">
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
@@ -170,7 +165,7 @@ if(RunTimeDataSource_Flag == true){
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="GET Member Token" id="df760567-0724-4947-9398-3235ab9c0d35">
+  <con:testStep type="restrequest" name="GET Member Token" id="e41bc68e-d7ab-4b80-8b0a-1d9d11c461f0">
     <con:settings/>
     <con:config service="GET Member Token" resourcePath="/oauth/token" methodName="GET Member Token" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="GET Member Token" id="dbba64c0-256c-4cda-a935-104acc1c460c" mediaType="application/x-www-form-urlencoded" postQueryString="true">
@@ -193,11 +188,11 @@ if(RunTimeDataSource_Flag == true){
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:jmsPropertyConfig/>
         <con:parameters>
-          <con:entry key="password" value="Whirlpool123$"/>
+          <con:entry key="password" value="Whirlpool123"/>
           <con:entry key="grant_type" value="password"/>
           <con:entry key="client_secret" value="syntel123$"/>
           <con:entry key="client_id" value="syntel"/>
-          <con:entry key="username" value="wcloud_admin_account_soapui@mailinator.com"/>
+          <con:entry key="username" value="${DataSource_RunTime#Email_ID}"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>grant_type</con:entry>
@@ -238,7 +233,80 @@ if(RunTimeDataSource_Flag == true){
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Skip on failure" id="3e639b64-0915-44ce-a8d5-aee7d1c6dc1a">
+  <con:testStep type="groovy" name="Report" id="2cdabd16-5fa3-4d07-b9f9-43ce8840f820">
+    <con:settings/>
+    <con:config>
+      <script>def Final_Path = com.eviware.soapui.SoapUI.globalProperties.getPropertyValue("Test_Result_Path")
+log.info Final_Path
+def final_path = new File(Final_Path)
+final_path.mkdir()
+
+
+/*Get Test Case Name and Status*/
+
+def TestCaseName = testRunner.testCase.getName()
+obj = context.testCase.getTestStepByName(TestCaseName)
+assertions = obj.getAssertionList()
+def Status
+assertions.each{
+	def stat = (it.status).toString()
+	if(stat == "VALID" || stat == "PASS"){
+		Status = "Pass"
+	}
+	if(stat == "FAILED" || stat == "FAIL"){
+		Status = "Fail"
+	}
+}
+log.info(Status)
+
+
+/*Creating Txt File*/
+
+String date = new Date()
+String date_now = new Date()
+date = date.replaceAll(":","_")
+date = date.replaceAll(" ","_")
+def TCName = TestCaseName.replaceAll(" ","_")
+report_file = Final_Path + TCName + "_" + date + "_" + Status + ".txt"
+/* Writing to file */
+def file1 = new File(report_file)
+
+
+/*Get Time Taken for request*/
+
+obj = context.testCase.getTestStepByName(TestCaseName)
+assertions = obj.getAssertionList()
+def Time_Taken
+assertions.each{
+	Time_Taken = testRunner.testCase.testSteps[TestCaseName].testRequest.response.timeTaken
+	log.info(Time_Taken)
+}
+
+
+
+/*Get Status Code*/
+Header = testRunner.testCase.testSteps[TestCaseName].testRequest.response.getResponseHeaders()
+Status_Code = Header["#status#"]
+log.info Status_Code
+file1.write("Status:  " + Status + "\n")
+file1.append("Time Taken:  " + Time_Taken + " ms\n")
+file1.append("TimeStamp:  " + date_now + "\n")
+file1.append("Test Step:  " + TestCaseName + "\n\n\n\n")
+file1.append("----------------- Http Status ------------------------------\n")
+file1.append("Http Status Code:  " + Status_Code + "\n\n\n\n")
+file1.append("---------------- Request ---------------------------\n")
+
+
+/*Get request and response*/
+myRequestStep = testRunner.testCase.getTestStepByName(TestCaseName)
+def request = new String(myRequestStep.testRequest.messageExchange.rawRequestData)
+def response = new String(myRequestStep.testRequest.messageExchange.rawResponseData)
+file1.append(request + "\n\n\n\n")
+file1.append("---------------- Response --------------------------\n")
+file1.append(response)</script>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="groovy" name="Skip on failure" id="c8d1be47-b8fa-42ad-be86-772793caba22">
     <con:settings/>
     <con:config>
       <script>def TestCaseName = testRunner.testCase.getName()
@@ -264,7 +332,7 @@ testRunner.cancel(k)}
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Member Token - Global Variable" id="9e0feb52-1aa8-4d26-9733-0622687c3ef0">
+  <con:testStep type="groovy" name="Member Token - Global Variable" id="cddd913f-2b22-4a3b-b94d-a9d7b50a7758">
     <con:settings/>
     <con:config>
       <script>def token = context.expand( '${GET Member Token#Response#$[\'access_token\']}' )
@@ -286,11 +354,6 @@ com.eviware.soapui.SoapUI.globalProperties.setPropertyValue("Refresh_Token", Ref
   <con:reportParameters/>
   <con:breakPoints>
     <con:testStepId>0401e430-2634-44be-a1d9-991e7c6aca20</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>7105307e-26be-4c55-a28c-ed42fa0cade7</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>

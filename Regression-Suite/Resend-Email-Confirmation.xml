@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="0366d31c-292c-4a87-9ec7-2ceaaacb978e" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Resend Email Confirmation" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="5a20f14e-2dd6-456d-aae9-002b4d350437" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Resend Email Confirmation" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="0366d31c-292c-4a87-9ec7-2ceaaacb978efileName">Resend-Email-Confirmation</con:setting>
+    <con:setting id="5a20f14e-2dd6-456d-aae9-002b4d350437fileName">Resend-Email-Confirmation</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="delay" name="Wait" id="2eba24af-1e10-435d-b50e-1a789d1e4cf9">
-    <con:settings/>
-    <con:config>
-      <delay>1000</delay>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="groovy" name="DataSource_Setup" id="203195e1-ad98-4996-8d59-746f459a8f9c">
+  <con:testStep type="groovy" name="DataSource_Setup" id="9e0b8bc7-964b-4f5e-98f5-7c80305c3a3e">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream;
@@ -148,7 +143,7 @@ if(RunTimeDataSource_Flag == true){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasource" name="DataSource_RunTime" id="9d609569-d63f-44b7-a158-5fe0745ddf43">
+  <con:testStep type="datasource" name="DataSource_RunTime" id="b3ede1da-92f1-468e-a64a-bb1156b700a8">
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
@@ -170,7 +165,7 @@ if(RunTimeDataSource_Flag == true){
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Run_Time_Data_Transfer" id="01507045-bc74-43bd-b9c6-e38ee81f9288">
+  <con:testStep type="groovy" name="Run_Time_Data_Transfer" id="a8b37273-00d0-45f6-9868-1562b9ee98db">
     <con:settings/>
     <con:config>
       <script>def account_ID_Number = context.expand( '${DataSource_RunTime#Account_ID_Number}' )
@@ -184,7 +179,7 @@ testRunner.testCase.testSuite.setPropertyValue("Verification_Code", verification
 testRunner.testCase.testSuite.setPropertyValue("Account_Email", Email_ID)</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasource" name="DataSource" id="ae6e7f27-29a2-43ac-8656-5b1075639dfa">
+  <con:testStep type="datasource" name="DataSource" id="47f78042-4ff1-46db-a47f-99cadd0a9268">
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
@@ -285,7 +280,7 @@ testRunner.testCase.testSuite.setPropertyValue("Account_Email", Email_ID)</scrip
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Flow Control" id="f85533ea-0d09-4501-a71b-78254bd8262c">
+  <con:testStep type="groovy" name="Flow Control" id="e0273e28-f882-492a-8085-489f3f1cc197">
     <con:settings/>
     <con:config>
       <script>def dataCombination = context.expand( '${DataSource#Data_Combination}' )
@@ -297,24 +292,24 @@ if (API_Name != TestCaseName){
 	testRunner.testCase.testSteps['Test_Data_Setup'].setDisabled(true)
 	testRunner.testCase.testSteps['Resend Email Confirmation_Positive'].setDisabled(true)
 	testRunner.testCase.testSteps['Resend Email Confirmation_Negative'].setDisabled(true)
-	//testRunner.testCase.testSteps['Report'].setDisabled(true)
+	testRunner.testCase.testSteps['Report'].setDisabled(true)
 }else{
 	if(dataCombination == "Positive"){
 		testRunner.testCase.testSteps['Test_Data_Setup'].setDisabled(false)
 		testRunner.testCase.testSteps['Resend Email Confirmation_Positive'].setDisabled(false)
 		testRunner.testCase.testSteps['Resend Email Confirmation_Negative'].setDisabled(true)
-	//	testRunner.testCase.testSteps['Report'].setDisabled(false)
+		testRunner.testCase.testSteps['Report'].setDisabled(false)
 	}
 	if(dataCombination == "Negative"){
 		testRunner.testCase.testSteps['Test_Data_Setup'].setDisabled(false)
 		testRunner.testCase.testSteps['Resend Email Confirmation_Positive'].setDisabled(true)
 		testRunner.testCase.testSteps['Resend Email Confirmation_Negative'].setDisabled(false)
-	//	testRunner.testCase.testSteps['Report'].setDisabled(false)
+		testRunner.testCase.testSteps['Report'].setDisabled(false)
 	}
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Test_Data_Setup" id="7ef68255-7e4d-4815-a23c-8b92a63a37c6">
+  <con:testStep type="groovy" name="Test_Data_Setup" id="5021c577-212f-4c26-8721-93ba3db25418" disabled="true">
     <con:settings/>
     <con:config>
       <script>def data_Combination = context.expand( '${DataSource#Data_Combination}' )
@@ -333,7 +328,7 @@ def tC_Number = context.expand( '${DataSource#TC_Number}' )
 log.info tC_Number</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Resend Email Confirmation_Positive" id="9ff83380-3b6b-4237-9e4b-353b00813eca">
+  <con:testStep type="restrequest" name="Resend Email Confirmation_Positive" id="8e3cdaae-4961-469f-ac91-223b81f82a54" disabled="true">
     <con:settings/>
     <con:config service="Resend Email Confirmation" resourcePath="/client_auth/accounts/${#[Regression Suite#Create Account#Create Account_Positive]#Response#$['email']}/confirmations/resend" methodName="Resend Email Confirmation" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Resend Email Confirmation_Positive" id="49ced10b-024a-4800-811c-3312adada08e" mediaType="application/json">
@@ -408,7 +403,7 @@ log.info tC_Number</script>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Resend Email Confirmation_Negative" id="eccc14aa-09e3-42f7-b399-6c09e36f3bbf" disabled="true">
+  <con:testStep type="restrequest" name="Resend Email Confirmation_Negative" id="d0213f06-ada6-43b6-a76c-30ae15a04b74" disabled="true">
     <con:settings/>
     <con:config service="Resend Email Confirmation" resourcePath="/client_auth/accounts/${#[Regression Suite#Create Account#Create Account_Positive]#Response#$['email']}/confirmations/resend" methodName="Resend Email Confirmation" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Resend Email Confirmation_Negative" id="49ced10b-024a-4800-811c-3312adada08e" mediaType="application/json">
@@ -473,7 +468,136 @@ log.info tC_Number</script>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasourceloop" name="DataSource Loop" id="98a177a8-195d-41dc-ace0-caca3c6b07f2">
+  <con:testStep type="groovy" name="Report" id="edae66c4-532c-40ee-b8e5-78e9b1f235eb" disabled="true">
+    <con:settings/>
+    <con:config>
+      <script>import java.io.FileInputStream
+import java.io.File
+import java.io.FileNotFoundException
+import java.io.FileOutputStream
+import java.io.IOException
+import java.util.Iterator
+import java.io.InputStream
+import java.lang.String
+import java.text.SimpleDateFormat
+import org.apache.poi.EncryptedDocumentException
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException
+import org.apache.poi.ss.util.CellReference
+import org.apache.poi.ss.usermodel.Cell
+import org.apache.poi.ss.usermodel.DateUtil
+import org.apache.poi.ss.usermodel.Row
+import org.apache.poi.ss.usermodel.Sheet
+import org.apache.poi.ss.usermodel.Workbook
+import org.apache.poi.ss.usermodel.WorkbookFactory
+import org.apache.poi.hssf.usermodel.HSSFWorkbook
+import org.apache.poi.xssf.usermodel.XSSFWorkbook
+import org.apache.poi.xssf.streaming.SXSSFWorkbook
+import org.apache.poi.xssf.usermodel.XSSFCell
+import org.apache.poi.xssf.usermodel.XSSFRow
+import org.apache.poi.xssf.usermodel.XSSFSheet
+import org.apache.poi.xssf.usermodel.XSSFWorkbook
+
+def Final_Path = com.eviware.soapui.SoapUI.globalProperties.getPropertyValue("Test_Result_Path")
+log.info Final_Path
+def final_path = new File(Final_Path)
+final_path.mkdir()
+
+/*Get Test Case Name and Status*/
+def data_combination = context.expand( '${DataSource#Data_Combination}' )
+/*Get TC Name*/
+def TCN = context.expand( '${DataSource#TC_Number}' )
+def TestCaseName = testRunner.testCase.getName()
+if(data_combination == "Positive"){
+	TestCaseName = TestCaseName + "_Positive"
+}
+if(data_combination == "Negative"){
+	TestCaseName = TestCaseName + "_Negative"
+}
+log.info TestCaseName
+
+obj = context.testCase.getTestStepByName(TestCaseName)
+assertions = obj.getAssertionList()
+def Status
+assertions.each{
+	def stat = (it.status).toString()
+	if(stat == "VALID" || stat == "PASS"){
+		Status = "Pass"
+	}
+	if(stat == "FAILED" || stat == "FAIL"){
+		Status = "Fail"
+	}
+}
+log.info(Status)
+testRunner.testCase.testSuite.setPropertyValue("Status", Status)
+
+/*Creating Txt File*/
+
+String date = new Date()
+String date_now = new Date()
+date = date.replaceAll(":","_")
+date = date.replaceAll(" ","_")
+def TCName = TestCaseName.replaceAll(" ","_")
+report_file = Final_Path + TCN + "_" + TCName + "_" + date + "_" + Status + ".txt"
+/* Writing to file */
+def file1 = new File(report_file)
+
+
+/*Get Time Taken for request*/
+
+obj = context.testCase.getTestStepByName(TestCaseName)
+assertions = obj.getAssertionList()
+def Time_Taken
+assertions.each{
+	Time_Taken = testRunner.testCase.testSteps[TestCaseName].testRequest.response.timeTaken
+	log.info(Time_Taken)
+}
+
+
+
+/*Get Status Code*/
+Header = testRunner.testCase.testSteps[TestCaseName].testRequest.response.getResponseHeaders()
+Status_Code = Header["#status#"]
+log.info Status_Code
+file1.write("Status:  " + Status + "\n")
+file1.append("Time Taken:  " + Time_Taken + " ms\n")
+file1.append("TimeStamp:  " + date_now + "\n")
+file1.append("Test Step:  " + TestCaseName + "\n\n\n\n")
+file1.append("----------------- Http Status ------------------------------\n")
+file1.append("Http Status Code:  " + Status_Code + "\n\n\n\n")
+file1.append("---------------- Request ---------------------------\n")
+
+
+/*Get request and response*/
+myRequestStep = testRunner.testCase.getTestStepByName(TestCaseName)
+def request = new String(myRequestStep.testRequest.messageExchange.rawRequestData)
+def response = new String(myRequestStep.testRequest.messageExchange.rawResponseData)
+file1.append(request + "\n\n\n\n")
+file1.append("---------------- Response --------------------------\n")
+file1.append(response)
+
+
+/* Creating Excel for test result */
+def Testresultpath = com.eviware.soapui.SoapUI.globalProperties.getPropertyValue("Test_Result_Path")
+Testresultpath = Testresultpath + "Test_Run_Results.xls"
+log.info Testresultpath
+
+FileInputStream fis = new FileInputStream(new File(Testresultpath))
+Workbook wb = WorkbookFactory.create(fis)
+Sheet sh = wb.getSheet("Test_Run_Results")
+def Row_count = sh.getLastRowNum()
+Row_count = Row_count.toInteger()
+Row_count++
+log.info Row_count
+Row row = sh.createRow(Row_count)
+Cell cell = row.createCell(0).setCellValue(TCN)
+Cell cell_1 = row.createCell(1).setCellValue(Status)
+Cell cell_2 = row.createCell(2).setCellValue(TestCaseName)
+FileOutputStream out = new FileOutputStream(Testresultpath,false)
+wb.write(out)
+out.close()</script>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasourceloop" name="DataSource Loop" id="142eb329-1419-4f12-9c88-e75e7ec8a002">
     <con:settings/>
     <con:config>
       <dataSourceStep>DataSource</dataSourceStep>
@@ -483,10 +607,15 @@ log.info tC_Number</script>
   <con:properties>
     <con:property>
       <con:name>Account_ID</con:name>
-      <con:value>5827</con:value>
+      <con:value>6123</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>6a0ae9f4-5c3d-4f9a-a615-dd661f626238</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
   <con:breakPoints>
     <con:testStepId>98a177a8-195d-41dc-ace0-caca3c6b07f2</con:testStepId>
     <con:status>NONE</con:status>
@@ -504,11 +633,6 @@ log.info tC_Number</script>
   </con:breakPoints>
   <con:breakPoints>
     <con:testStepId>203195e1-ad98-4996-8d59-746f459a8f9c</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>2eba24af-1e10-435d-b50e-1a789d1e4cf9</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>

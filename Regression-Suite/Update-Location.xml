@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="701d071b-f0ea-484a-a9c0-d3a5c6ad45c4" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Update Location" searchProperties="true" timeout="0" maxResults="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="a3c78970-6e6a-4ae1-80bb-6f861e642a5c" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Update Location" searchProperties="true" timeout="0" maxResults="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="701d071b-f0ea-484a-a9c0-d3a5c6ad45c4fileName">Update-Location</con:setting>
+    <con:setting id="a3c78970-6e6a-4ae1-80bb-6f861e642a5cfileName">Update-Location</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="delay" name="Wait" id="2f85ffef-be74-4985-be62-0a4148e05033">
-    <con:settings/>
-    <con:config>
-      <delay>5000</delay>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="groovy" name="DataSource_Setup" id="af5fbb72-834c-4af0-b690-ba27cf8c4e6f">
+  <con:testStep type="groovy" name="DataSource_Setup" id="91e3f87f-01ae-492c-bfbe-191991499d16">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream;
@@ -148,7 +143,7 @@ if(RunTimeDataSource_Flag == true){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasource" name="DataSource_RunTime" id="3b5ebb9a-7bec-4f5e-8daf-965114c89e0e">
+  <con:testStep type="datasource" name="DataSource_RunTime" id="f90edbd5-ad28-4f82-8661-5264288039ab">
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
@@ -168,7 +163,7 @@ if(RunTimeDataSource_Flag == true){
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Run_Time_Data_Transfer" id="26891665-ea3a-4414-8424-3340f9789cb5">
+  <con:testStep type="groovy" name="Run_Time_Data_Transfer" id="a54dd8b7-d33d-4533-8e92-a725f0462bf3">
     <con:settings/>
     <con:config>
       <script>def Location_ID_Number = context.expand( '${DataSource_RunTime#Location_ID_Number}' )
@@ -178,7 +173,7 @@ testRunner.testCase.testSuite.setPropertyValue("Account_ID", Account_ID_Number)
 testRunner.testCase.testSuite.setPropertyValue("Location_ID", Location_ID_Number)</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasource" name="DataSource" id="2c77737d-3b03-4942-a9fe-09cbed1b0ba0">
+  <con:testStep type="datasource" name="DataSource" id="5ac832df-7d46-4727-90d3-c2492a3b2620">
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
@@ -279,7 +274,7 @@ testRunner.testCase.testSuite.setPropertyValue("Location_ID", Location_ID_Number
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Flow Control" id="478bb396-5c2f-419e-9d0a-775043a921ef">
+  <con:testStep type="groovy" name="Flow Control" id="6b47657a-a1c2-4bd3-a076-2a2888244b1f">
     <con:settings/>
     <con:config>
       <script>def dataCombination = context.expand( '${DataSource#Data_Combination}' )
@@ -289,25 +284,25 @@ def TestCaseName = testRunner.testCase.getName()
 if (API_Name != TestCaseName){
 	testRunner.testCase.testSteps['Update Location_Positive'].setDisabled(true)
 	testRunner.testCase.testSteps['Update Location_Negative'].setDisabled(true)
-	//testRunner.testCase.testSteps['Report'].setDisabled(true)
+	testRunner.testCase.testSteps['Report'].setDisabled(true)
 	testRunner.testCase.testSteps['Test_Data_Setup'].setDisabled(true)
 }else{
 	if(dataCombination == "Positive"){
 		testRunner.testCase.testSteps['Update Location_Positive'].setDisabled(false)
 		testRunner.testCase.testSteps['Update Location_Negative'].setDisabled(true)
-		//testRunner.testCase.testSteps['Report'].setDisabled(false)
+		testRunner.testCase.testSteps['Report'].setDisabled(false)
 		testRunner.testCase.testSteps['Test_Data_Setup'].setDisabled(false)
 	}
 	if(dataCombination == "Negative"){
 		testRunner.testCase.testSteps['Update Location_Positive'].setDisabled(true)
 		testRunner.testCase.testSteps['Update Location_Negative'].setDisabled(false)
-		//testRunner.testCase.testSteps['Report'].setDisabled(false)
+		testRunner.testCase.testSteps['Report'].setDisabled(false)
 		testRunner.testCase.testSteps['Test_Data_Setup'].setDisabled(false)
 	}
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Test_Data_Setup" id="b4a8070a-4074-4f86-89f3-39b4ade5847d">
+  <con:testStep type="groovy" name="Test_Data_Setup" id="2b7c636f-c6e2-4e9d-8aa3-daa23294d34b" disabled="true">
     <con:settings/>
     <con:config>
       <script>def data_Combination = context.expand( '${DataSource#Data_Combination}' )
@@ -339,7 +334,7 @@ if (data_Combination == "Negative"){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Update Location_Positive" id="7ca88082-afa8-408e-bdd5-15967428613f">
+  <con:testStep type="restrequest" name="Update Location_Positive" id="1bfd002c-cab0-4cfa-8103-f7fc269a03c6" disabled="true">
     <con:settings/>
     <con:config service="Update location" resourcePath="/location" methodName="Update location" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Update Location_Positive" id="6d4fe3b7-7bf1-421d-a116-38f2401d4425" mediaType="application/json" postQueryString="false">
@@ -428,7 +423,7 @@ if (data_Combination == "Negative"){
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Update Location_Negative" id="a491624f-c977-4331-92bc-0d6106d16089" disabled="true">
+  <con:testStep type="restrequest" name="Update Location_Negative" id="1e555833-8eaa-4cc4-ba45-3b64b7d4d432" disabled="true">
     <con:settings/>
     <con:config service="Update location" resourcePath="/location" methodName="Update location" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Update Location_Negative" id="6d4fe3b7-7bf1-421d-a116-38f2401d4425" mediaType="application/json" postQueryString="false">
@@ -453,7 +448,7 @@ if (data_Combination == "Negative"){
   "loyaltyId": ${DataSource#Loyalty_ID},
   "status": "1",
   "createdAt": "2017-04-19T 17:05:53Z",
-  "updatedAt": "2017-05-19T 17:06:53Z",
+   "updatedAt": "2017-05-19T 17:06:53Z",
   "ratePlanName": "Tariff",
   "utilityName": "",
   "utilityId": 0,
@@ -506,7 +501,137 @@ if (data_Combination == "Negative"){
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasourceloop" name="DataSource Loop" id="90884a32-f343-441f-8609-17af61f4ccbb">
+  <con:testStep type="groovy" name="Report" id="5c492309-86ed-4e61-a67c-d22457784432" disabled="true">
+    <con:settings/>
+    <con:config>
+      <script>import java.io.FileInputStream
+import java.io.File
+import java.io.FileNotFoundException
+import java.io.FileOutputStream
+import java.io.IOException
+import java.util.Iterator
+import java.io.InputStream
+import java.lang.String
+import java.text.SimpleDateFormat
+import org.apache.poi.EncryptedDocumentException
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException
+import org.apache.poi.ss.util.CellReference
+import org.apache.poi.ss.usermodel.Cell
+import org.apache.poi.ss.usermodel.DateUtil
+import org.apache.poi.ss.usermodel.Row
+import org.apache.poi.ss.usermodel.Sheet
+import org.apache.poi.ss.usermodel.Workbook
+import org.apache.poi.ss.usermodel.WorkbookFactory
+import org.apache.poi.hssf.usermodel.HSSFWorkbook
+import org.apache.poi.xssf.usermodel.XSSFWorkbook
+import org.apache.poi.xssf.streaming.SXSSFWorkbook
+import org.apache.poi.xssf.usermodel.XSSFCell
+import org.apache.poi.xssf.usermodel.XSSFRow
+import org.apache.poi.xssf.usermodel.XSSFSheet
+import org.apache.poi.xssf.usermodel.XSSFWorkbook
+
+
+def Final_Path = com.eviware.soapui.SoapUI.globalProperties.getPropertyValue("Test_Result_Path")
+log.info Final_Path
+def final_path = new File(Final_Path)
+final_path.mkdir()
+
+
+/*Get Test Case Name and Status*/
+def data_combination = context.expand( '${DataSource#Data_Combination}' )
+/*Get TC Name*/
+def TCN = context.expand( '${DataSource#TC_Number}' )
+def TestCaseName = testRunner.testCase.getName()
+if(data_combination == "Positive"){
+	TestCaseName = TestCaseName + "_Positive"
+}
+if(data_combination == "Negative"){
+	TestCaseName = TestCaseName + "_Negative"
+}
+
+obj = context.testCase.getTestStepByName(TestCaseName)
+assertions = obj.getAssertionList()
+def Status
+assertions.each{
+	def stat = (it.status).toString()
+	if(stat == "VALID" || stat == "PASS"){
+		Status = "Pass"
+	}
+	if(stat == "FAILED" || stat == "FAIL"){
+		Status = "Fail"
+	}
+}
+log.info(Status)
+testRunner.testCase.testSuite.setPropertyValue("Status", Status)
+
+/*Creating Txt File*/
+
+String date = new Date()
+String date_now = new Date()
+date = date.replaceAll(":","_")
+date = date.replaceAll(" ","_")
+def TCName = TestCaseName.replaceAll(" ","_")
+report_file = Final_Path + TCN + "_" + TCName + "_" + date + "_" + Status + ".txt"
+/* Writing to file */
+def file1 = new File(report_file)
+
+
+/*Get Time Taken for request*/
+
+obj = context.testCase.getTestStepByName(TestCaseName)
+assertions = obj.getAssertionList()
+def Time_Taken
+assertions.each{
+	Time_Taken = testRunner.testCase.testSteps[TestCaseName].testRequest.response.timeTaken
+	log.info(Time_Taken)
+}
+
+
+
+/*Get Status Code*/
+Header = testRunner.testCase.testSteps[TestCaseName].testRequest.response.getResponseHeaders()
+Status_Code = Header["#status#"]
+log.info Status_Code
+file1.write("Status:  " + Status + "\n")
+file1.append("Time Taken:  " + Time_Taken + " ms\n")
+file1.append("TimeStamp:  " + date_now + "\n")
+file1.append("Test Step:  " + TestCaseName + "\n\n\n\n")
+file1.append("----------------- Http Status ------------------------------\n")
+file1.append("Http Status Code:  " + Status_Code + "\n\n\n\n")
+file1.append("---------------- Request ---------------------------\n")
+
+
+/*Get request and response*/
+myRequestStep = testRunner.testCase.getTestStepByName(TestCaseName)
+def request = new String(myRequestStep.testRequest.messageExchange.rawRequestData)
+def response = new String(myRequestStep.testRequest.messageExchange.rawResponseData)
+file1.append(request + "\n\n\n\n")
+file1.append("---------------- Response --------------------------\n")
+file1.append(response)
+
+/* Creating Excel for test result */
+
+def Testresultpath = com.eviware.soapui.SoapUI.globalProperties.getPropertyValue("Test_Result_Path")
+Testresultpath = Testresultpath + "Test_Run_Results.xls"
+log.info Testresultpath
+
+FileInputStream fis = new FileInputStream(new File(Testresultpath))
+Workbook wb = WorkbookFactory.create(fis)
+Sheet sh = wb.getSheet("Test_Run_Results")
+def Row_count = sh.getLastRowNum()
+Row_count = Row_count.toInteger()
+Row_count++
+log.info Row_count
+Row row = sh.createRow(Row_count)
+Cell cell = row.createCell(0).setCellValue(TCN)
+Cell cell_1 = row.createCell(1).setCellValue(Status)
+Cell cell_2 = row.createCell(2).setCellValue(TestCaseName)
+FileOutputStream out = new FileOutputStream(Testresultpath,false)
+wb.write(out)
+out.close()</script>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasourceloop" name="DataSource Loop" id="6ffe52db-0d97-4b7a-80d8-5949b31c1b9f">
     <con:settings/>
     <con:config>
       <dataSourceStep>DataSource</dataSourceStep>
@@ -516,16 +641,21 @@ if (data_Combination == "Negative"){
   <con:properties>
     <con:property>
       <con:name>Account_ID</con:name>
-      <con:value>5827</con:value>
+      <con:value>6123</con:value>
     </con:property>
     <con:property>
       <con:name>Location_ID</con:name>
-      <con:value>2685</con:value>
+      <con:value>2744</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>
   <con:breakPoints>
     <con:testStepId>b4a8070a-4074-4f86-89f3-39b4ade5847d</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>50c16775-6ba0-4bc6-95e1-7d96d76b7832</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
@@ -546,11 +676,6 @@ if (data_Combination == "Negative"){
   </con:breakPoints>
   <con:breakPoints>
     <con:testStepId>af5fbb72-834c-4af0-b690-ba27cf8c4e6f</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>2f85ffef-be74-4985-be62-0a4148e05033</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>

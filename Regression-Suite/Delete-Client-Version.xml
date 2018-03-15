@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="47a5a4ff-7c66-451c-821d-cae4e587c949" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Delete Client Version" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="737bac27-bdf8-4d07-a003-5d0c34ddbad8" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Delete Client Version" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="47a5a4ff-7c66-451c-821d-cae4e587c949fileName">Delete-Client-Version</con:setting>
+    <con:setting id="737bac27-bdf8-4d07-a003-5d0c34ddbad8fileName">Delete-Client-Version</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="delay" name="Wait" id="f60e3794-f55b-42df-85ea-0fe8fcf5accb">
-    <con:settings/>
-    <con:config>
-      <delay>1000</delay>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="groovy" name="DataSource_Setup" id="4efaf044-5daa-424f-9110-e1843fce6dfd">
+  <con:testStep type="groovy" name="DataSource_Setup" id="78e7fc1d-da97-42ea-bc60-7050f6e4bcb0">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream;
@@ -148,7 +143,7 @@ if(RunTimeDataSource_Flag == true){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Test_Data_Setup" id="376fee64-0c8a-4e76-8bf6-d06229b53b7e">
+  <con:testStep type="groovy" name="Test_Data_Setup" id="af0e8604-af0f-4a24-942d-d14ed220ad68">
     <con:settings/>
     <con:config>
       <script>def Response = context.expand( '${#[Regression Suite#Create Client Version#Create Client Version]#Response#$[\'response\']}' )
@@ -159,7 +154,7 @@ log.info tempResponse[0]
 testRunner.testCase.setPropertyValue("Client_Version_ID", tempResponse[0])</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasource" name="DataSource" id="7bf71df4-3ff0-421b-b3a7-2d67f215a344">
+  <con:testStep type="datasource" name="DataSource" id="e2aa927c-a0b5-4259-89b0-c6c34cdb3d84">
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
@@ -260,7 +255,7 @@ testRunner.testCase.setPropertyValue("Client_Version_ID", tempResponse[0])</scri
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Flow Control" id="c8f06e2e-a988-4490-8f00-495363d59861">
+  <con:testStep type="groovy" name="Flow Control" id="04f0f8e3-8d4d-45ef-93ac-2d52277a10d0">
     <con:settings/>
     <con:config>
       <script>def dataCombination = context.expand( '${DataSource#Data_Combination}' )
@@ -270,14 +265,14 @@ def TestCaseName = testRunner.testCase.getName()
 if (API_Name != TestCaseName){
 	log.info "Skipping"
 	testRunner.testCase.testSteps['Delete Client Version'].setDisabled(true)
-//	testRunner.testCase.testSteps['Report'].setDisabled(true)
+	testRunner.testCase.testSteps['Report'].setDisabled(true)
 }else{
 	testRunner.testCase.testSteps['Delete Client Version'].setDisabled(false)
-	//testRunner.testCase.testSteps['Report'].setDisabled(false)
+	testRunner.testCase.testSteps['Report'].setDisabled(false)
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Delete Client Version" id="ca7ca6ea-8a74-4766-8711-752cf7fa711a" disabled="true">
+  <con:testStep type="restrequest" name="Delete Client Version" id="04b5404b-71e5-4fdf-86c1-a891a031c91e" disabled="true">
     <con:settings/>
     <con:config service="Delete Client Version" resourcePath="/delete_client_version/${#TestCase#Client_Version_ID}" methodName="Delete Client Version" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Delete Client Version" id="4023bdeb-f938-44ec-8701-590c0d128342" mediaType="application/json" postQueryString="false">
@@ -339,7 +334,136 @@ if (API_Name != TestCaseName){
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasourceloop" name="DataSource Loop" id="47fc0bc9-3f3e-4124-935d-1678e678ecd2">
+  <con:testStep type="groovy" name="Report" id="2bbc4f88-37b6-49bd-a4a0-20d735774e5e" disabled="true">
+    <con:settings/>
+    <con:config>
+      <script>import java.io.FileInputStream
+import java.io.File
+import java.io.FileNotFoundException
+import java.io.FileOutputStream
+import java.io.IOException
+import java.util.Iterator
+import java.io.InputStream
+import java.lang.String
+import java.text.SimpleDateFormat
+import org.apache.poi.EncryptedDocumentException
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException
+import org.apache.poi.ss.util.CellReference
+import org.apache.poi.ss.usermodel.Cell
+import org.apache.poi.ss.usermodel.DateUtil
+import org.apache.poi.ss.usermodel.Row
+import org.apache.poi.ss.usermodel.Sheet
+import org.apache.poi.ss.usermodel.Workbook
+import org.apache.poi.ss.usermodel.WorkbookFactory
+import org.apache.poi.hssf.usermodel.HSSFWorkbook
+import org.apache.poi.xssf.usermodel.XSSFWorkbook
+import org.apache.poi.xssf.streaming.SXSSFWorkbook
+import org.apache.poi.xssf.usermodel.XSSFCell
+import org.apache.poi.xssf.usermodel.XSSFRow
+import org.apache.poi.xssf.usermodel.XSSFSheet
+import org.apache.poi.xssf.usermodel.XSSFWorkbook
+
+
+def Final_Path = com.eviware.soapui.SoapUI.globalProperties.getPropertyValue("Test_Result_Path")
+log.info Final_Path
+def final_path = new File(Final_Path)
+final_path.mkdir()
+
+
+/*Get Test Case Name and Status*/
+def data_combination = context.expand( '${DataSource#Data_Combination}' )
+/*Get TC Name*/
+def TCN = context.expand( '${DataSource#TC_Number}' )
+def TestCaseName = testRunner.testCase.getName()
+
+
+obj = context.testCase.getTestStepByName(TestCaseName)
+assertions = obj.getAssertionList()
+def Status
+assertions.each{
+	def stat = (it.status).toString()
+	if(stat == "VALID" || stat == "PASS"){
+		Status = "Pass"
+	}
+	if(stat == "FAILED" || stat == "FAIL"){
+		Status = "Fail"
+	}
+}
+log.info(Status)
+testRunner.testCase.testSuite.setPropertyValue("Status", Status)
+
+/*Creating Txt File*/
+
+String date = new Date()
+String date_now = new Date()
+date = date.replaceAll(":","_")
+date = date.replaceAll(" ","_")
+def TCName = TestCaseName.replaceAll(" ","_")
+report_file = Final_Path + TCN + "_" + TCName + "_" + date + "_" + Status + ".txt"
+/* Writing to file */
+def file1 = new File(report_file)
+
+
+/*Get Time Taken for request*/
+
+obj = context.testCase.getTestStepByName(TestCaseName)
+assertions = obj.getAssertionList()
+def Time_Taken
+assertions.each{
+	Time_Taken = testRunner.testCase.testSteps[TestCaseName].testRequest.response.timeTaken
+	log.info(Time_Taken)
+}
+
+
+
+/*Get Status Code*/
+Header = testRunner.testCase.testSteps[TestCaseName].testRequest.response.getResponseHeaders()
+Status_Code = Header["#status#"]
+log.info Status_Code
+file1.write("Status:  " + Status + "\n")
+file1.append("Time Taken:  " + Time_Taken + " ms\n")
+file1.append("TimeStamp:  " + date_now + "\n")
+file1.append("Test Step:  " + TestCaseName + "\n\n\n\n")
+file1.append("----------------- Http Status ------------------------------\n")
+file1.append("Http Status Code:  " + Status_Code + "\n\n\n\n")
+file1.append("---------------- Request ---------------------------\n")
+
+
+/*Get request and response*/
+myRequestStep = testRunner.testCase.getTestStepByName(TestCaseName)
+try{
+def request = new String(myRequestStep.testRequest.messageExchange.rawRequestData)
+def response = new String(myRequestStep.testRequest.messageExchange.rawResponseData)
+file1.append(request + "\n\n\n\n")
+file1.append("---------------- Response --------------------------\n")
+file1.append(response)
+}catch(Exception e){log.info "Request/Response empty"
+}
+
+/* Creating Excel for test result */
+
+def Testresultpath = com.eviware.soapui.SoapUI.globalProperties.getPropertyValue("Test_Result_Path")
+Testresultpath = Testresultpath + "Test_Run_Results.xls"
+log.info Testresultpath
+
+FileInputStream fis = new FileInputStream(new File(Testresultpath))
+Workbook wb = WorkbookFactory.create(fis)
+Sheet sh = wb.getSheet("Test_Run_Results")
+def Row_count = sh.getLastRowNum()
+Row_count = Row_count.toInteger()
+Row_count++
+log.info Row_count
+Row row = sh.createRow(Row_count)
+Cell cell = row.createCell(0).setCellValue(TCN)
+Cell cell_1 = row.createCell(1).setCellValue(Status)
+Cell cell_2 = row.createCell(2).setCellValue(TestCaseName)
+FileOutputStream out = new FileOutputStream(Testresultpath,false)
+wb.write(out)
+out.close()
+log.info "Report Generated"</script>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasourceloop" name="DataSource Loop" id="21212e1c-42b4-4e35-a37f-527d1aeb1880">
     <con:settings/>
     <con:config>
       <dataSourceStep>DataSource</dataSourceStep>
@@ -349,7 +473,7 @@ if (API_Name != TestCaseName){
   <con:properties>
     <con:property>
       <con:name>Client_Version_ID</con:name>
-      <con:value>507</con:value>
+      <con:value>518</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>
@@ -360,11 +484,6 @@ if (API_Name != TestCaseName){
   </con:breakPoints>
   <con:breakPoints>
     <con:testStepId>c8f06e2e-a988-4490-8f00-495363d59861</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>f60e3794-f55b-42df-85ea-0fe8fcf5accb</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>

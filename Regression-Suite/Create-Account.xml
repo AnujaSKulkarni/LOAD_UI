@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="4116a559-779e-43a0-ba46-4ec42bfc53ae" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Create Account" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="dc55c82b-3f72-4911-ac1b-2d8e8328a67a" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Create Account" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="IncludeOverview">true</con:setting>
     <con:setting id="IncludeResults">true</con:setting>
@@ -7,15 +7,10 @@
     <con:setting id="ErrorDetails">true</con:setting>
     <con:setting id="IncludeCoverage">true</con:setting>
     <con:setting id="4116a559-779e-43a0-ba46-4ec42bfc53aefileName">Create-Account</con:setting>
+    <con:setting id="dc55c82b-3f72-4911-ac1b-2d8e8328a67afileName">Create-Account</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="delay" name="Wait Time" id="3fce7749-8a72-4ce5-9b04-083b44ec7ca9" disabled="true">
-    <con:settings/>
-    <con:config>
-      <delay>1000</delay>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="groovy" name="DataSource_Setup" id="cb1cec20-26c4-4c6f-b8de-4b973f6d2a5a">
+  <con:testStep type="groovy" name="DataSource_Setup" id="d00cbde1-1cb2-45ef-b908-8c00a2a9bb70">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream;
@@ -153,7 +148,7 @@ if(RunTimeDataSource_Flag == true){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasource" name="DataSource" id="df469809-6c39-46cb-af19-af08375fb70c">
+  <con:testStep type="datasource" name="DataSource" id="4cd95aa1-647c-4b5b-b1d3-e9c3df31c50c">
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
@@ -262,7 +257,7 @@ if(RunTimeDataSource_Flag == true){
       <con:expandProperties>false</con:expandProperties>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Flow Control" id="b7affd43-2d08-4660-8e76-ba45a72a5c39">
+  <con:testStep type="groovy" name="Flow Control" id="44d96623-9e7e-4d93-b6ad-8fcf0198ca4c">
     <con:settings/>
     <con:config>
       <script>def dataCombination = context.expand( '${DataSource#Data_Combination}' )
@@ -275,7 +270,7 @@ if (API_Name != TestCaseName){
 	//testRunner.testCase.testSteps['Property Transfer'].setDisabled(true)
 	testRunner.testCase.testSteps['Create Account_Positive'].setDisabled(true)
 	testRunner.testCase.testSteps['Create Account_Negative'].setDisabled(true)
-	//testRunner.testCase.testSteps['Report'].setDisabled(true)
+	testRunner.testCase.testSteps['Report'].setDisabled(true)
 	testRunner.testCase.testSteps['Skip on failure'].setDisabled(true)
 	testRunner.testCase.testSteps['Data_Sink_Flow_Control'].setDisabled(true)
 	testRunner.testCase.testSteps['Run_Time_Data_Transfer'].setDisabled(true)
@@ -285,7 +280,7 @@ if (API_Name != TestCaseName){
 		//testRunner.testCase.testSteps['Property Transfer'].setDisabled(false)
 		testRunner.testCase.testSteps['Create Account_Positive'].setDisabled(false)
 		testRunner.testCase.testSteps['Create Account_Negative'].setDisabled(true)
-		//testRunner.testCase.testSteps['Report'].setDisabled(false)
+		testRunner.testCase.testSteps['Report'].setDisabled(false)
 		testRunner.testCase.testSteps['Skip on failure'].setDisabled(false)
 		testRunner.testCase.testSteps['Data_Sink_Flow_Control'].setDisabled(false)
 		testRunner.testCase.testSteps['Run_Time_Data_Transfer'].setDisabled(false)
@@ -295,7 +290,7 @@ if (API_Name != TestCaseName){
 		//testRunner.testCase.testSteps['Property Transfer'].setDisabled(false)
 		testRunner.testCase.testSteps['Create Account_Positive'].setDisabled(true)
 		testRunner.testCase.testSteps['Create Account_Negative'].setDisabled(false)
-		//testRunner.testCase.testSteps['Report'].setDisabled(false)
+		testRunner.testCase.testSteps['Report'].setDisabled(false)
 		testRunner.testCase.testSteps['Skip on failure'].setDisabled(false)
 		testRunner.testCase.testSteps['Data_Sink_Flow_Control'].setDisabled(false)
 		testRunner.testCase.testSteps['Run_Time_Data_Transfer'].setDisabled(false)
@@ -303,7 +298,7 @@ if (API_Name != TestCaseName){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Unique_Email_ID" id="594ffe77-042a-46c6-b8d5-4834c8533fcf" disabled="true">
+  <con:testStep type="groovy" name="Unique_Email_ID" id="ed9443ac-3d0a-4ec5-8296-d655a891df52" disabled="true">
     <con:settings/>
     <con:config>
       <script>String date = new Date()
@@ -327,7 +322,7 @@ Region = Region.replace("\"", "")
 testRunner.testCase.setPropertyValue("Region", Region)</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Create Account_Positive" id="b6227ae6-fa73-4b70-bd83-0c59fdff7af8" disabled="true">
+  <con:testStep type="restrequest" name="Create Account_Positive" id="2e1ce897-3257-464d-9f5f-6c38c64db275" disabled="true">
     <con:settings/>
     <con:config service="Create Account" resourcePath="/client_auth/accounts" methodName="Create Account" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Create Account_Positive" id="ca9f4001-c1e6-4520-a84d-0a8f310353ef" mediaType="application/json" postQueryString="false">
@@ -481,7 +476,7 @@ testRunner.testCase.setPropertyValue("Region", Region)</script>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Create Account_Negative" id="69e3e6c1-e035-4ff7-97a4-a62d5c1caf73" disabled="true">
+  <con:testStep type="restrequest" name="Create Account_Negative" id="b14f08f9-9e3e-4402-95ee-e7068ad45842" disabled="true">
     <con:settings/>
     <con:config service="Create Account" resourcePath="/client_auth/accounts" methodName="Create Account" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Create Account_Negative" id="ca9f4001-c1e6-4520-a84d-0a8f310353ef" mediaType="application/json" postQueryString="false">
@@ -574,12 +569,146 @@ testRunner.testCase.setPropertyValue("Region", Region)</script>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Skip on failure" id="570c1df7-5894-4ca3-a7c4-ce2719758e45" disabled="true">
+  <con:testStep type="groovy" name="Report" id="a217431f-60c2-41f4-992c-33661f583168" disabled="true">
     <con:settings/>
     <con:config>
-      <script>def TestCaseName = testRunner.testCase.getName()
-def data_Combination = context.expand( '${DataSource#Data_Combination}' )
-TestCaseName = TestCaseName + "_" + data_Combination
+      <script>import java.io.FileInputStream
+import java.io.File
+import java.io.FileNotFoundException
+import java.io.FileOutputStream
+import java.io.IOException
+import java.util.Iterator
+import java.io.InputStream
+import java.lang.String
+import java.text.SimpleDateFormat
+import org.apache.poi.EncryptedDocumentException
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException
+import org.apache.poi.ss.util.CellReference
+import org.apache.poi.ss.usermodel.Cell
+import org.apache.poi.ss.usermodel.DateUtil
+import org.apache.poi.ss.usermodel.Row
+import org.apache.poi.ss.usermodel.Sheet
+import org.apache.poi.ss.usermodel.Workbook
+import org.apache.poi.ss.usermodel.WorkbookFactory
+import org.apache.poi.hssf.usermodel.HSSFWorkbook
+import org.apache.poi.xssf.usermodel.XSSFWorkbook
+import org.apache.poi.xssf.streaming.SXSSFWorkbook
+import org.apache.poi.xssf.usermodel.XSSFCell
+import org.apache.poi.xssf.usermodel.XSSFRow
+import org.apache.poi.xssf.usermodel.XSSFSheet
+import org.apache.poi.xssf.usermodel.XSSFWorkbook
+
+def Final_Path = com.eviware.soapui.SoapUI.globalProperties.getPropertyValue("Test_Result_Path")
+log.info Final_Path
+def final_path = new File(Final_Path)
+final_path.mkdir()
+
+/*Get Test Case Name and Status*/
+def data_combination = context.expand( '${DataSource#Data_Combination}' )
+/*Get TC Name*/
+def TCN = context.expand( '${DataSource#TC_Number}' )
+def TestCaseName = testRunner.testCase.getName()
+if(data_combination == "Positive"){
+	TestCaseName = TestCaseName + "_Positive"
+}
+if(data_combination == "Negative"){
+	TestCaseName = TestCaseName + "_Negative"
+}
+log.info TestCaseName
+
+obj = context.testCase.getTestStepByName(TestCaseName)
+assertions = obj.getAssertionList()
+def Status
+assertions.each{
+	def stat = (it.status).toString()
+	if(stat == "VALID" || stat == "PASS"){
+		Status = "Pass"
+	}
+	if(stat == "FAILED" || stat == "FAIL"){
+		Status = "Fail"
+	}
+}
+log.info(Status)
+testRunner.testCase.testSuite.setPropertyValue("Status", Status)
+
+/*Creating Txt File*/
+
+String date = new Date()
+String date_now = new Date()
+date = date.replaceAll(":","_")
+date = date.replaceAll(" ","_")
+def TCName = TestCaseName.replaceAll(" ","_")
+report_file = Final_Path + TCN + "_" + TCName + "_" + date + "_" + Status + ".txt"
+/* Writing to file */
+def file1 = new File(report_file)
+
+
+/*Get Time Taken for request*/
+
+obj = context.testCase.getTestStepByName(TestCaseName)
+assertions = obj.getAssertionList()
+def Time_Taken
+assertions.each{
+	Time_Taken = testRunner.testCase.testSteps[TestCaseName].testRequest.response.timeTaken
+	log.info(Time_Taken)
+}
+
+
+
+/*Get Status Code*/
+Header = testRunner.testCase.testSteps[TestCaseName].testRequest.response.getResponseHeaders()
+Status_Code = Header["#status#"]
+log.info Status_Code
+file1.write("Status:  " + Status + "\n")
+file1.append("Time Taken:  " + Time_Taken + " ms\n")
+file1.append("TimeStamp:  " + date_now + "\n")
+file1.append("Test Step:  " + TestCaseName + "\n\n\n\n")
+file1.append("----------------- Http Status ------------------------------\n")
+file1.append("Http Status Code:  " + Status_Code + "\n\n\n\n")
+file1.append("---------------- Request ---------------------------\n")
+
+
+/*Get request and response*/
+try{
+	myRequestStep = testRunner.testCase.getTestStepByName(TestCaseName)
+	def request = new String(myRequestStep.testRequest.messageExchange.rawRequestData)
+	def response = new String(myRequestStep.testRequest.messageExchange.rawResponseData)
+	file1.append(request + "\n\n\n\n")
+	file1.append("---------------- Response --------------------------\n")
+	file1.append(response)
+}catch(Exception e){
+	log.info "Empty Response"
+}
+
+
+
+/* Creating Excel for test result */
+def Testresultpath = com.eviware.soapui.SoapUI.globalProperties.getPropertyValue("Test_Result_Path")
+Testresultpath = Testresultpath + "Test_Run_Results.xls"
+log.info Testresultpath
+
+FileInputStream fis = new FileInputStream(new File(Testresultpath))
+Workbook wb = WorkbookFactory.create(fis)
+Sheet sh = wb.getSheet("Test_Run_Results")
+def Row_count = sh.getLastRowNum()
+Row_count = Row_count.toInteger()
+Row_count++
+log.info Row_count
+Row row = sh.createRow(Row_count)
+Cell cell = row.createCell(0).setCellValue(TCN)
+Cell cell_1 = row.createCell(1).setCellValue(Status)
+Cell cell_2 = row.createCell(2).setCellValue(TestCaseName)
+Cell cell_3 = row.createCell(3).setCellValue(date_now)
+Cell cell_4 = row.createCell(4).setCellValue(Time_Taken)
+FileOutputStream out = new FileOutputStream(Testresultpath,false)
+wb.write(out)
+out.close()</script>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="groovy" name="Skip on failure" id="8ec19e8d-bd46-4712-8dc1-70ae83a4ed3c" disabled="true">
+    <con:settings/>
+    <con:config>
+      <script>/*def TestCaseName = testRunner.testCase.getName()
 obj = context.testCase.getTestStepByName(TestCaseName)
 assertions = obj.getAssertionList()
 def Status
@@ -591,8 +720,8 @@ assertions.each{
 	if(stat == "FAILED"){
 		Status = "Fail"
 	}
-}
-//def Status = context.expand( '${#TestSuite#Status}' )
+}*/
+def Status = context.expand( '${#TestSuite#Status}' )
 
 log.info(Status)
 
@@ -604,7 +733,7 @@ if(Status == "Fail"){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Data_Sink_Flow_Control" id="25f56c56-21da-4ff0-b080-ab75098fbb47" disabled="true">
+  <con:testStep type="groovy" name="Data_Sink_Flow_Control" id="c587f0a2-baeb-4aa1-af02-20639d638de8" disabled="true">
     <con:settings/>
     <con:config>
       <script>/*Get Test Case Name and Status*/
@@ -634,7 +763,7 @@ if(Status_Code.contains("200")){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Run_Time_Data_Transfer" id="22aed820-ea0b-4513-a2a8-0c5170fab946" disabled="true">
+  <con:testStep type="groovy" name="Run_Time_Data_Transfer" id="69baaf9a-bad7-48ee-a9a1-ef92e1f1de13" disabled="true">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream
@@ -708,11 +837,17 @@ wb.write(out)
 out.close()</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasourceloop" name="Positive_Data_Loop" id="9fbbf17f-d19c-43ef-80ca-a62f7557802f">
+  <con:testStep type="datasourceloop" name="Positive_Data_Loop" id="d427ebc3-04a2-4a71-8efa-eaf530a43daa">
     <con:settings/>
     <con:config>
       <dataSourceStep>DataSource</dataSourceStep>
       <targetStep>Flow Control</targetStep>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="groovy" name="Groovy Script" id="89d3676b-3147-4274-9551-57baeb07a692">
+    <con:settings/>
+    <con:config>
+      <script/>
     </con:config>
   </con:testStep>
   <con:properties>
@@ -794,6 +929,11 @@ Connection: keep-alive
     <con:properties/>
   </con:breakPoints>
   <con:breakPoints>
+    <con:testStepId>864e4cac-5657-43de-923a-36bb57d875c6</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
     <con:testStepId>570c1df7-5894-4ca3-a7c4-ce2719758e45</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
@@ -810,11 +950,6 @@ Connection: keep-alive
   </con:breakPoints>
   <con:breakPoints>
     <con:testStepId>cb1cec20-26c4-4c6f-b8de-4b973f6d2a5a</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>3fce7749-8a72-4ce5-9b04-083b44ec7ca9</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
