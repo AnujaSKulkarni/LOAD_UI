@@ -262,7 +262,7 @@ if (API_Name != TestCaseName){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="getCountriesAndStates" id="3301623f-2db8-4992-b30d-edef18772d6c">
+  <con:testStep type="restrequest" name="getCountriesAndStates" id="3301623f-2db8-4992-b30d-edef18772d6c" disabled="true">
     <con:settings/>
     <con:config service="getCountriesAndStates" resourcePath="/client_auth/countriesAndStates" methodName="getCountriesAndStates" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="getCountriesAndStates" id="31fbb0c8-865d-4668-b51b-2f78b522d907" mediaType="application/json">
@@ -431,6 +431,11 @@ out.close()</script>
   </con:breakPoints>
   <con:breakPoints>
     <con:testStepId>ad716a04-8717-4a8a-8791-54e2d57f3440</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>10377e84-ac67-48ce-9768-7da8a2c7bb60</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>

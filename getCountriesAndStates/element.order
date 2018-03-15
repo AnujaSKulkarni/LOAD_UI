@@ -164,5 +164,3 @@ getAllTimers-account
 Retrieve-NotificationMessages
 Retrieve-All-Content
 getCountriesAndStates
-Regression-Suite
-REST-Virt-1
