@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="getallappliances_by_accountid" path="/appliance/allAppliances/account/${#[Regression Suite#Create Location#Create Location_Positive]#Response#$['ACCOUNT_ID']}" id="60a557ed-4e25-49cc-a138-5471d418231b" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="825872fd-c3f3-4fc1-8ae8-e842a016a49bfileName">getallappliances_by_accountid</con:setting>
+    <con:setting id="60a557ed-4e25-49cc-a138-5471d418231bfileName">getallappliances_by_accountid</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="getallappliances_by_accountid" id="3e2735da-461e-4bcb-912f-15c91c487e75" method="GET">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>Authorization</con:name>
+        <con:value>bearer ${access_token}</con:value>
+        <con:style>HEADER</con:style>
+        <con:default>bearer ${access_token}</con:default>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:ns="https://api-test.whrcloud.com/api/v1/appliance/allAppliances/account/12870">ns:Response</con:element>
+    </con:representation>
+    <con:request name="getallappliances_by_accountid" id="fcfd7e5a-619a-4e1c-a06e-1acaef8a4f06" mediaType="application/json">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>${API-Connect}</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:parameterOrder>
+        <con:entry>Authorization</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

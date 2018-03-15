@@ -261,7 +261,7 @@ if (API_Name != TestCaseName){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Get Company by Name" id="b0d59dac-d508-4292-9f6d-5020f85f6b0e" disabled="true">
+  <con:testStep type="restrequest" name="Get Company by Name" id="b0d59dac-d508-4292-9f6d-5020f85f6b0e">
     <con:settings/>
     <con:config service="Get Company by Name" resourcePath="/company/WhirlPool" methodName="Get Company by Name" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Get Company by Name" id="ef6c30f1-4666-4212-b52e-9dfc12ce8b2f" mediaType="application/json">
@@ -303,7 +303,7 @@ if (API_Name != TestCaseName){
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Report" id="f3a4de3c-d5aa-4221-b35d-8e02b52bc305" disabled="true">
+  <con:testStep type="groovy" name="Report" id="f3a4de3c-d5aa-4221-b35d-8e02b52bc305">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream

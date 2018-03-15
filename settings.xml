@@ -633,6 +633,12 @@
     <con:service type="REST" name="getCountriesAndStates">
       <con:endpoint authProfile="No Authorization" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://{{API-Connect}}</con:endpoint>
     </con:service>
+    <con:service type="REST" name="getallappliances_by_accountid">
+      <con:endpoint authProfile="No Authorization" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://{{API-Connect}}</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="Update_Password">
+      <con:endpoint authProfile="No Authorization" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://{{API-Connect}}</con:endpoint>
+    </con:service>
     <con:property>
       <con:name>Location</con:name>
       <con:value>http://locationserviceqa-v2.mybluemix.net/api/v1</con:value>
@@ -1238,6 +1244,12 @@
     <con:service type="REST" name="getCountriesAndStates">
       <con:endpoint authProfile="No Authorization" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://{{API-Connect}}</con:endpoint>
     </con:service>
+    <con:service type="REST" name="getallappliances_by_accountid">
+      <con:endpoint authProfile="No Authorization" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://{{API-Connect}}</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="Update_Password">
+      <con:endpoint authProfile="No Authorization" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://{{API-Connect}}</con:endpoint>
+    </con:service>
     <con:property>
       <con:name>Location</con:name>
       <con:value>http://locationservicedev-v2.mybluemix.net/api/v1</con:value>
@@ -1841,6 +1853,12 @@
       <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="getCountriesAndStates">
+      <con:endpoint authProfile="No Authorization" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://{{API-Connect}}</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="getallappliances_by_accountid">
+      <con:endpoint authProfile="No Authorization" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://{{API-Connect}}</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="Update_Password">
       <con:endpoint authProfile="No Authorization" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://{{API-Connect}}</con:endpoint>
     </con:service>
     <con:property>
