@@ -26,7 +26,7 @@
       <con1:property key="limits">Time=180;</con1:property>
     </con1:attributes>
     <con1:addons/>
-    <con1:scene label="New Scenario" id="e9c87c04-1400-49b9-8bb8-051e08a75c80" version="724">
+    <con1:scene label="New Scenario" id="e9c87c04-1400-49b9-8bb8-051e08a75c80" version="806">
       <con1:properties>
         <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
         <con1:property propagates="true" key="CanvasItem.abortOnFinish" type="java.lang.Boolean">true</con1:property>
@@ -275,6 +275,28 @@
         </con1:attributes>
         <con1:addons/>
       </con1:component>
+      <con1:component type="com.eviware.loadui.components.soapui.SoapUISamplerComponent" label="Regression Suite:GetRolesList (disabled)" id="dc994cd2-787e-4312-87c6-b977226cf9c1" category="Runners">
+        <con1:properties>
+          <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
+          <con1:property propagates="true" key="concurrentSamples" type="java.lang.Long">5000</con1:property>
+          <con1:property propagates="true" key="property_name_is_not_relevant_for_private_property" type="java.lang.Long">9223372036854775807</con1:property>
+          <con1:property propagates="true" key="maxQueueSize" type="java.lang.Long">1000</con1:property>
+          <con1:property propagates="true" key="countDiscarded" type="java.lang.Boolean">false</con1:property>
+          <con1:property propagates="true" key="disabledTestSteps" type="java.lang.String"/>
+          <con1:property propagates="true" key="_thinkTime" type="java.lang.Long">0</con1:property>
+          <con1:property propagates="true" key="ReadyApiTestCase" type="com.eviware.soapui.impl.wsdl.testcase.WsdlTestCase">6c3e3034-0789-4a6f-8922-243e5883566a</con1:property>
+          <con1:property propagates="true" key="raiseError" type="java.lang.Boolean">true</con1:property>
+          <con1:property propagates="true" key="outputTestCaseProperties" type="java.lang.Boolean">true</con1:property>
+          <con1:property propagates="true" key="OutputLevel" type="java.lang.String">TestCase only</con1:property>
+          <con1:property propagates="true" key="closeConnectionsAfterRequest" type="java.lang.Boolean">false</con1:property>
+          <con1:property propagates="true" key="disableSoapuiAssertions" type="java.lang.Boolean">false</con1:property>
+          <con1:property propagates="true" key="forceShareDatasources" type="java.lang.Boolean">true</con1:property>
+        </con1:properties>
+        <con1:attributes>
+          <con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Ready API TestCase Runner</con1:property>
+        </con1:attributes>
+        <con1:addons/>
+      </con1:component>
       <con1:connection outputTerminalId="7966a90d-8ebd-4cfb-ac07-b369bd88f58f/outgoingTerminal" inputTerminalId="76a06fab-11a2-43d2-b565-f3e2f5a45f6d/stateTerminal"/>
       <con1:connection outputTerminalId="76a06fab-11a2-43d2-b565-f3e2f5a45f6d/triggerTerminal" inputTerminalId="4979e15c-fb8f-40db-aa8e-56067588d368/triggerTerminal"/>
       <con1:connection outputTerminalId="4979e15c-fb8f-40db-aa8e-56067588d368/runningTerminal" inputTerminalId="3ffe4a45-1f14-4831-bf1a-6fa00bc151a0/incomingTerminal"/>
@@ -286,7 +308,8 @@
       <con1:connection outputTerminalId="63b4a19a-9fc0-48a3-a9b9-fff07d96a6f2/runningTerminal" inputTerminalId="3bd76a8f-be0a-4b69-b064-767ae9f1db31/triggerTerminal"/>
       <con1:connection outputTerminalId="3bd76a8f-be0a-4b69-b064-767ae9f1db31/runningTerminal" inputTerminalId="650a5387-07db-4290-baa3-91e22762597f/triggerTerminal"/>
       <con1:connection outputTerminalId="650a5387-07db-4290-baa3-91e22762597f/runningTerminal" inputTerminalId="962177f9-6d03-4d09-9262-e75acc398a4d/triggerTerminal"/>
-      <con1:connection outputTerminalId="962177f9-6d03-4d09-9262-e75acc398a4d/runningTerminal" inputTerminalId="3ffe4a45-1f14-4831-bf1a-6fa00bc151a0/incomingTerminal"/>
+      <con1:connection outputTerminalId="962177f9-6d03-4d09-9262-e75acc398a4d/runningTerminal" inputTerminalId="dc994cd2-787e-4312-87c6-b977226cf9c1/triggerTerminal"/>
+      <con1:connection outputTerminalId="dc994cd2-787e-4312-87c6-b977226cf9c1/runningTerminal" inputTerminalId="3ffe4a45-1f14-4831-bf1a-6fa00bc151a0/incomingTerminal"/>
       <con1:connection outputTerminalId="3ffe4a45-1f14-4831-bf1a-6fa00bc151a0/exit" inputTerminalId="76a06fab-11a2-43d2-b565-f3e2f5a45f6d/Sample Count"/>
     </con1:scene>
     <con1:statistics>
