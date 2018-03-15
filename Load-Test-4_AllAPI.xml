@@ -23,10 +23,10 @@
       <con1:property propagates="true" key="ModelItem.remoteMode" type="java.lang.String"/>
     </con1:properties>
     <con1:attributes>
-      <con1:property key="limits">Time=900;</con1:property>
+      <con1:property key="limits">Time=7200;</con1:property>
     </con1:attributes>
     <con1:addons/>
-    <con1:scene label="New Scenario" id="433708a0-f132-47bd-9ee7-d5ea8d95f914" version="5590">
+    <con1:scene label="New Scenario" id="433708a0-f132-47bd-9ee7-d5ea8d95f914" version="5826">
       <con1:properties>
         <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
         <con1:property propagates="true" key="CanvasItem.abortOnFinish" type="java.lang.Boolean">true</con1:property>
@@ -35,7 +35,7 @@
         <con1:property propagates="true" key="SceneItem.scenarioRateSpecific" type="java.lang.Long">10</con1:property>
       </con1:properties>
       <con1:attributes>
-        <con1:property key="limits">Time=900;</con1:property>
+        <con1:property key="limits">Time=7200;</con1:property>
       </con1:attributes>
       <con1:addons/>
       <con1:component type="com.eviware.loadui.impl.component.IntervalComponent" label="Interval 1" id="f150aa33-e617-426d-9b7d-638d7587b857" category="Scheduler">
@@ -1289,10 +1289,10 @@
       </con1:component>
       <con1:connection outputTerminalId="f150aa33-e617-426d-9b7d-638d7587b857/outgoingTerminal" inputTerminalId="9f094666-e1f0-42f1-a1c3-013a9d835475/stateTerminal"/>
       <con1:connection outputTerminalId="9f094666-e1f0-42f1-a1c3-013a9d835475/triggerTerminal" inputTerminalId="ba2894ab-4eb3-41a4-a30a-92048ace9aa4/triggerTerminal"/>
-      <con1:connection outputTerminalId="ba2894ab-4eb3-41a4-a30a-92048ace9aa4/runningTerminal" inputTerminalId="6ea35443-f28b-4ea9-ac3c-8fb9b1bf5946/incomingTerminal"/>
+      <con1:connection outputTerminalId="ba2894ab-4eb3-41a4-a30a-92048ace9aa4/runningTerminal" inputTerminalId="75378c7c-e2e2-4381-bd7e-f28bf8e999c3/triggerTerminal"/>
+      <con1:connection outputTerminalId="75378c7c-e2e2-4381-bd7e-f28bf8e999c3/runningTerminal" inputTerminalId="6ea35443-f28b-4ea9-ac3c-8fb9b1bf5946/incomingTerminal"/>
       <con1:connection outputTerminalId="6ea35443-f28b-4ea9-ac3c-8fb9b1bf5946/loop" inputTerminalId="593fc92b-e997-4d93-ba01-5d88a08d509e/triggerTerminal"/>
-      <con1:connection outputTerminalId="593fc92b-e997-4d93-ba01-5d88a08d509e/runningTerminal" inputTerminalId="75378c7c-e2e2-4381-bd7e-f28bf8e999c3/triggerTerminal"/>
-      <con1:connection outputTerminalId="75378c7c-e2e2-4381-bd7e-f28bf8e999c3/runningTerminal" inputTerminalId="6dc22337-8c28-44f1-8a97-32d6e977f503/triggerTerminal"/>
+      <con1:connection outputTerminalId="593fc92b-e997-4d93-ba01-5d88a08d509e/runningTerminal" inputTerminalId="6dc22337-8c28-44f1-8a97-32d6e977f503/triggerTerminal"/>
       <con1:connection outputTerminalId="6dc22337-8c28-44f1-8a97-32d6e977f503/runningTerminal" inputTerminalId="d7d60402-7b47-4a1f-8e18-a0f94da41d43/triggerTerminal"/>
       <con1:connection outputTerminalId="d7d60402-7b47-4a1f-8e18-a0f94da41d43/runningTerminal" inputTerminalId="6a094e48-f012-4283-897f-c2a535419422/triggerTerminal"/>
       <con1:connection outputTerminalId="6a094e48-f012-4283-897f-c2a535419422/runningTerminal" inputTerminalId="950a5883-3ef7-4fd1-b360-542a24289c64/triggerTerminal"/>

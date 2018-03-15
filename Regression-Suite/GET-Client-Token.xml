@@ -4,7 +4,7 @@
     <con:setting id="4d9b8d24-cdbf-470c-926c-ce1cd761a7a0fileName">GET-Client-Token</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="delay" name="Delay" id="633924d1-26cb-4000-a6b4-21b59980aa7b">
+  <con:testStep type="delay" name="Delay" id="633924d1-26cb-4000-a6b4-21b59980aa7b" disabled="true">
     <con:settings/>
     <con:config>
       <delay>500</delay>

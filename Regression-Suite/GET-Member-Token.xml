@@ -4,7 +4,7 @@
     <con:setting id="7026bea1-9c34-446c-8319-d9c3af471c0efileName">GET-Member-Token</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="delay" name="Copy of Delay" id="7105307e-26be-4c55-a28c-ed42fa0cade7">
+  <con:testStep type="delay" name="Copy of Delay" id="7105307e-26be-4c55-a28c-ed42fa0cade7" disabled="true">
     <con:settings/>
     <con:config>
       <delay>500</delay>

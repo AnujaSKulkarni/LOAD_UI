@@ -9,7 +9,7 @@
     <con:setting id="4116a559-779e-43a0-ba46-4ec42bfc53aefileName">Create-Account</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="delay" name="Wait Time" id="3fce7749-8a72-4ce5-9b04-083b44ec7ca9">
+  <con:testStep type="delay" name="Wait Time" id="3fce7749-8a72-4ce5-9b04-083b44ec7ca9" disabled="true">
     <con:settings/>
     <con:config>
       <delay>1000</delay>

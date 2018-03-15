@@ -4,7 +4,7 @@
     <con:setting id="b13b5a9a-f922-4e6f-ba6a-2b38e28e3e91fileName">Delete-Account</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="delay" name="Wait" id="694d6336-07c4-4b2a-916c-d40e7a457b64">
+  <con:testStep type="delay" name="Wait" id="694d6336-07c4-4b2a-916c-d40e7a457b64" disabled="true">
     <con:settings/>
     <con:config>
       <delay>500</delay>
