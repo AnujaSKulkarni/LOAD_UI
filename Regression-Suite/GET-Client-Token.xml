@@ -288,8 +288,8 @@ if (final_path.exists() == false){
 	wb1.write(out1);
 	out1.close();
 }
-com.eviware.soapui.SoapUI.globalProperties.setPropertyValue("Test_Result_Path", Final_Path)
-com.eviware.soapui.SoapUI.globalProperties.setPropertyValue("Run_Time_Data", Rundatapath)</con:setupScript>
+//com.eviware.soapui.SoapUI.globalProperties.setPropertyValue("Test_Result_Path", Final_Path)
+//com.eviware.soapui.SoapUI.globalProperties.setPropertyValue("Run_Time_Data", Rundatapath)</con:setupScript>
   <con:properties>
     <con:property>
       <con:name>Client_Token_Response</con:name>

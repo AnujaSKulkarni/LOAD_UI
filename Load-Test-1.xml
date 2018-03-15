@@ -4,6 +4,11 @@
     <con:setting id="soapUIObjectSourceId">294875cc-8b7b-49ab-8c4f-b41f5810e03f</con:setting>
     <con:setting id="soapUIObjectSourceType">soapUIObjectSourceType_RestRequest</con:setting>
     <con:setting id="2a867e25-9246-46dc-8342-4fa0ccfd412dfileName">Load-Test-1</con:setting>
+    <con:setting id="IncludeScenarioResults">true</con:setting>
+    <con:setting id="IncludeStatistics">true</con:setting>
+    <con:setting id="IncludeTestStepsHistory">false</con:setting>
+    <con:setting id="IncludeStatisticHistory">false</con:setting>
+    <con:setting id="IncludeHelp">true</con:setting>
   </con:settings>
   <con1:loadui-project id="a3a973a5-7e90-4d8b-8d32-d88392e3319c" label="Load Test 1" xmlns:con1="http://eviware.com/loadui/config">
     <con1:properties>
@@ -21,7 +26,7 @@
       <con1:property key="limits">Time=60;</con1:property>
     </con1:attributes>
     <con1:addons/>
-    <con1:scene label="New Scenario" id="e9c87c04-1400-49b9-8bb8-051e08a75c80" version="83">
+    <con1:scene label="New Scenario" id="e9c87c04-1400-49b9-8bb8-051e08a75c80" version="165">
       <con1:properties>
         <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
         <con1:property propagates="true" key="CanvasItem.abortOnFinish" type="java.lang.Boolean">true</con1:property>
