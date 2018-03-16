@@ -3,22 +3,20 @@
   <con:settings>
     <con:setting id="5702229f-a04f-4c5a-b3b0-7f4af4c761dcfileName">Create-Location</con:setting>
     <con:setting id="e2d81e32-ddc2-4f17-ad4e-4c3d356ae62efileName">Create-Location</con:setting>
-  <con:setting id="bc29f8a7-f538-4ee8-b939-a94c565cde55fileName">Create-Location</con:setting><con:setting id="878e477a-0aa9-4d21-ac81-f1cec8304c58fileName">Create-Location</con:setting></con:settings>
+    <con:setting id="bc29f8a7-f538-4ee8-b939-a94c565cde55fileName">Create-Location</con:setting>
+    <con:setting id="878e477a-0aa9-4d21-ac81-f1cec8304c58fileName">Create-Location</con:setting>
+  </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  
-  
-  
-  
-  
-  
   <con:testStep type="groovy" name="Test_Data_Setup" id="d68bbce1-fabc-4133-949f-7e853b3e51ac">
     <con:settings/>
-    <con:config><script>String date = new Date()
+    <con:config>
+      <script>String date = new Date()
 date = date.replaceAll(":","_")
 date = date.replaceAll(" ","_")
 def RandomNumber = (int)(Math.random()*10000000)
 def LocationName = "\"" + "Location_" + date + RandomNumber +  "\""
-testRunner.testCase.setPropertyValue("Location_Name", LocationName)</script></con:config>
+testRunner.testCase.setPropertyValue("Location_Name", LocationName)</script>
+    </con:config>
   </con:testStep>
   <con:testStep type="restrequest" name="Create Location" id="c2787542-856e-4599-8cf2-7b04dd0c27a6">
     <con:settings/>
@@ -104,11 +102,6 @@ testRunner.testCase.setPropertyValue("Location_Name", LocationName)</script></co
       </con:restRequest>
     </con:config>
   </con:testStep>
-  
-  
-  
-  
-  
   <con:properties>
     <con:property>
       <con:name>Location_ID_Transfer</con:name>
@@ -155,7 +148,11 @@ Strict-Transport-Security: max-age=15768000
       <con:name>Location</con:name>
       <con:value>Regression_Location_Fri_Mar_16_17_03_01_IST_2018</con:value>
     </con:property>
-  <con:property><con:name>Location_Name</con:name><con:value>"Location_Fri_Mar_16_18_57_51_IST_20186458953"</con:value></con:property></con:properties>
+    <con:property>
+      <con:name>Location_Name</con:name>
+      <con:value>"Location_Fri_Mar_16_19_26_58_IST_20182701469"</con:value>
+    </con:property>
+  </con:properties>
   <con:reportParameters/>
   <con:breakPoints>
     <con:testStepId>2ae81ba5-3442-4c6e-900e-e4deecac385a</con:testStepId>

@@ -3,15 +3,10 @@
   <con:settings>
     <con:setting id="17cda1a8-5122-4de5-b720-dedf4ed146cffileName">Get-Location-by-AccountId</con:setting>
     <con:setting id="256b39da-0cd8-47ae-a695-16c2b247dc8efileName">Get-Location-by-AccountId</con:setting>
-  <con:setting id="e418c70f-ca01-4c94-b442-6a117f4006d6fileName">Get-Location-by-AccountId</con:setting></con:settings>
+    <con:setting id="e418c70f-ca01-4c94-b442-6a117f4006d6fileName">Get-Location-by-AccountId</con:setting>
+  </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  
-  
-  
-  
-  
-  
-  <con:testStep type="restrequest" name="Get Location by AccountId_Positive" id="6ae8b0ff-e605-4e34-abed-4c5a32e85166" disabled="true">
+  <con:testStep type="restrequest" name="Get Location by AccountId_Positive" id="6ae8b0ff-e605-4e34-abed-4c5a32e85166">
     <con:settings/>
     <con:config service="Get Location by AccountId" resourcePath="/location/account/${#Project#Account_ID_Load}" methodName="Get Location by AccountId" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Get Location by AccountId_Positive" id="663c63e9-9332-4578-b295-051610626265" mediaType="application/json">
@@ -71,9 +66,6 @@
       </con:restRequest>
     </con:config>
   </con:testStep>
-  
-  
-  
   <con:properties>
     <con:property>
       <con:name>Account_ID</con:name>

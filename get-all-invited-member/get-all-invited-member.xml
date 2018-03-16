@@ -1,2 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="get all invited member" path="/members/${#Project#Account_ID_Load}" id="37f89108-bc33-4435-ba5b-971906726557" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="37f89108-bc33-4435-ba5b-971906726557fileName">get-all-invited-member</con:setting></con:settings><con:parameters/><con:method name="get all invited member" id="9f278e62-5943-4d27-a0d3-6a73c5d6ec56" method="GET"><con:settings/><con:parameters><con:parameter><con:name>Authorization</con:name><con:value>Bearer ${access_token}</con:value><con:style>HEADER</con:style><con:default>Bearer ${access_token}</con:default><con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></con:parameter></con:parameters><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>404 401</con:status><con:params/><con:element xmlns:ns="https://api-stg.whrcloud.com/api/v1/api/v1/members/6602">ns:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:ns="https://api-stg.whrcloud.com/api/v1/api/v1/members/6602">ns:Response</con:element></con:representation><con:request name="get all invited member" id="821703f0-a445-4d67-a927-940346ab5300" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/><con:parameterOrder><con:entry>Authorization</con:entry></con:parameterOrder></con:request></con:method></con:resource>
+<con:resource name="get all invited member" path="/members/${#Project#Account_ID_Load}" id="37f89108-bc33-4435-ba5b-971906726557" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="37f89108-bc33-4435-ba5b-971906726557fileName">get-all-invited-member</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="get all invited member" id="9f278e62-5943-4d27-a0d3-6a73c5d6ec56" method="GET">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>Authorization</con:name>
+        <con:value>Bearer ${access_token}</con:value>
+        <con:style>HEADER</con:style>
+        <con:default>Bearer ${access_token}</con:default>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404 401</con:status>
+      <con:params/>
+      <con:element xmlns:ns="https://api-stg.whrcloud.com/api/v1/api/v1/members/6602">ns:Fault</con:element>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:ns="https://api-stg.whrcloud.com/api/v1/api/v1/members/6602">ns:Response</con:element>
+    </con:representation>
+    <con:request name="get all invited member" id="821703f0-a445-4d67-a927-940346ab5300" mediaType="application/json">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://{{API-Connect}}</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:parameterOrder>
+        <con:entry>Authorization</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

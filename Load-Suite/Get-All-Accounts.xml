@@ -3,12 +3,9 @@
   <con:settings>
     <con:setting id="87493dfc-8de2-44c7-a14b-aa20c15b368dfileName">Get-All-Accounts</con:setting>
     <con:setting id="45e7bdc6-41da-4b65-960c-1e158e1eb460fileName">Get-All-Accounts</con:setting>
-  <con:setting id="27520324-3b3a-418d-9c6f-2092dcba59b9fileName">Get-All-Accounts</con:setting></con:settings>
+    <con:setting id="27520324-3b3a-418d-9c6f-2092dcba59b9fileName">Get-All-Accounts</con:setting>
+  </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  
-  
-  
-  
   <con:testStep type="restrequest" name="Get All Accounts" id="8e0a7497-8e8a-4cdf-ac67-fd8b9aeb6e42">
     <con:settings/>
     <con:config service="Get All Accounts" resourcePath="/accounts" methodName="Get All Accounts" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -58,7 +55,7 @@
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:jmsPropertyConfig/>
         <con:parameters>
-          <entry key="Authorization" value="Bearer ${GET Member Token#Response#$['access_token']}" xmlns="http://eviware.com/soapui/config"/>
+          <entry key="Authorization" value="Bearer ${access_token}" xmlns="http://eviware.com/soapui/config"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>Authorization</con:entry>
@@ -95,8 +92,6 @@
       </con:restRequest>
     </con:config>
   </con:testStep>
-  
-  
   <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>
