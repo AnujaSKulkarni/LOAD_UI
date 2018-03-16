@@ -16,23 +16,23 @@
   <con:properties>
     <con:property>
       <con:name>Email_ID</con:name>
-      <con:value>"THU_MAR_15_19_30_07_IST_2018@MAILINATOR.COM"</con:value>
+      <con:value>"FRI_MAR_16_13_30_31_IST_2018@MAILINATOR.COM"</con:value>
     </con:property>
     <con:property>
       <con:name>Email_ID_string</con:name>
-      <con:value>THU_MAR_15_19_30_07_IST_2018@MAILINATOR.COM</con:value>
+      <con:value>FRI_MAR_16_13_30_31_IST_2018@MAILINATOR.COM</con:value>
     </con:property>
     <con:property>
       <con:name>Account_ID</con:name>
-      <con:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">6304</con:value>
+      <con:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">6422</con:value>
     </con:property>
     <con:property>
       <con:name>Verification_Code</con:name>
-      <con:value>5346</con:value>
+      <con:value>4618</con:value>
     </con:property>
     <con:property>
       <con:name>Account_Email</con:name>
-      <con:value>THU_MAR_15_18_50_29_IST_2018@MAILINATOR.COM</con:value>
+      <con:value>THU_MAR_15_19_48_30_IST_2018@MAILINATOR.COM</con:value>
     </con:property>
     <con:property>
       <con:name>Location_ID</con:name>
@@ -40,11 +40,11 @@
     </con:property>
     <con:property>
       <con:name>Group_Name</con:name>
-      <con:value>"SANITY_GROUP_THU_MAR_15_19_30_21_IST_2018"</con:value>
+      <con:value>"SANITY_GROUP_FRI_MAR_16_13_14_21_IST_2018"</con:value>
     </con:property>
     <con:property>
       <con:name>Group_Name_string</con:name>
-      <con:value>SANITY_GROUP_THU_MAR_15_19_30_21_IST_2018</con:value>
+      <con:value>SANITY_GROUP_FRI_MAR_16_13_14_21_IST_2018</con:value>
     </con:property>
     <con:property>
       <con:name>Template_ID</con:name>
@@ -64,7 +64,7 @@
     </con:property>
     <con:property>
       <con:name>Status</con:name>
-      <con:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Pass</con:value>
+      <con:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Fail</con:value>
     </con:property>
     <con:property>
       <con:name>Run_count</con:name>
@@ -84,11 +84,11 @@
     </con:property>
     <con:property>
       <con:name>Group_ID</con:name>
-      <con:value>4742</con:value>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>Location_Number</con:name>
-      <con:value>2753</con:value>
+      <con:value>2802</con:value>
     </con:property>
     <con:property>
       <con:name>Alternate_Email</con:name>
