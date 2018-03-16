@@ -107,11 +107,7 @@ testRunner.testCase.setPropertyValue("Location_Name", LocationName)</script></co
   
   
   
-  <con:testStep type="groovy" name="Run_Time_Data_Transfer" id="5e652c2b-a905-4939-8cfd-61ab8555e699">
-    <con:settings/>
-    <con:config><script>def LocationID = context.expand( '${Create Location_Positive#Response#$[\'LOCATION_ID\']}' )
-testRunner.testCase.testSuite.setPropertyValue("LocationID", LocationID)</script></con:config>
-  </con:testStep>
+  
   
   <con:properties>
     <con:property>
