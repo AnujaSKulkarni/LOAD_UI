@@ -168,4 +168,5 @@ getallappliances_by_accountid
 Update_Password
 Regression-Suite
 TestSuite
+Load-Suite
 REST-Virt-1

@@ -1,4 +1,3 @@
-GET-Client-Token.xml
-Create-Account.xml
 GET-Member-Token.xml
 Create-Location.xml
+Get-Location-by-AccountId.xml
