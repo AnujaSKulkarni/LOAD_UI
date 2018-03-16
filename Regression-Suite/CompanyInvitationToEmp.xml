@@ -147,7 +147,13 @@ if(RunTimeDataSource_Flag == true){
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
-        <con:configuration><file>${Test_Data_Path}</file><worksheet>Data</worksheet><cell>A2</cell><ignoreEmpty>false</ignoreEmpty><evaluateFormulas>false</evaluateFormulas></con:configuration>
+        <con:configuration>
+          <file>${Test_Data_Path}</file>
+          <worksheet>Data</worksheet>
+          <cell>A2</cell>
+          <ignoreEmpty>false</ignoreEmpty>
+          <evaluateFormulas>false</evaluateFormulas>
+        </con:configuration>
       </con:dataSource>
       <con:shared>true</con:shared>
       <con:restartShared>true</con:restartShared>
@@ -250,7 +256,7 @@ if (API_Name != TestCaseName){
 	testRunner.testCase.testSteps['Test_Data_Setup'].setDisabled(true)
 	testRunner.testCase.testSteps['CompanyInvitationToEmp_Positive'].setDisabled(true)
 	testRunner.testCase.testSteps['CompanyInvitationToEmp_Negative'].setDisabled(true)
-	testRunner.testCase.testSteps['Report'].setDisabled(true)
+	//testRunner.testCase.testSteps['Report'].setDisabled(true)
 	testRunner.testCase.testSteps['Delay'].setDisabled(true)
 }else{
 	if(dataCombination == "Positive"){
@@ -258,7 +264,7 @@ if (API_Name != TestCaseName){
 		testRunner.testCase.testSteps['Test_Data_Setup'].setDisabled(false)
 		testRunner.testCase.testSteps['CompanyInvitationToEmp_Positive'].setDisabled(false)
 		testRunner.testCase.testSteps['CompanyInvitationToEmp_Negative'].setDisabled(true)
-		testRunner.testCase.testSteps['Report'].setDisabled(false)
+	//	testRunner.testCase.testSteps['Report'].setDisabled(false)
 		testRunner.testCase.testSteps['Delay'].setDisabled(false)
 	}
 	if(dataCombination == "Negative"){
@@ -266,7 +272,7 @@ if (API_Name != TestCaseName){
 		testRunner.testCase.testSteps['Test_Data_Setup'].setDisabled(false)
 		testRunner.testCase.testSteps['CompanyInvitationToEmp_Positive'].setDisabled(true)
 		testRunner.testCase.testSteps['CompanyInvitationToEmp_Negative'].setDisabled(false)
-		testRunner.testCase.testSteps['Report'].setDisabled(false)
+		//testRunner.testCase.testSteps['Report'].setDisabled(false)
 		testRunner.testCase.testSteps['Delay'].setDisabled(false)
 	}
 }</script>
