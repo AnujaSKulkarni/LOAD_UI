@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="294875cc-8b7b-49ab-8c4f-b41f5810e03f" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GET Client Token" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="0125686c-d08c-42b4-9c7e-4c2cd1272dd3" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GET Client Token" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="4d9b8d24-cdbf-470c-926c-ce1cd761a7a0fileName">GET-Client-Token</con:setting>
     <con:setting id="294875cc-8b7b-49ab-8c4f-b41f5810e03ffileName">GET-Client-Token</con:setting>
-  </con:settings>
+  <con:setting id="0125686c-d08c-42b4-9c7e-4c2cd1272dd3fileName">GET-Client-Token</con:setting></con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="restrequest" name="GET Client Token" id="e3538ac3-b618-4e01-b37c-ca2f65976d48">
+  <con:testStep type="restrequest" name="GET Client Token" id="257c709a-ad28-430b-973a-267b8f317558">
     <con:settings/>
     <con:config service="GET Client Token" resourcePath="/oauth/token" methodName="GET Client Token" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="GET Client Token" id="3d9e8eef-6b94-46de-8b7d-21a4174f9b47" mediaType="application/x-www-form-urlencoded" postQueryString="true">
@@ -69,81 +69,8 @@
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Report" id="7b634643-e8b1-48ed-b665-d593ff75d40d">
-    <con:settings/>
-    <con:config>
-      <script>def Final_Path = com.eviware.soapui.SoapUI.globalProperties.getPropertyValue("Test_Result_Path")
-log.info Final_Path
-def final_path = new File(Final_Path)
-final_path.mkdir()
-
-
-/*Get Test Case Name and Status*/
-
-def TestCaseName = testRunner.testCase.getName()
-obj = context.testCase.getTestStepByName(TestCaseName)
-assertions = obj.getAssertionList()
-def Status
-assertions.each{
-	def stat = (it.status).toString()
-	if(stat == "VALID" || stat == "PASS"){
-		Status = "Pass"
-	}
-	if(stat == "FAILED" || stat == "FAIL"){
-		Status = "Fail"
-	}
-}
-log.info(Status)
-testRunner.testCase.testSuite.setPropertyValue("Status", Status)
-
-
-/*Creating Txt File*/
-
-String date = new Date()
-String date_now = new Date()
-date = date.replaceAll(":","_")
-date = date.replaceAll(" ","_")
-def TCName = TestCaseName.replaceAll(" ","_")
-report_file = Final_Path + TCName + "_" + date + "_" + Status + ".txt"
-/* Writing to file */
-def file1 = new File(report_file)
-
-
-/*Get Time Taken for request*/
-
-obj = context.testCase.getTestStepByName(TestCaseName)
-assertions = obj.getAssertionList()
-def Time_Taken
-assertions.each{
-	Time_Taken = testRunner.testCase.testSteps[TestCaseName].testRequest.response.timeTaken
-	log.info(Time_Taken)
-}
-
-
-
-/*Get Status Code*/
-Header = testRunner.testCase.testSteps[TestCaseName].testRequest.response.getResponseHeaders()
-Status_Code = Header["#status#"]
-log.info Status_Code
-file1.write("Status:  " + Status + "\n")
-file1.append("Time Taken:  " + Time_Taken + " ms\n")
-file1.append("TimeStamp:  " + date_now + "\n")
-file1.append("Test Step:  " + TestCaseName + "\n\n\n\n")
-file1.append("----------------- Http Status ------------------------------\n")
-file1.append("Http Status Code:  " + Status_Code + "\n\n\n\n")
-file1.append("---------------- Request ---------------------------\n")
-
-
-/*Get request and response*/
-myRequestStep = testRunner.testCase.getTestStepByName(TestCaseName)
-def request = new String(myRequestStep.testRequest.messageExchange.rawRequestData)
-def response = new String(myRequestStep.testRequest.messageExchange.rawResponseData)
-file1.append(request + "\n\n\n\n")
-file1.append("---------------- Response --------------------------\n")
-file1.append(response)</script>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="groovy" name="Skip_on_failure" id="5d2f638c-23fa-45ce-91ac-c94a1a0034ea">
+  
+  <con:testStep type="groovy" name="Skip_on_failure" id="e7d39479-1c5c-40e5-825a-e1fb9d95616b">
     <con:settings/>
     <con:config>
       <script>def TestCaseName = testRunner.testCase.getName()
@@ -169,7 +96,7 @@ testRunner.cancel(k)}
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Client Token - Global Variable" id="2c0a849d-72d6-4aca-bd8e-c6fd71696a96">
+  <con:testStep type="groovy" name="Client Token - Global Variable" id="fda8ed1f-85f0-412e-82c5-552da5b3a371">
     <con:settings/>
     <con:config>
       <script>def token = context.expand( '${GET Client Token#Response#$[\'access_token\']}' )
@@ -177,7 +104,7 @@ log.info(token)
 com.eviware.soapui.SoapUI.globalProperties.setPropertyValue("Client_Token", token)</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Groovy Script" id="f14ef3f9-1f17-47ca-9cbe-a4cb56c2d96d" disabled="true">
+  <con:testStep type="groovy" name="Groovy Script" id="f6fb5c42-445d-4970-af80-e98835b654d6" disabled="true">
     <con:settings/>
     <con:config><script>import java.io.FileInputStream
 import java.io.InputStream
