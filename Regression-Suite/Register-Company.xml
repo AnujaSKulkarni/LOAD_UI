@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="250c902d-5c4b-4593-8831-e61d8aa063c5" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Register Company" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="250c902d-5c4b-4593-8831-e61d8aa063c5" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Register Company" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" disabled="true" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="489947f6-0b60-4cfb-87db-7e8dbbed0ddafileName">Register-Company</con:setting>
     <con:setting id="250c902d-5c4b-4593-8831-e61d8aa063c5fileName">Register-Company</con:setting>

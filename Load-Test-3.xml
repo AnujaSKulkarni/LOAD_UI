@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:loadUiTest name="Load Test 2" id="5cc883e8-0967-49f9-86af-aac03c43a00a" xmlns:con="http://eviware.com/soapui/config">
+<con:loadUiTest name="Load Test 3" id="1dd61b45-9691-401a-a2c9-99d57feb6918" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="soapUIObjectSourceId">e59c73aa-5daa-4617-9ab4-ff38f5ff45d3</con:setting>
+    <con:setting id="soapUIObjectSourceId">e2d81e32-ddc2-4f17-ad4e-4c3d356ae62e</con:setting>
     <con:setting id="soapUIObjectSourceType">soapUIObjectSourceType_RestRequest</con:setting>
-    <con:setting id="5cc883e8-0967-49f9-86af-aac03c43a00afileName">Load-Test-2</con:setting>
+    <con:setting id="1dd61b45-9691-401a-a2c9-99d57feb6918fileName">Load-Test-3</con:setting>
   </con:settings>
-  <con1:loadui-project id="dec4b7d2-83a5-401d-9efb-105b90b637de" label="Load Test 2" xmlns:con1="http://eviware.com/loadui/config">
+  <con1:loadui-project id="43d5b2ce-0282-48d2-9676-307e4116612e" label="Load Test 3" xmlns:con1="http://eviware.com/loadui/config">
     <con1:properties>
       <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
       <con1:property propagates="true" key="CanvasItem.abortOnFinish" type="java.lang.Boolean">false</con1:property>
@@ -18,10 +18,10 @@
       <con1:property propagates="true" key="ModelItem.remoteMode" type="java.lang.String"/>
     </con1:properties>
     <con1:attributes>
-      <con1:property key="limits">Time=60;</con1:property>
+      <con1:property key="limits">Time=120;</con1:property>
     </con1:attributes>
     <con1:addons/>
-    <con1:scene label="New Scenario" id="8e58f1db-0279-410f-8d97-b7403b0ef777" version="354">
+    <con1:scene label="New Scenario" id="52f8dafe-d6d0-4af3-921e-9d4675f73d79" version="160">
       <con1:properties>
         <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
         <con1:property propagates="true" key="CanvasItem.abortOnFinish" type="java.lang.Boolean">true</con1:property>
@@ -30,10 +30,10 @@
         <con1:property propagates="true" key="SceneItem.scenarioRateSpecific" type="java.lang.Long">10</con1:property>
       </con1:properties>
       <con1:attributes>
-        <con1:property key="limits">Time=60;</con1:property>
+        <con1:property key="limits">Time=120;</con1:property>
       </con1:attributes>
       <con1:addons/>
-      <con1:component type="com.eviware.loadui.impl.component.IntervalComponent" label="Interval 1" id="75ed97d3-bbd7-4e36-a10d-5fc894692b53" category="Scheduler">
+      <con1:component type="com.eviware.loadui.impl.component.IntervalComponent" label="Interval 1" id="e1227d11-6498-47e9-9f23-e05f755f2752" category="Scheduler">
         <con1:properties>
           <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
           <con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">true</con1:property>
@@ -48,7 +48,7 @@
         </con1:attributes>
         <con1:addons/>
       </con1:component>
-      <con1:component type="com.eviware.loadui.components.soapui.SoapUISamplerComponent" label="Regression Suite:GET Member Token" id="8819d8e1-1f41-4c59-a771-8184c9756f4a" category="Runners">
+      <con1:component type="com.eviware.loadui.components.soapui.SoapUISamplerComponent" label="Regression Suite:Create Location" id="0e2880c8-7549-4679-97e7-1c0e0837e4a8" category="Runners">
         <con1:properties>
           <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
           <con1:property propagates="true" key="concurrentSamples" type="java.lang.Long">5000</con1:property>
@@ -56,7 +56,7 @@
           <con1:property propagates="true" key="maxQueueSize" type="java.lang.Long">1000</con1:property>
           <con1:property propagates="true" key="countDiscarded" type="java.lang.Boolean">false</con1:property>
           <con1:property propagates="true" key="disabledTestSteps" type="java.lang.String"/>
-          <con1:property propagates="true" key="_thinkTime" type="java.lang.Long">0</con1:property>
+          <con1:property propagates="true" key="_thinkTime" type="java.lang.Long">1000</con1:property>
           <con1:property propagates="true" key="ReadyApiTestCase" type="com.eviware.soapui.impl.wsdl.testcase.WsdlTestCase">e2d81e32-ddc2-4f17-ad4e-4c3d356ae62e</con1:property>
           <con1:property propagates="true" key="raiseError" type="java.lang.Boolean">true</con1:property>
           <con1:property propagates="true" key="outputTestCaseProperties" type="java.lang.Boolean">true</con1:property>
@@ -70,7 +70,7 @@
         </con1:attributes>
         <con1:addons/>
       </con1:component>
-      <con1:component type="com.eviware.loadui.impl.component.generators.FixedVU" label="Fixed Load 2" id="9a22feab-ab9c-40f5-bfdd-c296f19bb42b" category="Generators">
+      <con1:component type="com.eviware.loadui.impl.component.generators.FixedVU" label="Fixed Load 2" id="f5d4c1fb-9f8e-41a5-8a62-075049d76704" category="Generators">
         <con1:properties>
           <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
           <con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">false</con1:property>
@@ -83,18 +83,7 @@
         </con1:attributes>
         <con1:addons/>
       </con1:component>
-      <con1:component type="com.eviware.loadui.impl.component.flowControls.LoopFlowComponent" label="Loop 1" id="f905c5a7-2ab8-46cc-859b-fb7e951fe80d" category="Flow">
-        <con1:properties>
-          <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
-          <con1:property propagates="true" key="iterations" type="java.lang.Long">200</con1:property>
-          <con1:property propagates="true" key="displayedIterations" type="java.lang.Long">200</con1:property>
-        </con1:properties>
-        <con1:attributes>
-          <con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Loop</con1:property>
-        </con1:attributes>
-        <con1:addons/>
-      </con1:component>
-      <con1:component type="com.eviware.loadui.components.soapui.SoapUISamplerComponent" label="Regression Suite:Create Account" id="838c8089-c0a7-4d53-b611-fa1ca1a6af6d" category="Runners">
+      <con1:component type="com.eviware.loadui.components.soapui.SoapUISamplerComponent" label="Regression Suite:Create Account" id="167f5606-4221-4750-8701-e6af5bb631d6" category="Runners">
         <con1:properties>
           <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
           <con1:property propagates="true" key="concurrentSamples" type="java.lang.Long">5000</con1:property>
@@ -116,7 +105,7 @@
         </con1:attributes>
         <con1:addons/>
       </con1:component>
-      <con1:component type="com.eviware.loadui.components.soapui.SoapUISamplerComponent" label="Regression Suite:GET Member Token" id="2efb3d7b-9311-4a4c-92ee-d74541218df6" category="Runners">
+      <con1:component type="com.eviware.loadui.components.soapui.SoapUISamplerComponent" label="Regression Suite:GET Member Token" id="550cf1f1-4952-4401-b4bf-0c0e5d9fb905" category="Runners">
         <con1:properties>
           <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
           <con1:property propagates="true" key="concurrentSamples" type="java.lang.Long">5000</con1:property>
@@ -138,90 +127,55 @@
         </con1:attributes>
         <con1:addons/>
       </con1:component>
-      <con1:component type="com.eviware.loadui.components.soapui.SoapUISamplerComponent" label="Regression Suite:Send Invitation" id="0bfe30b3-95a9-4c5f-a4e5-760ab874d7c8" category="Runners">
+      <con1:component type="com.eviware.loadui.impl.component.flowControls.LoopFlowComponent" label="Loop 1" id="7b9fa828-3607-49bd-8002-7477661959de" category="Flow">
         <con1:properties>
           <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
-          <con1:property propagates="true" key="concurrentSamples" type="java.lang.Long">5000</con1:property>
-          <con1:property propagates="true" key="property_name_is_not_relevant_for_private_property" type="java.lang.Long">9223372036854775807</con1:property>
-          <con1:property propagates="true" key="maxQueueSize" type="java.lang.Long">1000</con1:property>
-          <con1:property propagates="true" key="countDiscarded" type="java.lang.Boolean">false</con1:property>
-          <con1:property propagates="true" key="disabledTestSteps" type="java.lang.String"/>
-          <con1:property propagates="true" key="_thinkTime" type="java.lang.Long">0</con1:property>
-          <con1:property propagates="true" key="ReadyApiTestCase" type="com.eviware.soapui.impl.wsdl.testcase.WsdlTestCase">c3cd17c0-d022-4c6d-88e9-93de3e3b799a</con1:property>
-          <con1:property propagates="true" key="raiseError" type="java.lang.Boolean">true</con1:property>
-          <con1:property propagates="true" key="outputTestCaseProperties" type="java.lang.Boolean">true</con1:property>
-          <con1:property propagates="true" key="OutputLevel" type="java.lang.String">TestCase only</con1:property>
-          <con1:property propagates="true" key="closeConnectionsAfterRequest" type="java.lang.Boolean">false</con1:property>
-          <con1:property propagates="true" key="disableSoapuiAssertions" type="java.lang.Boolean">false</con1:property>
-          <con1:property propagates="true" key="forceShareDatasources" type="java.lang.Boolean">true</con1:property>
+          <con1:property propagates="true" key="iterations" type="java.lang.Long">200</con1:property>
+          <con1:property propagates="true" key="displayedIterations" type="java.lang.Long">200</con1:property>
         </con1:properties>
         <con1:attributes>
-          <con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Ready API TestCase Runner</con1:property>
+          <con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Loop</con1:property>
         </con1:attributes>
         <con1:addons/>
       </con1:component>
-      <con1:component type="com.eviware.loadui.components.soapui.SoapUISamplerComponent" label="Regression Suite:GET Client Token" id="2552e80a-281d-48a3-bd4f-13245d9aa9f5" category="Runners">
-        <con1:properties>
-          <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
-          <con1:property propagates="true" key="concurrentSamples" type="java.lang.Long">5000</con1:property>
-          <con1:property propagates="true" key="property_name_is_not_relevant_for_private_property" type="java.lang.Long">9223372036854775807</con1:property>
-          <con1:property propagates="true" key="maxQueueSize" type="java.lang.Long">1000</con1:property>
-          <con1:property propagates="true" key="countDiscarded" type="java.lang.Boolean">false</con1:property>
-          <con1:property propagates="true" key="disabledTestSteps" type="java.lang.String"/>
-          <con1:property propagates="true" key="_thinkTime" type="java.lang.Long">0</con1:property>
-          <con1:property propagates="true" key="ReadyApiTestCase" type="com.eviware.soapui.impl.wsdl.testcase.WsdlTestCase">294875cc-8b7b-49ab-8c4f-b41f5810e03f</con1:property>
-          <con1:property propagates="true" key="raiseError" type="java.lang.Boolean">true</con1:property>
-          <con1:property propagates="true" key="outputTestCaseProperties" type="java.lang.Boolean">true</con1:property>
-          <con1:property propagates="true" key="OutputLevel" type="java.lang.String">TestCase only</con1:property>
-          <con1:property propagates="true" key="closeConnectionsAfterRequest" type="java.lang.Boolean">false</con1:property>
-          <con1:property propagates="true" key="disableSoapuiAssertions" type="java.lang.Boolean">false</con1:property>
-          <con1:property propagates="true" key="forceShareDatasources" type="java.lang.Boolean">true</con1:property>
-        </con1:properties>
-        <con1:attributes>
-          <con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Ready API TestCase Runner</con1:property>
-        </con1:attributes>
-        <con1:addons/>
-      </con1:component>
-      <con1:connection outputTerminalId="75ed97d3-bbd7-4e36-a10d-5fc894692b53/outgoingTerminal" inputTerminalId="9a22feab-ab9c-40f5-bfdd-c296f19bb42b/stateTerminal"/>
-      <con1:connection outputTerminalId="9a22feab-ab9c-40f5-bfdd-c296f19bb42b/triggerTerminal" inputTerminalId="2552e80a-281d-48a3-bd4f-13245d9aa9f5/triggerTerminal"/>
-      <con1:connection outputTerminalId="2552e80a-281d-48a3-bd4f-13245d9aa9f5/runningTerminal" inputTerminalId="2efb3d7b-9311-4a4c-92ee-d74541218df6/triggerTerminal"/>
-      <con1:connection outputTerminalId="2efb3d7b-9311-4a4c-92ee-d74541218df6/runningTerminal" inputTerminalId="f905c5a7-2ab8-46cc-859b-fb7e951fe80d/incomingTerminal"/>
-      <con1:connection outputTerminalId="f905c5a7-2ab8-46cc-859b-fb7e951fe80d/loop" inputTerminalId="838c8089-c0a7-4d53-b611-fa1ca1a6af6d/triggerTerminal"/>
-      <con1:connection outputTerminalId="838c8089-c0a7-4d53-b611-fa1ca1a6af6d/runningTerminal" inputTerminalId="8819d8e1-1f41-4c59-a771-8184c9756f4a/triggerTerminal"/>
-      <con1:connection outputTerminalId="8819d8e1-1f41-4c59-a771-8184c9756f4a/runningTerminal" inputTerminalId="0bfe30b3-95a9-4c5f-a4e5-760ab874d7c8/triggerTerminal"/>
-      <con1:connection outputTerminalId="0bfe30b3-95a9-4c5f-a4e5-760ab874d7c8/runningTerminal" inputTerminalId="f905c5a7-2ab8-46cc-859b-fb7e951fe80d/incomingTerminal"/>
-      <con1:connection outputTerminalId="f905c5a7-2ab8-46cc-859b-fb7e951fe80d/exit" inputTerminalId="9a22feab-ab9c-40f5-bfdd-c296f19bb42b/Sample Count"/>
+      <con1:connection outputTerminalId="e1227d11-6498-47e9-9f23-e05f755f2752/outgoingTerminal" inputTerminalId="f5d4c1fb-9f8e-41a5-8a62-075049d76704/stateTerminal"/>
+      <con1:connection outputTerminalId="f5d4c1fb-9f8e-41a5-8a62-075049d76704/triggerTerminal" inputTerminalId="550cf1f1-4952-4401-b4bf-0c0e5d9fb905/triggerTerminal"/>
+      <con1:connection outputTerminalId="550cf1f1-4952-4401-b4bf-0c0e5d9fb905/runningTerminal" inputTerminalId="7b9fa828-3607-49bd-8002-7477661959de/incomingTerminal"/>
+      <con1:connection outputTerminalId="7b9fa828-3607-49bd-8002-7477661959de/loop" inputTerminalId="167f5606-4221-4750-8701-e6af5bb631d6/triggerTerminal"/>
+      <con1:connection outputTerminalId="167f5606-4221-4750-8701-e6af5bb631d6/runningTerminal" inputTerminalId="0e2880c8-7549-4679-97e7-1c0e0837e4a8/triggerTerminal"/>
+      <con1:connection outputTerminalId="0e2880c8-7549-4679-97e7-1c0e0837e4a8/runningTerminal" inputTerminalId="7b9fa828-3607-49bd-8002-7477661959de/incomingTerminal"/>
+      <con1:connection outputTerminalId="7b9fa828-3607-49bd-8002-7477661959de/exit" inputTerminalId="f5d4c1fb-9f8e-41a5-8a62-075049d76704/Sample Count"/>
     </con1:scene>
     <con1:statistics>
       <con1:page title="DefaultLoadUIStatisticPage">
         <con1:chartGroup type="com.eviware.loadui.api.statistics.model.chart.line.LineChartView" title="" groupType="Monitors">
           <con1:attributes>
-            <con1:property key="GroupId">4b53cb19-4b26-4779-ac34-722f81885bf3</con1:property>
+            <con1:property key="GroupId">24060f38-d832-463c-9b2d-889eece87f13</con1:property>
           </con1:attributes>
         </con1:chartGroup>
         <con1:chartGroup type="com.eviware.loadui.api.statistics.model.chart.line.LineChartView" title="Baseline Statistics" groupType="Graph">
-          <con1:chart statisticHolder="8819d8e1-1f41-4c59-a771-8184c9756f4a">
+          <con1:chart statisticHolder="0e2880c8-7549-4679-97e7-1c0e0837e4a8">
             <con1:attributes>
-              <con1:property key="_CHART_segments">63:36:8819d8e1-1f41-4c59-a771-8184c9756f4a10:Throughput3:TPS4:main</con1:property>
+              <con1:property key="_CHART_segments">63:36:0e2880c8-7549-4679-97e7-1c0e0837e4a810:Throughput3:TPS4:main</con1:property>
             </con1:attributes>
           </con1:chart>
-          <con1:chart statisticHolder="dec4b7d2-83a5-401d-9efb-105b90b637de">
+          <con1:chart statisticHolder="43d5b2ce-0282-48d2-9676-307e4116612e">
             <con1:attributes>
-              <con1:property key="_CHART_segments">67:36:dec4b7d2-83a5-401d-9efb-105b90b637de10:Time Taken7:AVERAGE4:main76:36:dec4b7d2-83a5-401d-9efb-105b90b637de10:Time Taken15:PERCENTILE_95TH4:main65:36:dec4b7d2-83a5-401d-9efb-105b90b637de10:Running VU5:TOTAL4:main</con1:property>
+              <con1:property key="_CHART_segments">67:36:43d5b2ce-0282-48d2-9676-307e4116612e10:Time Taken7:AVERAGE4:main76:36:43d5b2ce-0282-48d2-9676-307e4116612e10:Time Taken15:PERCENTILE_95TH4:main65:36:43d5b2ce-0282-48d2-9676-307e4116612e10:Running VU5:TOTAL4:main</con1:property>
             </con1:attributes>
           </con1:chart>
           <con1:attributes>
-            <con1:property key="GroupId">116545e1-13d5-4812-97e4-08554156cd2a</con1:property>
+            <con1:property key="GroupId">6ab158d2-0e46-4eb5-8472-9e5127be1732</con1:property>
           </con1:attributes>
         </con1:chartGroup>
       </con1:page>
     </con1:statistics>
     <con1:heatUpTime>15</con1:heatUpTime>
   </con1:loadui-project>
-  <con:loadUITestScenario projectId="dec4b7d2-83a5-401d-9efb-105b90b637de" scenarioId="8e58f1db-0279-410f-8d97-b7403b0ef777" name="New Scenario" id="51cd8f2c-698d-482c-be3f-5654bbcab843">
+  <con:loadUITestScenario projectId="43d5b2ce-0282-48d2-9676-307e4116612e" scenarioId="52f8dafe-d6d0-4af3-921e-9d4675f73d79" name="New Scenario" id="dc2fcf5f-d317-4056-9b78-3e4c9da7a5b2">
     <con:settings/>
   </con:loadUITestScenario>
-  <con:loadUIPanelData id="6635e629-da58-4d83-af83-20f3c5d4cb65">
+  <con:loadUIPanelData id="0894c7d1-0193-4510-b862-ed0cf8c106f7">
     <con:panel>Log</con:panel>
     <con:data>
       <con:paramName>column_width@Timestamp</con:paramName>
@@ -320,6 +274,6 @@
       <con:paramValue>false</con:paramValue>
     </con:data>
   </con:loadUIPanelData>
-  <con:statistics id="116545e1-13d5-4812-97e4-08554156cd2a"/>
+  <con:statistics id="6ab158d2-0e46-4eb5-8472-9e5127be1732"/>
   <con:reportParameters/>
 </con:loadUiTest>

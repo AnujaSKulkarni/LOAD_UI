@@ -121,7 +121,6 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook
 import org.apache.poi.xssf.streaming.SXSSFWorkbook
 	
 //***********************Transferring Environment Properties to Global Variables***********************
-def Rundatapath
 def Property_Count = testRunner.testCase.testSuite.project.propertyCount
 def Property_Name
 def Property_Value
@@ -177,10 +176,15 @@ def date_Folder = dateFormat.format(today)
 def Environment_Name = context.expand( '${#Project#Environment_Name}' )
 file_path = "C:/Users/" + username + "/Documents/TestResults/"
 def path = new File(file_path)
-path.mkdir()
+if (path.exists() == false){
+	path.mkdir()
+}
+
 file_path_2 = file_path + Environment_Name + "/"
 def path_2 = new File(file_path_2)
-path_2.mkdir()
+if (path_2.exists() == false){
+	path_2.mkdir()
+}
 	
 file_path_1 = file_path_2 + date_Folder + "/"
 def path_1 = new File(file_path_1)
@@ -204,6 +208,7 @@ log.info final_path.exists()
 if (final_path.exists() == false){
 	final_path.mkdir()
 	com.eviware.soapui.SoapUI.globalProperties.setPropertyValue("Test_Result_Path", Final_Path)
+	
 	
 	/* Creating Excel for test result */
 	def Testresultpath = com.eviware.soapui.SoapUI.globalProperties.getPropertyValue("Test_Result_Path")
@@ -249,7 +254,7 @@ if (final_path.exists() == false){
 	
 	
 	/*Run Time Data */
-	Rundatapath = com.eviware.soapui.SoapUI.globalProperties.getPropertyValue("Test_Result_Path")
+	def Rundatapath = com.eviware.soapui.SoapUI.globalProperties.getPropertyValue("Test_Result_Path")
 	Rundatapath = Rundatapath + "Run_Time_Data.xls"
 	com.eviware.soapui.SoapUI.globalProperties.setPropertyValue("Run_Time_Data", Rundatapath)
 	
@@ -287,9 +292,7 @@ if (final_path.exists() == false){
 	c2.setCellValue("Account_ID_Number")
 	wb1.write(out1);
 	out1.close();
-}
-//com.eviware.soapui.SoapUI.globalProperties.setPropertyValue("Test_Result_Path", Final_Path)
-//com.eviware.soapui.SoapUI.globalProperties.setPropertyValue("Run_Time_Data", Rundatapath)</con:setupScript>
+}</con:setupScript>
   <con:properties>
     <con:property>
       <con:name>Client_Token_Response</con:name>

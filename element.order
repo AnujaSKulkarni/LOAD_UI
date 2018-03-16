@@ -167,4 +167,5 @@ getCountriesAndStates
 getallappliances_by_accountid
 Update_Password
 Regression-Suite
+Single-Request-Test-Cases
 REST-Virt-1
