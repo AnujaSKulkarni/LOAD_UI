@@ -1,7 +1,6 @@
 GET-Client-Token.xml
 Create-Account.xml
 GET-Member-Token.xml
-Account-Phone-Number-confirmation.xml
 forgotPwd.xml
 Get-All-Accounts.xml
 Get-Account.xml
@@ -10,11 +9,9 @@ HandheldPrivileges.xml
 Create-Group.xml
 Get-Groups.xml
 GET-groups-by-AccountId.xml
-GetRolesList.xml
 Assign-Group.xml
 Get-All-Privacy-Policies.xml
 Get-All-Terms-and-Conditions.xml
-Refresh-Token.xml
 Create-Location.xml
 Send-Invitation.xml
 getallinvitedmember.xml

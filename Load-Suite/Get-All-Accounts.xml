@@ -9,7 +9,7 @@
   
   
   
-  <con:testStep type="restrequest" name="Get All Accounts" id="8e0a7497-8e8a-4cdf-ac67-fd8b9aeb6e42" disabled="true">
+  <con:testStep type="restrequest" name="Get All Accounts" id="8e0a7497-8e8a-4cdf-ac67-fd8b9aeb6e42">
     <con:settings/>
     <con:config service="Get All Accounts" resourcePath="/accounts" methodName="Get All Accounts" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Get All Accounts" id="b8b46a01-298e-4615-8039-eb0f93b0a321" mediaType="application/json" postQueryString="false">

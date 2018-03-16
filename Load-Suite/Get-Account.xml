@@ -11,7 +11,7 @@
   
   
   
-  <con:testStep type="restrequest" name="Get Account" id="7bb222dc-d987-442f-8349-55f07e1fe5c2" disabled="true">
+  <con:testStep type="restrequest" name="Get Account" id="7bb222dc-d987-442f-8349-55f07e1fe5c2">
     <con:settings/>
     <con:config service="Get Account" resourcePath="/account/${#Project#Account_ID_Load}" methodName="Get Account" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Get Account" id="2686a9fb-f18b-41ef-a5fe-403186c27901" mediaType="application/json">

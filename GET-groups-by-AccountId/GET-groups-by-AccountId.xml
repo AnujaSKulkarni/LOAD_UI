@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="GET groups by AccountId" path="/get_groups/${#[Regression Suite#Create Group]#Account_ID}" id="5989f705-c3de-4acb-9476-3cb89f4f47a4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="GET groups by AccountId" path="/get_groups/${#Project#Account_ID_Load}" id="5989f705-c3de-4acb-9476-3cb89f4f47a4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
       <con:settings>
         <con:setting id="5989f705-c3de-4acb-9476-3cb89f4f47a4fileName">GET-groups-by-AccountId</con:setting>
       </con:settings>
