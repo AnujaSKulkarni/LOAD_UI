@@ -18,23 +18,13 @@
     <con:config><script>String date = new Date()
 date = date.replaceAll(":","_")
 date = date.replaceAll(" ","_")
-RandomNumber (int)(Math.random()*10000000)
+RandomNumber = (int)(Math.random()*10000000)
 Email_ID = "\"" + date + RandomNumber + "@mailinator.com" + "\""
 Email_ID = Email_ID.toUpperCase()
-Email_ID_string = date + "@mailinator.com"
+Email_ID_string = date + RandomNumber + "@mailinator.com"
 Email_ID_string = Email_ID_string.toUpperCase()
-testRunner.testCase.testSuite.setPropertyValue("Email_ID", Email_ID)
-testRunner.testCase.testSuite.setPropertyValue("Email_ID_string", Email_ID_string)
-
-def Brand_Name = context.expand( '${DataSource#Brand}' )
-Brand_Name = Brand_Name.replace("\"", "")
-testRunner.testCase.setPropertyValue("Brand_Name", Brand_Name)
-def Country_Name = context.expand( '${DataSource#Country_Name}' )
-Country_Name = Country_Name.replace("\"", "")
-testRunner.testCase.setPropertyValue("Country_Name", Country_Name)
-def Region = context.expand( '${DataSource#Region}' )
-Region = Region.replace("\"", "")
-testRunner.testCase.setPropertyValue("Region", Region)</script></con:config>
+testRunner.testCase.setPropertyValue("Email_ID", Email_ID)
+testRunner.testCase.setPropertyValue("Email_ID_string", Email_ID_string)</script></con:config>
   </con:testStep>
   <con:testStep type="restrequest" name="Create Account" id="d292790a-d451-45e1-b28a-2d611c7c049c" disabled="true">
     <con:settings/>
@@ -50,7 +40,7 @@ testRunner.testCase.setPropertyValue("Region", Region)</script></con:config>
   "statusId": 1,
   "firstName": "Load",
   "lastName": "Testing",
-  "email": ${#TestSuite#Email_ID},
+  "email": ${#TestCase#Email_ID},
   "emailConfirmedAt": null,
   "signedInCount": 0,
   "currentSignInAt": null,
@@ -243,7 +233,7 @@ Connection: keep-alive
       <con:name>Region</con:name>
       <con:value>NAR</con:value>
     </con:property>
-  </con:properties>
+  <con:property><con:name>Email_ID</con:name><con:value>"FRI_MAR_16_18_33_01_IST_20188758387@MAILINATOR.COM"</con:value></con:property><con:property><con:name>Email_ID_string</con:name><con:value>FRI_MAR_16_18_33_01_IST_20188758387@MAILINATOR.COM</con:value></con:property></con:properties>
   <con:reportParameters/>
   <con:breakPoints>
     <con:testStepId>df469809-6c39-46cb-af19-af08375fb70c</con:testStepId>

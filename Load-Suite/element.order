@@ -6,7 +6,6 @@ forgotPwd.xml
 Get-All-Accounts.xml
 Get-Account.xml
 Update-Account.xml
-Resend-Email-Confirmation.xml
 HandheldPrivileges.xml
 Create-Group.xml
 Get-Groups.xml
