@@ -8,11 +8,9 @@
     <con:setting id="IncludeCoverage">true</con:setting>
     <con:setting id="4116a559-779e-43a0-ba46-4ec42bfc53aefileName">Create-Account</con:setting>
     <con:setting id="dc55c82b-3f72-4911-ac1b-2d8e8328a67afileName">Create-Account</con:setting>
-  <con:setting id="7281251d-220f-4073-bafb-dfc216a68ba4fileName">Create-Account</con:setting></con:settings>
+    <con:setting id="7281251d-220f-4073-bafb-dfc216a68ba4fileName">Create-Account</con:setting>
+  </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  
-  
-  
   <con:testStep type="groovy" name="Unique_Email_ID" id="80d1ffc3-619d-480c-9436-c95e2e81cb03">
     <con:settings/>
     <con:config>
@@ -146,7 +144,9 @@ testRunner.testCase.setPropertyValue("Region", Region)</script>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:jmsPropertyConfig/>
-        <con:parameters><entry key="Content-Type" value="application/json" xmlns="http://eviware.com/soapui/config"/></con:parameters>
+        <con:parameters>
+          <entry key="Content-Type" value="application/json" xmlns="http://eviware.com/soapui/config"/>
+        </con:parameters>
         <con:parameterOrder>
           <con:entry>Authorization</con:entry>
           <con:entry>wp-client-brand</con:entry>
@@ -186,17 +186,6 @@ testRunner.testCase.setPropertyValue("Region", Region)</script>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  
-  
-  
-  
-  <con:testStep type="groovy" name="Run_Time_Data_Transfer" id="1374d0d5-1a36-4e7e-ae89-55333adf3504">
-    <con:settings/>
-    <con:config><script>def Account_ID = context.expand( '${Create Account#Response#$[\'accountId\']}' )
-testRunner.testCase.testSuite.setPropertyValue("Account_ID_test", Account_ID)</script></con:config>
-  </con:testStep>
-  
-  
   <con:properties>
     <con:property>
       <con:name>Account_ID_Response</con:name>
