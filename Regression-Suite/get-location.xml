@@ -314,7 +314,7 @@ if (data_Combination == "Negative"){
   </con:testStep>
   <con:testStep type="restrequest" name="get location_Positive" id="0c247470-9270-4f28-85df-e058260d5331" disabled="true">
     <con:settings/>
-    <con:config service="get location" resourcePath="/locations/location/${#[Regression Suite#Create Location#Create Location_Positive]#Response#$['LOCATION_ID']}" methodName="get location" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config service="get location" resourcePath="/locations/location/${#Project#Location_ID_Load}" methodName="get location" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="get location_Positive" id="6d4d7cac-0d08-4709-bc6c-9176997138c9" mediaType="application/json">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -374,7 +374,7 @@ if (data_Combination == "Negative"){
   </con:testStep>
   <con:testStep type="restrequest" name="get location_Negative" id="fbbb66b4-7e25-4d28-9c3d-2ea8f2bef414" disabled="true">
     <con:settings/>
-    <con:config service="get location" resourcePath="/locations/location/${#[Regression Suite#Create Location#Create Location_Positive]#Response#$['LOCATION_ID']}" methodName="get location" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config service="get location" resourcePath="/locations/location/${#Project#Location_ID_Load}" methodName="get location" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="get location_Negative" id="6d4d7cac-0d08-4709-bc6c-9176997138c9" mediaType="application/json">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>

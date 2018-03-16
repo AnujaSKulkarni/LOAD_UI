@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="get location" path="/locations/location/${#[Regression Suite#Create Location#Create Location_Positive]#Response#$['LOCATION_ID']}" id="6a4141a8-849c-4f2c-a008-8097f0c38a71" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="get location" path="/locations/location/${#Project#Location_ID_Load}" id="6a4141a8-849c-4f2c-a008-8097f0c38a71" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
       <con:settings>
         <con:setting id="6a4141a8-849c-4f2c-a008-8097f0c38a71fileName">get-location</con:setting>
       </con:settings>
@@ -33,13 +33,13 @@
           <con:params/>
           <con:element>data</con:element>
         </con:representation>
-        <con:request name="get location" id="6d4d7cac-0d08-4709-bc6c-9176997138c9" mediaType="application/json">
+        <con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:ns="https://api-stg.whrcloud.com/api/v1/locations/location/3892">ns:Response</con:element></con:representation><con:request name="get location" id="6d4d7cac-0d08-4709-bc6c-9176997138c9" mediaType="application/json">
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
           </con:settings>
           <con:endpoint>${Location}</con:endpoint>
           <con:request/>
-          <con:credentials>
+          <con:originalUri>https://api-stg.whrcloud.com/api/v1/locations/location/3892</con:originalUri><con:credentials>
             <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
             <con:authType>No Authorization</con:authType>
           </con:credentials>

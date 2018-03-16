@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="Get Location by AccountId" path="/location/account/${#TestCase#Account_ID}" id="1e544b62-0f02-4482-aacb-e8b01919ed67" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="Get Location by AccountId" path="/location/account/${#Project#Account_ID_Load}" id="1e544b62-0f02-4482-aacb-e8b01919ed67" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
       <con:settings>
         <con:setting id="1e544b62-0f02-4482-aacb-e8b01919ed67fileName">Get-Location-by-AccountId</con:setting>
       </con:settings>
@@ -27,7 +27,7 @@
           <con:params/>
           <con:element xmlns:ns="http://locationserviceqa-v2.mybluemix.net/api/v1/location/account/7827">ns:Fault</con:element>
         </con:representation>
-        <con:request name="Get Location by AccountId" id="663c63e9-9332-4578-b295-051610626265" mediaType="application/json">
+        <con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element>Response</con:element></con:representation><con:request name="Get Location by AccountId" id="663c63e9-9332-4578-b295-051610626265" mediaType="application/json">
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
           </con:settings>
