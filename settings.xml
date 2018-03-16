@@ -116,7 +116,7 @@
     <con:property>
       <con:name>UPC_Sheet</con:name>
     </con:property>
-  </con:properties>
+  <con:property><con:name>Account_ID_Load</con:name></con:property></con:properties>
   <con:wssContainer/>
   <con:databaseConnectionContainer>
     <con:databaseConnection>
@@ -731,7 +731,7 @@
       <con:name>UPC_Sheet</con:name>
       <con:value>UPC_QA</con:value>
     </con:property>
-    <con:databaseConnectionContainer>
+    <con:property><con:name>Account_ID_Load</con:name><con:value/></con:property><con:databaseConnectionContainer>
       <con:databaseConnection>
         <con:name>DataBase</con:name>
         <con:driver>com.ibm.db2.jcc.DB2Driver</con:driver>
@@ -1342,7 +1342,7 @@
       <con:name>UPC_Sheet</con:name>
       <con:value/>
     </con:property>
-    <con:databaseConnectionContainer>
+    <con:property><con:name>Account_ID_Load</con:name><con:value/></con:property><con:databaseConnectionContainer>
       <con:databaseConnection>
         <con:name>DataBase</con:name>
         <con:driver>com.ibm.db2.jcc.DB2Driver</con:driver>
@@ -1953,7 +1953,7 @@
       <con:name>UPC_Sheet</con:name>
       <con:value>UPC_Stg</con:value>
     </con:property>
-    <con:databaseConnectionContainer>
+    <con:property><con:name>Account_ID_Load</con:name><con:value>6602</con:value></con:property><con:databaseConnectionContainer>
       <con:databaseConnection>
         <con:name>DataBase</con:name>
         <con:driver>com.ibm.db2.jcc.DB2Driver</con:driver>

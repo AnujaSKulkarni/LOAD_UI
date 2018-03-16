@@ -16,7 +16,8 @@
     <con:config><script>String date = new Date()
 date = date.replaceAll(":","_")
 date = date.replaceAll(" ","_")
-def LocationName = "\"" + "Location_" + date + "\""
+def RandomNumber = (int)(Math.random()*10000000)
+def LocationName = "\"" + "Location_" + date + RandomNumber +  "\""
 testRunner.testCase.setPropertyValue("Location_Name", LocationName)</script></con:config>
   </con:testStep>
   <con:testStep type="restrequest" name="Create Location_Positive" id="be000c22-5b87-4354-8bb9-c7bf2eece528">
@@ -50,7 +51,7 @@ testRunner.testCase.setPropertyValue("Location_Name", LocationName)</script></co
   "enableClothspin":1,
   "countryId": 100,
   "countryCode": "US",
-  "accountId":${#TestSuite#Account_ID_test}
+  "accountId":${#Project#Account_ID_Load}
 }</con:request>
         <con:originalUri>http://locationserviceqa.mybluemix.net/api/location</con:originalUri>
         <con:assertion type="Valid HTTP Status Codes" id="3a1d1876-da64-48ee-8405-b33acc5cf513" name="Valid HTTP Status Codes">

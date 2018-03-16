@@ -76,45 +76,8 @@
     </con:config>
   </con:testStep>
   
-  <con:testStep type="groovy" name="Skip on failure" id="5312a556-c277-4341-b73d-9820d598c3ab">
-    <con:settings/>
-    <con:config>
-      <script>def TestCaseName = testRunner.testCase.getName()
-obj = context.testCase.getTestStepByName(TestCaseName)
-assertions = obj.getAssertionList()
-def Status
-assertions.each{
-	def stat = (it.status).toString()
-	if(stat == "VALID"){
-		Status = "Pass"
-	}
-	if(stat == "FAILED"){
-		Status = "Fail"
-	}
-}
-log.info(Status)
-
-com.eviware.soapui.SoapUI.globalProperties.setPropertyValue("access_token","undefined")
-
-if(Status == "Fail"){
-testRunner.testCase.testSteps.each{k, v ->    
-testRunner.cancel(k)}
-}</script>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="groovy" name="Member Token - Global Variable" id="946f24b4-60a6-4c75-ac6b-c0dffdb82095">
-    <con:settings/>
-    <con:config>
-      <script>def token = context.expand( '${GET Member Token#Response#$[\'access_token\']}' )
-def Refresh_Token = context.expand( '${GET Member Token#Response#$[\'refresh_token\']}' )
-
-log.info(token)
-com.eviware.soapui.SoapUI.globalProperties.setPropertyValue("access_token", token)
-
-log.info "token: " + Refresh_Token
-com.eviware.soapui.SoapUI.globalProperties.setPropertyValue("Refresh_Token", Refresh_Token)</script>
-    </con:config>
-  </con:testStep>
+  
+  
   <con:properties>
     <con:property>
       <con:name>Member_Token_response</con:name>
