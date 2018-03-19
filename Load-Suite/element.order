@@ -41,7 +41,6 @@ update--setting.xml
 Retrive-setting-All.xml
 Retrive-CycleById.xml
 Retrive-setting-favfill.xml
-Delete-cycleByid.xml
 Delete-SettingByAttribute.xml
 Delete-Favorities.xml
 HistoryWithTimeRange.xml

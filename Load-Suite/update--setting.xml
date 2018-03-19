@@ -38,7 +38,9 @@
                 "favoriteFill1" :"ml",
                 "favoriteFill2" :"cups"
             }
-        }</con:request>
+        }
+     ]
+}</con:request>
         <con:originalUri>https://api-test.whrcloud.com/api/v1/account/favorites/entity/setting</con:originalUri>
         <con:assertion type="Valid HTTP Status Codes" id="3f4dc77a-a91c-41bd-89c5-0dab776ad3b2" name="Valid HTTP Status Codes">
           <con:settings/>
