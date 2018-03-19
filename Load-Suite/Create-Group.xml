@@ -3,17 +3,13 @@
   <con:settings>
     <con:setting id="6c216d9e-c6c9-4f57-8000-fec1eb3d515efileName">Create-Group</con:setting>
     <con:setting id="cbe851c1-338c-4a21-b23f-c277758508f0fileName">Create-Group</con:setting>
-  <con:setting id="7d09dd88-5547-4cd8-b99c-71cab9a765c4fileName">Create-Group</con:setting></con:settings>
+    <con:setting id="7d09dd88-5547-4cd8-b99c-71cab9a765c4fileName">Create-Group</con:setting>
+  </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  
-  
-  
-  
-  
-  
   <con:testStep type="groovy" name="Create_Group_Name" id="9ac0be32-fcd3-4860-901e-375b20121036">
     <con:settings/>
-    <con:config><script>String date = new Date()
+    <con:config>
+      <script>String date = new Date()
 date = date.replaceAll(":","_")
 date = date.replaceAll(" ","_")
 RandomNumber = (int)(Math.random()*10000000)
@@ -22,7 +18,8 @@ Email_ID = Email_ID.toUpperCase()
 Email_ID_string = "Sanity_Group_" + date + RandomNumber
 Email_ID_string = Email_ID_string.toUpperCase()
 testRunner.testCase.setPropertyValue("Group_Name", Email_ID)
-testRunner.testCase.setPropertyValue("Group_Name_string", Email_ID_string)</script></con:config>
+testRunner.testCase.setPropertyValue("Group_Name_string", Email_ID_string)</script>
+    </con:config>
   </con:testStep>
   <con:testStep type="restrequest" name="Create Group" id="98a2c466-4e04-4aa4-bbb2-445f673a2359">
     <con:settings/>
@@ -86,14 +83,16 @@ testRunner.testCase.setPropertyValue("Group_Name_string", Email_ID_string)</scri
       </con:restRequest>
     </con:config>
   </con:testStep>
-  
-  
-  
-  
-  
   <con:properties>
-    
-  <con:property><con:name>Group_Name</con:name><con:value>"SANITY_GROUP_FRI_MAR_16_18_48_47_IST_20187193983"</con:value></con:property><con:property><con:name>Group_Name_string</con:name><con:value>SANITY_GROUP_FRI_MAR_16_18_48_47_IST_20187193983</con:value></con:property></con:properties>
+    <con:property>
+      <con:name>Group_Name</con:name>
+      <con:value>"SANITY_GROUP_FRI_MAR_16_19_26_34_IST_20181668302"</con:value>
+    </con:property>
+    <con:property>
+      <con:name>Group_Name_string</con:name>
+      <con:value>SANITY_GROUP_FRI_MAR_16_19_26_34_IST_20181668302</con:value>
+    </con:property>
+  </con:properties>
   <con:reportParameters/>
   <con:breakPoints>
     <con:testStepId>14457311-3574-4362-a788-5f447bca7b37</con:testStepId>

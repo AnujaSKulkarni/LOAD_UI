@@ -147,14 +147,16 @@ if(RunTimeDataSource_Flag == true){
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
-        <con:configuration><file>${Run_Time_Data}</file><worksheet>Account_Run_Time_Data</worksheet><cell>A2</cell><ignoreEmpty>true</ignoreEmpty><evaluateFormulas>false</evaluateFormulas></con:configuration>
+        <con:configuration>
+          <file>${Run_Time_Data}</file>
+          <worksheet>Account_Run_Time_Data</worksheet>
+          <cell>A2</cell>
+          <ignoreEmpty>true</ignoreEmpty>
+          <evaluateFormulas>false</evaluateFormulas>
+        </con:configuration>
       </con:dataSource>
       <con:shared>true</con:shared>
       <con:restartShared>true</con:restartShared>
-      <con:property>Account_ID_Number</con:property>
-      <con:property>Verification_Code</con:property>
-      <con:property>Email_ID</con:property>
-      <con:property>Group_ID</con:property>
       <con:completeLastOperation>true</con:completeLastOperation>
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
@@ -182,12 +184,12 @@ if(RunTimeDataSource_Flag == true){
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:jmsPropertyConfig/>
         <con:parameters>
-  <con:entry key="password" value="Whirlpool123$"/>
-  <con:entry key="grant_type" value="password"/>
-  <con:entry key="client_secret" value="syntel123$"/>
-  <con:entry key="client_id" value="syntel"/>
-  <con:entry key="username" value="wcloud_admin_account_soapui@mailinator.com"/>
-</con:parameters>
+          <con:entry key="password" value="Whirlpool123$"/>
+          <con:entry key="grant_type" value="password"/>
+          <con:entry key="client_secret" value="syntel123$"/>
+          <con:entry key="client_id" value="syntel"/>
+          <con:entry key="username" value="wcloud_admin_account_soapui@mailinator.com"/>
+        </con:parameters>
         <con:parameterOrder>
           <con:entry>grant_type</con:entry>
           <con:entry>username</con:entry>

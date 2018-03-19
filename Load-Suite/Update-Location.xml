@@ -3,14 +3,20 @@
   <con:settings>
     <con:setting id="701d071b-f0ea-484a-a9c0-d3a5c6ad45c4fileName">Update-Location</con:setting>
     <con:setting id="a3c78970-6e6a-4ae1-80bb-6f861e642a5cfileName">Update-Location</con:setting>
-  <con:setting id="6b41f7be-750f-43d5-b3d4-9f8bac900797fileName">Update-Location</con:setting></con:settings>
+    <con:setting id="6b41f7be-750f-43d5-b3d4-9f8bac900797fileName">Update-Location</con:setting>
+  </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  
-  
-  
-  
-  
-  
+  <con:testStep type="groovy" name="Test_Data_Setup" id="e722e781-f47b-4da2-b074-bf012d5a11b2">
+    <con:settings/>
+    <con:config>
+      <script>String date = new Date()
+date = date.replaceAll(":","_")
+date = date.replaceAll(" ","_")
+def RandomNumber = (int)(Math.random()*10000000)
+def LocationName = "\"" + "Update_Location_" + date + RandomNumber +  "\""
+testRunner.testCase.setPropertyValue("Location_Name", LocationName)</script>
+    </con:config>
+  </con:testStep>
   <con:testStep type="restrequest" name="Update Location" id="a2f76f6b-29e5-408c-a2b7-9a38561c2b40">
     <con:settings/>
     <con:config service="Update location" resourcePath="/location" methodName="Update location" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -21,7 +27,7 @@
         <con:endpoint>${Location}</con:endpoint>
         <con:request>{
   "locationId":${#Project#Location_ID_Load},
-  "locationName":${#[Load Suite#Create Location]#Location_Name},
+  "locationName":${#TestCase#Location_Name},
   "street": "test",
   "stateId":4197,
   "city": "New York",
@@ -96,9 +102,6 @@
       </con:restRequest>
     </con:config>
   </con:testStep>
-  
-  
-  
   <con:properties>
     <con:property>
       <con:name>Account_ID</con:name>
@@ -107,6 +110,10 @@
     <con:property>
       <con:name>Location_ID</con:name>
       <con:value>2753</con:value>
+    </con:property>
+    <con:property>
+      <con:name>Location_Name</con:name>
+      <con:value>"Update_Location_Fri_Mar_16_19_28_14_IST_20187496482"</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>
@@ -137,6 +144,11 @@
   </con:breakPoints>
   <con:breakPoints>
     <con:testStepId>af5fbb72-834c-4af0-b690-ba27cf8c4e6f</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>e722e781-f47b-4da2-b074-bf012d5a11b2</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>

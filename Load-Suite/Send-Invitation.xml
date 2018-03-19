@@ -3,17 +3,13 @@
   <con:settings>
     <con:setting id="ef308af9-ed74-4841-8232-002078478a6cfileName">Send-Invitation</con:setting>
     <con:setting id="c3cd17c0-d022-4c6d-88e9-93de3e3b799afileName">Send-Invitation</con:setting>
-  <con:setting id="6342a5f8-bfb2-46a8-91f7-6ef52839835afileName">Send-Invitation</con:setting></con:settings>
+    <con:setting id="6342a5f8-bfb2-46a8-91f7-6ef52839835afileName">Send-Invitation</con:setting>
+  </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  
-  
-  
-  
-  
-  
   <con:testStep type="groovy" name="Unique_Email_ID" id="fd7ba305-d779-4e15-8f06-b9a24619a73b">
     <con:settings/>
-    <con:config><script>String date = new Date()
+    <con:config>
+      <script>String date = new Date()
 date = date.replaceAll(":","_")
 date = date.replaceAll(" ","_")
 RandomNumber = (int)(Math.random()*10000000)
@@ -22,10 +18,9 @@ Email_ID = Email_ID.toUpperCase()
 Email_ID_string =  "Invitation_" + date + RandomNumber + "@mailinator.com"
 Email_ID_string = Email_ID_string.toUpperCase()
 testRunner.testCase.setPropertyValue("Email_ID", Email_ID)
-testRunner.testCase.setPropertyValue("Email_ID_string", Email_ID_string)</script></con:config>
+testRunner.testCase.setPropertyValue("Email_ID_string", Email_ID_string)</script>
+    </con:config>
   </con:testStep>
-  
-  
   <con:testStep type="restrequest" name="Send Invitation" id="6297683b-7ece-40d3-8681-c74f30a84341">
     <con:settings/>
     <con:config service="Send Invitation" resourcePath="/invitation" methodName="Send Invitation" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -96,7 +91,8 @@ testRunner.testCase.setPropertyValue("Email_ID_string", Email_ID_string)</script
         </con:environmentSpec>
       </con:restRequest>
     </con:config>
-  </con:testStep><con:properties>
+  </con:testStep>
+  <con:properties>
     <con:property>
       <con:name>Account_ID</con:name>
       <con:value>2000</con:value>
@@ -107,11 +103,11 @@ testRunner.testCase.setPropertyValue("Email_ID_string", Email_ID_string)</script
     </con:property>
     <con:property>
       <con:name>Email_ID</con:name>
-      <con:value>"INVITATION_FRI_MAR_16_18_58_43_IST_20182284541@MAILINATOR.COM"</con:value>
+      <con:value>"INVITATION_FRI_MAR_16_19_27_04_IST_20187248081@MAILINATOR.COM"</con:value>
     </con:property>
     <con:property>
       <con:name>Email_ID_string</con:name>
-      <con:value>INVITATION_FRI_MAR_16_18_58_43_IST_20182284541@MAILINATOR.COM</con:value>
+      <con:value>INVITATION_FRI_MAR_16_19_27_04_IST_20187248081@MAILINATOR.COM</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>
@@ -140,7 +136,17 @@ testRunner.testCase.setPropertyValue("Email_ID_string", Email_ID_string)</script
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
-  <con:breakPoints><con:testStepId>fd7ba305-d779-4e15-8f06-b9a24619a73b</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>6297683b-7ece-40d3-8681-c74f30a84341</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:environmentSpec>
+  <con:breakPoints>
+    <con:testStepId>fd7ba305-d779-4e15-8f06-b9a24619a73b</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>6297683b-7ece-40d3-8681-c74f30a84341</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:environmentSpec>
     <con:entry environmentId="1653fcad-25f1-42dc-b777-d850bb70a926">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
