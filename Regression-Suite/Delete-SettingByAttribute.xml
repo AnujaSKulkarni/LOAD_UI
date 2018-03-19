@@ -258,7 +258,7 @@ if (API_Name != TestCaseName){
   </con:testStep>
   <con:testStep type="restrequest" name="Delete-SettingByAttribute" id="d5a0425f-a70b-4428-be5c-223ddcc6a553" disabled="true">
     <con:settings/>
-    <con:config service="Delete-SettingByAttribute" resourcePath="/account/favorites/${#[Regression Suite#create-setting#create-setting]#RawRequest#$['applianceId']}/entity/setting/id/M2MAttributeName" methodName="Delete-SettingByAttribute" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config service="Delete-SettingByAttribute" resourcePath="/account/favorites/Refrigerator123/entity/setting/id/M2MAttributeName" methodName="Delete-SettingByAttribute" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Delete-SettingByAttribute" id="fc0c0322-3e05-4fa8-af1a-c2a93ed4fa87" mediaType="application/json" postQueryString="false">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>

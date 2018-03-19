@@ -258,7 +258,7 @@ if (API_Name != TestCaseName){
   </con:testStep>
   <con:testStep type="restrequest" name="Retrive-setting-favfill" id="16bedb1d-e875-4706-a8d2-ca25f1a397dc" disabled="true">
     <con:settings/>
-    <con:config service="Retrive-setting-favfill" resourcePath="/account/favorites/${#[Regression Suite#create-setting#create-setting]#RawRequest#$['applianceId']}/entity/setting/id/favfill" methodName="Retrive-setting-favfill" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config service="Retrive-setting-favfill" resourcePath="/account/favorites/Refrigerator123/entity/setting/id/favfill" methodName="Retrive-setting-favfill" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Retrive-setting-favfill" id="925b22ef-9428-4436-bbd3-ee4d743b9dc6" mediaType="application/json">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>

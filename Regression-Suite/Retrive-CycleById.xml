@@ -258,7 +258,7 @@ if (API_Name != TestCaseName){
   </con:testStep>
   <con:testStep type="restrequest" name="Retrive-CycleById" id="492aa8dd-c00c-4d28-91ea-db0347ad9cce" disabled="true">
     <con:settings/>
-    <con:config service="Retrive-CycleById" resourcePath="/account/favorites/${#[Regression Suite#Retrive Favorites#Retrive Favorites]#Response#$['applianceId']}/entity/cycle/id/${#[Regression Suite#Retrive Favorites#Retrive Favorites]#Response#$['favoritesList'][0]['favoriteCycles'][0]['id']}" methodName="Retrive-CycleById" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config service="Retrive-CycleById" resourcePath="/account/favorites/Refrigerator123/entity/cycle/id/Refrigerator123" methodName="Retrive-CycleById" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Retrive-CycleById" id="176b9da2-e529-43c8-b360-3a17fc50fefd" mediaType="application/json">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>

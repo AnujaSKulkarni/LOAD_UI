@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="Rate Revealer" path="/locations/${#[Regression Suite#Update Location#Update Location_Positive]#Response#$[0]['LOCATION_ID']}/smart_energy" id="096ea2da-7180-4d56-b4ab-f2147fea3d87" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="Rate Revealer" path="/locations/${#Project#Location_ID_Load}/smart_energy" id="096ea2da-7180-4d56-b4ab-f2147fea3d87" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
       <con:settings>
         <con:setting id="096ea2da-7180-4d56-b4ab-f2147fea3d87fileName">Rate-Revealer</con:setting>
       </con:settings>
@@ -42,7 +42,7 @@
           <con:params/>
           <con:element xmlns:smar="https://api-test.whrcloud.com/api/v1/locations/2672/smart_energy">smar:Response</con:element>
         </con:representation>
-        <con:request name="Rate Revealer" id="c99260b8-29f0-4dac-82f8-a5dd99f3057a" mediaType="application/json">
+        <con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>500</con:status><con:params/><con:element xmlns:smar="https://api-test.whrcloud.com/api/v1/locations/2672/smart_energy">smar:Fault</con:element></con:representation><con:request name="Rate Revealer" id="c99260b8-29f0-4dac-82f8-a5dd99f3057a" mediaType="application/json">
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
           </con:settings>

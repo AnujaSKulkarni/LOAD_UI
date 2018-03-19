@@ -258,7 +258,7 @@ if (API_Name != TestCaseName){
   </con:testStep>
   <con:testStep type="restrequest" name="Delete-cycleByid" id="b191d135-124e-49e7-9293-e901a749c4f0" disabled="true">
     <con:settings/>
-    <con:config service="Delete-cycleByid" resourcePath="/account/favorites/${#[Regression Suite#Retrive Favorites#Retrive Favorites]#Response#$['_id']}/entity/cycle/id/${#[Regression Suite#Retrive Favorites#Retrive Favorites]#Response#$['favoritesList'][0]['favoriteCycles'][0]['id']}" methodName="Delete-cycleByid" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config service="Delete-cycleByid" resourcePath="/account/favorites/Refrigerator123/entity/cycle/id/Refrigerator123-AFUU" methodName="Delete-cycleByid" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Delete-cycleByid" id="e4e7325b-5994-4abc-8fde-b538623b32af" mediaType="application/json" postQueryString="false">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>

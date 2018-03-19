@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="Delete-cycleByid" path="/account/favorites/${#[Regression Suite#Retrive Favorites#Retrive Favorites]#Response#$['_id']}/entity/cycle/id/${#[Regression Suite#Retrive Favorites#Retrive Favorites]#Response#$['favoritesList'][0]['favoriteCycles'][0]['id']}" id="9f70bdae-8b62-4e1a-981c-e85790ad1d63" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="Delete-cycleByid" path="/account/favorites/Refrigerator123/entity/cycle/id/Refrigerator123-AFUU" id="9f70bdae-8b62-4e1a-981c-e85790ad1d63" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
       <con:settings>
         <con:setting id="9f70bdae-8b62-4e1a-981c-e85790ad1d63fileName">Delete-cycleByid</con:setting>
       </con:settings>

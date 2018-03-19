@@ -258,7 +258,7 @@ if (API_Name != TestCaseName){
   </con:testStep>
   <con:testStep type="restrequest" name="Rate Revealer" id="0bb48829-00df-4bb1-878e-b6bad5ba5f7e" disabled="true">
     <con:settings/>
-    <con:config service="Rate Revealer" resourcePath="/locations/${#[Regression Suite#Update Location#Update Location_Positive]#Response#$[0]['LOCATION_ID']}/smart_energy" methodName="Rate Revealer" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config service="Rate Revealer" resourcePath="/locations/${#Project#Location_ID_Load}/smart_energy" methodName="Rate Revealer" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Rate Revealer" id="c99260b8-29f0-4dac-82f8-a5dd99f3057a" mediaType="application/json">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>

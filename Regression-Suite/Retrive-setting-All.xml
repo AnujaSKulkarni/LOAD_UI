@@ -258,7 +258,7 @@ if (API_Name != TestCaseName){
   </con:testStep>
   <con:testStep type="restrequest" name="Retrive-setting-All" id="e54df3d7-cc7d-4ca6-9aec-a2be369d9297" disabled="true">
     <con:settings/>
-    <con:config service="Retrive-setting-All" resourcePath="/account/favorites/${#[Regression Suite#create-setting#create-setting]#RawRequest#$['applianceId']}/entity/setting/id/All" methodName="Retrive-setting-All" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config service="Retrive-setting-All" resourcePath="/account/favorites/Refrigerator123/entity/setting/id/All" methodName="Retrive-setting-All" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Retrive-setting-All" id="458d7602-d447-44c8-99e5-b098d3d16100" mediaType="application/json">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
