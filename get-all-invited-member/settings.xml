@@ -3,8 +3,8 @@
   <con:settings>
     <con:setting id="df198dcc-cfc4-4009-8b00-eb74a142cac9fileName">get-all-invited-member</con:setting>
   </con:settings>
-  <con:definitionCache type="TEXT" rootPart=""/>
-  <con:endpoints>
+  
+  <con:definitionCache type="TEXT" rootPart=""/><con:endpoints>
     <con:endpoint>https://{{API-Connect}}</con:endpoint>
   </con:endpoints>
 </con:interface>

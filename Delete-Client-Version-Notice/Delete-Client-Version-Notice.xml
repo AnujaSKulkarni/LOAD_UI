@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="Delete Client Version Notice" path="/delete_client_version_notice/${#[Regression Suite#Get Client Version Notice]#Client_Version_Notice}" id="ddf533d7-3d1c-409e-bd00-245ddb6d9e7a" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="Delete Client Version Notice" path="/delete_client_version_notice/${#[Load Suite#Get Client Version Notice]#Client_Version_Notice}" id="ddf533d7-3d1c-409e-bd00-245ddb6d9e7a" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
       <con:settings>
         <con:setting id="ddf533d7-3d1c-409e-bd00-245ddb6d9e7afileName">Delete-Client-Version-Notice</con:setting>
       </con:settings>
@@ -31,7 +31,7 @@
           <con:params/>
           <con:element xmlns:ns="https://accountserviceqa-v2.mybluemix.net/api/v1/delete_client_version_notice/25">ns:Response</con:element>
         </con:representation>
-        <con:request name="Delete Client Version Notice" id="34d71270-8c68-4ec3-96f2-8c2c69ffe362" mediaType="application/json" postQueryString="false">
+        <con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xmlns:ns="https://accountserviceqa-v2.mybluemix.net/api/v1/delete_client_version_notice/25">ns:Fault</con:element></con:representation><con:request name="Delete Client Version Notice" id="34d71270-8c68-4ec3-96f2-8c2c69ffe362" mediaType="application/json" postQueryString="false">
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
           </con:settings>

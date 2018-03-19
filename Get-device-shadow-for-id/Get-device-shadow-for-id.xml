@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="Get device shadow for id" path="/deviceshadow/${#TestCase#Device_Shadow_Name}" id="680a9800-e083-48db-8b4e-7bddc1a59a2b" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="Get device shadow for id" path="/deviceshadow/WPR333334UCD3" id="680a9800-e083-48db-8b4e-7bddc1a59a2b" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
       <con:settings>
         <con:setting id="680a9800-e083-48db-8b4e-7bddc1a59a2bfileName">Get-device-shadow-for-id</con:setting>
       </con:settings>
