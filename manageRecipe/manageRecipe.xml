@@ -15,7 +15,7 @@
             <con:description xsi:nil="true"/>
           </con:parameter>
         </con:parameters>
-        <con:request name="manageRecipe" id="387d971b-85cf-43fc-995d-fae6cae8ae2d" mediaType="application/json" postQueryString="false">
+        <con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:wpr="https://api-test.whrcloud.com/api/v1/manageRecipe/WPR4BCKC4R37C">wpr:Response</con:element></con:representation><con:request name="manageRecipe" id="387d971b-85cf-43fc-995d-fae6cae8ae2d" mediaType="application/json" postQueryString="false">
           <con:settings>
             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
           </con:settings>

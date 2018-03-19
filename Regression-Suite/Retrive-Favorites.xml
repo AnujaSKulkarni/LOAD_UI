@@ -258,7 +258,7 @@ if (API_Name != TestCaseName){
   </con:testStep>
   <con:testStep type="restrequest" name="Retrive Favorites" id="13ec3708-37e1-463e-a42a-d482a2d6eac3" disabled="true">
     <con:settings/>
-    <con:config service="Retrive Favorites" resourcePath="/account/favorites/${#[Regression Suite#create-setting#create-setting]#RawRequest#$['applianceId']}" methodName="Retrive Favorites" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config service="Retrive Favorites" resourcePath="/account/favorites/Refrigerator123" methodName="Retrive Favorites" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Retrive Favorites" id="94842eb3-34ee-44e6-b104-26817db54f35" mediaType="application/json">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>

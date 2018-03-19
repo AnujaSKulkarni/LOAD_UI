@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="searchRecipe" path="/searchRecipe/${UPC_DataSource#UPC_Codes}/en" id="3f864174-9b58-450f-9af1-b4f3c929f2a1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="searchRecipe" path="/searchRecipe/031000110741/en" id="3f864174-9b58-450f-9af1-b4f3c929f2a1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
       <con:settings>
         <con:setting id="3f864174-9b58-450f-9af1-b4f3c929f2a1fileName">searchRecipe</con:setting>
       </con:settings>

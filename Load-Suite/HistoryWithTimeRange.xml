@@ -271,7 +271,7 @@ testRunner.testCase.setPropertyValue("Device_Shadow_Name", Device_Shadow_Name)</
   </con:testStep>
   <con:testStep type="restrequest" name="Get device shadow for id" id="84181bb8-0021-4cc7-94e8-1df2b3fd5fcb" disabled="true">
     <con:settings/>
-    <con:config service="Get device shadow for id" resourcePath="/deviceshadow/${#TestCase#Device_Shadow_Name}" methodName="Get device shadow for id" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config service="Get device shadow for id" resourcePath="/deviceshadow/WPR333334UCD3" methodName="Get device shadow for id" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Get device shadow for id" id="29790405-256a-42ec-aa9d-8127214b09f7" mediaType="application/json">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>

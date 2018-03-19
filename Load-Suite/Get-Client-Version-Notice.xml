@@ -282,41 +282,13 @@ if (API_Name != TestCaseName){
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="MessageContentAssertion" id="cbd7edda-5064-4838-a6b2-6593d0ce5df8" name="Message Content Assertion">
-          <con:configuration xsi:type="con:MessageContentAssertion">
-            <con:elements>
-              <con:xpath>//Response[1]/e[1]/clientVersionNoticesId[1]</con:xpath>
-              <con:element>clientVersionNoticesId</con:element>
-              <con:type xsi:nil="true"/>
-              <con:operator>=</con:operator>
-              <con:enabled>true</con:enabled>
-              <con:expectedValue>${#TestCase#Client_Version_Notice}</con:expectedValue>
-              <con:hasValue>false</con:hasValue>
-              <con:numberType>false</con:numberType>
-            </con:elements>
-            <con:originalMessage><![CDATA[<Response>
-   <e>
-      <category>eol_warneol_warn</category>
-      <clientVersionId>0</clientVersionId>
-      <clientVersionNoticesId>25</clientVersionNoticesId>
-      <createdAt>2017-12-18 10:03:37.574251</createdAt>
-      <endDate>2017-12-30 11:14:38.0</endDate>
-      <notice>{loc-title-key:product.eol_warn_title, loc-key:product.eol_warn_message}</notice>
-      <repeat>true</repeat>
-      <startDate>2017-12-04 11:14:38.0</startDate>
-      <updatedAt>2017-12-18 10:03:37.574251</updatedAt>
-   </e>
-</Response>]]></con:originalMessage>
-          </con:configuration>
-        </con:assertion>
+        
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:parameters>
-          <entry key="wp-notices-ids" value="${#TestCase#Client_Version_Notice}" xmlns="http://eviware.com/soapui/config"/>
-        </con:parameters>
+        <con:parameters><entry key="wp-notices-ids" value="${#Project#Client_Version_Notice_ID_Load}" xmlns="http://eviware.com/soapui/config"/></con:parameters>
         <con:parameterOrder>
           <con:entry>Authorization</con:entry>
           <con:entry>wp-notices-ids</con:entry>

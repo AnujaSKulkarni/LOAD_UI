@@ -295,16 +295,12 @@ if (API_Name != TestCaseName){
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:parameters>
-          <con:entry key="wp-client-appName" value="${#[Regression Suite#Create Client Version#Create Client Version]#RawRequest#$['application']}"/>
-          <con:entry key="wp-client-platform" value="${#[Regression Suite#Create Client Version#Create Client Version]#RawRequest#$['platform']}"/>
-          <con:entry key="wp-client-verion" value="${#[Regression Suite#Create Client Version#Create Client Version]#RawRequest#$['version']}"/>
-        </con:parameters>
-        <con:parameterOrder>
-          <con:entry>Authorization</con:entry>
-          <con:entry>wp-client-appName</con:entry>
-          <con:entry>wp-client-verion</con:entry>
-          <con:entry>wp-client-platform</con:entry>
-        </con:parameterOrder>
+  <con:entry key="wp-client-appName" value="${#[Regression Suite#Create Client Version#Create Client Version]#RawRequest#$['application']}"/>
+  <con:entry key="wp-client-platform" value="${#[Regression Suite#Create Client Version#Create Client Version]#RawRequest#$['platform']}"/>
+  <con:entry key="wp-client-verion" value="${#[Regression Suite#Create Client Version#Create Client Version]#RawRequest#$['version']}"/>
+  <con:entry key="Content-Type" value="application/json"/>
+</con:parameters>
+        <con:parameterOrder><con:entry>Authorization</con:entry><con:entry>wp-client-appName</con:entry><con:entry>wp-client-verion</con:entry><con:entry>wp-client-platform</con:entry><con:entry>Content-Type</con:entry></con:parameterOrder>
         <con:environmentSpec>
           <con:entry environmentId="1653fcad-25f1-42dc-b777-d850bb70a926">
             <con:authProfile>Inherit From Parent</con:authProfile>
