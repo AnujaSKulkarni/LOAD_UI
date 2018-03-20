@@ -8,7 +8,12 @@
   
   
   
-  <con:testStep type="restrequest" name="create-cycle" id="c5d939fa-ca61-4f5f-9aeb-a616aff1ce14">
+  <con:testStep type="groovy" name="Applaince_ID" id="1ade8c5e-4e18-4c0d-9182-456b88d4f309"><con:settings/><con:config><script>String date = new Date()
+date = date.replaceAll(":","_")
+date = date.replaceAll(" ","_")
+RandomNumber = (int)(Math.random()*10000000)
+Appliance_ID = "\"" + "Appliance_" + date + "_" + RandomNumber + "\""
+testRunner.testCase.setPropertyValue("Appliance_ID", Appliance_ID)</script></con:config></con:testStep><con:testStep type="restrequest" name="create-cycle" id="c5d939fa-ca61-4f5f-9aeb-a616aff1ce14">
     <con:settings/>
     <con:config service="create or update-cycle" resourcePath="/account/favorites/entity/cycle" methodName="create or update-cycle" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="create-cycle" id="6a2d6662-8e8d-440a-bdb1-755700bebec8" mediaType="application/json" postQueryString="false">
@@ -17,7 +22,7 @@
         </con:settings>
         <con:endpoint>${API-Connect}</con:endpoint>
         <con:request>{  
-    "applianceId":"Refrigerator123",
+    "applianceId":${#TestCase#Appliance_ID},
     "accountId":"24",
     "locationId":"341",
     "favoritesList":[  
@@ -89,7 +94,7 @@
   </con:testStep>
   
   
-  <con:properties/>
+  <con:properties><con:property><con:name>Appliance_ID</con:name><con:value>"Appliance_Tue_Mar_20_15_15_42_IST_2018_7715642"</con:value></con:property></con:properties>
   <con:reportParameters/>
   <con:breakPoints>
     <con:testStepId>eccc5407-ef6a-4c5a-866a-6c41825173db</con:testStepId>
