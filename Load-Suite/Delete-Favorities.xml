@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="46d70e2b-6052-41df-bfc4-77b18553e807" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Delete Favorities" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="46d70e2b-6052-41df-bfc4-77b18553e807" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Delete Favorities" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" disabled="true" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="c1780c5c-a643-4e26-9970-73da6e14a49cfileName">Delete-Favorities</con:setting>
     <con:setting id="54e187ce-95de-45c9-b752-17d2f38ca2ecfileName">Delete-Favorities</con:setting>
@@ -10,7 +10,7 @@
   
   <con:testStep type="restrequest" name="Delete Favorities" id="5d720ffa-746f-4b61-b1a3-c14a56e725d8">
     <con:settings/>
-    <con:config service="Delete Favorities" resourcePath="/account/favorites/${#[Load Suite#create-cycle#create-cycle]#RawRequest#$['applianceId']}" methodName="Delete Favorities" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config service="Delete Favorities" resourcePath="/account/favorites/Refrigerator123" methodName="Delete Favorities" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Delete Favorities" id="17184110-64b4-49d3-b574-c2ac0d3c6e5e" mediaType="application/json" postQueryString="false">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>

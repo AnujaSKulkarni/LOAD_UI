@@ -70,45 +70,8 @@
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasource" name="DataSource" id="4a1750ad-e271-4347-a8ea-6d1c93206bed">
-    <con:settings>
-      <con:setting id="com.eviware.soapui.impl.wsdl.teststeps.datasource.DataSourceContainer@prepared-properties">&lt;xml-fragment/></con:setting>
-    </con:settings>
-    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:dataSource type="Data Connection">
-        <con:configuration>
-          <Connection>&lt;None></Connection>
-          <query/>
-          <fetchSize/>
-          <stored-procedure>false</stored-procedure>
-        </con:configuration>
-      </con:dataSource>
-      <con:shared>true</con:shared>
-      <con:restartShared>true</con:restartShared>
-      <con:property>prop1</con:property>
-      <con:completeLastOperation>true</con:completeLastOperation>
-      <con:restartOnRun>true</con:restartOnRun>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="datasink" name="DataSink" id="7e3dc51b-85ad-43c9-983c-a857e0bc2a6b">
-    <con:settings/>
-    <con:config xsi:type="con:DataSinkStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:properties>
-        <con:property>
-          <con:name>Ajit</con:name>
-          <con:value>1</con:value>
-        </con:property>
-        <con:property>
-          <con:name>Mohit</con:name>
-          <con:value>2</con:value>
-        </con:property>
-        <con:property>
-          <con:name>Sachin</con:name>
-          <con:value>3</con:value>
-        </con:property>
-      </con:properties>
-    </con:config>
-  </con:testStep>
+  
+  
   <con:setupScript>import java.io.FileInputStream
 import java.io.InputStream
 import java.io.FileOutputStream
