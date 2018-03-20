@@ -23,10 +23,10 @@
       <con1:property propagates="true" key="ModelItem.remoteMode" type="java.lang.String"/>
     </con1:properties>
     <con1:attributes>
-      <con1:property key="limits">Time=2700;</con1:property>
+      <con1:property key="limits">Time=1800;</con1:property>
     </con1:attributes>
     <con1:addons/>
-    <con1:scene label="New Scenario" id="dc2cc255-300c-4e6f-b6fb-c792808714e1" version="5226">
+    <con1:scene label="New Scenario" id="dc2cc255-300c-4e6f-b6fb-c792808714e1" version="5526">
       <con1:properties>
         <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
         <con1:property propagates="true" key="CanvasItem.abortOnFinish" type="java.lang.Boolean">true</con1:property>
@@ -35,7 +35,7 @@
         <con1:property propagates="true" key="SceneItem.scenarioRateSpecific" type="java.lang.Long">10</con1:property>
       </con1:properties>
       <con1:attributes>
-        <con1:property key="limits">Time=2700;</con1:property>
+        <con1:property key="limits">Time=1800;</con1:property>
       </con1:attributes>
       <con1:addons/>
       <con1:component type="com.eviware.loadui.impl.component.IntervalComponent" label="Interval 1" id="8df7bdd3-a51a-4ea0-924d-28bfc0f46517" category="Scheduler">
@@ -232,7 +232,7 @@
       <con1:component type="com.eviware.loadui.components.soapui.SoapUISamplerComponent" label="Load Suite:Create Group" id="84dc7902-aa58-42d9-8b68-c2c3cfa8396f" category="Runners">
         <con1:properties>
           <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
-          <con1:property propagates="true" key="concurrentSamples" type="java.lang.Long">5000</con1:property>
+          <con1:property propagates="true" key="concurrentSamples" type="java.lang.Long">500</con1:property>
           <con1:property propagates="true" key="property_name_is_not_relevant_for_private_property" type="java.lang.Long">9223372036854775807</con1:property>
           <con1:property propagates="true" key="maxQueueSize" type="java.lang.Long">1000</con1:property>
           <con1:property propagates="true" key="countDiscarded" type="java.lang.Boolean">false</con1:property>
@@ -966,28 +966,6 @@
         </con1:attributes>
         <con1:addons/>
       </con1:component>
-      <con1:component type="com.eviware.loadui.components.soapui.SoapUISamplerComponent" label="Load Suite:Delete Favorities" id="258f434f-6ace-444c-a306-45af1394acc1" category="Runners">
-        <con1:properties>
-          <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
-          <con1:property propagates="true" key="concurrentSamples" type="java.lang.Long">5000</con1:property>
-          <con1:property propagates="true" key="property_name_is_not_relevant_for_private_property" type="java.lang.Long">9223372036854775807</con1:property>
-          <con1:property propagates="true" key="maxQueueSize" type="java.lang.Long">1000</con1:property>
-          <con1:property propagates="true" key="countDiscarded" type="java.lang.Boolean">false</con1:property>
-          <con1:property propagates="true" key="disabledTestSteps" type="java.lang.String"/>
-          <con1:property propagates="true" key="_thinkTime" type="java.lang.Long">0</con1:property>
-          <con1:property propagates="true" key="ReadyApiTestCase" type="com.eviware.soapui.impl.wsdl.testcase.WsdlTestCase">46d70e2b-6052-41df-bfc4-77b18553e807</con1:property>
-          <con1:property propagates="true" key="raiseError" type="java.lang.Boolean">true</con1:property>
-          <con1:property propagates="true" key="outputTestCaseProperties" type="java.lang.Boolean">true</con1:property>
-          <con1:property propagates="true" key="OutputLevel" type="java.lang.String">TestCase only</con1:property>
-          <con1:property propagates="true" key="closeConnectionsAfterRequest" type="java.lang.Boolean">false</con1:property>
-          <con1:property propagates="true" key="disableSoapuiAssertions" type="java.lang.Boolean">false</con1:property>
-          <con1:property propagates="true" key="forceShareDatasources" type="java.lang.Boolean">true</con1:property>
-        </con1:properties>
-        <con1:attributes>
-          <con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Ready API TestCase Runner</con1:property>
-        </con1:attributes>
-        <con1:addons/>
-      </con1:component>
       <con1:component type="com.eviware.loadui.components.soapui.SoapUISamplerComponent" label="Load Suite:HistoryWithoutTimeRange" id="abc850d2-b78a-405e-946e-430388ee2f1f" category="Runners">
         <con1:properties>
           <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
@@ -1079,13 +1057,13 @@
       <con1:component type="com.eviware.loadui.impl.component.generators.RampSequenceVU" label="Ramp Sequence (VU) 1" id="5d80918e-fa03-4ba2-a649-9f80f85b6306" category="Generators">
         <con1:properties>
           <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
-          <con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">false</con1:property>
+          <con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">true</con1:property>
           <con1:property propagates="true" key="limitVU" type="java.lang.Long">9223372036854775807</con1:property>
           <con1:property propagates="true" key="baseVU" type="java.lang.Long">1</con1:property>
           <con1:property propagates="true" key="peakVU" type="java.lang.Long">5</con1:property>
           <con1:property propagates="true" key="rampUpDuration" type="java.lang.Long">20</con1:property>
           <con1:property propagates="true" key="rampDownDuration" type="java.lang.Long">20</con1:property>
-          <con1:property propagates="true" key="peakDuration" type="java.lang.Long">600</con1:property>
+          <con1:property propagates="true" key="peakDuration" type="java.lang.Long">300</con1:property>
           <con1:property propagates="true" key="waitTime" type="java.lang.Long">1000</con1:property>
         </con1:properties>
         <con1:attributes>
@@ -1136,8 +1114,7 @@
       <con1:connection outputTerminalId="8ad6b8d5-a502-42b4-8d22-03b1933631de/runningTerminal" inputTerminalId="eaaf5bdc-e661-432b-b3ef-ccb883d584da/triggerTerminal"/>
       <con1:connection outputTerminalId="eaaf5bdc-e661-432b-b3ef-ccb883d584da/runningTerminal" inputTerminalId="1751d471-6db5-4d1d-8478-eaf7301587e3/triggerTerminal"/>
       <con1:connection outputTerminalId="1751d471-6db5-4d1d-8478-eaf7301587e3/runningTerminal" inputTerminalId="e32b8388-df68-4556-8e01-ac9c86825ba9/triggerTerminal"/>
-      <con1:connection outputTerminalId="e32b8388-df68-4556-8e01-ac9c86825ba9/runningTerminal" inputTerminalId="258f434f-6ace-444c-a306-45af1394acc1/triggerTerminal"/>
-      <con1:connection outputTerminalId="258f434f-6ace-444c-a306-45af1394acc1/runningTerminal" inputTerminalId="dbc034e8-05b9-4040-acea-ec654cde0ef0/triggerTerminal"/>
+      <con1:connection outputTerminalId="e32b8388-df68-4556-8e01-ac9c86825ba9/runningTerminal" inputTerminalId="dbc034e8-05b9-4040-acea-ec654cde0ef0/triggerTerminal"/>
       <con1:connection outputTerminalId="dbc034e8-05b9-4040-acea-ec654cde0ef0/runningTerminal" inputTerminalId="abc850d2-b78a-405e-946e-430388ee2f1f/triggerTerminal"/>
       <con1:connection outputTerminalId="abc850d2-b78a-405e-946e-430388ee2f1f/runningTerminal" inputTerminalId="ba8be94a-caf4-4b9e-a5f7-0dc453f24a46/triggerTerminal"/>
       <con1:connection outputTerminalId="ba8be94a-caf4-4b9e-a5f7-0dc453f24a46/runningTerminal" inputTerminalId="906a6a41-7dfd-475d-b65c-4a51d9ee72fd/triggerTerminal"/>

@@ -3,7 +3,8 @@
   <con:settings>
     <con:setting id="4d9b8d24-cdbf-470c-926c-ce1cd761a7a0fileName">GET-Client-Token</con:setting>
     <con:setting id="294875cc-8b7b-49ab-8c4f-b41f5810e03ffileName">GET-Client-Token</con:setting>
-  <con:setting id="627a6f44-2e3b-408e-a2eb-1fe76da302a1fileName">GET-Client-Token</con:setting></con:settings>
+    <con:setting id="627a6f44-2e3b-408e-a2eb-1fe76da302a1fileName">GET-Client-Token</con:setting>
+  </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="restrequest" name="GET Client Token" id="f4252529-ec2b-4b3f-aab7-55bd642296ac">
     <con:settings/>
@@ -69,10 +70,45 @@
       </con:restRequest>
     </con:config>
   </con:testStep>
-  
-  
-  
-  
+  <con:testStep type="datasource" name="DataSource" id="4a1750ad-e271-4347-a8ea-6d1c93206bed">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.teststeps.datasource.DataSourceContainer@prepared-properties">&lt;xml-fragment/></con:setting>
+    </con:settings>
+    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:dataSource type="Data Connection">
+        <con:configuration>
+          <Connection>&lt;None></Connection>
+          <query/>
+          <fetchSize/>
+          <stored-procedure>false</stored-procedure>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>prop1</con:property>
+      <con:completeLastOperation>true</con:completeLastOperation>
+      <con:restartOnRun>true</con:restartOnRun>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasink" name="DataSink" id="7e3dc51b-85ad-43c9-983c-a857e0bc2a6b">
+    <con:settings/>
+    <con:config xsi:type="con:DataSinkStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:properties>
+        <con:property>
+          <con:name>Ajit</con:name>
+          <con:value>1</con:value>
+        </con:property>
+        <con:property>
+          <con:name>Mohit</con:name>
+          <con:value>2</con:value>
+        </con:property>
+        <con:property>
+          <con:name>Sachin</con:name>
+          <con:value>3</con:value>
+        </con:property>
+      </con:properties>
+    </con:config>
+  </con:testStep>
   <con:setupScript>import java.io.FileInputStream
 import java.io.InputStream
 import java.io.FileOutputStream
