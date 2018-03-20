@@ -113,7 +113,7 @@ testRunner.testCase.setPropertyValue("Location_Name", LocationName)</script>
     </con:property>
     <con:property>
       <con:name>Location_Name</con:name>
-      <con:value>"Update_Location_Mon_Mar_19_16_48_11_IST_20187808579"</con:value>
+      <con:value>"Update_Location_Tue_Mar_20_14_09_05_IST_20184695933"</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

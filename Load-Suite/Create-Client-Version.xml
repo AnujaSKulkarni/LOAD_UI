@@ -3,19 +3,19 @@
   <con:settings>
     <con:setting id="3597d1a7-aaad-4d84-9b18-e9dfa7df027afileName">Create-Client-Version</con:setting>
     <con:setting id="8e858ccf-341f-4187-9a0d-e9f236d5d5e4fileName">Create-Client-Version</con:setting>
-  <con:setting id="3607e5b5-ad39-4edd-8bba-7d39939ec7d0fileName">Create-Client-Version</con:setting></con:settings>
+    <con:setting id="3607e5b5-ad39-4edd-8bba-7d39939ec7d0fileName">Create-Client-Version</con:setting>
+  </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  
-  
-  
   <con:testStep type="groovy" name="Test_Data_Setup" id="b949ef3b-9d8a-43e3-b144-273cbe9bb379">
     <con:settings/>
-    <con:config><script>String date = new Date()
+    <con:config>
+      <script>String date = new Date()
 date = date.replaceAll(":","_")
 date = date.replaceAll(" ","_")
 def RandomNumber = (int)(Math.random()*10000000)
 date = "\"" + "Client_Version_Name_" + date + "_" + RandomNumber +  "\""
-testRunner.testCase.setPropertyValue("Application", date)</script></con:config>
+testRunner.testCase.setPropertyValue("Application", date)</script>
+    </con:config>
   </con:testStep>
   <con:testStep type="restrequest" name="Create Client Version" id="f8623a61-1527-4a28-976d-668011d00476">
     <con:settings/>
@@ -67,12 +67,10 @@ testRunner.testCase.setPropertyValue("Application", date)</script></con:config>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  
-  
   <con:properties>
     <con:property>
       <con:name>Application</con:name>
-      <con:value>"Client_Version_Name_Mon_Mar_19_16_48_17_IST_2018_271914"</con:value>
+      <con:value>"Client_Version_Name_Tue_Mar_20_14_09_11_IST_2018_6746652"</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>
