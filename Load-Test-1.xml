@@ -33,7 +33,7 @@
         <con1:property propagates="true" key="SceneItem.followProject" type="java.lang.Boolean">true</con1:property>
         <con1:property propagates="true" key="SceneItem.scenarioRatePercentage" type="java.lang.Long">100</con1:property>
         <con1:property propagates="true" key="SceneItem.scenarioRateSpecific" type="java.lang.Long">10</con1:property>
-      </con1:properties>
+      <con1:property propagates="true" key="ModelItem.samplerOutputLevel" type="com.eviware.loadui.api.component.SoapUISamplerOutputLevel">TestCaseAndAllTestSteps</con1:property></con1:properties>
       <con1:attributes>
         <con1:property key="limits">Time=300;</con1:property>
       </con1:attributes>
@@ -178,7 +178,7 @@
         <con1:properties>
           <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
           <con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">true</con1:property>
-          <con1:property propagates="true" key="limitVU" type="java.lang.Long">9223372036854775807</con1:property>
+          <con1:property propagates="true" key="limitVU" type="java.lang.Long">10</con1:property>
           <con1:property propagates="true" key="load" type="java.lang.Long">1</con1:property>
           <con1:property propagates="true" key="interval" type="java.lang.Long">1000</con1:property>
         </con1:properties>
@@ -187,16 +187,16 @@
         </con1:attributes>
         <con1:addons/>
       </con1:component>
-      <con1:connection outputTerminalId="0663aa83-463b-4a75-9661-7e8b1fd67b09/outgoingTerminal" inputTerminalId="c5e22042-d2af-4b82-b957-2cf780c7d6cb/stateTerminal"/>
-      <con1:connection outputTerminalId="c5e22042-d2af-4b82-b957-2cf780c7d6cb/triggerTerminal" inputTerminalId="660c1119-1455-4f69-bfa8-671a661b620e/incomingTerminal"/>
-      <con1:connection outputTerminalId="660c1119-1455-4f69-bfa8-671a661b620e/loop" inputTerminalId="0d1edab6-b770-433c-9f04-c8ba745249ee/triggerTerminal"/>
-      <con1:connection outputTerminalId="0d1edab6-b770-433c-9f04-c8ba745249ee/runningTerminal" inputTerminalId="42eb6608-b26e-4c6c-9c28-f4839519af8e/triggerTerminal"/>
-      <con1:connection outputTerminalId="42eb6608-b26e-4c6c-9c28-f4839519af8e/runningTerminal" inputTerminalId="5690026b-e86a-4ada-84fb-a94e2bed2c5f/triggerTerminal"/>
-      <con1:connection outputTerminalId="5690026b-e86a-4ada-84fb-a94e2bed2c5f/runningTerminal" inputTerminalId="c206db1d-cb54-4fae-b4ce-6880e10bd0b3/triggerTerminal"/>
-      <con1:connection outputTerminalId="c206db1d-cb54-4fae-b4ce-6880e10bd0b3/runningTerminal" inputTerminalId="60285dc0-4580-43f4-a2aa-efba1b9c8c79/triggerTerminal"/>
-      <con1:connection outputTerminalId="60285dc0-4580-43f4-a2aa-efba1b9c8c79/runningTerminal" inputTerminalId="660c1119-1455-4f69-bfa8-671a661b620e/incomingTerminal"/>
-      <con1:connection outputTerminalId="660c1119-1455-4f69-bfa8-671a661b620e/exit" inputTerminalId="c5e22042-d2af-4b82-b957-2cf780c7d6cb/Sample Count"/>
-    </con1:scene>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    <con1:connection outputTerminalId="0663aa83-463b-4a75-9661-7e8b1fd67b09/outgoingTerminal" inputTerminalId="c5e22042-d2af-4b82-b957-2cf780c7d6cb/stateTerminal"/><con1:connection outputTerminalId="c5e22042-d2af-4b82-b957-2cf780c7d6cb/triggerTerminal" inputTerminalId="660c1119-1455-4f69-bfa8-671a661b620e/incomingTerminal"/><con1:connection outputTerminalId="660c1119-1455-4f69-bfa8-671a661b620e/loop" inputTerminalId="0d1edab6-b770-433c-9f04-c8ba745249ee/triggerTerminal"/><con1:connection outputTerminalId="0d1edab6-b770-433c-9f04-c8ba745249ee/runningTerminal" inputTerminalId="42eb6608-b26e-4c6c-9c28-f4839519af8e/triggerTerminal"/><con1:connection outputTerminalId="42eb6608-b26e-4c6c-9c28-f4839519af8e/runningTerminal" inputTerminalId="5690026b-e86a-4ada-84fb-a94e2bed2c5f/triggerTerminal"/><con1:connection outputTerminalId="5690026b-e86a-4ada-84fb-a94e2bed2c5f/runningTerminal" inputTerminalId="c206db1d-cb54-4fae-b4ce-6880e10bd0b3/triggerTerminal"/><con1:connection outputTerminalId="c206db1d-cb54-4fae-b4ce-6880e10bd0b3/runningTerminal" inputTerminalId="60285dc0-4580-43f4-a2aa-efba1b9c8c79/triggerTerminal"/><con1:connection outputTerminalId="60285dc0-4580-43f4-a2aa-efba1b9c8c79/runningTerminal" inputTerminalId="660c1119-1455-4f69-bfa8-671a661b620e/incomingTerminal"/><con1:connection outputTerminalId="660c1119-1455-4f69-bfa8-671a661b620e/exit" inputTerminalId="c5e22042-d2af-4b82-b957-2cf780c7d6cb/Sample Count"/></con1:scene>
     <con1:statistics>
       <con1:page title="DefaultLoadUIStatisticPage">
         <con1:chartGroup type="com.eviware.loadui.api.statistics.model.chart.line.LineChartView" title="" groupType="Monitors">

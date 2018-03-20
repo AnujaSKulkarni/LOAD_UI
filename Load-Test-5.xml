@@ -28,7 +28,7 @@
         <con1:property propagates="true" key="SceneItem.followProject" type="java.lang.Boolean">true</con1:property>
         <con1:property propagates="true" key="SceneItem.scenarioRatePercentage" type="java.lang.Long">100</con1:property>
         <con1:property propagates="true" key="SceneItem.scenarioRateSpecific" type="java.lang.Long">10</con1:property>
-      </con1:properties>
+      <con1:property propagates="true" key="ModelItem.samplerOutputLevel" type="com.eviware.loadui.api.component.SoapUISamplerOutputLevel">TestCaseAndAllTestSteps</con1:property></con1:properties>
       <con1:attributes>
         <con1:property key="limits">Time=900;</con1:property>
       </con1:attributes>
@@ -74,7 +74,7 @@
         <con1:properties>
           <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
           <con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">false</con1:property>
-          <con1:property propagates="true" key="limitVU" type="java.lang.Long">9223372036854775807</con1:property>
+          <con1:property propagates="true" key="limitVU" type="java.lang.Long">10</con1:property>
           <con1:property propagates="true" key="load" type="java.lang.Long">1</con1:property>
           <con1:property propagates="true" key="interval" type="java.lang.Long">1000</con1:property>
         </con1:properties>
@@ -512,31 +512,31 @@
         </con1:attributes>
         <con1:addons/>
       </con1:component>
-      <con1:connection outputTerminalId="00d77f49-e1d6-4a19-a1e0-fed624494cbb/outgoingTerminal" inputTerminalId="881bae64-967f-4130-a1fe-4fb19613275e/stateTerminal"/>
-      <con1:connection outputTerminalId="881bae64-967f-4130-a1fe-4fb19613275e/triggerTerminal" inputTerminalId="9f439ba6-dd61-4c26-bd43-7af9f4766cf9/incomingTerminal"/>
-      <con1:connection outputTerminalId="9f439ba6-dd61-4c26-bd43-7af9f4766cf9/loop" inputTerminalId="64ae033a-ccfd-47d4-acfa-670a46521192/triggerTerminal"/>
-      <con1:connection outputTerminalId="64ae033a-ccfd-47d4-acfa-670a46521192/runningTerminal" inputTerminalId="4a026a75-3b83-4743-b488-3e8a8682c51d/triggerTerminal"/>
-      <con1:connection outputTerminalId="4a026a75-3b83-4743-b488-3e8a8682c51d/runningTerminal" inputTerminalId="e6c2048d-b0a4-4b64-8c68-77100a53664f/triggerTerminal"/>
-      <con1:connection outputTerminalId="e6c2048d-b0a4-4b64-8c68-77100a53664f/runningTerminal" inputTerminalId="694727e8-0d8d-438d-a951-7f30d4e86650/triggerTerminal"/>
-      <con1:connection outputTerminalId="694727e8-0d8d-438d-a951-7f30d4e86650/runningTerminal" inputTerminalId="df072d9e-17e5-43eb-b472-9fc5b6c4eacc/triggerTerminal"/>
-      <con1:connection outputTerminalId="df072d9e-17e5-43eb-b472-9fc5b6c4eacc/runningTerminal" inputTerminalId="c0a35d51-85c4-4ef1-bd51-14496fd9d438/triggerTerminal"/>
-      <con1:connection outputTerminalId="c0a35d51-85c4-4ef1-bd51-14496fd9d438/runningTerminal" inputTerminalId="e1d390ec-09fd-4b59-8013-4a7c691a925f/triggerTerminal"/>
-      <con1:connection outputTerminalId="e1d390ec-09fd-4b59-8013-4a7c691a925f/runningTerminal" inputTerminalId="0cf1c8a5-b282-4929-be5b-d2c4ac274d42/triggerTerminal"/>
-      <con1:connection outputTerminalId="0cf1c8a5-b282-4929-be5b-d2c4ac274d42/runningTerminal" inputTerminalId="eb66ad97-e488-46da-894e-d4cac1271592/triggerTerminal"/>
-      <con1:connection outputTerminalId="eb66ad97-e488-46da-894e-d4cac1271592/runningTerminal" inputTerminalId="6c130741-8fbc-4e71-abd9-2f94957199bf/triggerTerminal"/>
-      <con1:connection outputTerminalId="6c130741-8fbc-4e71-abd9-2f94957199bf/runningTerminal" inputTerminalId="e556f2f2-1c14-4910-922b-466484467f22/triggerTerminal"/>
-      <con1:connection outputTerminalId="e556f2f2-1c14-4910-922b-466484467f22/runningTerminal" inputTerminalId="c6a08530-3025-4819-8c27-5256b593efa1/triggerTerminal"/>
-      <con1:connection outputTerminalId="c6a08530-3025-4819-8c27-5256b593efa1/runningTerminal" inputTerminalId="32ac8163-f930-4955-9ff0-fc2399aca8b5/triggerTerminal"/>
-      <con1:connection outputTerminalId="32ac8163-f930-4955-9ff0-fc2399aca8b5/runningTerminal" inputTerminalId="59116bc3-b239-4cd2-b93a-0ca5ef33c6ce/triggerTerminal"/>
-      <con1:connection outputTerminalId="59116bc3-b239-4cd2-b93a-0ca5ef33c6ce/runningTerminal" inputTerminalId="715362bd-ead7-43f8-b07f-dbf188b12833/triggerTerminal"/>
-      <con1:connection outputTerminalId="715362bd-ead7-43f8-b07f-dbf188b12833/runningTerminal" inputTerminalId="b622bee3-018b-4d22-afef-a76ea2b343e6/triggerTerminal"/>
-      <con1:connection outputTerminalId="b622bee3-018b-4d22-afef-a76ea2b343e6/runningTerminal" inputTerminalId="0a065c18-04c3-4650-a464-a30ef0ed8ef9/triggerTerminal"/>
-      <con1:connection outputTerminalId="0a065c18-04c3-4650-a464-a30ef0ed8ef9/runningTerminal" inputTerminalId="b390f747-9447-40a4-94f1-22c6ca11aac0/triggerTerminal"/>
-      <con1:connection outputTerminalId="b390f747-9447-40a4-94f1-22c6ca11aac0/runningTerminal" inputTerminalId="94c1765e-f27c-4b78-8e11-95027c5f24e5/triggerTerminal"/>
-      <con1:connection outputTerminalId="94c1765e-f27c-4b78-8e11-95027c5f24e5/runningTerminal" inputTerminalId="dcf79d69-df77-44e2-9a9c-947df595ac1a/triggerTerminal"/>
-      <con1:connection outputTerminalId="dcf79d69-df77-44e2-9a9c-947df595ac1a/runningTerminal" inputTerminalId="9f439ba6-dd61-4c26-bd43-7af9f4766cf9/incomingTerminal"/>
-      <con1:connection outputTerminalId="9f439ba6-dd61-4c26-bd43-7af9f4766cf9/exit" inputTerminalId="881bae64-967f-4130-a1fe-4fb19613275e/Sample Count"/>
-    </con1:scene>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    <con1:connection outputTerminalId="00d77f49-e1d6-4a19-a1e0-fed624494cbb/outgoingTerminal" inputTerminalId="881bae64-967f-4130-a1fe-4fb19613275e/stateTerminal"/><con1:connection outputTerminalId="881bae64-967f-4130-a1fe-4fb19613275e/triggerTerminal" inputTerminalId="9f439ba6-dd61-4c26-bd43-7af9f4766cf9/incomingTerminal"/><con1:connection outputTerminalId="9f439ba6-dd61-4c26-bd43-7af9f4766cf9/loop" inputTerminalId="64ae033a-ccfd-47d4-acfa-670a46521192/triggerTerminal"/><con1:connection outputTerminalId="64ae033a-ccfd-47d4-acfa-670a46521192/runningTerminal" inputTerminalId="4a026a75-3b83-4743-b488-3e8a8682c51d/triggerTerminal"/><con1:connection outputTerminalId="4a026a75-3b83-4743-b488-3e8a8682c51d/runningTerminal" inputTerminalId="e6c2048d-b0a4-4b64-8c68-77100a53664f/triggerTerminal"/><con1:connection outputTerminalId="e6c2048d-b0a4-4b64-8c68-77100a53664f/runningTerminal" inputTerminalId="694727e8-0d8d-438d-a951-7f30d4e86650/triggerTerminal"/><con1:connection outputTerminalId="694727e8-0d8d-438d-a951-7f30d4e86650/runningTerminal" inputTerminalId="df072d9e-17e5-43eb-b472-9fc5b6c4eacc/triggerTerminal"/><con1:connection outputTerminalId="df072d9e-17e5-43eb-b472-9fc5b6c4eacc/runningTerminal" inputTerminalId="c0a35d51-85c4-4ef1-bd51-14496fd9d438/triggerTerminal"/><con1:connection outputTerminalId="c0a35d51-85c4-4ef1-bd51-14496fd9d438/runningTerminal" inputTerminalId="e1d390ec-09fd-4b59-8013-4a7c691a925f/triggerTerminal"/><con1:connection outputTerminalId="e1d390ec-09fd-4b59-8013-4a7c691a925f/runningTerminal" inputTerminalId="0cf1c8a5-b282-4929-be5b-d2c4ac274d42/triggerTerminal"/><con1:connection outputTerminalId="0cf1c8a5-b282-4929-be5b-d2c4ac274d42/runningTerminal" inputTerminalId="eb66ad97-e488-46da-894e-d4cac1271592/triggerTerminal"/><con1:connection outputTerminalId="eb66ad97-e488-46da-894e-d4cac1271592/runningTerminal" inputTerminalId="6c130741-8fbc-4e71-abd9-2f94957199bf/triggerTerminal"/><con1:connection outputTerminalId="6c130741-8fbc-4e71-abd9-2f94957199bf/runningTerminal" inputTerminalId="e556f2f2-1c14-4910-922b-466484467f22/triggerTerminal"/><con1:connection outputTerminalId="e556f2f2-1c14-4910-922b-466484467f22/runningTerminal" inputTerminalId="c6a08530-3025-4819-8c27-5256b593efa1/triggerTerminal"/><con1:connection outputTerminalId="c6a08530-3025-4819-8c27-5256b593efa1/runningTerminal" inputTerminalId="32ac8163-f930-4955-9ff0-fc2399aca8b5/triggerTerminal"/><con1:connection outputTerminalId="32ac8163-f930-4955-9ff0-fc2399aca8b5/runningTerminal" inputTerminalId="59116bc3-b239-4cd2-b93a-0ca5ef33c6ce/triggerTerminal"/><con1:connection outputTerminalId="59116bc3-b239-4cd2-b93a-0ca5ef33c6ce/runningTerminal" inputTerminalId="715362bd-ead7-43f8-b07f-dbf188b12833/triggerTerminal"/><con1:connection outputTerminalId="715362bd-ead7-43f8-b07f-dbf188b12833/runningTerminal" inputTerminalId="b622bee3-018b-4d22-afef-a76ea2b343e6/triggerTerminal"/><con1:connection outputTerminalId="b622bee3-018b-4d22-afef-a76ea2b343e6/runningTerminal" inputTerminalId="0a065c18-04c3-4650-a464-a30ef0ed8ef9/triggerTerminal"/><con1:connection outputTerminalId="0a065c18-04c3-4650-a464-a30ef0ed8ef9/runningTerminal" inputTerminalId="b390f747-9447-40a4-94f1-22c6ca11aac0/triggerTerminal"/><con1:connection outputTerminalId="b390f747-9447-40a4-94f1-22c6ca11aac0/runningTerminal" inputTerminalId="94c1765e-f27c-4b78-8e11-95027c5f24e5/triggerTerminal"/><con1:connection outputTerminalId="94c1765e-f27c-4b78-8e11-95027c5f24e5/runningTerminal" inputTerminalId="dcf79d69-df77-44e2-9a9c-947df595ac1a/triggerTerminal"/><con1:connection outputTerminalId="dcf79d69-df77-44e2-9a9c-947df595ac1a/runningTerminal" inputTerminalId="9f439ba6-dd61-4c26-bd43-7af9f4766cf9/incomingTerminal"/><con1:connection outputTerminalId="9f439ba6-dd61-4c26-bd43-7af9f4766cf9/exit" inputTerminalId="881bae64-967f-4130-a1fe-4fb19613275e/Sample Count"/></con1:scene>
     <con1:statistics>
       <con1:page title="DefaultLoadUIStatisticPage">
         <con1:chartGroup type="com.eviware.loadui.api.statistics.model.chart.line.LineChartView" title="" groupType="Monitors">
