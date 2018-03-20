@@ -317,7 +317,7 @@ log.info tC_Number</script>
   </con:testStep>
   <con:testStep type="restrequest" name="Get Account_Positive" id="ab692edd-1902-473a-98b6-3e8af6ee9bca" disabled="true">
     <con:settings/>
-    <con:config service="Get Account" resourcePath="/account/${#TestCase#Account_ID}" methodName="Get Account" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config service="Get Account" resourcePath="/account/${#Project#Account_ID_Load}" methodName="Get Account" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Get Account_Positive" id="2686a9fb-f18b-41ef-a5fe-403186c27901" mediaType="application/json">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -377,7 +377,7 @@ log.info tC_Number</script>
   </con:testStep>
   <con:testStep type="restrequest" name="Get Account_Negative" id="6fc93c00-21f9-4a39-af82-289083d75b96" disabled="true">
     <con:settings/>
-    <con:config service="Get Account" resourcePath="/account/${#TestCase#Account_ID}" methodName="Get Account" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config service="Get Account" resourcePath="/account/${#Project#Account_ID_Load}" methodName="Get Account" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Get Account_Negative" id="2686a9fb-f18b-41ef-a5fe-403186c27901" mediaType="application/json">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>

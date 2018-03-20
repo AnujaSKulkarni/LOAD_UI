@@ -257,7 +257,7 @@ if (API_Name != TestCaseName){
   </con:testStep>
   <con:testStep type="restrequest" name="GET groups by AccountId" id="03b6ac19-3155-49c1-af5d-e9b26e7e271c" disabled="true">
     <con:settings/>
-    <con:config service="GET groups by AccountId" resourcePath="/get_groups/${#[Regression Suite#Create Group]#Account_ID}" methodName="GET groups by AccountId" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config service="GET groups by AccountId" resourcePath="/get_groups/${#Project#Account_ID_Load}" methodName="GET groups by AccountId" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="GET groups by AccountId" id="0d1d98c6-502c-4d00-a6cf-bd9b009a3757" mediaType="application/json" postQueryString="false">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>

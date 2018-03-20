@@ -290,7 +290,7 @@ if (API_Name != TestCaseName){
   </con:testStep>
   <con:testStep type="restrequest" name="Get Groups" id="6a5148d6-5860-413c-a550-64db09445f08" disabled="true">
     <con:settings/>
-    <con:config service="Get Groups" resourcePath="/get_groups/${#TestCase#Group_ID}" methodName="Get Groups" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config service="Get Groups" resourcePath="/get_groups/${#Project#Group_ID_Load}" methodName="Get Groups" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Get Groups" id="9ba659de-9a48-4e05-92a7-553d4d254391" mediaType="application/json">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>

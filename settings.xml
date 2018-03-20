@@ -116,7 +116,7 @@
     <con:property>
       <con:name>UPC_Sheet</con:name>
     </con:property>
-  <con:property><con:name>Account_ID_Load</con:name></con:property></con:properties>
+  <con:property><con:name>Account_ID_Load</con:name></con:property><con:property><con:name>Role_ID_Load</con:name></con:property><con:property><con:name>Group_ID_Load</con:name></con:property><con:property><con:name>Location_ID_Load</con:name></con:property><con:property><con:name>Client_Version_ID_Load</con:name></con:property><con:property><con:name>Client_Version_ID_Name_AppName_Load</con:name></con:property><con:property><con:name>Client_Version_Load</con:name></con:property><con:property><con:name>Client_Platform_Load</con:name></con:property><con:property><con:name>Client_Version_Notice_ID_Load</con:name></con:property></con:properties>
   <con:wssContainer/>
   <con:databaseConnectionContainer>
     <con:databaseConnection>
@@ -639,7 +639,7 @@
     <con:service type="REST" name="Update_Password">
       <con:endpoint authProfile="No Authorization" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://{{API-Connect}}</con:endpoint>
     </con:service>
-    <con:property>
+    <con:service type="REST" name="get all invited member"><con:endpoint authProfile="No Authorization"/></con:service><con:property>
       <con:name>Location</con:name>
       <con:value>http://locationserviceqa-v2.mybluemix.net/api/v1</con:value>
     </con:property>
@@ -731,7 +731,7 @@
       <con:name>UPC_Sheet</con:name>
       <con:value>UPC_QA</con:value>
     </con:property>
-    <con:property><con:name>Account_ID_Load</con:name><con:value/></con:property><con:databaseConnectionContainer>
+    <con:property><con:name>Account_ID_Load</con:name><con:value/></con:property><con:property><con:name>Role_ID_Load</con:name><con:value/></con:property><con:property><con:name>Group_ID_Load</con:name><con:value/></con:property><con:property><con:name>Location_ID_Load</con:name><con:value/></con:property><con:property><con:name>Client_Version_ID_Load</con:name><con:value/></con:property><con:property><con:name>Client_Version_ID_Name_AppName_Load</con:name><con:value/></con:property><con:property><con:name>Client_Version_Load</con:name><con:value/></con:property><con:property><con:name>Client_Platform_Load</con:name><con:value/></con:property><con:property><con:name>Client_Version_Notice_ID_Load</con:name><con:value/></con:property><con:databaseConnectionContainer>
       <con:databaseConnection>
         <con:name>DataBase</con:name>
         <con:driver>com.ibm.db2.jcc.DB2Driver</con:driver>
@@ -1250,7 +1250,7 @@
     <con:service type="REST" name="Update_Password">
       <con:endpoint authProfile="No Authorization" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://{{API-Connect}}</con:endpoint>
     </con:service>
-    <con:property>
+    <con:service type="REST" name="get all invited member"><con:endpoint authProfile="No Authorization"/></con:service><con:property>
       <con:name>Location</con:name>
       <con:value>http://locationservicedev-v2.mybluemix.net/api/v1</con:value>
     </con:property>
@@ -1342,7 +1342,7 @@
       <con:name>UPC_Sheet</con:name>
       <con:value/>
     </con:property>
-    <con:property><con:name>Account_ID_Load</con:name><con:value/></con:property><con:databaseConnectionContainer>
+    <con:property><con:name>Account_ID_Load</con:name><con:value/></con:property><con:property><con:name>Role_ID_Load</con:name><con:value/></con:property><con:property><con:name>Group_ID_Load</con:name><con:value/></con:property><con:property><con:name>Location_ID_Load</con:name><con:value/></con:property><con:property><con:name>Client_Version_ID_Load</con:name><con:value/></con:property><con:property><con:name>Client_Version_ID_Name_AppName_Load</con:name><con:value/></con:property><con:property><con:name>Client_Version_Load</con:name><con:value/></con:property><con:property><con:name>Client_Platform_Load</con:name><con:value/></con:property><con:property><con:name>Client_Version_Notice_ID_Load</con:name><con:value/></con:property><con:databaseConnectionContainer>
       <con:databaseConnection>
         <con:name>DataBase</con:name>
         <con:driver>com.ibm.db2.jcc.DB2Driver</con:driver>
@@ -1853,15 +1853,15 @@
       <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="getCountriesAndStates">
-      <con:endpoint authProfile="No Authorization" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://{{API-Connect}}</con:endpoint>
+      <con:endpoint authProfile="No Authorization" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="getallappliances_by_accountid">
-      <con:endpoint authProfile="No Authorization" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://{{API-Connect}}</con:endpoint>
+      <con:endpoint authProfile="No Authorization" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="Update_Password">
-      <con:endpoint authProfile="No Authorization" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://{{API-Connect}}</con:endpoint>
+      <con:endpoint authProfile="No Authorization" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${API-Connect}</con:endpoint>
     </con:service>
-    <con:property>
+    <con:service type="REST" name="get all invited member"><con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${API-Connect}</con:endpoint></con:service><con:property>
       <con:name>Location</con:name>
       <con:value>http://locationservicestg-v2.mybluemix.net/api/v1</con:value>
     </con:property>
@@ -1953,7 +1953,7 @@
       <con:name>UPC_Sheet</con:name>
       <con:value>UPC_Stg</con:value>
     </con:property>
-    <con:property><con:name>Account_ID_Load</con:name><con:value>6602</con:value></con:property><con:databaseConnectionContainer>
+    <con:property><con:name>Account_ID_Load</con:name><con:value>6602</con:value></con:property><con:property><con:name>Role_ID_Load</con:name><con:value>1</con:value></con:property><con:property><con:name>Group_ID_Load</con:name><con:value>5604</con:value></con:property><con:property><con:name>Location_ID_Load</con:name><con:value>3892</con:value></con:property><con:property><con:name>Client_Version_ID_Load</con:name><con:value>547</con:value></con:property><con:property><con:name>Client_Version_ID_Name_AppName_Load</con:name><con:value>Client_Version_Name_Mon_Mar_19_14_19_36_IST_2018_2156858</con:value></con:property><con:property><con:name>Client_Version_Load</con:name><con:value>2.3.4</con:value></con:property><con:property><con:name>Client_Platform_Load</con:name><con:value>Automation</con:value></con:property><con:property><con:name>Client_Version_Notice_ID_Load</con:name><con:value>504</con:value></con:property><con:databaseConnectionContainer>
       <con:databaseConnection>
         <con:name>DataBase</con:name>
         <con:driver>com.ibm.db2.jcc.DB2Driver</con:driver>

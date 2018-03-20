@@ -258,7 +258,7 @@ if (API_Name != TestCaseName){
   </con:testStep>
   <con:testStep type="restrequest" name="Energy_providers" id="d2c5193f-ad5c-4c5b-9129-ed344ce9d995" disabled="true">
     <con:settings/>
-    <con:config service="Energy_providers" resourcePath="/energy_providers/${#[Regression Suite#Create Location#Create Location_Positive]#Response#$['POSTAL_CODE']}" methodName="Energy_providers" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config service="Energy_providers" resourcePath="/energy_providers/10533" methodName="Energy_providers" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Energy_providers" id="ce4e5181-9a1e-4397-b182-e001b1a363e7" mediaType="application/json">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>

@@ -10,7 +10,8 @@
     <con:setting id="GeneratableJUnitReport@Folder">C:\Users\MB5027676\Desktop</con:setting>
     <con:setting id="08d716b0-d72a-4b2e-8d65-6c52af8434f5fileName">Regression-Suite</con:setting>
     <con:setting id="75dffb72-f960-4705-b63c-4f8c34fdd9f5fileName">Regression-Suite</con:setting>
-  <con:setting id="7b51d217-26ca-4889-ba94-20a2007383a5fileName">Load-Suite</con:setting></con:settings>
+    <con:setting id="7b51d217-26ca-4889-ba94-20a2007383a5fileName">Load-Suite</con:setting>
+  </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:runType>SEQUENTIAL</con:runType>
   <con:properties>
@@ -68,7 +69,7 @@
     </con:property>
     <con:property>
       <con:name>Run_count</con:name>
-      <con:value>1</con:value>
+      <con:value>42</con:value>
     </con:property>
     <con:property>
       <con:name>Email_cnf</con:name>

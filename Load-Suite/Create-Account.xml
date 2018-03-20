@@ -8,35 +8,25 @@
     <con:setting id="IncludeCoverage">true</con:setting>
     <con:setting id="4116a559-779e-43a0-ba46-4ec42bfc53aefileName">Create-Account</con:setting>
     <con:setting id="dc55c82b-3f72-4911-ac1b-2d8e8328a67afileName">Create-Account</con:setting>
-  <con:setting id="115f77b2-adb6-481d-b2ed-d2654a74f063fileName">Create-Account</con:setting></con:settings>
+    <con:setting id="115f77b2-adb6-481d-b2ed-d2654a74f063fileName">Create-Account</con:setting>
+  </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  
-  
-  
-  <con:testStep type="groovy" name="Unique_Email_ID" id="bffad985-13fa-4536-bf8d-7f9e7eff2b5d" disabled="true">
+  <con:testStep type="groovy" name="Unique_Email_ID" id="bffad985-13fa-4536-bf8d-7f9e7eff2b5d">
     <con:settings/>
-    <con:config><script>String date = new Date()
+    <con:config>
+      <script>String date = new Date()
 date = date.replaceAll(":","_")
 date = date.replaceAll(" ","_")
-RandomNumber (int)(Math.random()*10000000)
+RandomNumber = (int)(Math.random()*10000000)
 Email_ID = "\"" + date + RandomNumber + "@mailinator.com" + "\""
 Email_ID = Email_ID.toUpperCase()
-Email_ID_string = date + "@mailinator.com"
+Email_ID_string = date + RandomNumber + "@mailinator.com"
 Email_ID_string = Email_ID_string.toUpperCase()
-testRunner.testCase.testSuite.setPropertyValue("Email_ID", Email_ID)
-testRunner.testCase.testSuite.setPropertyValue("Email_ID_string", Email_ID_string)
-
-def Brand_Name = context.expand( '${DataSource#Brand}' )
-Brand_Name = Brand_Name.replace("\"", "")
-testRunner.testCase.setPropertyValue("Brand_Name", Brand_Name)
-def Country_Name = context.expand( '${DataSource#Country_Name}' )
-Country_Name = Country_Name.replace("\"", "")
-testRunner.testCase.setPropertyValue("Country_Name", Country_Name)
-def Region = context.expand( '${DataSource#Region}' )
-Region = Region.replace("\"", "")
-testRunner.testCase.setPropertyValue("Region", Region)</script></con:config>
+testRunner.testCase.setPropertyValue("Email_ID", Email_ID)
+testRunner.testCase.setPropertyValue("Email_ID_string", Email_ID_string)</script>
+    </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Create Account" id="d292790a-d451-45e1-b28a-2d611c7c049c" disabled="true">
+  <con:testStep type="restrequest" name="Create Account" id="d292790a-d451-45e1-b28a-2d611c7c049c">
     <con:settings/>
     <con:config service="Create Account" resourcePath="/client_auth/accounts" methodName="Create Account" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Create Account" id="ca9f4001-c1e6-4520-a84d-0a8f310353ef" mediaType="application/json" postQueryString="false">
@@ -50,7 +40,7 @@ testRunner.testCase.setPropertyValue("Region", Region)</script></con:config>
   "statusId": 1,
   "firstName": "Load",
   "lastName": "Testing",
-  "email": ${#TestSuite#Email_ID},
+  "email": ${#TestCase#Email_ID},
   "emailConfirmedAt": null,
   "signedInCount": 0,
   "currentSignInAt": null,
@@ -77,66 +67,6 @@ testRunner.testCase.setPropertyValue("Region", Region)</script></con:config>
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
-          </con:configuration>
-        </con:assertion>
-        <con:assertion type="MessageContentAssertion" id="2a912873-215f-4d0a-a037-33f6488c540c" name="Message Content Assertion">
-          <con:configuration xsi:type="con:MessageContentAssertion">
-            <con:elements>
-              <con:xpath>declare namespace ns1='http://api/accou/api/accounts';
-//ns1:Response[1]/ns1:email[1]</con:xpath>
-              <con:element>email</con:element>
-              <con:type xsi:nil="true"/>
-              <con:operator>=</con:operator>
-              <con:enabled>true</con:enabled>
-              <con:expectedValue>${#TestSuite#Email_ID_string}</con:expectedValue>
-              <con:hasValue>false</con:hasValue>
-              <con:numberType>false</con:numberType>
-            </con:elements>
-            <con:originalMessage><![CDATA[<Response xmlns="http://api/accou/api/accounts">
-   <accountId>9011</accountId>
-   <addressLine null="true"/>
-   <alternateEmail null="true"/>
-   <city null="true"/>
-   <companyId>0</companyId>
-   <confirmationSentAt>1512452346032</confirmationSentAt>
-   <country null="true"/>
-   <createdAt>1512452345908</createdAt>
-   <currentSignInAt null="true"/>
-   <email>TUE_DEC_05_11_09_05_IST_2017@MAILINATOR.COM</email>
-   <email1 null="true"/>
-   <emailConfirmedAt null="true"/>
-   <enabled>1</enabled>
-   <firstName>PRIMARY_OWNER</firstName>
-   <inviteLink null="true"/>
-   <languageId>1</languageId>
-   <lastName>Testing</lastName>
-   <lastSignInAt null="true"/>
-   <lockedAt null="true"/>
-   <logonId null="true"/>
-   <logonPassword null="true"/>
-   <logonPasswordVerify null="true"/>
-   <m2mUserId>1</m2mUserId>
-   <message null="true"/>
-   <mobilePhone1 null="true"/>
-   <notificationId>0</notificationId>
-   <password null="true"/>
-   <phone1 null="true"/>
-   <phoneNo>+919423216146</phoneNo>
-   <phoneVerificationConfirmedAt null="true"/>
-   <phoneVerificationSentAt>1488808319</phoneVerificationSentAt>
-   <productRegistrationAttributes null="true"/>
-   <receiveEmailPreference null="true"/>
-   <resetPasswordSentAt null="true"/>
-   <signedInCount>0</signedInCount>
-   <state null="true"/>
-   <statusId>1</statusId>
-   <updatedAt null="true"/>
-   <userRole>PRIMARY_OWNER</userRole>
-   <userRolePrivilege null="true"/>
-   <validateMobile null="true"/>
-   <verificationCode>1313</verificationCode>
-   <zipCode null="true"/>
-</Response>]]></con:originalMessage>
           </con:configuration>
         </con:assertion>
         <con:credentials>
@@ -190,13 +120,6 @@ testRunner.testCase.setPropertyValue("Region", Region)</script></con:config>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  
-  
-  
-  
-  
-  
-  
   <con:properties>
     <con:property>
       <con:name>Account_ID_Response</con:name>
@@ -242,6 +165,14 @@ Connection: keep-alive
     <con:property>
       <con:name>Region</con:name>
       <con:value>NAR</con:value>
+    </con:property>
+    <con:property>
+      <con:name>Email_ID</con:name>
+      <con:value>"MON_MAR_19_16_47_42_IST_20186257256@MAILINATOR.COM"</con:value>
+    </con:property>
+    <con:property>
+      <con:name>Email_ID_string</con:name>
+      <con:value>MON_MAR_19_16_47_42_IST_20186257256@MAILINATOR.COM</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

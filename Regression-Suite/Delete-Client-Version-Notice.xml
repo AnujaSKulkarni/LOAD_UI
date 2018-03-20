@@ -257,7 +257,7 @@ if (API_Name != TestCaseName){
   </con:testStep>
   <con:testStep type="restrequest" name="Delete Client Version Notice" id="9f92215e-604d-4736-a3c3-0b4d072658df" disabled="true">
     <con:settings/>
-    <con:config service="Delete Client Version Notice" resourcePath="/delete_client_version_notice/${#[Regression Suite#Get Client Version Notice]#Client_Version_Notice}" methodName="Delete Client Version Notice" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config service="Delete Client Version Notice" resourcePath="/delete_client_version_notice/${#[Load Suite#Get Client Version Notice]#Client_Version_Notice}" methodName="Delete Client Version Notice" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Delete Client Version Notice" id="34d71270-8c68-4ec3-96f2-8c2c69ffe362" mediaType="application/json" postQueryString="false">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>

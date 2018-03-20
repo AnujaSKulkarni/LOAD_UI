@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="Get Groups" path="/get_groups/${#TestCase#Group_ID}" id="830dd7b9-3eef-421e-9d5a-fbe2ba8e404a" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="Get Groups" path="/get_groups/${#Project#Group_ID_Load}" id="830dd7b9-3eef-421e-9d5a-fbe2ba8e404a" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
       <con:settings>
         <con:setting id="830dd7b9-3eef-421e-9d5a-fbe2ba8e404afileName">Get-Groups</con:setting>
       </con:settings>

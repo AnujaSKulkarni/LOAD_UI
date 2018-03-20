@@ -280,7 +280,7 @@ if (API_Name != TestCaseName){
   </con:testStep>
   <con:testStep type="restrequest" name="searchRecipe" id="5b507002-c3d9-4f7d-abdd-8331593e745b" disabled="true">
     <con:settings/>
-    <con:config service="searchRecipe" resourcePath="/searchRecipe/${UPC_DataSource#UPC_Codes}/en" methodName="searchRecipe" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config service="searchRecipe" resourcePath="/searchRecipe/031000110741/en" methodName="searchRecipe" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="searchRecipe" id="d2d2db26-4f43-48d8-a10b-56ea805d8d8d" mediaType="application/json">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>

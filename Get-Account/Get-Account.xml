@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="Get Account" path="/account/${#TestCase#Account_ID}" id="ca1a5f93-74d8-4dcc-9c38-9aa58a253417" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="Get Account" path="/account/${#Project#Account_ID_Load}" id="ca1a5f93-74d8-4dcc-9c38-9aa58a253417" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
       <con:settings>
         <con:setting id="ca1a5f93-74d8-4dcc-9c38-9aa58a253417fileName">Get-Account</con:setting>
       </con:settings>
