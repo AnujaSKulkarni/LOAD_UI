@@ -286,7 +286,7 @@ if (API_Name != TestCaseName){
         <con:parameterOrder>
           <con:entry>Authorization</con:entry>
         </con:parameterOrder>
-      </con:restRequest>
+      <con:environmentSpec><con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:restRequest>
     </con:config>
   </con:testStep>
   <con:testStep type="groovy" name="Report" id="d5bf9232-e510-4008-80ae-240b6758fe73" disabled="true">

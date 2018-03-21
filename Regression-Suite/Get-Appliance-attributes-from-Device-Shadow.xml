@@ -276,7 +276,7 @@ testRunner.testCase.setPropertyValue("Device_Shadow_Name", Device_Shadow_Name)</
   </con:testStep>
   <con:testStep type="restrequest" name="Get Appliance attributes from Device Shadow_Positive" id="f42acb87-9ba0-49db-b3ac-244f7ccece30" disabled="true">
     <con:settings/>
-    <con:config service="Get Appliance attributes from Device Shadow" resourcePath="/appliance/WPR333334UCD3" methodName="Get Appliance attributes from Device Shadow" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config service="Get Appliance attributes from Device Shadow" resourcePath="/appliance/${#Project#Appliance_SAID_Load}" methodName="Get Appliance attributes from Device Shadow" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Get Appliance attributes from Device Shadow_Positive" id="dfd348bd-0a45-45bf-a2a8-9453ba48307a" mediaType="application/json">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -330,13 +330,13 @@ testRunner.testCase.setPropertyValue("Device_Shadow_Name", Device_Shadow_Name)</
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-        </con:environmentSpec>
+        <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
   <con:testStep type="restrequest" name="Get Appliance attributes from Device Shadow_Negative" id="5f5d526e-82d2-488d-9b66-d2590fa40582" disabled="true">
     <con:settings/>
-    <con:config service="Get Appliance attributes from Device Shadow" resourcePath="/appliance/WPR333334UCD3" methodName="Get Appliance attributes from Device Shadow" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config service="Get Appliance attributes from Device Shadow" resourcePath="/appliance/${#Project#Appliance_SAID_Load}" methodName="Get Appliance attributes from Device Shadow" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Get Appliance attributes from Device Shadow_Negative" id="dfd348bd-0a45-45bf-a2a8-9453ba48307a" mediaType="application/json">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -390,7 +390,7 @@ testRunner.testCase.setPropertyValue("Device_Shadow_Name", Device_Shadow_Name)</
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-        </con:environmentSpec>
+        <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
@@ -567,5 +567,5 @@ out.close()</script>
     <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
-  </con:environmentSpec>
+  <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
 </con:testCase>

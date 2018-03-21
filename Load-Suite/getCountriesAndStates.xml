@@ -18,7 +18,7 @@
         <con:endpoint>${API-Connect}</con:endpoint>
         <con:request/>
         <con:originalUri>https://api-stg.whrcloud.com/api/v1/client_auth/countriesAndStates</con:originalUri>
-        <con:credentials>
+        <con:assertion type="Valid HTTP Status Codes" id="6a87ae25-f043-4b53-a774-b25aa315c4f5" name="Valid HTTP Status Codes"><con:settings/><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
         </con:credentials>
@@ -29,7 +29,7 @@
           <con:entry>wp-client-region</con:entry>
           <con:entry>wp-client-brand</con:entry>
         </con:parameterOrder>
-      </con:restRequest>
+      <con:environmentSpec><con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:restRequest>
     </con:config>
   </con:testStep>
   

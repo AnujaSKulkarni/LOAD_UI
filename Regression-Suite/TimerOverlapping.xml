@@ -297,7 +297,7 @@ log.info m2</script>
         <con:parameterOrder>
           <con:entry>Authorization</con:entry>
         </con:parameterOrder>
-      </con:restRequest>
+      <con:environmentSpec><con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:restRequest>
     </con:config>
   </con:testStep>
   <con:testStep type="groovy" name="Report" id="679ade4f-9df4-4755-aa41-9bd8dd8c6c3c" disabled="true">

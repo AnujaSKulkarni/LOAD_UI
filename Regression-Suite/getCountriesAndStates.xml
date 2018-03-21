@@ -277,7 +277,7 @@ if (API_Name != TestCaseName){
           <con:entry>wp-client-region</con:entry>
           <con:entry>wp-client-brand</con:entry>
         </con:parameterOrder>
-      </con:restRequest>
+      <con:environmentSpec><con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:restRequest>
     </con:config>
   </con:testStep>
   <con:testStep type="groovy" name="Report" id="736ad200-2afb-4d79-93d7-157add81b9f5">

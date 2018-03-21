@@ -11,7 +11,7 @@
   
   <con:testStep type="restrequest" name="Get Appliance attributes from Device Shadow" id="c55d69ea-97e5-4a34-abbe-f43eee31a494">
     <con:settings/>
-    <con:config service="Get Appliance attributes from Device Shadow" resourcePath="/appliance/WPR333334UCD3" methodName="Get Appliance attributes from Device Shadow" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config service="Get Appliance attributes from Device Shadow" resourcePath="/appliance/${#Project#Appliance_SAID_Load}" methodName="Get Appliance attributes from Device Shadow" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Get Appliance attributes from Device Shadow" id="dfd348bd-0a45-45bf-a2a8-9453ba48307a" mediaType="application/json">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -63,7 +63,7 @@
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-        </con:environmentSpec>
+        <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
@@ -107,5 +107,5 @@
     <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
-  </con:environmentSpec>
+  <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
 </con:testCase>

@@ -53,6 +53,6 @@
         <con:entry>wp-client-region</con:entry>
         <con:entry>wp-client-brand</con:entry>
       </con:parameterOrder>
-    </con:request>
+    <con:environmentSpec><con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:request>
   </con:method>
 </con:resource>
