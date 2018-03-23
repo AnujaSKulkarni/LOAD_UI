@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="22007323-cc8c-4c38-a3ce-7ff5dd54d6d0" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Rate Revealer" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="22007323-cc8c-4c38-a3ce-7ff5dd54d6d0" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Rate Revealer" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" disabled="true" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="9b6b6b62-e5f0-407d-a7e0-0a5bff0ef2b5fileName">Rate-Revealer</con:setting>
     <con:setting id="1a9bed6f-ecc9-41d2-b2c5-b8c0dda6e599fileName">Rate-Revealer</con:setting>
-  <con:setting id="22007323-cc8c-4c38-a3ce-7ff5dd54d6d0fileName">Rate-Revealer</con:setting></con:settings>
+    <con:setting id="22007323-cc8c-4c38-a3ce-7ff5dd54d6d0fileName">Rate-Revealer</con:setting>
+  </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  
-  
-  
   <con:testStep type="restrequest" name="Rate Revealer" id="77acf518-d7ee-42dd-8ce0-36944e1b4709">
     <con:settings/>
     <con:config service="Rate Revealer" resourcePath="/locations/${#Project#Location_ID_Load}/smart_energy" methodName="Rate Revealer" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -40,12 +38,13 @@
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-        <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  
-  
   <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>

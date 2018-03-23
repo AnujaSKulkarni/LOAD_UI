@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="e6a65065-553b-4eb9-8a86-0088222378bc" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="forgotPwd" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="e6a65065-553b-4eb9-8a86-0088222378bc" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="forgotPwd" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" disabled="true" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="15f644a3-f259-40e1-bbfe-a0cea3171dd4fileName">forgotPwd</con:setting>
     <con:setting id="d8b29de8-33b3-42bf-a70b-9cf637ebcfa2fileName">forgotPwd</con:setting>
-  <con:setting id="e6a65065-553b-4eb9-8a86-0088222378bcfileName">forgotPwd</con:setting></con:settings>
+    <con:setting id="e6a65065-553b-4eb9-8a86-0088222378bcfileName">forgotPwd</con:setting>
+  </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  
-  
-  
-  
-  
-  
   <con:testStep type="restrequest" name="forgotPwd" id="86ff0e3f-8e64-4cc9-a02f-7796e06fdf2e">
     <con:settings/>
     <con:config service="forgotPwd" resourcePath="/client_auth/accounts/forgotPassword/${#[Load Suite#Create Account]#Email_ID_string}" methodName="forgotPwd" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -70,13 +65,13 @@
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-        <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  
-  
-  
   <con:properties>
     <con:property>
       <con:name>Email_ID</con:name>
@@ -139,5 +134,8 @@
     <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
-  <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+    <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
 </con:testCase>
