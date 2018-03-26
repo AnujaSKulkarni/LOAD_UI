@@ -116,7 +116,10 @@ testRunner.testCase.setPropertyValue("Email_ID_string", Email_ID_string)</script
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-        <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
@@ -168,11 +171,11 @@ Connection: keep-alive
     </con:property>
     <con:property>
       <con:name>Email_ID</con:name>
-      <con:value>"WED_MAR_21_18_58_17_IST_20185853449@MAILINATOR.COM"</con:value>
+      <con:value>"MON_MAR_26_15_03_26_IST_2018916542@MAILINATOR.COM"</con:value>
     </con:property>
     <con:property>
       <con:name>Email_ID_string</con:name>
-      <con:value>WED_MAR_21_18_58_17_IST_20185853449@MAILINATOR.COM</con:value>
+      <con:value>MON_MAR_26_15_03_26_IST_2018916542@MAILINATOR.COM</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>
@@ -256,5 +259,8 @@ Connection: keep-alive
     <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
-  <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+    <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
 </con:testCase>

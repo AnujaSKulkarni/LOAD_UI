@@ -88,7 +88,10 @@ testRunner.testCase.setPropertyValue("Email_ID_string", Email_ID_string)</script
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-        <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
@@ -103,11 +106,11 @@ testRunner.testCase.setPropertyValue("Email_ID_string", Email_ID_string)</script
     </con:property>
     <con:property>
       <con:name>Email_ID</con:name>
-      <con:value>"INVITATION_WED_MAR_21_18_58_38_IST_20182142345@MAILINATOR.COM"</con:value>
+      <con:value>"INVITATION_MON_MAR_26_15_03_46_IST_20182429327@MAILINATOR.COM"</con:value>
     </con:property>
     <con:property>
       <con:name>Email_ID_string</con:name>
-      <con:value>INVITATION_WED_MAR_21_18_58_38_IST_20182142345@MAILINATOR.COM</con:value>
+      <con:value>INVITATION_MON_MAR_26_15_03_46_IST_20182429327@MAILINATOR.COM</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

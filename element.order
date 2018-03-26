@@ -169,4 +169,5 @@ Update_Password
 get-all-invited-member
 Regression-Suite
 Load-Suite
+Load-Suite-All-APIs
 REST-Virt-1

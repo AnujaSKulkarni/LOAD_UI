@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="0928b562-7be8-4ae5-b1c3-a0eac16a97dc" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Delete-SettingByAttribute" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" disabled="true" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="0928b562-7be8-4ae5-b1c3-a0eac16a97dc" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Delete-SettingByAttribute" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="67d019da-567e-46ef-81a4-32a4178050cefileName">Delete-SettingByAttribute</con:setting>
     <con:setting id="21339be6-a96e-475f-a851-eb0bb2c1a190fileName">Delete-SettingByAttribute</con:setting>
-  <con:setting id="0928b562-7be8-4ae5-b1c3-a0eac16a97dcfileName">Delete-SettingByAttribute</con:setting></con:settings>
+    <con:setting id="0928b562-7be8-4ae5-b1c3-a0eac16a97dcfileName">Delete-SettingByAttribute</con:setting>
+  </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  
-  
-  
   <con:testStep type="restrequest" name="Delete-SettingByAttribute" id="e28f713a-185a-46e7-919d-069f4a260d7b">
     <con:settings/>
     <con:config service="Delete-SettingByAttribute" resourcePath="/account/favorites/Refrigerator123/entity/setting/id/M2MAttributeName" methodName="Delete-SettingByAttribute" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -37,12 +35,13 @@
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-        <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  
-  
   <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>

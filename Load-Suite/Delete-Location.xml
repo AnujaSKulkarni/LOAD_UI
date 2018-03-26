@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="12c23286-04ff-4542-8641-d811195e056a" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Delete Location" searchProperties="true" timeout="0" maxResults="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" disabled="true" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="12c23286-04ff-4542-8641-d811195e056a" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Delete Location" searchProperties="true" timeout="0" maxResults="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="8cb6c968-ee27-4a49-9fb7-2422b506a07bfileName">Delete-Location</con:setting>
     <con:setting id="4667103a-65f8-41ec-9a7d-6ddccae842e8fileName">Delete-Location</con:setting>
-  <con:setting id="12c23286-04ff-4542-8641-d811195e056afileName">Delete-Location</con:setting></con:settings>
+    <con:setting id="12c23286-04ff-4542-8641-d811195e056afileName">Delete-Location</con:setting>
+  </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="groovy" name="DataSource_Setup" id="2f382553-883a-4d45-8b32-b1f29e00c7bf">
     <con:settings/>
@@ -147,7 +148,13 @@ if(RunTimeDataSource_Flag == true){
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
-        <con:configuration><file>${Test_Data_Path}</file><worksheet>Data</worksheet><cell>A2</cell><ignoreEmpty>true</ignoreEmpty><evaluateFormulas>false</evaluateFormulas></con:configuration>
+        <con:configuration>
+          <file>${Test_Data_Path}</file>
+          <worksheet>Data</worksheet>
+          <cell>A2</cell>
+          <ignoreEmpty>true</ignoreEmpty>
+          <evaluateFormulas>false</evaluateFormulas>
+        </con:configuration>
       </con:dataSource>
       <con:shared>true</con:shared>
       <con:restartShared>true</con:restartShared>
@@ -180,6 +187,7 @@ if(RunTimeDataSource_Flag == true){
       <con:property>Country_ID</con:property>
       <con:property>Customer_Care</con:property>
       <con:property>DCT</con:property>
+      <con:property>DDM_Name</con:property>
       <con:property>desired_temperature</con:property>
       <con:property>Device_ID</con:property>
       <con:property>Device_Notification_ID</con:property>
@@ -198,6 +206,7 @@ if(RunTimeDataSource_Flag == true){
       <con:property>JSON_Body</con:property>
       <con:property>Key</con:property>
       <con:property>Language_ID</con:property>
+      <con:property>languageCode</con:property>
       <con:property>Last_Name</con:property>
       <con:property>Lastupdate</con:property>
       <con:property>Latitude</con:property>
@@ -206,6 +215,7 @@ if(RunTimeDataSource_Flag == true){
       <con:property>Location_Number</con:property>
       <con:property>Longitude</con:property>
       <con:property>Loyalty_ID</con:property>
+      <con:property>name</con:property>
       <con:property>Nest_Away</con:property>
       <con:property>Nest_Thermostat_ID</con:property>
       <con:property>New_Password</con:property>
@@ -221,11 +231,12 @@ if(RunTimeDataSource_Flag == true){
       <con:property>SAID</con:property>
       <con:property>Shoppinglist_ID</con:property>
       <con:property>Shoppinglist_Name</con:property>
-      <con:property>State_ID</con:property>
+      <con:property>State_Name</con:property>
       <con:property>Status</con:property>
       <con:property>Status_ID</con:property>
       <con:property>Street</con:property>
       <con:property>trigger_temperature</con:property>
+      <con:property>Utility_Name</con:property>
       <con:property>User_ID</con:property>
       <con:property>User_Role</con:property>
       <con:property>Verification_Code</con:property>
@@ -278,12 +289,16 @@ if (API_Name != TestCaseName){
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
-        <con:configuration><file>${Run_Time_Data}</file><worksheet>Location_Run_Time_Data</worksheet><cell>A2</cell><ignoreEmpty>true</ignoreEmpty><evaluateFormulas>false</evaluateFormulas></con:configuration>
+        <con:configuration>
+          <file>${Run_Time_Data}</file>
+          <worksheet>Location_Run_Time_Data</worksheet>
+          <cell>A2</cell>
+          <ignoreEmpty>true</ignoreEmpty>
+          <evaluateFormulas>false</evaluateFormulas>
+        </con:configuration>
       </con:dataSource>
       <con:shared>true</con:shared>
       <con:restartShared>true</con:restartShared>
-      <con:property>Location_ID_Number</con:property>
-      <con:property>Account_ID_Number</con:property>
       <con:completeLastOperation>true</con:completeLastOperation>
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
@@ -351,7 +366,10 @@ testRunner.testCase.setPropertyValue("Location_ID_Number",Location_ID_Number)</s
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-        <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
@@ -555,7 +573,10 @@ log.info Location_ID_Number</script>
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-        <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
@@ -757,5 +778,8 @@ out.close()</script>
     <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
-  <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+    <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
 </con:testCase>

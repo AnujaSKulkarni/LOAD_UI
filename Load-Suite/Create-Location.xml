@@ -66,7 +66,9 @@ testRunner.testCase.setPropertyValue("Location_Name", LocationName)</script>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:jmsPropertyConfig/>
-        <con:parameters><entry key="Authorization" value="Bearer ${access_token}" xmlns="http://eviware.com/soapui/config"/></con:parameters>
+        <con:parameters>
+          <entry key="Authorization" value="Bearer ${access_token}" xmlns="http://eviware.com/soapui/config"/>
+        </con:parameters>
         <con:parameterOrder>
           <con:entry>Authorization</con:entry>
         </con:parameterOrder>
@@ -98,7 +100,10 @@ testRunner.testCase.setPropertyValue("Location_Name", LocationName)</script>
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-        <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
@@ -150,7 +155,7 @@ Strict-Transport-Security: max-age=15768000
     </con:property>
     <con:property>
       <con:name>Location_Name</con:name>
-      <con:value>"Location_Wed_Mar_21_18_58_36_IST_20184346471"</con:value>
+      <con:value>"Location_Mon_Mar_26_15_03_44_IST_20184267964"</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>
@@ -199,5 +204,8 @@ Strict-Transport-Security: max-age=15768000
     <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
-  <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+    <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
 </con:testCase>

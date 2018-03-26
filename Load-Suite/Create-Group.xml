@@ -79,18 +79,21 @@ testRunner.testCase.setPropertyValue("Group_Name_string", Email_ID_string)</scri
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-        <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
   <con:properties>
     <con:property>
       <con:name>Group_Name</con:name>
-      <con:value>"SANITY_GROUP_WED_MAR_21_18_58_30_IST_20184129743"</con:value>
+      <con:value>"SANITY_GROUP_MON_MAR_26_15_03_38_IST_2018574816"</con:value>
     </con:property>
     <con:property>
       <con:name>Group_Name_string</con:name>
-      <con:value>SANITY_GROUP_WED_MAR_21_18_58_30_IST_20184129743</con:value>
+      <con:value>SANITY_GROUP_MON_MAR_26_15_03_38_IST_2018574816</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>
@@ -149,5 +152,8 @@ testRunner.testCase.setPropertyValue("Group_Name_string", Email_ID_string)</scri
     <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
-  <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+    <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
 </con:testCase>

@@ -98,7 +98,10 @@ testRunner.testCase.setPropertyValue("Location_Name", LocationName)</script>
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-        <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
@@ -113,7 +116,7 @@ testRunner.testCase.setPropertyValue("Location_Name", LocationName)</script>
     </con:property>
     <con:property>
       <con:name>Location_Name</con:name>
-      <con:value>"Update_Location_Wed_Mar_21_18_58_42_IST_2018470117"</con:value>
+      <con:value>"Update_Location_Mon_Mar_26_15_03_48_IST_20188785951"</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>
@@ -177,5 +180,8 @@ testRunner.testCase.setPropertyValue("Location_Name", LocationName)</script>
     <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
-  <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+    <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
 </con:testCase>

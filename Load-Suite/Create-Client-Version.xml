@@ -63,14 +63,17 @@ testRunner.testCase.setPropertyValue("Application", date)</script>
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-        <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
   <con:properties>
     <con:property>
       <con:name>Application</con:name>
-      <con:value>"Client_Version_Name_Wed_Mar_21_18_58_55_IST_2018_4871479"</con:value>
+      <con:value>"Client_Version_Name_Mon_Mar_26_15_03_57_IST_2018_6802174"</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>
