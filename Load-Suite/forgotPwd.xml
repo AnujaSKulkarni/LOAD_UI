@@ -8,7 +8,7 @@
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="restrequest" name="forgotPwd" id="86ff0e3f-8e64-4cc9-a02f-7796e06fdf2e">
     <con:settings/>
-    <con:config service="forgotPwd" resourcePath="/client_auth/accounts/forgotPassword/${#[Load Suite#Create Account]#Email_ID_string}" methodName="forgotPwd" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config service="forgotPwd" resourcePath="/client_auth/accounts/forgotPassword/wcloud_admin_account_soapui@mailinator.com" methodName="forgotPwd" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="forgotPwd" id="043b2d58-2080-4a90-baa9-a688fe40264f" mediaType="application/json" postQueryString="false">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>

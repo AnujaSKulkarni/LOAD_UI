@@ -328,7 +328,7 @@ if (data_Combination == "Negative"){
   </con:testStep>
   <con:testStep type="restrequest" name="forgotPwd_Positive" id="d1424b3c-fdfd-44e2-9282-08daa0c9aeab" disabled="true">
     <con:settings/>
-    <con:config service="forgotPwd" resourcePath="/client_auth/accounts/forgotPassword/${#[Load Suite#Create Account]#Email_ID_string}" methodName="forgotPwd" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config service="forgotPwd" resourcePath="/client_auth/accounts/forgotPassword/wcloud_admin_account_soapui@mailinator.com" methodName="forgotPwd" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="forgotPwd_Positive" id="043b2d58-2080-4a90-baa9-a688fe40264f" mediaType="application/json" postQueryString="false">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -394,7 +394,7 @@ if (data_Combination == "Negative"){
   </con:testStep>
   <con:testStep type="restrequest" name="forgotPwd_Negative" id="2c01ca9f-6d0e-4841-a114-7eb90a92db77" disabled="true">
     <con:settings/>
-    <con:config service="forgotPwd" resourcePath="/client_auth/accounts/forgotPassword/${#[Load Suite#Create Account]#Email_ID_string}" methodName="forgotPwd" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config service="forgotPwd" resourcePath="/client_auth/accounts/forgotPassword/wcloud_admin_account_soapui@mailinator.com" methodName="forgotPwd" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="forgotPwd_Negative" id="043b2d58-2080-4a90-baa9-a688fe40264f" mediaType="application/json" postQueryString="false">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
