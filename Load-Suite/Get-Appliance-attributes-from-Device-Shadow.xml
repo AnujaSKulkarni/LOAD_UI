@@ -3,9 +3,12 @@
   <con:settings>
     <con:setting id="d966370b-8826-4880-822a-838f979627ebfileName">Get-Appliance-attributes-from-Device-Shadow</con:setting>
     <con:setting id="bcc64e00-21ed-48fb-878d-15eb8e446305fileName">Get-Appliance-attributes-from-Device-Shadow</con:setting>
-    <con:setting id="7f9bfe81-3059-4c0a-85cb-949baa62025bfileName">Get-Appliance-attributes-from-Device-Shadow</con:setting>
-  </con:settings>
+  <con:setting id="7f9bfe81-3059-4c0a-85cb-949baa62025bfileName">Get-Appliance-attributes-from-Device-Shadow</con:setting></con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
+  
+  
+  
+  
   <con:testStep type="restrequest" name="Get Appliance attributes from Device Shadow" id="c55d69ea-97e5-4a34-abbe-f43eee31a494">
     <con:settings/>
     <con:config service="Get Appliance attributes from Device Shadow" resourcePath="/appliance/${#Project#Appliance_SAID_Load}" methodName="Get Appliance attributes from Device Shadow" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -28,9 +31,7 @@
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:jmsPropertyConfig/>
-        <con:parameters>
-          <entry key="Authorization" value="Bearer ${access_token}" xmlns="http://eviware.com/soapui/config"/>
-        </con:parameters>
+        <con:parameters><entry key="Authorization" value="Bearer ${access_token}" xmlns="http://eviware.com/soapui/config"/></con:parameters>
         <con:parameterOrder>
           <con:entry>Authorization</con:entry>
         </con:parameterOrder>
@@ -62,19 +63,13 @@
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-        </con:environmentSpec>
+        <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="delay" name="Wait Time" id="bd7d8038-9a65-480d-a6cc-99de88fcb685">
-    <con:settings/>
-    <con:config>
-      <delay>1000</delay>
-    </con:config>
-  </con:testStep>
+  
+  
+  
   <con:properties>
     <con:property>
       <con:name>Device_Shadow_Name</con:name>
@@ -112,8 +107,5 @@
     <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
-    <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
-      <con:authProfile>Inherit From Parent</con:authProfile>
-    </con:entry>
-  </con:environmentSpec>
+  <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
 </con:testCase>

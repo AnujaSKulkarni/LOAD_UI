@@ -66,19 +66,12 @@
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-        </con:environmentSpec>
+        <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="delay" name="Wait Time" id="60bb25d8-1b92-4e88-8b98-4d083bd916a9">
-    <con:settings/>
-    <con:config>
-      <delay>500</delay>
-    </con:config>
-  </con:testStep>
+  
+  
   <con:setupScript>import java.io.FileInputStream
 import java.io.InputStream
 import java.io.FileOutputStream
@@ -300,8 +293,5 @@ if (final_path.exists() == false){
     <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
-    <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
-      <con:authProfile>Inherit From Parent</con:authProfile>
-    </con:entry>
-  </con:environmentSpec>
+  <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
 </con:testCase>

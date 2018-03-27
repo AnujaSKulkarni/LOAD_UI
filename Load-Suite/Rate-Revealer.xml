@@ -45,12 +45,6 @@
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="delay" name="Wait Time" id="753e8053-d668-4f2d-88d1-797b9117ca31">
-    <con:settings/>
-    <con:config>
-      <delay>500</delay>
-    </con:config>
-  </con:testStep>
   <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>

@@ -3,9 +3,10 @@
   <con:settings>
     <con:setting id="7026bea1-9c34-446c-8319-d9c3af471c0efileName">GET-Member-Token</con:setting>
     <con:setting id="e59c73aa-5daa-4617-9ab4-ff38f5ff45d3fileName">GET-Member-Token</con:setting>
-    <con:setting id="bfa16495-b468-4d30-bbf9-93480670cb26fileName">GET-Member-Token</con:setting>
-  </con:settings>
+  <con:setting id="bfa16495-b468-4d30-bbf9-93480670cb26fileName">GET-Member-Token</con:setting></con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
+  
+  
   <con:testStep type="restrequest" name="GET Member Token" id="c6b23d36-2d1d-4f33-9b33-eb7663a30863">
     <con:settings/>
     <con:config service="GET Member Token" resourcePath="/oauth/token" methodName="GET Member Token" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -29,12 +30,12 @@
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:jmsPropertyConfig/>
         <con:parameters>
-          <con:entry key="password" value="Whirlpool123$"/>
-          <con:entry key="grant_type" value="password"/>
-          <con:entry key="client_secret" value="syntel123$"/>
-          <con:entry key="client_id" value="syntel"/>
-          <con:entry key="username" value="wcloud_admin_account_soapui@mailinator.com"/>
-        </con:parameters>
+  <con:entry key="password" value="Whirlpool123$"/>
+  <con:entry key="grant_type" value="password"/>
+  <con:entry key="client_secret" value="syntel123$"/>
+  <con:entry key="client_id" value="syntel"/>
+  <con:entry key="username" value="wcloud_admin_account_soapui@mailinator.com"/>
+</con:parameters>
         <con:parameterOrder>
           <con:entry>grant_type</con:entry>
           <con:entry>username</con:entry>
@@ -70,19 +71,13 @@
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-        </con:environmentSpec>
+        <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="delay" name="Wait Time" id="1a50f204-fe00-4b57-9da8-3ea6fbb1407f">
-    <con:settings/>
-    <con:config>
-      <delay>500</delay>
-    </con:config>
-  </con:testStep>
+  
+  
+  
   <con:properties>
     <con:property>
       <con:name>Member_Token_response</con:name>
@@ -120,8 +115,5 @@
     <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
-    <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
-      <con:authProfile>Inherit From Parent</con:authProfile>
-    </con:entry>
-  </con:environmentSpec>
+  <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
 </con:testCase>

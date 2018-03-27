@@ -26,7 +26,7 @@
       <con1:property key="limits">Time=300;</con1:property>
     </con1:attributes>
     <con1:addons/>
-    <con1:scene label="New Scenario" id="9b0cc878-640f-40bf-9e6e-0a509ff14ea9" version="703">
+    <con1:scene label="New Scenario" id="9b0cc878-640f-40bf-9e6e-0a509ff14ea9" version="693">
       <con1:properties>
         <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
         <con1:property propagates="true" key="CanvasItem.abortOnFinish" type="java.lang.Boolean">true</con1:property>
@@ -58,7 +58,7 @@
         <con1:properties>
           <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
           <con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">false</con1:property>
-          <con1:property propagates="true" key="limitVU" type="java.lang.Long">9223372036854775807</con1:property>
+          <con1:property propagates="true" key="limitVU" type="java.lang.Long">25</con1:property>
           <con1:property propagates="true" key="load" type="java.lang.Long">1</con1:property>
           <con1:property propagates="true" key="interval" type="java.lang.Long">1000</con1:property>
         </con1:properties>
@@ -67,10 +67,10 @@
         </con1:attributes>
         <con1:addons/>
       </con1:component>
-      <con1:component type="com.eviware.loadui.components.soapui.SoapUISamplerComponent" label="Regression Suite:GET Client Token" id="ece019c7-e3b4-4cd9-a6de-a062c92358b2" category="Runners">
+      <con1:component type="com.eviware.loadui.components.soapui.SoapUISamplerComponent" label="Regression Suite:GET Client Token" id="d1c5ad59-5b66-44bd-8b9d-b15453c7da74" category="Runners">
         <con1:properties>
           <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
-          <con1:property propagates="true" key="concurrentSamples" type="java.lang.Long">500</con1:property>
+          <con1:property propagates="true" key="concurrentSamples" type="java.lang.Long">1000</con1:property>
           <con1:property propagates="true" key="property_name_is_not_relevant_for_private_property" type="java.lang.Long">9223372036854775807</con1:property>
           <con1:property propagates="true" key="maxQueueSize" type="java.lang.Long">1000</con1:property>
           <con1:property propagates="true" key="countDiscarded" type="java.lang.Boolean">false</con1:property>
@@ -90,8 +90,8 @@
         <con1:addons/>
       </con1:component>
       <con1:connection outputTerminalId="0663aa83-463b-4a75-9661-7e8b1fd67b09/outgoingTerminal" inputTerminalId="c5e22042-d2af-4b82-b957-2cf780c7d6cb/stateTerminal"/>
-      <con1:connection outputTerminalId="c5e22042-d2af-4b82-b957-2cf780c7d6cb/triggerTerminal" inputTerminalId="ece019c7-e3b4-4cd9-a6de-a062c92358b2/triggerTerminal"/>
-      <con1:connection outputTerminalId="ece019c7-e3b4-4cd9-a6de-a062c92358b2/runningTerminal" inputTerminalId="c5e22042-d2af-4b82-b957-2cf780c7d6cb/Sample Count"/>
+      <con1:connection outputTerminalId="c5e22042-d2af-4b82-b957-2cf780c7d6cb/triggerTerminal" inputTerminalId="d1c5ad59-5b66-44bd-8b9d-b15453c7da74/triggerTerminal"/>
+      <con1:connection outputTerminalId="d1c5ad59-5b66-44bd-8b9d-b15453c7da74/runningTerminal" inputTerminalId="c5e22042-d2af-4b82-b957-2cf780c7d6cb/Sample Count"/>
     </con1:scene>
     <con1:statistics>
       <con1:page title="DefaultLoadUIStatisticPage">
@@ -124,7 +124,7 @@
     </con:data>
     <con:data>
       <con:paramName>column_width@ID</con:paramName>
-      <con:paramValue>57</con:paramValue>
+      <con:paramValue>74</con:paramValue>
     </con:data>
     <con:data>
       <con:paramName>column_visible@ID</con:paramName>
@@ -209,6 +209,14 @@
     <con:data>
       <con:paramName>column_visible@soapui_context</con:paramName>
       <con:paramValue>false</con:paramValue>
+    </con:data>
+    <con:data>
+      <con:paramName>column_width@Test step status</con:paramName>
+      <con:paramValue>120</con:paramValue>
+    </con:data>
+    <con:data>
+      <con:paramName>column_visible@Test step status</con:paramName>
+      <con:paramValue>true</con:paramValue>
     </con:data>
   </con:loadUIPanelData>
   <con:statistics id="22e75c4a-3888-4ba9-a2d5-f229083e2537"/>

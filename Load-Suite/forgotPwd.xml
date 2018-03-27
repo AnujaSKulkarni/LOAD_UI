@@ -8,7 +8,7 @@
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="restrequest" name="forgotPwd" id="86ff0e3f-8e64-4cc9-a02f-7796e06fdf2e">
     <con:settings/>
-    <con:config service="forgotPwd" resourcePath="/client_auth/accounts/forgotPassword/${#[Load Suite#Create Account]#Email_ID_string}" methodName="forgotPwd" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config service="forgotPwd" resourcePath="/client_auth/accounts/forgotPassword/wcloud_admin_account_soapui@mailinator.com" methodName="forgotPwd" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="forgotPwd" id="043b2d58-2080-4a90-baa9-a688fe40264f" mediaType="application/json" postQueryString="false">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -29,7 +29,8 @@
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:jmsPropertyConfig/>
         <con:parameters>
-          <entry key="Authorization" value="Bearer ${access_token}" xmlns="http://eviware.com/soapui/config"/>
+          <con:entry key="Authorization" value="Bearer ${access_token}"/>
+          <con:entry key="wp-client-brand" value="Whirlpool"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>Authorization</con:entry>
@@ -69,12 +70,6 @@
           </con:entry>
         </con:environmentSpec>
       </con:restRequest>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="delay" name="Wait Time" id="9d1c2315-38f2-4ef5-a693-990de514c29b">
-    <con:settings/>
-    <con:config>
-      <delay>500</delay>
     </con:config>
   </con:testStep>
   <con:properties>

@@ -716,12 +716,6 @@ out.close()</script>
       <targetStep>Flow Control</targetStep>
     </con:config>
   </con:testStep>
-  <con:testStep type="delay" name="Wait Time" id="a5f355cb-072d-447b-90cb-b306bd449829">
-    <con:settings/>
-    <con:config>
-      <delay>500</delay>
-    </con:config>
-  </con:testStep>
   <con:properties>
     <con:property>
       <con:name>Location_ID_Number</con:name>

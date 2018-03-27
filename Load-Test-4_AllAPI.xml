@@ -26,7 +26,7 @@
       <con1:property key="limits">Time=7200;</con1:property>
     </con1:attributes>
     <con1:addons/>
-    <con1:scene label="New Scenario" id="433708a0-f132-47bd-9ee7-d5ea8d95f914" version="7478">
+    <con1:scene label="New Scenario" id="433708a0-f132-47bd-9ee7-d5ea8d95f914" version="7360">
       <con1:properties>
         <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
         <con1:property propagates="true" key="CanvasItem.abortOnFinish" type="java.lang.Boolean">true</con1:property>
@@ -80,7 +80,7 @@
         <con1:properties>
           <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
           <con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">true</con1:property>
-          <con1:property propagates="true" key="limitVU" type="java.lang.Long">9223372036854775807</con1:property>
+          <con1:property propagates="true" key="limitVU" type="java.lang.Long">25</con1:property>
           <con1:property propagates="true" key="load" type="java.lang.Long">1</con1:property>
           <con1:property propagates="true" key="interval" type="java.lang.Long">1000</con1:property>
         </con1:properties>
@@ -1389,7 +1389,7 @@
     </con:data>
     <con:data>
       <con:paramName>column_width@ID</con:paramName>
-      <con:paramValue>57</con:paramValue>
+      <con:paramValue>74</con:paramValue>
     </con:data>
     <con:data>
       <con:paramName>column_visible@ID</con:paramName>
@@ -1474,6 +1474,14 @@
     <con:data>
       <con:paramName>column_visible@soapui_context</con:paramName>
       <con:paramValue>false</con:paramValue>
+    </con:data>
+    <con:data>
+      <con:paramName>column_width@Test step status</con:paramName>
+      <con:paramValue>120</con:paramValue>
+    </con:data>
+    <con:data>
+      <con:paramName>column_visible@Test step status</con:paramName>
+      <con:paramValue>true</con:paramValue>
     </con:data>
   </con:loadUIPanelData>
   <con:statistics id="bd40acc1-3c9c-4ac7-beb5-4a4c23d6a826"/>
