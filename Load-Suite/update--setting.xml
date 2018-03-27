@@ -3,12 +3,15 @@
   <con:settings>
     <con:setting id="d5054182-acec-4a7e-a402-6a40a5d66b87fileName">update--setting</con:setting>
     <con:setting id="0d9544e5-756d-4a99-85de-adbc229f6179fileName">update--setting</con:setting>
-  <con:setting id="94c4ac45-990e-4d4b-bcf1-3e216a004910fileName">update--setting</con:setting></con:settings>
+    <con:setting id="94c4ac45-990e-4d4b-bcf1-3e216a004910fileName">update--setting</con:setting>
+  </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  
-  
-  
-  
+  <con:testStep type="delay" name="Wait Time" id="7b17233a-6fb5-4c7f-8d72-b06330fdcfe9">
+    <con:settings/>
+    <con:config>
+      <delay>500</delay>
+    </con:config>
+  </con:testStep>
   <con:testStep type="restrequest" name="update -setting" id="c4f19786-9bcd-43ad-9a63-07c125ca1d82">
     <con:settings/>
     <con:config service="create or update -setting" resourcePath="/account/favorites/entity/setting" methodName="create or update -setting" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -61,12 +64,13 @@
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-        <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  
-  
   <con:properties>
     <con:property>
       <con:name>applianceid</con:name>
@@ -95,6 +99,11 @@
   </con:breakPoints>
   <con:breakPoints>
     <con:testStepId>fede0b53-6623-4d64-9ffd-8979a72ce9ab</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>7b17233a-6fb5-4c7f-8d72-b06330fdcfe9</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>

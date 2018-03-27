@@ -3,11 +3,9 @@
   <con:settings>
     <con:setting id="ec1f52ad-103f-430b-af4f-7c4689218ce6fileName">Energy_providers</con:setting>
     <con:setting id="fb57e576-fb51-41ac-a2d2-b10872ebdda1fileName">Energy_providers</con:setting>
-  <con:setting id="ff25fff6-92a2-4624-b7aa-a8b7037a6f4cfileName">Energy_providers</con:setting></con:settings>
+    <con:setting id="ff25fff6-92a2-4624-b7aa-a8b7037a6f4cfileName">Energy_providers</con:setting>
+  </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  
-  
-  
   <con:testStep type="restrequest" name="Energy_providers" id="58b0b2a5-2b15-4750-b461-819c1d049abf">
     <con:settings/>
     <con:config service="Energy_providers" resourcePath="/energy_providers/10533" methodName="Energy_providers" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -45,12 +43,19 @@
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-        <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  
-  
+  <con:testStep type="delay" name="Wait Time" id="42e1bcb3-318d-417d-a927-11f4c22f0dba">
+    <con:settings/>
+    <con:config>
+      <delay>500</delay>
+    </con:config>
+  </con:testStep>
   <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>

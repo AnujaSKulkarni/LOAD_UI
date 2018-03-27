@@ -3,11 +3,9 @@
   <con:settings>
     <con:setting id="7f1c5ef9-6d40-4f70-bd66-8d00c04cc0e1fileName">Retrive-setting-favfill</con:setting>
     <con:setting id="063c3fe3-beeb-4e85-8abc-0b08962a1939fileName">Retrive-setting-favfill</con:setting>
-  <con:setting id="07cf3fd3-83f7-45d6-876c-52362aac3770fileName">Retrive-setting-favfill</con:setting></con:settings>
+    <con:setting id="07cf3fd3-83f7-45d6-876c-52362aac3770fileName">Retrive-setting-favfill</con:setting>
+  </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  
-  
-  
   <con:testStep type="restrequest" name="Retrive-setting-favfill" id="758c59eb-c0f5-45f8-8c33-679efe3fae16">
     <con:settings/>
     <con:config service="Retrive-setting-favfill" resourcePath="/account/favorites/Refrigerator123/entity/setting/id/favfill" methodName="Retrive-setting-favfill" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -37,12 +35,19 @@
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-        <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  
-  
+  <con:testStep type="delay" name="Wait Time" id="f95319f5-1e00-4b7a-99b5-63338c66ec37">
+    <con:settings/>
+    <con:config>
+      <delay>500</delay>
+    </con:config>
+  </con:testStep>
   <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>

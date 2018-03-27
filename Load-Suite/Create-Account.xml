@@ -123,6 +123,12 @@ testRunner.testCase.setPropertyValue("Email_ID_string", Email_ID_string)</script
       </con:restRequest>
     </con:config>
   </con:testStep>
+  <con:testStep type="delay" name="Wait Time" id="493773ab-71db-4faa-83f7-e1cdc3addea1">
+    <con:settings/>
+    <con:config>
+      <delay>500</delay>
+    </con:config>
+  </con:testStep>
   <con:properties>
     <con:property>
       <con:name>Account_ID_Response</con:name>

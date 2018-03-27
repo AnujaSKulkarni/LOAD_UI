@@ -3,11 +3,9 @@
   <con:settings>
     <con:setting id="947edf17-8a88-4644-bf7b-dc18a7d4d151fileName">Retrive-setting-All</con:setting>
     <con:setting id="5140637b-9ee9-4465-9335-a8e05e230645fileName">Retrive-setting-All</con:setting>
-  <con:setting id="fa5e4cbd-26e0-4ac6-a58a-380e446dd0a5fileName">Retrive-setting-All</con:setting></con:settings>
+    <con:setting id="fa5e4cbd-26e0-4ac6-a58a-380e446dd0a5fileName">Retrive-setting-All</con:setting>
+  </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  
-  
-  
   <con:testStep type="restrequest" name="Retrive-setting-All" id="b98ce827-9216-4e4f-9a51-89941ad40884">
     <con:settings/>
     <con:config service="Retrive-setting-All" resourcePath="/account/favorites/Refrigerator123/entity/setting/id/All" methodName="Retrive-setting-All" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -37,12 +35,19 @@
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-        <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  
-  
+  <con:testStep type="delay" name="Wait Time" id="cc619229-c2ae-4263-b0c7-b2532ea37b5b">
+    <con:settings/>
+    <con:config>
+      <delay>500</delay>
+    </con:config>
+  </con:testStep>
   <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>

@@ -3,14 +3,9 @@
   <con:settings>
     <con:setting id="241932e4-30cb-4e20-898f-59c649e9d131fileName">HistoryWithTimeRange</con:setting>
     <con:setting id="c36aff04-cf04-406e-ab0d-fde78692627afileName">HistoryWithTimeRange</con:setting>
-  <con:setting id="4990c513-2a79-4272-bd1b-417c150997b9fileName">HistoryWithTimeRange</con:setting></con:settings>
+    <con:setting id="4990c513-2a79-4272-bd1b-417c150997b9fileName">HistoryWithTimeRange</con:setting>
+  </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  
-  
-  
-  
-  
-  
   <con:testStep type="restrequest" name="HistoryWithTimeRange" id="c3c7f011-90c1-4833-93ff-a210a51ed4c5">
     <con:settings/>
     <con:config service="HistoryWithTimeRange" resourcePath="/appliances/history" methodName="HistoryWithTimeRange" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -45,12 +40,19 @@
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-        <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  
-  
+  <con:testStep type="delay" name="Wait Time" id="1ba14872-58da-4c51-8cfe-fa82751de65f">
+    <con:settings/>
+    <con:config>
+      <delay>500</delay>
+    </con:config>
+  </con:testStep>
   <con:properties>
     <con:property>
       <con:name>Device_Shadow_Name</con:name>

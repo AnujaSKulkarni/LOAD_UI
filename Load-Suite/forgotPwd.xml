@@ -29,8 +29,7 @@
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:jmsPropertyConfig/>
         <con:parameters>
-          <con:entry key="Authorization" value="Bearer ${access_token}"/>
-          <con:entry key="wp-client-brand" value="Whirlpool"/>
+          <entry key="Authorization" value="Bearer ${access_token}" xmlns="http://eviware.com/soapui/config"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>Authorization</con:entry>
@@ -70,6 +69,12 @@
           </con:entry>
         </con:environmentSpec>
       </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="delay" name="Wait Time" id="9d1c2315-38f2-4ef5-a693-990de514c29b">
+    <con:settings/>
+    <con:config>
+      <delay>500</delay>
     </con:config>
   </con:testStep>
   <con:properties>

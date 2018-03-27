@@ -3,11 +3,9 @@
   <con:settings>
     <con:setting id="c6c77827-4246-4a64-89a5-eccb80e3aa99fileName">cookRecipe</con:setting>
     <con:setting id="2e127492-88d5-43e3-8e93-e4f8f45e117afileName">cookRecipe</con:setting>
-  <con:setting id="8666eb31-5179-44b5-a430-02ec89150d54fileName">cookRecipe</con:setting></con:settings>
+    <con:setting id="8666eb31-5179-44b5-a430-02ec89150d54fileName">cookRecipe</con:setting>
+  </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  
-  
-  
   <con:testStep type="restrequest" name="cookRecipe" id="1d361fdb-fb21-496c-ac7c-8c47116e9563">
     <con:settings/>
     <con:config service="cookRecipe" resourcePath="/cookRecipe/WPR4BCKC4R37C" methodName="cookRecipe" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -62,12 +60,19 @@
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-        <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  
-  
+  <con:testStep type="delay" name="Wait Time" id="f3e436bc-4619-44a0-8a6a-deddd4b4b0ab">
+    <con:settings/>
+    <con:config>
+      <delay>1000</delay>
+    </con:config>
+  </con:testStep>
   <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>
