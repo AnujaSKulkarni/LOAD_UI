@@ -65,11 +65,14 @@
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-        <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Report" id="7b634643-e8b1-48ed-b665-d593ff75d40d">
+  <con:testStep type="groovy" name="Report" id="7b634643-e8b1-48ed-b665-d593ff75d40d" disabled="true">
     <con:settings/>
     <con:config>
       <script>def Final_Path = com.eviware.soapui.SoapUI.globalProperties.getPropertyValue("Test_Result_Path")
@@ -143,7 +146,7 @@ file1.append("---------------- Response --------------------------\n")
 file1.append(response)</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Skip_on_failure" id="5d2f638c-23fa-45ce-91ac-c94a1a0034ea">
+  <con:testStep type="groovy" name="Skip_on_failure" id="5d2f638c-23fa-45ce-91ac-c94a1a0034ea" disabled="true">
     <con:settings/>
     <con:config>
       <script>def TestCaseName = testRunner.testCase.getName()
@@ -179,7 +182,8 @@ com.eviware.soapui.SoapUI.globalProperties.setPropertyValue("Client_Token", toke
   </con:testStep>
   <con:testStep type="groovy" name="Groovy Script" id="f14ef3f9-1f17-47ca-9cbe-a4cb56c2d96d" disabled="true">
     <con:settings/>
-    <con:config><script>import java.io.FileInputStream
+    <con:config>
+      <script>import java.io.FileInputStream
 import java.io.InputStream
 import java.io.FileOutputStream
 import java.io.IOException
@@ -368,7 +372,8 @@ if (final_path.exists() == false){
 	c2.setCellValue("Account_ID_Number")
 	wb1.write(out1);
 	out1.close();
-}</script></con:config>
+}</script>
+    </con:config>
   </con:testStep>
   <con:setupScript>import java.io.FileInputStream
 import java.io.InputStream
@@ -591,5 +596,8 @@ if (final_path.exists() == false){
     <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
-  <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+    <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
 </con:testCase>
