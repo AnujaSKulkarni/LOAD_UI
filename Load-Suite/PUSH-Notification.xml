@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="e90a3d01-95c5-4401-9020-4b6ea42163fc" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="PUSH Notification" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="2f2048de-d803-4bcd-b68e-2db51adfba50fileName">PUSH-Notification</con:setting>
+    <con:setting id="ee17fa15-7840-49d1-a5d6-0d98de639347fileName">PUSH-Notification</con:setting>
+    <con:setting id="e90a3d01-95c5-4401-9020-4b6ea42163fcfileName">PUSH-Notification</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="restrequest" name="PUSH Notification" id="d3d6552f-ee54-4dd7-9d69-b4ef96440fa8">
+    <con:settings/>
+    <con:config service="PUSH Notification" resourcePath="/notifications" methodName="PUSH Notification" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="PUSH Notification" id="9c141b9f-5149-4521-a092-8b0f23586bd2" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>${API-Connect}</con:endpoint>
+        <con:request>{              
+"said":"WPR333334RA96",
+"alertdef":{
+  "alertPlatformType":"FabricCare"  
+  },
+ "applianceAttributes":
+     {
+      "Compartment_CycleState":1
+     }
+}</con:request>
+        <con:originalUri>https://api-test.whrcloud.com/api/v1/notifications</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="444cb523-b655-4488-af56-16975361b400" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <entry key="Authorization" value="Bearer ${access_token}" xmlns="http://eviware.com/soapui/config"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>Authorization</con:entry>
+          <con:entry>wp-client-region</con:entry>
+          <con:entry>wp-client-country</con:entry>
+          <con:entry>wp-client-brand</con:entry>
+        </con:parameterOrder>
+        <con:environmentSpec>
+          <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>e366e6ea-ba6d-4cf0-bccb-df82f441a44b</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:environmentSpec>
+    <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testCase>

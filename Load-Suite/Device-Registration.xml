@@ -1,32 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="e801aab7-10b5-487a-9073-041cd81019a6" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Command and Control - Set Attribute(s)" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="0c9a02bd-7895-45e2-b347-4f5d71d9da25" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Device Registration" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="6488e995-3c55-48e1-b52b-62906caf3d2afileName">Command-and-Control---Set-Attribute%28s%29</con:setting>
-    <con:setting id="e801aab7-10b5-487a-9073-041cd81019a6fileName">Command-and-Control---Set-Attribute%28s%29</con:setting>
+    <con:setting id="ea543467-1dc4-4345-9a9f-844be8215fbefileName">Device-Registration1</con:setting>
+    <con:setting id="fda70526-293b-4721-a627-f9fc4fa36b16fileName">Device-Registration</con:setting>
+    <con:setting id="0c9a02bd-7895-45e2-b347-4f5d71d9da25fileName">Device-Registration</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="restrequest" name="Command and Control - Set Attribute(s)" id="22a3986c-689f-4a11-99ba-263757a1f3d1">
+  <con:testStep type="restrequest" name="Device Registration" id="fec47e66-47f0-42c3-9ec9-e728801f4321">
     <con:settings/>
-    <con:config service="Command and Control - Set Attribute(s)" resourcePath="/appliance/command" methodName="Command and Control - Set Attribute(s)" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:restRequest name="Command and Control - Set Attribute(s)" id="21f0d580-813c-40ca-8714-9d6185a24b32" mediaType="application/json" postQueryString="false">
+    <con:config service="Device Registration" resourcePath="/registerDeviceIDForPush" methodName="Device Registration" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Device Registration" id="3077c5d7-a9c5-4776-845f-6609c18ab956" mediaType="application/json" postQueryString="false">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
-        <con:endpoint>${QA_Env}</con:endpoint>
+        <con:endpoint>${API-Connect}</con:endpoint>
         <con:request>{
-	"header": {
-	"command" : "setAttributes",
-	"said" : "WPR333334UCD3"
-	},
-"body": {
-	"CycleOptionsWHR_WrinkleShield": 1 
-	}
+  "deviceId": "D5A17B98-2136-4D2A-B3CC-9FF67E34EC96",
+  "platform": "A",
+  "token": "ffbb6ec32f0fdf728064ac62c3df1dc6195c9e9366c5fc364b12e94b3cfbf2c6"
 }</con:request>
-        <con:originalUri>https://api-stg.whrcloud.com/api/v1/appliance/command</con:originalUri>
-        <con:assertion type="Valid HTTP Status Codes" id="354db2e0-fcf6-4d19-9655-568d5ef5a855" name="Valid HTTP Status Codes">
+        <con:originalUri>https://api-test.whrcloud.com/api/v1/registerDeviceIDForPush</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="97e69915-b22c-493f-9448-13cbe5650167" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
-            <codes>200</codes>
+            <codes>201,200</codes>
           </con:configuration>
         </con:assertion>
         <con:credentials>
@@ -34,15 +31,12 @@
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:jmsPropertyConfig/>
-        <con:parameters>
-          <entry key="Authorization" value="Bearer ${access_token}" xmlns="http://eviware.com/soapui/config"/>
-        </con:parameters>
+        <con:parameters/>
         <con:parameterOrder>
           <con:entry>Authorization</con:entry>
+          <con:entry>wp-client-brand</con:entry>
           <con:entry>wp-client-region</con:entry>
           <con:entry>wp-client-country</con:entry>
-          <con:entry>wp-client-brand</con:entry>
         </con:parameterOrder>
         <con:environmentSpec>
           <con:entry environmentId="6f0100a6-91e6-476c-8a30-1216e3f39821">
@@ -72,13 +66,7 @@
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-          <con:entry environmentId="20272cd6-b686-4dc5-bbb9-a223e2cd1d8c">
-            <con:authProfile>No Authorization</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="e557dfa4-ea64-4e83-988f-317cbc736505">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="caf27257-7156-4318-b2df-f8a12834f2ff">
+          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
         </con:environmentSpec>
@@ -87,4 +75,14 @@
   </con:testStep>
   <con:properties/>
   <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>8bb16b8e-150b-49e7-9903-b56865f2c57e</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:environmentSpec>
+    <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
 </con:testCase>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="4b74b81d-b7c2-46f0-9abd-7ed15b205638" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="multi subscribe for opt  in and out" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="6b18a7ff-5db8-4810-95b4-e162b6ee2a10fileName">multi-subscribe-for-opt--in-and-out</con:setting>
+    <con:setting id="ad49f8b0-7aa8-4281-97e0-63be40c701e6fileName">multi-subscribe-for-opt--in-and-out</con:setting>
+    <con:setting id="4b74b81d-b7c2-46f0-9abd-7ed15b205638fileName">multi-subscribe-for-opt--in-and-out</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="restrequest" name="multi subscribe for opt  in and out" id="c2f8d258-a818-48d8-b475-787612a45588">
+    <con:settings/>
+    <con:config service="multi subscribe for opt  in and out" resourcePath="/notifications/subscriptions/multi" methodName="multi subscribe for opt  in and out" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="multi subscribe for opt  in and out" id="941c0ead-0aa8-40a0-bc30-96b0fdfbf90b" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>${API-Connect}</con:endpoint>
+        <con:request>[
+{
+"alertId":${JDBC#B_alert_id},
+"applianceId":${JDBC#A_appliance_id},
+"notificationType":"PUSH",
+"accountId":${#Project#Account_ID_Load},
+"status":"Enable"
+}]</con:request>
+        <con:originalUri>https://api-test.whrcloud.com/api/v1/notifications/subscriptions/multi</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="b57708e5-ac4f-4b3b-a854-ef136c1a5a59" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <entry key="Authorization" value="Bearer ${access_token}" xmlns="http://eviware.com/soapui/config"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>Authorization</con:entry>
+          <con:entry>wp-client-region</con:entry>
+          <con:entry>wp-client-country</con:entry>
+          <con:entry>wp-client-brand</con:entry>
+        </con:parameterOrder>
+        <con:environmentSpec>
+          <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>cd70758d-1ccd-4464-a202-b83095c9e249</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:environmentSpec>
+    <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testCase>

@@ -1,32 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="e801aab7-10b5-487a-9073-041cd81019a6" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Command and Control - Set Attribute(s)" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="c19c0d63-a832-4594-99b1-f8cb20f4730e" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Appliance Wraper" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="6488e995-3c55-48e1-b52b-62906caf3d2afileName">Command-and-Control---Set-Attribute%28s%29</con:setting>
-    <con:setting id="e801aab7-10b5-487a-9073-041cd81019a6fileName">Command-and-Control---Set-Attribute%28s%29</con:setting>
+    <con:setting id="8f97b4f7-4d1f-48ea-8b7f-16bc5c9f613cfileName">Appliance-Wraper</con:setting>
+    <con:setting id="7b5fb6a2-1657-4aab-9f8d-03fdc1e526d0fileName">Appliance-Wraper</con:setting>
+    <con:setting id="c19c0d63-a832-4594-99b1-f8cb20f4730efileName">Appliance-Wraper</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="restrequest" name="Command and Control - Set Attribute(s)" id="22a3986c-689f-4a11-99ba-263757a1f3d1">
+  <con:testStep type="restrequest" name="Appliance Wraper" id="5507c89b-8986-49a4-a717-9fcd2493afd5">
     <con:settings/>
-    <con:config service="Command and Control - Set Attribute(s)" resourcePath="/appliance/command" methodName="Command and Control - Set Attribute(s)" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:restRequest name="Command and Control - Set Attribute(s)" id="21f0d580-813c-40ca-8714-9d6185a24b32" mediaType="application/json" postQueryString="false">
+    <con:config service="Appliance Wraper" resourcePath="/appliances/claim/" methodName="Appliance Wraper" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Appliance Wraper" id="02d3df6f-10cd-4cc3-aed7-ba657cb3edac" mediaType="application/json" postQueryString="false">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
-        <con:endpoint>${QA_Env}</con:endpoint>
+        <con:endpoint>${API-Connect}</con:endpoint>
         <con:request>{
-	"header": {
-	"command" : "setAttributes",
-	"said" : "WPR333334UCD3"
-	},
-"body": {
-	"CycleOptionsWHR_WrinkleShield": 1 
-	}
-}</con:request>
-        <con:originalUri>https://api-stg.whrcloud.com/api/v1/appliance/command</con:originalUri>
-        <con:assertion type="Valid HTTP Status Codes" id="354db2e0-fcf6-4d19-9655-568d5ef5a855" name="Valid HTTP Status Codes">
+        "applianceName": "washer",
+        "said":"WPR333334RA96",
+        "locationId":${#Project#Location_ID_Load}
+        }</con:request>
+        <con:originalUri>https://api-test.whrcloud.com/api/v1/appliances/claim/</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="136a70db-fd2b-4243-a4f7-52651b059f52" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
-            <codes>200</codes>
+            <codes>200,401,409</codes>
           </con:configuration>
         </con:assertion>
         <con:credentials>
@@ -34,7 +31,6 @@
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:jmsPropertyConfig/>
         <con:parameters>
           <entry key="Authorization" value="Bearer ${access_token}" xmlns="http://eviware.com/soapui/config"/>
         </con:parameters>
@@ -72,13 +68,7 @@
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-          <con:entry environmentId="20272cd6-b686-4dc5-bbb9-a223e2cd1d8c">
-            <con:authProfile>No Authorization</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="e557dfa4-ea64-4e83-988f-317cbc736505">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="caf27257-7156-4318-b2df-f8a12834f2ff">
+          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
         </con:environmentSpec>
@@ -87,4 +77,14 @@
   </con:testStep>
   <con:properties/>
   <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>f454330f-1b87-40ea-a32c-65e70634b06a</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:environmentSpec>
+    <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
 </con:testCase>

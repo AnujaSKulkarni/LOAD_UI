@@ -50,3 +50,8 @@ Energy_providers.xml
 Rate-Revealer.xml
 getCountriesAndStates.xml
 Command-and-Control---Set-Attribute%28s%29.xml
+UnClaim-Appliance.xml
+Appliance-Wraper.xml
+Device-Registration.xml
+multi-subscribe-for-opt--in-and-out.xml
+PUSH-Notification.xml
