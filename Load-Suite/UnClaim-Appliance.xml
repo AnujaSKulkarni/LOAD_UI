@@ -1,32 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="e801aab7-10b5-487a-9073-041cd81019a6" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Command and Control - Set Attribute(s)" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="46f6d900-dfd2-4ec8-9f3c-704693a8085c" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="UnClaim Appliance" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="6488e995-3c55-48e1-b52b-62906caf3d2afileName">Command-and-Control---Set-Attribute%28s%29</con:setting>
-    <con:setting id="e801aab7-10b5-487a-9073-041cd81019a6fileName">Command-and-Control---Set-Attribute%28s%29</con:setting>
+    <con:setting id="9e9b9dd9-3739-4f51-886b-dcc888cd7997fileName">UnClaim-Appliance</con:setting>
+    <con:setting id="9f00baa3-336d-482c-ba45-d6c6ea52d4ccfileName">UnClaim-Appliance</con:setting>
+    <con:setting id="46f6d900-dfd2-4ec8-9f3c-704693a8085cfileName">UnClaim-Appliance</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="restrequest" name="Command and Control - Set Attribute(s)" id="22a3986c-689f-4a11-99ba-263757a1f3d1">
+  <con:testStep type="restrequest" name="UnClaim Appliance" id="83247bc2-dae5-4696-b30e-437cb837ddaf">
     <con:settings/>
-    <con:config service="Command and Control - Set Attribute(s)" resourcePath="/appliance/command" methodName="Command and Control - Set Attribute(s)" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:restRequest name="Command and Control - Set Attribute(s)" id="21f0d580-813c-40ca-8714-9d6185a24b32" mediaType="application/json" postQueryString="false">
+    <con:config service="Un Claim Appliance" resourcePath="/appliances/unclaim/WPR333334RA96" methodName="Un Claim Appliance" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="UnClaim Appliance" id="f78b6801-e42a-491d-99be-be4ecbb829e8" mediaType="application/json">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
-        <con:endpoint>${QA_Env}</con:endpoint>
-        <con:request>{
-	"header": {
-	"command" : "setAttributes",
-	"said" : "WPR333334UCD3"
-	},
-"body": {
-	"CycleOptionsWHR_WrinkleShield": 1 
-	}
-}</con:request>
-        <con:originalUri>https://api-stg.whrcloud.com/api/v1/appliance/command</con:originalUri>
-        <con:assertion type="Valid HTTP Status Codes" id="354db2e0-fcf6-4d19-9655-568d5ef5a855" name="Valid HTTP Status Codes">
+        <con:endpoint>${API-Connect}</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api-test.whrcloud.com/api/v1/appliances/unclaim/WPR333334RA96</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="06cd3496-4da6-462d-a7b2-6d646188a894" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
-            <codes>200</codes>
+            <codes>200,401,409</codes>
           </con:configuration>
         </con:assertion>
         <con:credentials>
@@ -34,15 +27,15 @@
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:jmsPropertyConfig/>
         <con:parameters>
-          <entry key="Authorization" value="Bearer ${access_token}" xmlns="http://eviware.com/soapui/config"/>
+          <con:entry key="Authorization" value="Bearer ${access_token}"/>
+          <con:entry key="wp-client-country" value="US"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>Authorization</con:entry>
           <con:entry>wp-client-region</con:entry>
-          <con:entry>wp-client-country</con:entry>
           <con:entry>wp-client-brand</con:entry>
+          <con:entry>wp-client-country</con:entry>
         </con:parameterOrder>
         <con:environmentSpec>
           <con:entry environmentId="6f0100a6-91e6-476c-8a30-1216e3f39821">
@@ -72,13 +65,7 @@
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-          <con:entry environmentId="20272cd6-b686-4dc5-bbb9-a223e2cd1d8c">
-            <con:authProfile>No Authorization</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="e557dfa4-ea64-4e83-988f-317cbc736505">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="caf27257-7156-4318-b2df-f8a12834f2ff">
+          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
         </con:environmentSpec>
@@ -87,4 +74,14 @@
   </con:testStep>
   <con:properties/>
   <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>4f761f7c-a863-4f84-82ce-0103838c9a82</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:environmentSpec>
+    <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
 </con:testCase>

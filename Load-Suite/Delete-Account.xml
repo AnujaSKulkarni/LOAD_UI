@@ -1,44 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="7d09dd88-5547-4cd8-b99c-71cab9a765c4" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Create Group" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="2f413994-6027-4065-9dea-b69d92ff1de5" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Delete Account" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="6c216d9e-c6c9-4f57-8000-fec1eb3d515efileName">Create-Group</con:setting>
-    <con:setting id="cbe851c1-338c-4a21-b23f-c277758508f0fileName">Create-Group</con:setting>
-    <con:setting id="7d09dd88-5547-4cd8-b99c-71cab9a765c4fileName">Create-Group</con:setting>
+    <con:setting id="b13b5a9a-f922-4e6f-ba6a-2b38e28e3e91fileName">Delete-Account</con:setting>
+    <con:setting id="4cfb5fdb-4774-4835-bce6-d291578e14c9fileName">Delete-Account</con:setting>
+    <con:setting id="2f413994-6027-4065-9dea-b69d92ff1de5fileName">Delete-Account</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="groovy" name="Create_Group_Name" id="9ac0be32-fcd3-4860-901e-375b20121036">
+  <con:testStep type="restrequest" name="Delete Account" id="5d5b8044-68b0-41fe-b6c3-ac79118ae0c2">
     <con:settings/>
-    <con:config>
-      <script>String date = new Date()
-date = date.replaceAll(":","_")
-date = date.replaceAll(" ","_")
-RandomNumber = (int)(Math.random()*10000000)
-Email_ID = "\"" + "Sanity_Group_" + date + RandomNumber +  "\""
-Email_ID = Email_ID.toUpperCase()
-Email_ID_string = "Sanity_Group_" + date + RandomNumber
-Email_ID_string = Email_ID_string.toUpperCase()
-testRunner.testCase.setPropertyValue("Group_Name", Email_ID)
-testRunner.testCase.setPropertyValue("Group_Name_string", Email_ID_string)</script>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="restrequest" name="Create Group" id="98a2c466-4e04-4aa4-bbb2-445f673a2359">
-    <con:settings/>
-    <con:config service="Create Group" resourcePath="/account/create_group" methodName="Create Group" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:restRequest name="Create Group" id="93151322-6bb7-4ae4-8774-4341e25f8a4c" mediaType="application/json" postQueryString="false">
+    <con:config service="Delete Account" resourcePath="/client_auth/accounts/1" methodName="Delete Account" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Delete Account" id="bb6390f9-a30f-48ca-b53a-ca7cae11b0b2" mediaType="application/json" postQueryString="false">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:endpoint>${#Project#API-Connect}</con:endpoint>
-        <con:request>{
-    "groupName": ${#TestCase#Group_Name},
-    "accountId": ${#Project#Account_ID_Load},
-    "roleId": ${#Project#Role_ID_Load}
-}</con:request>
-        <con:originalUri>https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/whirlpool-iot-qa/api/account/create_group</con:originalUri>
-        <con:assertion type="Valid HTTP Status Codes" id="e7bc700e-8856-4628-aebd-2f3f7565d1a6" name="Valid HTTP Status Codes">
+        <con:request/>
+        <con:originalUri>https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/whirlpool-iot-qa/api/accounts/1</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="5c271660-e1a7-4614-a217-96dd21706a1f" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
-            <codes>200</codes>
+            <codes>200,401</codes>
           </con:configuration>
         </con:assertion>
         <con:credentials>
@@ -86,44 +67,25 @@ testRunner.testCase.setPropertyValue("Group_Name_string", Email_ID_string)</scri
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:properties>
-    <con:property>
-      <con:name>Group_Name</con:name>
-      <con:value>"SANITY_GROUP_WED_MAR_28_14_22_26_IST_20186435658"</con:value>
-    </con:property>
-    <con:property>
-      <con:name>Group_Name_string</con:name>
-      <con:value>SANITY_GROUP_WED_MAR_28_14_22_26_IST_20186435658</con:value>
-    </con:property>
-  </con:properties>
+  <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>
-    <con:testStepId>14457311-3574-4362-a788-5f447bca7b37</con:testStepId>
+    <con:testStepId>1b14f57d-a9a6-4277-ac3c-ca4930f52fe0</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
   <con:breakPoints>
-    <con:testStepId>1fcbd0da-216f-492d-9c9c-b8d36a1c90ab</con:testStepId>
+    <con:testStepId>5c903152-122d-47bd-90f4-e73a2e0bf27b</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
   <con:breakPoints>
-    <con:testStepId>2812af4f-5f2b-417a-bd92-9e3fbd877fdf</con:testStepId>
+    <con:testStepId>69216754-f8e6-485e-b4b2-c78ad75b6324</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
   <con:breakPoints>
-    <con:testStepId>148cd184-6ccd-4996-806c-5c68afd95bbb</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>1b56683f-135b-4639-adaa-22db275b5dd3</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>f0953ba9-e9f5-4294-b967-607f158726b4</con:testStepId>
+    <con:testStepId>41d73efc-3a13-4e1d-a5d6-5d845c9f253d</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>

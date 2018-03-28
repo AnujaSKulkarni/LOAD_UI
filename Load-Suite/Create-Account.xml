@@ -66,7 +66,7 @@ testRunner.testCase.setPropertyValue("Email_ID_string", Email_ID_string)</script
         <con:assertion type="Valid HTTP Status Codes" id="243cede5-7830-4e85-bb98-d0f7cf1edba3" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
-            <codes>200</codes>
+            <codes>200,400</codes>
           </con:configuration>
         </con:assertion>
         <con:credentials>
@@ -76,10 +76,7 @@ testRunner.testCase.setPropertyValue("Email_ID_string", Email_ID_string)</script
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:jmsPropertyConfig/>
         <con:parameters>
-          <con:entry key="wp-client-country" value="${#TestCase#Country_Name}"/>
-          <con:entry key="wp-client-brand" value="${#TestCase#Brand_Name}"/>
-          <con:entry key="wp-client-region" value="${#TestCase#Region}"/>
-          <con:entry key="Content-Type" value="application/json"/>
+          <entry key="Content-Type" value="application/json" xmlns="http://eviware.com/soapui/config"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>Authorization</con:entry>
@@ -171,11 +168,11 @@ Connection: keep-alive
     </con:property>
     <con:property>
       <con:name>Email_ID</con:name>
-      <con:value>"MON_MAR_26_15_03_26_IST_2018916542@MAILINATOR.COM"</con:value>
+      <con:value>"WED_MAR_28_14_22_07_IST_20183585177@MAILINATOR.COM"</con:value>
     </con:property>
     <con:property>
       <con:name>Email_ID_string</con:name>
-      <con:value>MON_MAR_26_15_03_26_IST_2018916542@MAILINATOR.COM</con:value>
+      <con:value>WED_MAR_28_14_22_07_IST_20183585177@MAILINATOR.COM</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

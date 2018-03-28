@@ -5,7 +5,7 @@
     <con:setting id="e59c73aa-5daa-4617-9ab4-ff38f5ff45d3fileName">GET-Member-Token</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="groovy" name="DataSource_Setup" id="3b53115a-c0b1-4c1c-9bb5-b402663ece4e">
+  <con:testStep type="groovy" name="DataSource_Setup" id="3b53115a-c0b1-4c1c-9bb5-b402663ece4e" disabled="true">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream;
@@ -143,7 +143,7 @@ if(RunTimeDataSource_Flag == true){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasource" name="DataSource_RunTime" id="5fa49d09-12fb-4cdd-8a57-0a9083736706">
+  <con:testStep type="datasource" name="DataSource_RunTime" id="5fa49d09-12fb-4cdd-8a57-0a9083736706" disabled="true">
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
@@ -157,6 +157,10 @@ if(RunTimeDataSource_Flag == true){
       </con:dataSource>
       <con:shared>true</con:shared>
       <con:restartShared>true</con:restartShared>
+      <con:property>Account_ID_Number</con:property>
+      <con:property>Verification_Code</con:property>
+      <con:property>Email_ID</con:property>
+      <con:property>Group_ID</con:property>
       <con:completeLastOperation>true</con:completeLastOperation>
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
@@ -232,7 +236,7 @@ if(RunTimeDataSource_Flag == true){
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Report" id="2cdabd16-5fa3-4d07-b9f9-43ce8840f820">
+  <con:testStep type="groovy" name="Report" id="2cdabd16-5fa3-4d07-b9f9-43ce8840f820" disabled="true">
     <con:settings/>
     <con:config>
       <script>def Final_Path = com.eviware.soapui.SoapUI.globalProperties.getPropertyValue("Test_Result_Path")
@@ -305,7 +309,7 @@ file1.append("---------------- Response --------------------------\n")
 file1.append(response)</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Skip on failure" id="c8d1be47-b8fa-42ad-be86-772793caba22">
+  <con:testStep type="groovy" name="Skip on failure" id="c8d1be47-b8fa-42ad-be86-772793caba22" disabled="true">
     <con:settings/>
     <con:config>
       <script>def TestCaseName = testRunner.testCase.getName()
