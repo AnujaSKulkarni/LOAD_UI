@@ -1257,7 +1257,7 @@
         <con1:properties>
           <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
           <con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">true</con1:property>
-          <con1:property propagates="true" key="limitVU" type="java.lang.Long">9223372036854775807</con1:property>
+          <con1:property propagates="true" key="limitVU" type="java.lang.Long">25</con1:property>
           <con1:property propagates="true" key="baseVU" type="java.lang.Long">1</con1:property>
           <con1:property propagates="true" key="peakVU" type="java.lang.Long">25</con1:property>
           <con1:property propagates="true" key="rampUpDuration" type="java.lang.Long">120</con1:property>
@@ -1272,13 +1272,6 @@
       </con1:component>
       <con1:connection outputTerminalId="8df7bdd3-a51a-4ea0-924d-28bfc0f46517/outgoingTerminal" inputTerminalId="1c260939-e455-4909-af40-0b2fcfc0375c/stateTerminal"/>
       <con1:connection outputTerminalId="1c260939-e455-4909-af40-0b2fcfc0375c/triggerTerminal" inputTerminalId="d577bb90-2c82-42f3-8b29-dcd96b192cab/incomingTerminal"/>
-      <con1:connection outputTerminalId="d577bb90-2c82-42f3-8b29-dcd96b192cab/exit" inputTerminalId="f1e4d6ea-a9d3-43bd-80aa-4481007ecca4/triggerTerminal"/>
-      <con1:connection outputTerminalId="f1e4d6ea-a9d3-43bd-80aa-4481007ecca4/runningTerminal" inputTerminalId="b5b904b7-408a-4363-80a5-1440db6e7e9f/triggerTerminal"/>
-      <con1:connection outputTerminalId="b5b904b7-408a-4363-80a5-1440db6e7e9f/runningTerminal" inputTerminalId="a140ef59-2108-4e2d-8f65-38457a0803bc/triggerTerminal"/>
-      <con1:connection outputTerminalId="a140ef59-2108-4e2d-8f65-38457a0803bc/runningTerminal" inputTerminalId="f248edb3-5b2b-4047-859b-d10b578f881c/triggerTerminal"/>
-      <con1:connection outputTerminalId="f248edb3-5b2b-4047-859b-d10b578f881c/runningTerminal" inputTerminalId="8328168e-f804-4d99-9838-f9bd71ebbaec/triggerTerminal"/>
-      <con1:connection outputTerminalId="8328168e-f804-4d99-9838-f9bd71ebbaec/runningTerminal" inputTerminalId="c9e60dc4-9daa-47b4-8593-421ea3cbddb6/triggerTerminal"/>
-      <con1:connection outputTerminalId="c9e60dc4-9daa-47b4-8593-421ea3cbddb6/runningTerminal" inputTerminalId="bcaa002d-439e-457a-a333-5b3d4bb755df/triggerTerminal"/>
       <con1:connection outputTerminalId="d577bb90-2c82-42f3-8b29-dcd96b192cab/loop" inputTerminalId="d7b85b25-0469-43ee-98cd-3ab6b95216dd/triggerTerminal"/>
       <con1:connection outputTerminalId="d7b85b25-0469-43ee-98cd-3ab6b95216dd/runningTerminal" inputTerminalId="11c7dc8e-6dec-4e42-a0a7-a08384060258/triggerTerminal"/>
       <con1:connection outputTerminalId="11c7dc8e-6dec-4e42-a0a7-a08384060258/runningTerminal" inputTerminalId="ba4e1d81-ed47-40ad-a3b4-232e08d8d394/triggerTerminal"/>
@@ -1326,8 +1319,15 @@
       <con1:connection outputTerminalId="dbc034e8-05b9-4040-acea-ec654cde0ef0/runningTerminal" inputTerminalId="abc850d2-b78a-405e-946e-430388ee2f1f/triggerTerminal"/>
       <con1:connection outputTerminalId="abc850d2-b78a-405e-946e-430388ee2f1f/runningTerminal" inputTerminalId="ba8be94a-caf4-4b9e-a5f7-0dc453f24a46/triggerTerminal"/>
       <con1:connection outputTerminalId="ba8be94a-caf4-4b9e-a5f7-0dc453f24a46/runningTerminal" inputTerminalId="906a6a41-7dfd-475d-b65c-4a51d9ee72fd/triggerTerminal"/>
-      <con1:connection outputTerminalId="906a6a41-7dfd-475d-b65c-4a51d9ee72fd/runningTerminal" inputTerminalId="d577bb90-2c82-42f3-8b29-dcd96b192cab/incomingTerminal"/>
-      <con1:connection outputTerminalId="bcaa002d-439e-457a-a333-5b3d4bb755df/runningTerminal" inputTerminalId="1c260939-e455-4909-af40-0b2fcfc0375c/Sample Count"/>
+      <con1:connection outputTerminalId="906a6a41-7dfd-475d-b65c-4a51d9ee72fd/runningTerminal" inputTerminalId="f1e4d6ea-a9d3-43bd-80aa-4481007ecca4/triggerTerminal"/>
+      <con1:connection outputTerminalId="f1e4d6ea-a9d3-43bd-80aa-4481007ecca4/runningTerminal" inputTerminalId="b5b904b7-408a-4363-80a5-1440db6e7e9f/triggerTerminal"/>
+      <con1:connection outputTerminalId="b5b904b7-408a-4363-80a5-1440db6e7e9f/runningTerminal" inputTerminalId="a140ef59-2108-4e2d-8f65-38457a0803bc/triggerTerminal"/>
+      <con1:connection outputTerminalId="a140ef59-2108-4e2d-8f65-38457a0803bc/runningTerminal" inputTerminalId="f248edb3-5b2b-4047-859b-d10b578f881c/triggerTerminal"/>
+      <con1:connection outputTerminalId="f248edb3-5b2b-4047-859b-d10b578f881c/runningTerminal" inputTerminalId="8328168e-f804-4d99-9838-f9bd71ebbaec/triggerTerminal"/>
+      <con1:connection outputTerminalId="8328168e-f804-4d99-9838-f9bd71ebbaec/runningTerminal" inputTerminalId="c9e60dc4-9daa-47b4-8593-421ea3cbddb6/triggerTerminal"/>
+      <con1:connection outputTerminalId="c9e60dc4-9daa-47b4-8593-421ea3cbddb6/runningTerminal" inputTerminalId="bcaa002d-439e-457a-a333-5b3d4bb755df/triggerTerminal"/>
+      <con1:connection outputTerminalId="bcaa002d-439e-457a-a333-5b3d4bb755df/runningTerminal" inputTerminalId="d577bb90-2c82-42f3-8b29-dcd96b192cab/incomingTerminal"/>
+      <con1:connection outputTerminalId="d577bb90-2c82-42f3-8b29-dcd96b192cab/exit" inputTerminalId="1c260939-e455-4909-af40-0b2fcfc0375c/Sample Count"/>
     </con1:scene>
     <con1:statistics>
       <con1:page title="DefaultLoadUIStatisticPage">
