@@ -58,7 +58,7 @@ testRunner.testCase.setPropertyValue("Email_ID_string", Email_ID_string)</script
   "verificationCode": null,
   "phoneVerificationConfirmedAt": null,
   "validateMobile": true,
-  "userRole":"PRIMARY_OWNER",
+  "userRole":"WCLOUD_USER",
   "enabled":1,
   "languageCode":"eng"
 }</con:request>
@@ -168,11 +168,11 @@ Connection: keep-alive
     </con:property>
     <con:property>
       <con:name>Email_ID</con:name>
-      <con:value>"THU_MAR_29_13_14_25_IST_2018366790@MAILINATOR.COM"</con:value>
+      <con:value>"THU_MAR_29_16_31_27_IST_20186875221@MAILINATOR.COM"</con:value>
     </con:property>
     <con:property>
       <con:name>Email_ID_string</con:name>
-      <con:value>THU_MAR_29_13_14_25_IST_2018366790@MAILINATOR.COM</con:value>
+      <con:value>THU_MAR_29_16_31_27_IST_20186875221@MAILINATOR.COM</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>
