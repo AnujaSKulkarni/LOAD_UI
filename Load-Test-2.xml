@@ -26,7 +26,7 @@
       <con1:property key="limits">Time=300;</con1:property>
     </con1:attributes>
     <con1:addons/>
-    <con1:scene label="New Scenario" id="4879d6d1-3856-4f7d-83f0-04b9794ff5b5" version="32683">
+    <con1:scene label="New Scenario" id="4879d6d1-3856-4f7d-83f0-04b9794ff5b5" version="33087">
       <con1:properties>
         <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
         <con1:property propagates="true" key="CanvasItem.abortOnFinish" type="java.lang.Boolean">true</con1:property>
@@ -2125,7 +2125,7 @@
       <con1:component type="com.eviware.loadui.components.soapui.SoapUISamplerComponent" label="Regression Suite:PUSH Notification" id="3053f150-46e9-4971-b642-39f40634e633" category="Runners">
         <con1:properties>
           <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
-          <con1:property propagates="true" key="concurrentSamples" type="java.lang.Long">5000</con1:property>
+          <con1:property propagates="true" key="concurrentSamples" type="java.lang.Long">1000</con1:property>
           <con1:property propagates="true" key="property_name_is_not_relevant_for_private_property" type="java.lang.Long">9223372036854775807</con1:property>
           <con1:property propagates="true" key="maxQueueSize" type="java.lang.Long">1000</con1:property>
           <con1:property propagates="true" key="countDiscarded" type="java.lang.Boolean">false</con1:property>

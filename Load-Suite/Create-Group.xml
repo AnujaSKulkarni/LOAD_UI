@@ -89,11 +89,11 @@ testRunner.testCase.setPropertyValue("Group_Name_string", Email_ID_string)</scri
   <con:properties>
     <con:property>
       <con:name>Group_Name</con:name>
-      <con:value>"SANITY_GROUP_WED_MAR_28_14_22_26_IST_20186435658"</con:value>
+      <con:value>"SANITY_GROUP_THU_MAR_29_13_17_05_IST_20187351749"</con:value>
     </con:property>
     <con:property>
       <con:name>Group_Name_string</con:name>
-      <con:value>SANITY_GROUP_WED_MAR_28_14_22_26_IST_20186435658</con:value>
+      <con:value>SANITY_GROUP_THU_MAR_29_13_17_05_IST_20187351749</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>
