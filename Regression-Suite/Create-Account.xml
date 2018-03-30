@@ -298,7 +298,7 @@ if (API_Name != TestCaseName){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Unique_Email_ID" id="ed9443ac-3d0a-4ec5-8296-d655a891df52">
+  <con:testStep type="groovy" name="Unique_Email_ID" id="ed9443ac-3d0a-4ec5-8296-d655a891df52" disabled="true">
     <con:settings/>
     <con:config>
       <script>String date = new Date()
@@ -322,7 +322,7 @@ Region = Region.replace("\"", "")
 testRunner.testCase.setPropertyValue("Region", Region)</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Create Account_Positive" id="2e1ce897-3257-464d-9f5f-6c38c64db275">
+  <con:testStep type="restrequest" name="Create Account_Positive" id="2e1ce897-3257-464d-9f5f-6c38c64db275" disabled="true">
     <con:settings/>
     <con:config service="Create Account" resourcePath="/client_auth/accounts" methodName="Create Account" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Create Account_Positive" id="ca9f4001-c1e6-4520-a84d-0a8f310353ef" mediaType="application/json" postQueryString="false">
@@ -575,7 +575,7 @@ testRunner.testCase.setPropertyValue("Region", Region)</script>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Report" id="a217431f-60c2-41f4-992c-33661f583168">
+  <con:testStep type="groovy" name="Report" id="a217431f-60c2-41f4-992c-33661f583168" disabled="true">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream
@@ -711,7 +711,7 @@ wb.write(out)
 out.close()</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Skip on failure" id="8ec19e8d-bd46-4712-8dc1-70ae83a4ed3c">
+  <con:testStep type="groovy" name="Skip on failure" id="8ec19e8d-bd46-4712-8dc1-70ae83a4ed3c" disabled="true">
     <con:settings/>
     <con:config>
       <script>/*def TestCaseName = testRunner.testCase.getName()
@@ -739,7 +739,7 @@ if(Status == "Fail"){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Data_Sink_Flow_Control" id="c587f0a2-baeb-4aa1-af02-20639d638de8">
+  <con:testStep type="groovy" name="Data_Sink_Flow_Control" id="c587f0a2-baeb-4aa1-af02-20639d638de8" disabled="true">
     <con:settings/>
     <con:config>
       <script>/*Get Test Case Name and Status*/
@@ -769,7 +769,7 @@ if(Status_Code.contains("200")){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Run_Time_Data_Transfer" id="69baaf9a-bad7-48ee-a9a1-ef92e1f1de13">
+  <con:testStep type="groovy" name="Run_Time_Data_Transfer" id="69baaf9a-bad7-48ee-a9a1-ef92e1f1de13" disabled="true">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream
