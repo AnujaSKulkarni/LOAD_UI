@@ -3,12 +3,9 @@
   <con:settings>
     <con:setting id="ff033a49-9cdd-4fc9-a904-c9496ffb96a2fileName">searchRecipe</con:setting>
     <con:setting id="91ae8eef-044e-44f5-a836-cbe274cc242efileName">searchRecipe</con:setting>
-  <con:setting id="80312212-290b-4357-bce8-1740ef9e2abefileName">searchRecipe</con:setting></con:settings>
+    <con:setting id="80312212-290b-4357-bce8-1740ef9e2abefileName">searchRecipe</con:setting>
+  </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  
-  
-  
-  
   <con:testStep type="restrequest" name="searchRecipe" id="11149fa8-61c6-440f-8692-feb9428c1827">
     <con:settings/>
     <con:config service="searchRecipe" resourcePath="/searchRecipe/031000110741/en" methodName="searchRecipe" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -22,7 +19,7 @@
         <con:assertion type="Valid HTTP Status Codes" id="f232be9b-f417-4748-9965-75f5c50f46ec" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
-            <codes>200</codes>
+            <codes>200,404</codes>
           </con:configuration>
         </con:assertion>
         <con:credentials>
@@ -41,14 +38,13 @@
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-        <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  
-  
-  
-  
   <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>

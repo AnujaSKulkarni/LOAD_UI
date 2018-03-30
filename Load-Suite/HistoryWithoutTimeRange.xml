@@ -4,14 +4,9 @@
     <con:setting id="241932e4-30cb-4e20-898f-59c649e9d131fileName">HistoryWithTimeRange</con:setting>
     <con:setting id="a16f1e0c-72a7-458a-b9f1-74f9cbed541dfileName">HistoryWithoutTimeRange</con:setting>
     <con:setting id="c999ff0f-2d12-484c-9ee9-6861d53dab66fileName">HistoryWithoutTimeRange</con:setting>
-  <con:setting id="d697ba0d-852b-403b-ac0e-796b0c86ddabfileName">HistoryWithoutTimeRange</con:setting></con:settings>
+    <con:setting id="d697ba0d-852b-403b-ac0e-796b0c86ddabfileName">HistoryWithoutTimeRange</con:setting>
+  </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  
-  
-  
-  
-  
-  
   <con:testStep type="restrequest" name="HistoryWithoutTimeRange" id="56dabb19-38b4-4c77-85ef-848fe71ef7ce">
     <con:settings/>
     <con:config service="HistoryWithTimeRange" resourcePath="/appliances/history" methodName="HistoryWithTimeRange" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -30,7 +25,7 @@
         <con:assertion type="Valid HTTP Status Codes" id="e5839b0b-de88-4a9e-9330-c51fa9835433" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
-            <codes>200</codes>
+            <codes>200,405</codes>
           </con:configuration>
         </con:assertion>
         <con:credentials>
@@ -46,12 +41,13 @@
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-        <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  
-  
   <con:properties>
     <con:property>
       <con:name>Device_Shadow_Name</con:name>

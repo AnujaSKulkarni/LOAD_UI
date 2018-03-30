@@ -16,8 +16,8 @@
         <con:endpoint>${API-Connect}</con:endpoint>
         <con:request>[
 {
-"alertId":${JDBC#B_alert_id},
-"applianceId":${JDBC#A_appliance_id},
+"alertId":1,
+"applianceId":2,
 "notificationType":"PUSH",
 "accountId":${#Project#Account_ID_Load},
 "status":"Enable"
@@ -26,7 +26,7 @@
         <con:assertion type="Valid HTTP Status Codes" id="b57708e5-ac4f-4b3b-a854-ef136c1a5a59" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
-            <codes>200</codes>
+            <codes>200,400</codes>
           </con:configuration>
         </con:assertion>
         <con:credentials>

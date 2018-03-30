@@ -3,11 +3,9 @@
   <con:settings>
     <con:setting id="7a8e5a92-2cab-447a-8b10-a92c546e95a7fileName">create-setting</con:setting>
     <con:setting id="c1fc1c90-66a1-4f59-b706-8ef74c6ef127fileName">create-setting</con:setting>
-  <con:setting id="3a6cf576-bbe4-481b-9559-a1b034991facfileName">create-setting</con:setting></con:settings>
+    <con:setting id="3a6cf576-bbe4-481b-9559-a1b034991facfileName">create-setting</con:setting>
+  </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  
-  
-  
   <con:testStep type="restrequest" name="create-setting" id="acfe1f80-254f-40e5-b06d-3822a864ad08">
     <con:settings/>
     <con:config service="create or update -setting" resourcePath="/account/favorites/entity/setting" methodName="create or update -setting" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -43,7 +41,7 @@
         <con:assertion type="Valid HTTP Status Codes" id="9675d2ad-3478-4a2b-a2dc-a6e808517ff1" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
-            <codes>200</codes>
+            <codes>200,500</codes>
           </con:configuration>
         </con:assertion>
         <con:credentials>
@@ -59,12 +57,13 @@
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-        <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  
-  
   <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>

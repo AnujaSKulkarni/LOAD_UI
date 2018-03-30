@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="46f6d900-dfd2-4ec8-9f3c-704693a8085c" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="UnClaim Appliance" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="856abc06-29f0-4158-ba7c-395219257261" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Appliance Wraper" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="9e9b9dd9-3739-4f51-886b-dcc888cd7997fileName">UnClaim-Appliance</con:setting>
-    <con:setting id="9f00baa3-336d-482c-ba45-d6c6ea52d4ccfileName">UnClaim-Appliance</con:setting>
-    <con:setting id="46f6d900-dfd2-4ec8-9f3c-704693a8085cfileName">UnClaim-Appliance</con:setting>
+    <con:setting id="8f97b4f7-4d1f-48ea-8b7f-16bc5c9f613cfileName">Appliance-Wraper</con:setting>
+    <con:setting id="7b5fb6a2-1657-4aab-9f8d-03fdc1e526d0fileName">Appliance-Wraper</con:setting>
+    <con:setting id="856abc06-29f0-4158-ba7c-395219257261fileName">Appliance-Wraper</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="restrequest" name="UnClaim Appliance" id="83247bc2-dae5-4696-b30e-437cb837ddaf">
+  <con:testStep type="restrequest" name="Appliance Wraper" id="952ecf97-4f7c-44de-af4e-bab2ffbecbf8">
     <con:settings/>
-    <con:config service="Un Claim Appliance" resourcePath="/appliances/unclaim/${#Project#Appliance_SAID_Load}" methodName="Un Claim Appliance" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:restRequest name="UnClaim Appliance" id="f78b6801-e42a-491d-99be-be4ecbb829e8" mediaType="application/json">
+    <con:config service="Appliance Wraper" resourcePath="/appliances/claim/" methodName="Appliance Wraper" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Appliance Wraper" id="02d3df6f-10cd-4cc3-aed7-ba657cb3edac" mediaType="application/json" postQueryString="false">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:endpoint>${API-Connect}</con:endpoint>
-        <con:request/>
-        <con:originalUri>https://api-test.whrcloud.com/api/v1/appliances/unclaim/WPR333334RA96</con:originalUri>
-        <con:assertion type="Valid HTTP Status Codes" id="06cd3496-4da6-462d-a7b2-6d646188a894" name="Valid HTTP Status Codes">
+        <con:request>{
+        "applianceName": "washer",
+        "said":"${#Project#Appliance_SAID_Load}",
+        "locationId":${#Project#Location_ID_Load}
+        }</con:request>
+        <con:originalUri>https://api-test.whrcloud.com/api/v1/appliances/claim/</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="136a70db-fd2b-4243-a4f7-52651b059f52" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
-            <codes>200,401,409</codes>
+            <codes>200</codes>
           </con:configuration>
         </con:assertion>
         <con:credentials>
@@ -28,14 +32,13 @@
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:parameters>
-          <con:entry key="Authorization" value="Bearer ${access_token}"/>
-          <con:entry key="wp-client-country" value="US"/>
+          <entry key="Authorization" value="Bearer ${access_token}" xmlns="http://eviware.com/soapui/config"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>Authorization</con:entry>
           <con:entry>wp-client-region</con:entry>
-          <con:entry>wp-client-brand</con:entry>
           <con:entry>wp-client-country</con:entry>
+          <con:entry>wp-client-brand</con:entry>
         </con:parameterOrder>
         <con:environmentSpec>
           <con:entry environmentId="6f0100a6-91e6-476c-8a30-1216e3f39821">
@@ -75,7 +78,7 @@
   <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>
-    <con:testStepId>4f761f7c-a863-4f84-82ce-0103838c9a82</con:testStepId>
+    <con:testStepId>f454330f-1b87-40ea-a32c-65e70634b06a</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>

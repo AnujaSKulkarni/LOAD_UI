@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="46f6d900-dfd2-4ec8-9f3c-704693a8085c" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="UnClaim Appliance" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="fb25db4e-9650-47ef-9bf3-56bdf52fef29" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="UnClaim Appliance" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="9e9b9dd9-3739-4f51-886b-dcc888cd7997fileName">UnClaim-Appliance</con:setting>
     <con:setting id="9f00baa3-336d-482c-ba45-d6c6ea52d4ccfileName">UnClaim-Appliance</con:setting>
-    <con:setting id="46f6d900-dfd2-4ec8-9f3c-704693a8085cfileName">UnClaim-Appliance</con:setting>
+    <con:setting id="fb25db4e-9650-47ef-9bf3-56bdf52fef29fileName">UnClaim-Appliance</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="restrequest" name="UnClaim Appliance" id="83247bc2-dae5-4696-b30e-437cb837ddaf">
+  <con:testStep type="restrequest" name="UnClaim Appliance" id="458084f9-1dff-49b3-af50-5dabe6fc4756">
     <con:settings/>
     <con:config service="Un Claim Appliance" resourcePath="/appliances/unclaim/${#Project#Appliance_SAID_Load}" methodName="Un Claim Appliance" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="UnClaim Appliance" id="f78b6801-e42a-491d-99be-be4ecbb829e8" mediaType="application/json">
@@ -19,7 +19,7 @@
         <con:assertion type="Valid HTTP Status Codes" id="06cd3496-4da6-462d-a7b2-6d646188a894" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
-            <codes>200,401,409</codes>
+            <codes>200</codes>
           </con:configuration>
         </con:assertion>
         <con:credentials>
@@ -28,8 +28,7 @@
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:parameters>
-          <con:entry key="Authorization" value="Bearer ${access_token}"/>
-          <con:entry key="wp-client-country" value="US"/>
+          <entry key="Authorization" value="Bearer ${access_token}" xmlns="http://eviware.com/soapui/config"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>Authorization</con:entry>

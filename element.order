@@ -167,6 +167,7 @@ getCountriesAndStates
 getallappliances_by_accountid
 Update_Password
 get-all-invited-member
-Regression-Suite
+Initial_Suite
 Load-Suite
+Regression-Suite
 REST-Virt-1

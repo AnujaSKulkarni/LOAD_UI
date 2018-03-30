@@ -6,12 +6,6 @@
     <con:setting id="2c71f7dd-e0a3-4964-af2f-d34b9b723738fileName">update-cycle</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="delay" name="Wait Time" id="70d3d328-d5c0-4352-b31b-a5e0cd612823">
-    <con:settings/>
-    <con:config>
-      <delay>2000</delay>
-    </con:config>
-  </con:testStep>
   <con:testStep type="restrequest" name="update-cycle" id="53fa7039-140b-4ed1-9e27-bb68ed08164d">
     <con:settings/>
     <con:config service="create or update-cycle" resourcePath="/account/favorites/entity/cycle" methodName="create or update-cycle" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -52,7 +46,7 @@
         <con:assertion type="Valid HTTP Status Codes" id="91d07ad3-e445-4a57-84e0-e160081c242c" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
-            <codes>200</codes>
+            <codes>200,500</codes>
           </con:configuration>
         </con:assertion>
         <con:credentials>
@@ -110,11 +104,6 @@
   </con:breakPoints>
   <con:breakPoints>
     <con:testStepId>af049cdf-094d-42e7-8224-d07f5995fb50</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>70d3d328-d5c0-4352-b31b-a5e0cd612823</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>

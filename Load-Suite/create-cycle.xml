@@ -3,14 +3,9 @@
   <con:settings>
     <con:setting id="a8d71d2d-d39e-408f-9e09-e125bccc6e4ffileName">create-cycle</con:setting>
     <con:setting id="40728353-589c-4886-bb69-77ad2af3e2b8fileName">create-cycle</con:setting>
-  <con:setting id="69516faf-0a80-4329-995f-7029e1188c76fileName">create-cycle</con:setting></con:settings>
+    <con:setting id="69516faf-0a80-4329-995f-7029e1188c76fileName">create-cycle</con:setting>
+  </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  
-  
-  
-  
-  
-  
   <con:testStep type="restrequest" name="create-cycle" id="c5d939fa-ca61-4f5f-9aeb-a616aff1ce14">
     <con:settings/>
     <con:config service="create or update-cycle" resourcePath="/account/favorites/entity/cycle" methodName="create or update-cycle" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -50,27 +45,7 @@
         <con:assertion type="Valid HTTP Status Codes" id="fa706bbb-d068-482d-891b-1280b8bdcf18" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
-            <codes>200</codes>
-          </con:configuration>
-        </con:assertion>
-        <con:assertion type="MessageContentAssertion" id="da1dcb57-2af6-41fd-b1cc-3bb4bcf08371" name="Message Content Assertion">
-          <con:configuration xsi:type="con:MessageContentAssertion">
-            <con:elements>
-              <con:xpath>declare namespace ns1='https://api-test.whrcloud.com/api/v1/account/favorites/entity/cycle';
-//ns1:Response[1]/ns1:status[1]</con:xpath>
-              <con:element>status</con:element>
-              <con:type xsi:nil="true"/>
-              <con:operator>=</con:operator>
-              <con:enabled>true</con:enabled>
-              <con:expectedValue>SUCCESS</con:expectedValue>
-              <con:hasValue>false</con:hasValue>
-              <con:numberType>false</con:numberType>
-            </con:elements>
-            <con:originalMessage><![CDATA[<Response xmlns="https://api-test.whrcloud.com/api/v1/account/favorites/entity/cycle">
-   <code/>
-   <message>Favorities data is created or updated succesfully for appliacie id :Refrigerator123</message>
-   <status>SUCCESS</status>
-</Response>]]></con:originalMessage>
+            <codes>200,500</codes>
           </con:configuration>
         </con:assertion>
         <con:credentials>
@@ -86,10 +61,27 @@
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-        <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:restRequest>
     </con:config>
-  </con:testStep><con:properties><con:property><con:name>Appliance_ID</con:name><con:value>"Appliance_Tue_Mar_20_18_03_48_IST_2018_6307590"</con:value></con:property><con:property><con:name>Location_ID_Load</con:name><con:value>"437"</con:value></con:property><con:property><con:name>Account_ID_Load</con:name><con:value>"377"</con:value></con:property></con:properties>
+  </con:testStep>
+  <con:properties>
+    <con:property>
+      <con:name>Appliance_ID</con:name>
+      <con:value>"Appliance_Tue_Mar_20_18_03_48_IST_2018_6307590"</con:value>
+    </con:property>
+    <con:property>
+      <con:name>Location_ID_Load</con:name>
+      <con:value>"437"</con:value>
+    </con:property>
+    <con:property>
+      <con:name>Account_ID_Load</con:name>
+      <con:value>"377"</con:value>
+    </con:property>
+  </con:properties>
   <con:reportParameters/>
   <con:breakPoints>
     <con:testStepId>eccc5407-ef6a-4c5a-866a-6c41825173db</con:testStepId>

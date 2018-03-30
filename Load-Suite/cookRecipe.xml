@@ -3,11 +3,9 @@
   <con:settings>
     <con:setting id="c6c77827-4246-4a64-89a5-eccb80e3aa99fileName">cookRecipe</con:setting>
     <con:setting id="2e127492-88d5-43e3-8e93-e4f8f45e117afileName">cookRecipe</con:setting>
-  <con:setting id="8666eb31-5179-44b5-a430-02ec89150d54fileName">cookRecipe</con:setting></con:settings>
+    <con:setting id="8666eb31-5179-44b5-a430-02ec89150d54fileName">cookRecipe</con:setting>
+  </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  
-  
-  
   <con:testStep type="restrequest" name="cookRecipe" id="1d361fdb-fb21-496c-ac7c-8c47116e9563">
     <con:settings/>
     <con:config service="cookRecipe" resourcePath="/cookRecipe/WPR4BCKC4R37C" methodName="cookRecipe" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -43,7 +41,7 @@
         <con:assertion type="Valid HTTP Status Codes" id="329c8277-fe18-4ba0-83ce-cabf846cc16d" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
-            <codes>200</codes>
+            <codes>200,417</codes>
           </con:configuration>
         </con:assertion>
         <con:credentials>
@@ -62,12 +60,13 @@
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-        <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  
-  
   <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>
