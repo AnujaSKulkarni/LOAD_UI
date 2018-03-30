@@ -3,12 +3,15 @@
   <con:settings>
     <con:setting id="6cfe2d0e-2edc-45f2-89d7-cef347bf2a31fileName">update-cycle</con:setting>
     <con:setting id="35849d94-4e46-44e2-beee-820b945b54fcfileName">update-cycle</con:setting>
-  <con:setting id="2c71f7dd-e0a3-4964-af2f-d34b9b723738fileName">update-cycle</con:setting></con:settings>
+    <con:setting id="2c71f7dd-e0a3-4964-af2f-d34b9b723738fileName">update-cycle</con:setting>
+  </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  
-  
-  
-  
+  <con:testStep type="delay" name="Wait Time" id="70d3d328-d5c0-4352-b31b-a5e0cd612823">
+    <con:settings/>
+    <con:config>
+      <delay>2000</delay>
+    </con:config>
+  </con:testStep>
   <con:testStep type="restrequest" name="update-cycle" id="53fa7039-140b-4ed1-9e27-bb68ed08164d">
     <con:settings/>
     <con:config service="create or update-cycle" resourcePath="/account/favorites/entity/cycle" methodName="create or update-cycle" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -67,12 +70,13 @@
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-        <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  
-  
   <con:properties>
     <con:property>
       <con:name>applianceid</con:name>
@@ -106,6 +110,11 @@
   </con:breakPoints>
   <con:breakPoints>
     <con:testStepId>af049cdf-094d-42e7-8224-d07f5995fb50</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>70d3d328-d5c0-4352-b31b-a5e0cd612823</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>

@@ -6,6 +6,12 @@
     <con:setting id="6b41f7be-750f-43d5-b3d4-9f8bac900797fileName">Update-Location</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="delay" name="Wait Time" id="7814515b-88aa-4568-84ba-939cb630abc0">
+    <con:settings/>
+    <con:config>
+      <delay>2000</delay>
+    </con:config>
+  </con:testStep>
   <con:testStep type="groovy" name="Test_Data_Setup" id="e722e781-f47b-4da2-b074-bf012d5a11b2">
     <con:settings/>
     <con:config>
@@ -116,7 +122,7 @@ testRunner.testCase.setPropertyValue("Location_Name", LocationName)</script>
     </con:property>
     <con:property>
       <con:name>Location_Name</con:name>
-      <con:value>"Update_Location_Thu_Mar_29_13_17_51_IST_20188598377"</con:value>
+      <con:value>"Update_Location_Fri_Mar_30_13_01_05_IST_20181875019"</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>
@@ -152,6 +158,11 @@ testRunner.testCase.setPropertyValue("Location_Name", LocationName)</script>
   </con:breakPoints>
   <con:breakPoints>
     <con:testStepId>e722e781-f47b-4da2-b074-bf012d5a11b2</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>7814515b-88aa-4568-84ba-939cb630abc0</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
