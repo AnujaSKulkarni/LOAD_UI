@@ -56,3 +56,12 @@ Device-Registration.xml
 multi-subscribe-for-opt--in-and-out.xml
 PUSH-Notification.xml
 Delete-Account.xml
+Copy-of-Authorize-NEST-user.xml
+Copy-of-UpdateUserNestPreference.xml
+Copy-of-Get-User-Nest-Preference.xml
+Copy-of-Get-Nest-Structure.xml
+Copy-of-Add-Rule.xml
+Copy-of-Get-Rule.xml
+Copy-of-Update-Rule.xml
+Copy-of-Delete-Rule.xml
+Copy-of-DeauthorizeUser.xml
