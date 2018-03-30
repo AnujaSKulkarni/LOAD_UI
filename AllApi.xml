@@ -5,7 +5,7 @@
     <con:setting id="soapUIObjectSourceType">soapUIObjectSourceType_RestRequest</con:setting>
     <con:setting id="f11ed4f1-e3ed-4064-a43c-412c8dd9f2fafileName">AllApi</con:setting>
   </con:settings>
-  <con1:loadui-project id="9f3b9113-8c82-40e4-806d-0752f5f20722" label="Load Test 6" xmlns:con1="http://eviware.com/loadui/config">
+  <con1:loadui-project id="9f3b9113-8c82-40e4-806d-0752f5f20722" label="AllApi" xmlns:con1="http://eviware.com/loadui/config">
     <con1:properties>
       <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
       <con1:property propagates="true" key="CanvasItem.abortOnFinish" type="java.lang.Boolean">false</con1:property>
