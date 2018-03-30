@@ -8,7 +8,7 @@
   <con:properties>
     <con:property>
       <con:name>Run_count</con:name>
-      <con:value>1</con:value>
+      <con:value>3</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>
