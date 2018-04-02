@@ -3,11 +3,9 @@
   <con:settings>
     <con:setting id="7d40b26c-2de2-4e85-92b2-c35aea6825e3fileName">manageRecipe</con:setting>
     <con:setting id="1ef4b938-669b-42b3-a56d-0d748a2f61cefileName">manageRecipe</con:setting>
-  <con:setting id="212f4f4c-dd27-4487-b456-f5f57ccae926fileName">manageRecipe</con:setting></con:settings>
+    <con:setting id="212f4f4c-dd27-4487-b456-f5f57ccae926fileName">manageRecipe</con:setting>
+  </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  
-  
-  
   <con:testStep type="restrequest" name="manageRecipe" id="fbfdae4f-4aea-418e-8480-6465ae467c28">
     <con:settings/>
     <con:config service="manageRecipe" resourcePath="/manageRecipe/WPR4BCKC4R37C" methodName="manageRecipe" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -88,7 +86,7 @@
         <con:assertion type="Valid HTTP Status Codes" id="1ad2db78-8928-4833-9ac7-bdf8d1bd58c2" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
-            <codes>200</codes>
+            <codes>200,409</codes>
           </con:configuration>
         </con:assertion>
         <con:credentials>
@@ -107,12 +105,13 @@
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-        <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  
-  
   <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>
