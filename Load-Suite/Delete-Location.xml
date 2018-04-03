@@ -19,7 +19,7 @@
         <con:assertion type="Valid HTTP Status Codes" id="1b9b679f-b889-4918-a463-b91dba33ed40" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
-            <codes>200,404</codes>
+            <codes>200,404,500</codes>
           </con:configuration>
         </con:assertion>
         <con:credentials>

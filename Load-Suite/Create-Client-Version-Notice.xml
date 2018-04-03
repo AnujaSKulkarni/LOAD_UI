@@ -3,12 +3,9 @@
   <con:settings>
     <con:setting id="bbd6ea6e-ad05-42e3-acf9-1ef167a4ab31fileName">Create-Client-Version-Notice</con:setting>
     <con:setting id="2ad61210-0173-4f8f-87f6-61317b76279ffileName">Create-Client-Version-Notice</con:setting>
-  <con:setting id="5960010b-f8dc-45d6-b2fc-9c4cf3733ed3fileName">Create-Client-Version-Notice</con:setting></con:settings>
+    <con:setting id="5960010b-f8dc-45d6-b2fc-9c4cf3733ed3fileName">Create-Client-Version-Notice</con:setting>
+  </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  
-  
-  
-  
   <con:testStep type="restrequest" name="Create Client Version Notice" id="4a0efa2c-dc9a-431d-b6a7-50bf6c4afe76">
     <con:settings/>
     <con:config service="Create Client Version Notice" resourcePath="/create_client_version_notice" methodName="Create Client Version Notice" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -29,38 +26,7 @@
         <con:assertion type="Valid HTTP Status Codes" id="e9c7852c-cdce-45b4-8921-2efa7d0118ee" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
-            <codes>200</codes>
-          </con:configuration>
-        </con:assertion>
-        <con:assertion type="MessageContentAssertion" id="0e9c9679-efca-4f6a-a4ae-5c6f7a84611a" name="Message Content Assertion">
-          <con:configuration xsi:type="con:MessageContentAssertion">
-            <con:elements>
-              <con:xpath>declare namespace ns1='https://api-test.whrcloud.com/api/v1/create_client_version_notice';
-//ns1:Response[1]/ns1:status[1]</con:xpath>
-              <con:element>status</con:element>
-              <con:type xsi:nil="true"/>
-              <con:operator>=</con:operator>
-              <con:enabled>true</con:enabled>
-              <con:expectedValue>Success</con:expectedValue>
-              <con:hasValue>false</con:hasValue>
-              <con:numberType>false</con:numberType>
-            </con:elements>
-            <con:elements>
-              <con:xpath>declare namespace ns1='https://api-test.whrcloud.com/api/v1/create_client_version_notice';
-//ns1:Response[1]/ns1:code[1]</con:xpath>
-              <con:element>code</con:element>
-              <con:type xsi:nil="true"/>
-              <con:operator>=</con:operator>
-              <con:enabled>true</con:enabled>
-              <con:expectedValue>200</con:expectedValue>
-              <con:hasValue>false</con:hasValue>
-              <con:numberType>false</con:numberType>
-            </con:elements>
-            <con:originalMessage><![CDATA[<Response xmlns="https://api-test.whrcloud.com/api/v1/create_client_version_notice">
-   <code>200</code>
-   <message>Client Version Notice Id : 166 Created Successfully</message>
-   <status>Success</status>
-</Response>]]></con:originalMessage>
+            <codes>200,500</codes>
           </con:configuration>
         </con:assertion>
         <con:credentials>
@@ -78,12 +44,13 @@
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-        <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  
-  
   <con:properties>
     <con:property>
       <con:name>Client_Version_ID</con:name>

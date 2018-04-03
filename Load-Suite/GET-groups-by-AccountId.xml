@@ -3,11 +3,9 @@
   <con:settings>
     <con:setting id="c7535df5-7286-4530-aef6-1144809d69e5fileName">GET-groups-by-AccountId</con:setting>
     <con:setting id="f8c74e38-5696-42ea-a3b4-f1bfa8d412ebfileName">GET-groups-by-AccountId</con:setting>
-  <con:setting id="48e9a9ae-20c4-411e-b3c1-3cc3f5fa36bbfileName">GET-groups-by-AccountId</con:setting></con:settings>
+    <con:setting id="48e9a9ae-20c4-411e-b3c1-3cc3f5fa36bbfileName">GET-groups-by-AccountId</con:setting>
+  </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  
-  
-  
   <con:testStep type="restrequest" name="GET groups by AccountId" id="5b8ccc65-99c3-4c4d-9b3d-d5fa6a9a1436">
     <con:settings/>
     <con:config service="GET groups by AccountId" resourcePath="/get_groups/${#Project#Account_ID_Load}" methodName="GET groups by AccountId" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -21,7 +19,7 @@
         <con:assertion type="Valid HTTP Status Codes" id="2c159535-e393-4db0-9927-bbf053df9246" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
-            <codes>200</codes>
+            <codes>200,500</codes>
           </con:configuration>
         </con:assertion>
         <con:credentials>
@@ -46,12 +44,13 @@
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-        <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  
-  
   <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>

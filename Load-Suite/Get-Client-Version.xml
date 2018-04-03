@@ -3,11 +3,9 @@
   <con:settings>
     <con:setting id="ed865af3-34f6-4539-a75c-731e57ce058cfileName">Get-Client-Version</con:setting>
     <con:setting id="520e852d-eff0-4c28-ae79-fcfd46d8cfb4fileName">Get-Client-Version</con:setting>
-  <con:setting id="833c8a2f-0147-4a72-8805-117e08ef35effileName">Get-Client-Version</con:setting></con:settings>
+    <con:setting id="833c8a2f-0147-4a72-8805-117e08ef35effileName">Get-Client-Version</con:setting>
+  </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  
-  
-  
   <con:testStep type="restrequest" name="Get Client Version" id="69af03c5-19ac-45e1-a79f-a4064f6ab8b3">
     <con:settings/>
     <con:config service="Get Client Version" resourcePath="/client_auth/client_version" methodName="Get Client Version" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -21,25 +19,7 @@
         <con:assertion type="Valid HTTP Status Codes" id="019d93b7-ced1-4c6e-a4a3-31106ede6f73" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
-            <codes>200</codes>
-          </con:configuration>
-        </con:assertion>
-        <con:assertion type="MessageContentAssertion" id="82213839-d20b-41a4-8d68-9561871c7bbb" name="Message Content Assertion">
-          <con:configuration xsi:type="con:MessageContentAssertion">
-            <con:elements>
-              <con:xpath>declare namespace ns1='https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/whirlpool-iot-qa/api/v1/client_auth/client_version';
-//ns1:Response[1]/ns1:status[1]</con:xpath>
-              <con:element>status</con:element>
-              <con:type xsi:nil="true"/>
-              <con:operator>=</con:operator>
-              <con:enabled>true</con:enabled>
-              <con:expectedValue>success</con:expectedValue>
-              <con:hasValue>false</con:hasValue>
-              <con:numberType>false</con:numberType>
-            </con:elements>
-            <con:originalMessage>&lt;Response xmlns="https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/whirlpool-iot-qa/api/v1/client_auth/client_version">
-   &lt;status>success&lt;/status>
-&lt;/Response></con:originalMessage>
+            <codes>200,500</codes>
           </con:configuration>
         </con:assertion>
         <con:credentials>
@@ -48,12 +28,18 @@
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:parameters>
-  <con:entry key="wp-client-appName" value="${#Project#Client_Version_ID_Name_AppName_Load}"/>
-  <con:entry key="wp-client-platform" value="${#Project#Client_Platform_Load}"/>
-  <con:entry key="wp-client-verion" value="${#Project#Client_Version_Load}"/>
-  <con:entry key="Content-Type" value="application/json"/>
-</con:parameters>
-        <con:parameterOrder><con:entry>Authorization</con:entry><con:entry>wp-client-appName</con:entry><con:entry>wp-client-verion</con:entry><con:entry>wp-client-platform</con:entry><con:entry>Content-Type</con:entry></con:parameterOrder>
+          <con:entry key="wp-client-appName" value="${#Project#Client_Version_ID_Name_AppName_Load}"/>
+          <con:entry key="wp-client-platform" value="${#Project#Client_Platform_Load}"/>
+          <con:entry key="wp-client-verion" value="${#Project#Client_Version_Load}"/>
+          <con:entry key="Content-Type" value="application/json"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>Authorization</con:entry>
+          <con:entry>wp-client-appName</con:entry>
+          <con:entry>wp-client-verion</con:entry>
+          <con:entry>wp-client-platform</con:entry>
+          <con:entry>Content-Type</con:entry>
+        </con:parameterOrder>
         <con:environmentSpec>
           <con:entry environmentId="1653fcad-25f1-42dc-b777-d850bb70a926">
             <con:authProfile>Inherit From Parent</con:authProfile>
@@ -67,12 +53,13 @@
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-        <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  
-  
   <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>

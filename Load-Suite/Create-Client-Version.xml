@@ -36,7 +36,7 @@ testRunner.testCase.setPropertyValue("Application", date)</script>
         <con:assertion type="Valid HTTP Status Codes" id="698194d7-a39e-49f3-8931-5c771036fa8f" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
-            <codes>200</codes>
+            <codes>200,500</codes>
           </con:configuration>
         </con:assertion>
         <con:credentials>

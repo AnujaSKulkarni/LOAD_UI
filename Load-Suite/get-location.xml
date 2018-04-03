@@ -3,14 +3,9 @@
   <con:settings>
     <con:setting id="6756c8db-584e-4b6f-9343-8307243d995efileName">get-location</con:setting>
     <con:setting id="93659f11-6cb7-4bb4-827f-730308750252fileName">get-location</con:setting>
-  <con:setting id="70ab6ffb-8ff1-46be-ac84-f08de1ed7e2afileName">get-location</con:setting></con:settings>
+    <con:setting id="70ab6ffb-8ff1-46be-ac84-f08de1ed7e2afileName">get-location</con:setting>
+  </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  
-  
-  
-  
-  
-  
   <con:testStep type="restrequest" name="get location" id="abc8062c-5394-48d4-8701-02fd4bbe9e63">
     <con:settings/>
     <con:config service="get location" resourcePath="/locations/location/${#Project#Location_ID_Load}" methodName="get location" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -24,7 +19,7 @@
         <con:assertion type="Valid HTTP Status Codes" id="6b1ada7d-cf0d-46ef-97fe-72bd20ff30f5" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
-            <codes>200</codes>
+            <codes>200,500</codes>
           </con:configuration>
         </con:assertion>
         <con:credentials>
@@ -67,13 +62,13 @@
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-        <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  
-  
-  
   <con:properties>
     <con:property>
       <con:name>Location_ID</con:name>
@@ -125,5 +120,8 @@
     <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
-  <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+    <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
 </con:testCase>

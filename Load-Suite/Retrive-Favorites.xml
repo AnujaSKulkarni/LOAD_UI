@@ -3,11 +3,9 @@
   <con:settings>
     <con:setting id="2384f7d5-da7e-40da-a21e-c659f23677f4fileName">Retrive-Favorites</con:setting>
     <con:setting id="e7bb70b7-a8d5-4fb9-9bc0-8d2ad2a35cbefileName">Retrive-Favorites</con:setting>
-  <con:setting id="251ff0f9-14b0-4213-bfd9-04db3508ac3bfileName">Retrive-Favorites</con:setting></con:settings>
+    <con:setting id="251ff0f9-14b0-4213-bfd9-04db3508ac3bfileName">Retrive-Favorites</con:setting>
+  </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  
-  
-  
   <con:testStep type="restrequest" name="Retrive Favorites" id="9a9870b5-af06-4b58-b1f9-d46332695b72">
     <con:settings/>
     <con:config service="Retrive Favorites" resourcePath="/account/favorites/Refrigerator123" methodName="Retrive Favorites" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -21,7 +19,7 @@
         <con:assertion type="Valid HTTP Status Codes" id="2297cb7f-2d1d-4b8b-b71b-fc3eed6d7f95" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
-            <codes>200</codes>
+            <codes>200,500</codes>
           </con:configuration>
         </con:assertion>
         <con:credentials>
@@ -37,12 +35,13 @@
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-        <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  
-  
   <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>

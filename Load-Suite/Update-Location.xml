@@ -61,7 +61,7 @@ testRunner.testCase.setPropertyValue("Location_Name", LocationName)</script>
         <con:assertion type="Valid HTTP Status Codes" id="982069ef-9638-47dc-85f6-a5e131af6f32" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
-            <codes>200</codes>
+            <codes>200,500</codes>
           </con:configuration>
         </con:assertion>
         <con:credentials>

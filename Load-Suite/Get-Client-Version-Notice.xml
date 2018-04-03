@@ -3,12 +3,9 @@
   <con:settings>
     <con:setting id="336405c9-8534-4ac3-8ec3-5a00414d5657fileName">Get-Client-Version-Notice</con:setting>
     <con:setting id="ffa9f5dc-81b7-486a-876a-d664a44e2e06fileName">Get-Client-Version-Notice</con:setting>
-  <con:setting id="fb35a400-390c-40a3-b79b-31fcdfe9ff76fileName">Get-Client-Version-Notice</con:setting></con:settings>
+    <con:setting id="fb35a400-390c-40a3-b79b-31fcdfe9ff76fileName">Get-Client-Version-Notice</con:setting>
+  </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  
-  
-  
-  
   <con:testStep type="restrequest" name="Get Client Version Notice" id="cb8af500-9f1d-4890-ba4d-1ea2e567d7c4">
     <con:settings/>
     <con:config service="Get Client Version Notice" resourcePath="/client_version_notices" methodName="Get Client Version Notice" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -22,16 +19,17 @@
         <con:assertion type="Valid HTTP Status Codes" id="22c01b23-4815-4c40-b24f-72c2e972a9ff" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
-            <codes>200</codes>
+            <codes>200,500</codes>
           </con:configuration>
         </con:assertion>
-        
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:parameters><entry key="wp-notices-ids" value="${#Project#Client_Version_Notice_ID_Load}" xmlns="http://eviware.com/soapui/config"/></con:parameters>
+        <con:parameters>
+          <entry key="wp-notices-ids" value="${#Project#Client_Version_Notice_ID_Load}" xmlns="http://eviware.com/soapui/config"/>
+        </con:parameters>
         <con:parameterOrder>
           <con:entry>Authorization</con:entry>
           <con:entry>wp-notices-ids</con:entry>
@@ -49,12 +47,13 @@
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-        <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  
-  
   <con:properties>
     <con:property>
       <con:name>Client_Version_Notice</con:name>

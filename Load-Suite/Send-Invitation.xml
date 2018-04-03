@@ -40,7 +40,7 @@ testRunner.testCase.setPropertyValue("Email_ID_string", Email_ID_string)</script
         <con:assertion type="Valid HTTP Status Codes" id="a5008a1e-e967-4d4d-99f6-7ffe9686992f" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
-            <codes>200</codes>
+            <codes>200,500</codes>
           </con:configuration>
         </con:assertion>
         <con:credentials>

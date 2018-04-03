@@ -38,7 +38,7 @@ testRunner.testCase.setPropertyValue("Group_Name_string", Email_ID_string)</scri
         <con:assertion type="Valid HTTP Status Codes" id="e7bc700e-8856-4628-aebd-2f3f7565d1a6" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
-            <codes>200</codes>
+            <codes>200,500</codes>
           </con:configuration>
         </con:assertion>
         <con:credentials>

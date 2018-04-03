@@ -3,11 +3,9 @@
   <con:settings>
     <con:setting id="389a2cec-fcf6-4732-8f16-57ca4c7ffebafileName">SetOptOutStatus</con:setting>
     <con:setting id="c7b9cc29-247b-46a8-8f45-3c5a470d7c59fileName">SetOptOutStatus</con:setting>
-  <con:setting id="bd52017f-fcee-4e99-94b5-feeb81f7efd2fileName">SetOptOutStatus</con:setting></con:settings>
+    <con:setting id="bd52017f-fcee-4e99-94b5-feeb81f7efd2fileName">SetOptOutStatus</con:setting>
+  </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  
-  
-  
   <con:testStep type="restrequest" name="SetOptOutStatus" id="a973ae1f-6a78-4ccf-a833-2e7ee6b9e769">
     <con:settings/>
     <con:config service="SetOptOutStatus" resourcePath="/OptOutStatus/true" methodName="SetOptOutStatus" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -21,7 +19,7 @@
         <con:assertion type="Valid HTTP Status Codes" id="623852fd-1011-45f9-aa65-b132c7d7c913" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
-            <codes>200</codes>
+            <codes>200,500</codes>
           </con:configuration>
         </con:assertion>
         <con:credentials>
@@ -40,12 +38,13 @@
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-        <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  
-  
   <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>

@@ -3,11 +3,9 @@
   <con:settings>
     <con:setting id="7f1c5ef9-6d40-4f70-bd66-8d00c04cc0e1fileName">Retrive-setting-favfill</con:setting>
     <con:setting id="063c3fe3-beeb-4e85-8abc-0b08962a1939fileName">Retrive-setting-favfill</con:setting>
-  <con:setting id="07cf3fd3-83f7-45d6-876c-52362aac3770fileName">Retrive-setting-favfill</con:setting></con:settings>
+    <con:setting id="07cf3fd3-83f7-45d6-876c-52362aac3770fileName">Retrive-setting-favfill</con:setting>
+  </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  
-  
-  
   <con:testStep type="restrequest" name="Retrive-setting-favfill" id="758c59eb-c0f5-45f8-8c33-679efe3fae16">
     <con:settings/>
     <con:config service="Retrive-setting-favfill" resourcePath="/account/favorites/Refrigerator123/entity/setting/id/favfill" methodName="Retrive-setting-favfill" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -21,7 +19,7 @@
         <con:assertion type="Valid HTTP Status Codes" id="c69c1f13-c6f9-4c45-8ae1-2a364baa28c5" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
-            <codes>200</codes>
+            <codes>200,500</codes>
           </con:configuration>
         </con:assertion>
         <con:credentials>
@@ -37,12 +35,13 @@
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-        <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  
-  
   <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>

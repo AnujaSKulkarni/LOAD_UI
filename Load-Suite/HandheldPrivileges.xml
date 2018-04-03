@@ -3,11 +3,9 @@
   <con:settings>
     <con:setting id="4fecfdda-e563-4845-ac85-3dcce875ebc9fileName">HandheldPrivileges</con:setting>
     <con:setting id="074e337b-0d6c-4bb7-a88c-3075144940e7fileName">HandheldPrivileges</con:setting>
-  <con:setting id="56731bfb-725f-48b5-a6e0-feb934c5ff3afileName">HandheldPrivileges</con:setting></con:settings>
+    <con:setting id="56731bfb-725f-48b5-a6e0-feb934c5ff3afileName">HandheldPrivileges</con:setting>
+  </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  
-  
-  
   <con:testStep type="restrequest" name="HandheldPrivileges" id="98938edd-5f47-4750-ac19-5a84e4b24a59">
     <con:settings/>
     <con:config service="HandheldPrivileges" resourcePath="/accounts/getHandheldPrivileges" methodName="HandheldPrivileges" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -21,7 +19,7 @@
         <con:assertion type="Valid HTTP Status Codes" id="cb9c4f3d-e054-408c-99ad-7dc1dcbea54a" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
-            <codes>200</codes>
+            <codes>200,500</codes>
           </con:configuration>
         </con:assertion>
         <con:credentials>
@@ -64,12 +62,13 @@
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-        <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  
-  
   <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>
@@ -107,5 +106,8 @@
     <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
-  <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+    <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
 </con:testCase>

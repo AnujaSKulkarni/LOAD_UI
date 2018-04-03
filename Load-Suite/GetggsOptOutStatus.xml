@@ -3,11 +3,9 @@
   <con:settings>
     <con:setting id="da33b27f-9b11-4c22-9998-91922b3f39acfileName">GetggsOptOutStatus</con:setting>
     <con:setting id="b417fa3f-e4a1-4ea1-86d7-dda1a1512206fileName">GetggsOptOutStatus</con:setting>
-  <con:setting id="082c469f-119d-427f-a2ec-7f9451ef727afileName">GetggsOptOutStatus</con:setting></con:settings>
+    <con:setting id="082c469f-119d-427f-a2ec-7f9451ef727afileName">GetggsOptOutStatus</con:setting>
+  </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  
-  
-  
   <con:testStep type="restrequest" name="GetggsOptOutStatus" id="8143f9b8-916e-4dd1-87c7-d98d08aece25">
     <con:settings/>
     <con:config service="GetggsOptOutStatus" resourcePath="/ggsOptOutStatus" methodName="GetggsOptOutStatus" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -21,7 +19,7 @@
         <con:assertion type="Valid HTTP Status Codes" id="4cf7e977-fd3a-44e0-bec3-f350e78d6914" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
-            <codes>200</codes>
+            <codes>200,500</codes>
           </con:configuration>
         </con:assertion>
         <con:credentials>
@@ -40,12 +38,13 @@
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-        <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  
-  
   <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>

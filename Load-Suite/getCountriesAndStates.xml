@@ -3,11 +3,9 @@
   <con:settings>
     <con:setting id="0e200ef0-7d92-4cd1-a6bf-9ba831409785fileName">getCountriesAndStates</con:setting>
     <con:setting id="9b029463-83a6-4776-b8cc-b22107824aabfileName">getCountriesAndStates</con:setting>
-  <con:setting id="7c753791-7710-42b4-a744-5a19046ab2ddfileName">getCountriesAndStates</con:setting></con:settings>
+    <con:setting id="7c753791-7710-42b4-a744-5a19046ab2ddfileName">getCountriesAndStates</con:setting>
+  </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  
-  
-  
   <con:testStep type="restrequest" name="getCountriesAndStates" id="90f40abd-fbb2-41dc-a3b8-cfe1e60573a2">
     <con:settings/>
     <con:config service="getCountriesAndStates" resourcePath="/client_auth/countriesAndStates" methodName="getCountriesAndStates" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -18,7 +16,13 @@
         <con:endpoint>${API-Connect}</con:endpoint>
         <con:request/>
         <con:originalUri>https://api-stg.whrcloud.com/api/v1/client_auth/countriesAndStates</con:originalUri>
-        <con:assertion type="Valid HTTP Status Codes" id="6a87ae25-f043-4b53-a774-b25aa315c4f5" name="Valid HTTP Status Codes"><con:settings/><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials>
+        <con:assertion type="Valid HTTP Status Codes" id="6a87ae25-f043-4b53-a774-b25aa315c4f5" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200,500</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
         </con:credentials>
@@ -29,11 +33,14 @@
           <con:entry>wp-client-region</con:entry>
           <con:entry>wp-client-brand</con:entry>
         </con:parameterOrder>
-      <con:environmentSpec><con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:restRequest>
+        <con:environmentSpec>
+          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
     </con:config>
   </con:testStep>
-  
-  
   <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>

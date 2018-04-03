@@ -3,14 +3,9 @@
   <con:settings>
     <con:setting id="142faeec-38e8-4777-8542-18dd120eef17fileName">Get-Account</con:setting>
     <con:setting id="bc722c86-b92b-480c-bfb9-0987a2cb1da3fileName">Get-Account</con:setting>
-  <con:setting id="c9122fee-9992-4e6b-9b27-f84dbcb6314ffileName">Get-Account</con:setting></con:settings>
+    <con:setting id="c9122fee-9992-4e6b-9b27-f84dbcb6314ffileName">Get-Account</con:setting>
+  </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  
-  
-  
-  
-  
-  
   <con:testStep type="restrequest" name="Get Account" id="7bb222dc-d987-442f-8349-55f07e1fe5c2">
     <con:settings/>
     <con:config service="Get Account" resourcePath="/account/${#Project#Account_ID_Load}" methodName="Get Account" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -24,7 +19,7 @@
         <con:assertion type="Valid HTTP Status Codes" id="538ada60-0ee9-4912-bea4-c14e9bdc4338" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
-            <codes>200</codes>
+            <codes>200,500</codes>
           </con:configuration>
         </con:assertion>
         <con:credentials>
@@ -67,13 +62,13 @@
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-        <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  
-  
-  
   <con:properties>
     <con:property>
       <con:name>Account_ID</con:name>
@@ -126,5 +121,8 @@
     <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
-  <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+    <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
 </con:testCase>

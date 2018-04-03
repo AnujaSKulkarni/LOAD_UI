@@ -3,11 +3,9 @@
   <con:settings>
     <con:setting id="9a3e9b3b-ccad-4e5d-acba-a346e65b776ffileName">Retrive-CycleById</con:setting>
     <con:setting id="ea4f0400-5e50-4036-aee9-0b8e4e862971fileName">Retrive-CycleById</con:setting>
-  <con:setting id="11e64072-5ce8-4018-8de2-ae672abadb1dfileName">Retrive-CycleById</con:setting></con:settings>
+    <con:setting id="11e64072-5ce8-4018-8de2-ae672abadb1dfileName">Retrive-CycleById</con:setting>
+  </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  
-  
-  
   <con:testStep type="restrequest" name="Retrive-CycleById" id="8a21ee5e-3f39-4fdb-959a-97daf9ae3482">
     <con:settings/>
     <con:config service="Retrive-CycleById" resourcePath="/account/favorites/Refrigerator123/entity/cycle/id/Refrigerator123" methodName="Retrive-CycleById" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -21,7 +19,7 @@
         <con:assertion type="Valid HTTP Status Codes" id="9c549fd5-c904-44b9-a0e0-b0c13a1288ab" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
-            <codes>200</codes>
+            <codes>200,500</codes>
           </con:configuration>
         </con:assertion>
         <con:credentials>
@@ -37,12 +35,13 @@
           <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-        <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec>
+          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  
-  
   <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>
