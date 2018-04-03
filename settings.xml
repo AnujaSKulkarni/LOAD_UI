@@ -2125,19 +2125,19 @@
   </con:environment>
   <con:environment id="9fa788db-b731-492d-9afc-d02cd932f15a" name="Pre-Prod">
     <con:service type="REST" name="Create Account">
-      <con:endpoint authProfile="No Authorization" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">https://accountservice.wcloud-pre-prod.us-south.containers.mybluemix.net/api/v1</con:endpoint>
+      <con:endpoint authProfile="No Authorization" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="Get All Accounts">
-      <con:endpoint authProfile="No Authorization" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">https://accountservice.wcloud-pre-prod.us-south.containers.mybluemix.net/api/v1</con:endpoint>
+      <con:endpoint authProfile="No Authorization" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="Get Account">
-      <con:endpoint authProfile="No Authorization" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">https://accountservice.wcloud-pre-prod.us-south.containers.mybluemix.net/api/v1</con:endpoint>
+      <con:endpoint authProfile="No Authorization" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="Update Account">
-      <con:endpoint authProfile="No Authorization" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">https://accountservice.wcloud-pre-prod.us-south.containers.mybluemix.net/api/v1</con:endpoint>
+      <con:endpoint authProfile="No Authorization" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="Delete Account">
-      <con:endpoint authProfile="No Authorization" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">https://accountservice.wcloud-pre-prod.us-south.containers.mybluemix.net/api/v1</con:endpoint>
+      <con:endpoint authProfile="No Authorization" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="Account Email confirmation">
       <con:endpoint authProfile="No Authorization" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${API-Connect}</con:endpoint>
@@ -2155,7 +2155,7 @@
       <con:endpoint authProfile="No Authorization" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="forgotPwd">
-      <con:endpoint authProfile="No Authorization" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">https://accountservice.wcloud-pre-prod.us-south.containers.mybluemix.net/api/v1</con:endpoint>
+      <con:endpoint authProfile="No Authorization" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="get all appliances dashDB">
       <con:endpoint authProfile="No Authorization" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${API-Connect}</con:endpoint>
@@ -2680,7 +2680,7 @@
     </con:property>
     <con:property>
       <con:name>API-Connect</con:name>
-      <con:value>https://api.us.apiconnect.ibmcloud.com/whirlpool--syntel--wcloud-wcloud-residential-pre-prod/residential-pre-prod/api/v1</con:value>
+      <con:value>https://api-pre-prod.whrcloud.com/api/v1</con:value>
     </con:property>
     <con:property>
       <con:name>Environment_Name</con:name>
@@ -2688,7 +2688,7 @@
     </con:property>
     <con:property>
       <con:name>Secure_auth</con:name>
-      <con:value>https://api.us.apiconnect.ibmcloud.com/whirlpool--syntel--wcloud-wcloud-residential-pre-prod/residential-pre-prod</con:value>
+      <con:value>https://api-pre-prod.whrcloud.com</con:value>
     </con:property>
     <con:property>
       <con:name>ADRS</con:name>
