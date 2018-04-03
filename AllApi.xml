@@ -59,7 +59,7 @@
           <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
           <con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">true</con1:property>
           <con1:property propagates="true" key="limitVU" type="java.lang.Long">9223372036854775807</con1:property>
-          <con1:property propagates="true" key="baseVU" type="java.lang.Long">2</con1:property>
+          <con1:property propagates="true" key="baseVU" type="java.lang.Long">1</con1:property>
           <con1:property propagates="true" key="peakVU" type="java.lang.Long">100</con1:property>
           <con1:property propagates="true" key="rampUpDuration" type="java.lang.Long">200</con1:property>
           <con1:property propagates="true" key="rampDownDuration" type="java.lang.Long">200</con1:property>

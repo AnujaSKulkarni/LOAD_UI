@@ -6,6 +6,12 @@
     <con:setting id="94c4ac45-990e-4d4b-bcf1-3e216a004910fileName">update--setting</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="delay" name="WaitTime" id="697afc12-2ed9-4611-a2bb-303fd9819836">
+    <con:settings/>
+    <con:config>
+      <delay>1000</delay>
+    </con:config>
+  </con:testStep>
   <con:testStep type="restrequest" name="update -setting" id="c4f19786-9bcd-43ad-9a63-07c125ca1d82">
     <con:settings/>
     <con:config service="create or update -setting" resourcePath="/account/favorites/entity/setting" methodName="create or update -setting" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -42,7 +48,7 @@
         <con:assertion type="Valid HTTP Status Codes" id="3f4dc77a-a91c-41bd-89c5-0dab776ad3b2" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
-            <codes>200,500</codes>
+            <codes>200,500,404</codes>
           </con:configuration>
         </con:assertion>
         <con:credentials>
@@ -93,6 +99,11 @@
   </con:breakPoints>
   <con:breakPoints>
     <con:testStepId>fede0b53-6623-4d64-9ffd-8979a72ce9ab</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>697afc12-2ed9-4611-a2bb-303fd9819836</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
