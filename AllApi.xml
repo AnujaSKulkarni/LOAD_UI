@@ -18,12 +18,12 @@
       <con1:property propagates="true" key="ModelItem.reportFolder" type="java.lang.String"/>
       <con1:property propagates="true" key="ModelItem.reportFormat" type="java.lang.String"/>
       <con1:property propagates="true" key="Temporary project" type="java.lang.String"/>
-      <con1:property propagates="true" key="ModelItem.rate" type="java.lang.Long">500</con1:property>
+      <con1:property propagates="true" key="ModelItem.rate" type="java.lang.Long">200</con1:property>
       <con1:property propagates="true" key="ModelItem.loadDistributionType" type="com.smartbear.load.facade.LoadDistributionType">Relative</con1:property>
       <con1:property propagates="true" key="ModelItem.remoteMode" type="java.lang.String"/>
     </con1:properties>
     <con1:attributes>
-      <con1:property key="limits">Time=2700;</con1:property>
+      <con1:property key="limits">Time=1800;</con1:property>
     </con1:attributes>
     <con1:addons>
       <con1:addon type="com.eviware.loadui.pro.api.monitoring.ServerAddon" id="f4109cff-9cdd-4524-8541-ff90e83f3eed">
@@ -58,7 +58,7 @@
         <con1:property propagates="true" key="ModelItem.samplerOutputLevel" type="com.eviware.loadui.api.component.SoapUISamplerOutputLevel">TestCaseAndAllTestSteps</con1:property>
       </con1:properties>
       <con1:attributes>
-        <con1:property key="limits">Time=2700;</con1:property>
+        <con1:property key="limits">Time=1800;</con1:property>
       </con1:attributes>
       <con1:addons/>
       <con1:component type="com.eviware.loadui.impl.component.IntervalComponent" label="Interval 1" id="ff6b6643-0951-45d3-af98-32c97dbc4532" category="Scheduler">
@@ -951,9 +951,9 @@
           <con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">true</con1:property>
           <con1:property propagates="true" key="limitVU" type="java.lang.Long">9223372036854775807</con1:property>
           <con1:property propagates="true" key="baseVU" type="java.lang.Long">2</con1:property>
-          <con1:property propagates="true" key="peakVU" type="java.lang.Long">500</con1:property>
-          <con1:property propagates="true" key="rampUpDuration" type="java.lang.Long">500</con1:property>
-          <con1:property propagates="true" key="rampDownDuration" type="java.lang.Long">500</con1:property>
+          <con1:property propagates="true" key="peakVU" type="java.lang.Long">200</con1:property>
+          <con1:property propagates="true" key="rampUpDuration" type="java.lang.Long">400</con1:property>
+          <con1:property propagates="true" key="rampDownDuration" type="java.lang.Long">400</con1:property>
           <con1:property propagates="true" key="peakDuration" type="java.lang.Long">600</con1:property>
           <con1:property propagates="true" key="waitTime" type="java.lang.Long">1000</con1:property>
         </con1:properties>

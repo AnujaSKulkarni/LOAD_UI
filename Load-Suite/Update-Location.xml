@@ -9,7 +9,7 @@
   <con:testStep type="delay" name="Wait Time" id="7814515b-88aa-4568-84ba-939cb630abc0">
     <con:settings/>
     <con:config>
-      <delay>2000</delay>
+      <delay>500</delay>
     </con:config>
   </con:testStep>
   <con:testStep type="groovy" name="Test_Data_Setup" id="e722e781-f47b-4da2-b074-bf012d5a11b2">

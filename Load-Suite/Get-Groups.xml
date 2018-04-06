@@ -9,7 +9,7 @@
   <con:testStep type="delay" name="Wait Time" id="5a5d4a4a-e1f5-48b4-a5b9-709ec7bc8962">
     <con:settings/>
     <con:config>
-      <delay>1000</delay>
+      <delay>500</delay>
     </con:config>
   </con:testStep>
   <con:testStep type="restrequest" name="Get Groups" id="0c037f62-eb32-4b39-bee5-05355f827d57">

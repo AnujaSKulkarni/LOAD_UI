@@ -9,7 +9,7 @@
   <con:testStep type="delay" name="WaitTime" id="11c2175d-505b-40e9-a2a8-35f19b022ee1">
     <con:settings/>
     <con:config>
-      <delay>1000</delay>
+      <delay>500</delay>
     </con:config>
   </con:testStep>
   <con:testStep type="restrequest" name="create-setting" id="acfe1f80-254f-40e5-b06d-3822a864ad08">
