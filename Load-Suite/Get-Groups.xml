@@ -6,6 +6,12 @@
     <con:setting id="760dd167-6cdf-47cf-80d5-a1702c142e98fileName">Get-Groups</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="delay" name="Wait Time" id="5a5d4a4a-e1f5-48b4-a5b9-709ec7bc8962">
+    <con:settings/>
+    <con:config>
+      <delay>1000</delay>
+    </con:config>
+  </con:testStep>
   <con:testStep type="restrequest" name="Get Groups" id="0c037f62-eb32-4b39-bee5-05355f827d57">
     <con:settings/>
     <con:config service="Get Groups" resourcePath="/get_groups/${#Project#Group_ID_Load}" methodName="Get Groups" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -86,6 +92,11 @@
   </con:breakPoints>
   <con:breakPoints>
     <con:testStepId>e0e8ad6b-c485-4ad1-a60c-851c99186d44</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>5a5d4a4a-e1f5-48b4-a5b9-709ec7bc8962</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>

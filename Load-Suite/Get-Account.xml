@@ -6,6 +6,12 @@
     <con:setting id="c9122fee-9992-4e6b-9b27-f84dbcb6314ffileName">Get-Account</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="delay" name="Wait Time" id="6d408c50-1335-4990-b4f9-6d948170eb61">
+    <con:settings/>
+    <con:config>
+      <delay>1000</delay>
+    </con:config>
+  </con:testStep>
   <con:testStep type="restrequest" name="Get Account" id="7bb222dc-d987-442f-8349-55f07e1fe5c2">
     <con:settings/>
     <con:config service="Get Account" resourcePath="/account/${#Project#Account_ID_Load}" methodName="Get Account" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -93,6 +99,11 @@
   </con:breakPoints>
   <con:breakPoints>
     <con:testStepId>4cb791bc-1005-4525-aaf3-fcb2f4a16c22</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>6d408c50-1335-4990-b4f9-6d948170eb61</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
