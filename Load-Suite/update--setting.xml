@@ -6,7 +6,7 @@
     <con:setting id="94c4ac45-990e-4d4b-bcf1-3e216a004910fileName">update--setting</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="delay" name="WaitTime" id="697afc12-2ed9-4611-a2bb-303fd9819836">
+  <con:testStep type="delay" name="WaitTime" id="697afc12-2ed9-4611-a2bb-303fd9819836" disabled="true">
     <con:settings/>
     <con:config>
       <delay>500</delay>

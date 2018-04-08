@@ -6,7 +6,7 @@
     <con:setting id="48e9a9ae-20c4-411e-b3c1-3cc3f5fa36bbfileName">GET-groups-by-AccountId</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="delay" name="Wait Time" id="ccc4c9e8-7b2f-4aff-bffc-79091b84297d">
+  <con:testStep type="delay" name="Wait Time" id="ccc4c9e8-7b2f-4aff-bffc-79091b84297d" disabled="true">
     <con:settings/>
     <con:config>
       <delay>500</delay>

@@ -6,7 +6,7 @@
     <con:setting id="6b41f7be-750f-43d5-b3d4-9f8bac900797fileName">Update-Location</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="delay" name="Wait Time" id="7814515b-88aa-4568-84ba-939cb630abc0">
+  <con:testStep type="delay" name="Wait Time" id="7814515b-88aa-4568-84ba-939cb630abc0" disabled="true">
     <con:settings/>
     <con:config>
       <delay>500</delay>

@@ -6,7 +6,7 @@
     <con:setting id="c9122fee-9992-4e6b-9b27-f84dbcb6314ffileName">Get-Account</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="delay" name="Wait Time" id="6d408c50-1335-4990-b4f9-6d948170eb61">
+  <con:testStep type="delay" name="Wait Time" id="6d408c50-1335-4990-b4f9-6d948170eb61" disabled="true">
     <con:settings/>
     <con:config>
       <delay>500</delay>

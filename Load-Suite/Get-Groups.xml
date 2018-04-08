@@ -6,7 +6,7 @@
     <con:setting id="760dd167-6cdf-47cf-80d5-a1702c142e98fileName">Get-Groups</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="delay" name="Wait Time" id="5a5d4a4a-e1f5-48b4-a5b9-709ec7bc8962">
+  <con:testStep type="delay" name="Wait Time" id="5a5d4a4a-e1f5-48b4-a5b9-709ec7bc8962" disabled="true">
     <con:settings/>
     <con:config>
       <delay>500</delay>
