@@ -106,11 +106,11 @@ testRunner.testCase.setPropertyValue("Email_ID_string", Email_ID_string)</script
     </con:property>
     <con:property>
       <con:name>Email_ID</con:name>
-      <con:value>"INVITATION_TUE_APR_03_12_19_54_IST_20183157640@MAILINATOR.COM"</con:value>
+      <con:value>"INVITATION_TUE_APR_03_15_04_14_IST_2018702247@MAILINATOR.COM"</con:value>
     </con:property>
     <con:property>
       <con:name>Email_ID_string</con:name>
-      <con:value>INVITATION_TUE_APR_03_12_19_54_IST_20183157640@MAILINATOR.COM</con:value>
+      <con:value>INVITATION_TUE_APR_03_15_04_14_IST_2018702247@MAILINATOR.COM</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>
