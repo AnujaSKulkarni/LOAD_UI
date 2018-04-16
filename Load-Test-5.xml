@@ -43,36 +43,14 @@
       <con1:property propagates="true" key="ModelItem.reportFolder" type="java.lang.String"/>
       <con1:property propagates="true" key="ModelItem.reportFormat" type="java.lang.String"/>
       <con1:property propagates="true" key="Temporary project" type="java.lang.String"/>
-      <con1:property propagates="true" key="ModelItem.rate" type="java.lang.Long">1500</con1:property>
+      <con1:property propagates="true" key="ModelItem.rate" type="java.lang.Long">200</con1:property>
       <con1:property propagates="true" key="ModelItem.loadDistributionType" type="com.smartbear.load.facade.LoadDistributionType">Equal</con1:property>
-      <con1:property propagates="true" key="ModelItem.remoteMode" type="java.lang.String"/>
+      <con1:property propagates="true" key="ModelItem.remoteMode" type="java.lang.String">LOCAL</con1:property>
     </con1:properties>
     <con1:attributes>
-      <con1:property key="limits">Time=1500;</con1:property>
+      <con1:property key="limits">Time=600;</con1:property>
     </con1:attributes>
-    <con1:addons>
-      <con1:addon type="com.eviware.loadui.pro.api.monitoring.ServerAddon" id="639be3ee-396c-4a4e-b995-b37ad8322e43">
-        <con1:properties>
-          <con1:property propagates="false" key="ServerItem.host" type="java.lang.String">SYNGDCDL0165</con1:property>
-          <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
-        </con1:properties>
-        <con1:attributes>
-          <con1:property key="label">My server</con1:property>
-        </con1:attributes>
-        <con1:addons>
-          <con1:addon type="monitor" id="3c393a8c-315c-4a08-8c94-69844261c6b9">
-            <con1:properties>
-              <con1:property propagates="true" key="_storedProperties[typeperf]" type="java.lang.String">563:9:Processor525:14:Interrupts/sec16:java.lang.Double11:% User Time16:java.lang.Double11:% Idle Time16:java.lang.Double8:DPC Rate16:java.lang.Double9:% C2 Time16:java.lang.Double18:C2 Transitions/sec16:java.lang.Double16:% Interrupt Time16:java.lang.Double16:% Processor Time16:java.lang.Double15:DPCs Queued/sec16:java.lang.Double18:C1 Transitions/sec16:java.lang.Double9:% C1 Time16:java.lang.Double17:% Privileged Time16:java.lang.Double10:% DPC Time16:java.lang.Double18:C3 Transitions/sec16:java.lang.Double9:% C3 Time16:java.lang.Double20:1:01:11:21:36:_Total962:11:LogicalDisk925:19:Disk Read Bytes/sec16:java.lang.Double28:Avg. Disk Write Queue Length16:java.lang.Double20:Disk Write Bytes/sec16:java.lang.Double25:Current Disk Queue Length16:java.lang.Double19:Avg. Disk sec/Write16:java.lang.Double11:% Idle Time16:java.lang.Double22:Avg. Disk Queue Length16:java.lang.Double16:% Disk Read Time16:java.lang.Double11:% Disk Time16:java.lang.Double24:Avg. Disk Bytes/Transfer16:java.lang.Double17:% Disk Write Time16:java.lang.Double14:Free Megabytes16:java.lang.Double12:Split IO/Sec16:java.lang.Double15:Disk Writes/sec16:java.lang.Double18:Avg. Disk sec/Read16:java.lang.Double14:Disk Bytes/sec16:java.lang.Double12:% Free Space16:java.lang.Double14:Disk Reads/sec16:java.lang.Double18:Disk Transfers/sec16:java.lang.Double21:Avg. Disk Bytes/Write16:java.lang.Double27:Avg. Disk Read Queue Length16:java.lang.Double22:Avg. Disk sec/Transfer16:java.lang.Double20:Avg. Disk Bytes/Read16:java.lang.Double16:2:C:2:D:6:_Total1564:6:Memory1543:24:Modified Page List Bytes16:java.lang.Double15:Pages Input/sec16:java.lang.Double16:Pages Output/sec16:java.lang.Double35:Standby Cache Normal Priority Bytes16:java.lang.Double15:Page Writes/sec16:java.lang.Double16:Available KBytes16:java.lang.Double19:Pool Nonpaged Bytes16:java.lang.Double25:Pool Paged Resident Bytes16:java.lang.Double15:Committed Bytes16:java.lang.Double16:Write Copies/sec16:java.lang.Double16:Available MBytes16:java.lang.Double21:Transition Faults/sec16:java.lang.Double16:Cache Faults/sec16:java.lang.Double24:% Committed Bytes In Use16:java.lang.Double17:Pool Paged Allocs16:java.lang.Double23:System Code Total Bytes16:java.lang.Double27:System Cache Resident Bytes16:java.lang.Double25:System Driver Total Bytes16:java.lang.Double11:Cache Bytes16:java.lang.Double44:Long-Term Average Standby Cache Lifetime (s)16:java.lang.Double24:Standby Cache Core Bytes16:java.lang.Double30:Free System Page Table Entries16:java.lang.Double15:Available Bytes16:java.lang.Double12:Commit Limit16:java.lang.Double14:Page Reads/sec16:java.lang.Double15:Page Faults/sec16:java.lang.Double26:System Code Resident Bytes16:java.lang.Double16:Pool Paged Bytes16:java.lang.Double28:System Driver Resident Bytes16:java.lang.Double22:Demand Zero Faults/sec16:java.lang.Double20:Pool Nonpaged Allocs16:java.lang.Double27:Standby Cache Reserve Bytes16:java.lang.Double16:Cache Bytes Peak16:java.lang.Double9:Pages/sec16:java.lang.Double31:Transition Pages RePurposed/sec16:java.lang.Double27:Free &amp; Zero Page List Bytes16:java.lang.Double6:4:main894:12:PhysicalDisk855:19:Disk Read Bytes/sec16:java.lang.Double28:Avg. Disk Write Queue Length16:java.lang.Double20:Disk Write Bytes/sec16:java.lang.Double25:Current Disk Queue Length16:java.lang.Double19:Avg. Disk sec/Write16:java.lang.Double11:% Idle Time16:java.lang.Double22:Avg. Disk Queue Length16:java.lang.Double16:% Disk Read Time16:java.lang.Double11:% Disk Time16:java.lang.Double24:Avg. Disk Bytes/Transfer16:java.lang.Double17:% Disk Write Time16:java.lang.Double12:Split IO/Sec16:java.lang.Double15:Disk Writes/sec16:java.lang.Double18:Avg. Disk sec/Read16:java.lang.Double14:Disk Bytes/sec16:java.lang.Double14:Disk Reads/sec16:java.lang.Double18:Disk Transfers/sec16:java.lang.Double21:Avg. Disk Bytes/Write16:java.lang.Double27:Avg. Disk Read Queue Length16:java.lang.Double22:Avg. Disk sec/Transfer16:java.lang.Double20:Avg. Disk Bytes/Read16:java.lang.Double17:7:0 C: D:6:_Total1110:17:Network Interface973:24:Packets Received Unknown16:java.lang.Double22:TCP RSC Exceptions/sec16:java.lang.Double27:TCP RSC Average Packet Size16:java.lang.Double20:Packets Received/sec16:java.lang.Double32:Packets Received Non-Unicast/sec16:java.lang.Double26:TCP Active RSC Connections16:java.lang.Double16:Packets Sent/sec16:java.lang.Double23:Packets Outbound Errors16:java.lang.Double23:Packets Received Errors16:java.lang.Double14:Bytes Sent/sec16:java.lang.Double19:Output Queue Length16:java.lang.Double26:Packets Received Discarded16:java.lang.Double24:Packets Sent Unicast/sec16:java.lang.Double29:TCP RSC Coalesced Packets/sec16:java.lang.Double15:Bytes Total/sec16:java.lang.Double26:Packets Outbound Discarded16:java.lang.Double21:Offloaded Connections16:java.lang.Double28:Packets Received Unicast/sec16:java.lang.Double28:Packets Sent Non-Unicast/sec16:java.lang.Double11:Packets/sec16:java.lang.Double18:Bytes Received/sec16:java.lang.Double17:Current Bandwidth16:java.lang.Double109:40:Intel[R] Ethernet Connection [3] I218-LM35:Intel[R] Dual Band Wireless-AC 726525:Local Area Connection* 12731:6:System711:20:Context Switches/sec16:java.lang.Double14:System Up Time16:java.lang.Double27:File Control Operations/sec16:java.lang.Double22:Processor Queue Length16:java.lang.Double9:Processes16:java.lang.Double19:File Read Bytes/sec16:java.lang.Double24:File Data Operations/sec16:java.lang.Double7:Threads16:java.lang.Double23:% Registry Quota In Use16:java.lang.Double24:Exception Dispatches/sec16:java.lang.Double24:File Read Operations/sec16:java.lang.Double25:File Write Operations/sec16:java.lang.Double20:File Write Bytes/sec16:java.lang.Double20:Alignment Fixups/sec16:java.lang.Double22:File Control Bytes/sec16:java.lang.Double16:System Calls/sec16:java.lang.Double23:Floating Emulations/sec16:java.lang.Double6:4:main112:11:Paging File62:12:% Usage Peak16:java.lang.Double7:% Usage16:java.lang.Double30:19:\??\C:\pagefile.sys6:_Total</con1:property>
-              <con1:property propagates="true" key="monitorName" type="java.lang.String">My monitor</con1:property>
-            </con1:properties>
-            <con1:attributes>
-              <con1:property key="_type">Windows</con1:property>
-            </con1:attributes>
-            <con1:addons/>
-          </con1:addon>
-        </con1:addons>
-      </con1:addon>
-    </con1:addons>
+    <con1:addons></con1:addons>
     <con1:scene label="New Scenario" id="353653b4-6f9f-4760-a742-c370a0a39153" version="1132">
       <con1:properties>
         <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
@@ -83,7 +61,7 @@
         <con1:property propagates="true" key="ModelItem.samplerOutputLevel" type="com.eviware.loadui.api.component.SoapUISamplerOutputLevel">TestCaseAndAllTestSteps</con1:property>
       </con1:properties>
       <con1:attributes>
-        <con1:property key="limits">Time=1500;</con1:property>
+        <con1:property key="limits">Time=600;</con1:property>
       </con1:attributes>
       <con1:addons/>
       <con1:component type="com.eviware.loadui.impl.component.IntervalComponent" label="Interval 1" id="00d77f49-e1d6-4a19-a1e0-fed624494cbb" category="Scheduler">
@@ -365,23 +343,6 @@
         </con1:attributes>
         <con1:addons/>
       </con1:component>
-      <con1:component type="com.eviware.loadui.impl.component.generators.RampSequenceVU" label="Ramp Sequence (VU) 1" id="5a0c3c8a-355c-4123-8e31-be9949d21fbf" category="Generators">
-        <con1:properties>
-          <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
-          <con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">true</con1:property>
-          <con1:property propagates="true" key="limitVU" type="java.lang.Long">9223372036854775807</con1:property>
-          <con1:property propagates="true" key="baseVU" type="java.lang.Long">1</con1:property>
-          <con1:property propagates="true" key="peakVU" type="java.lang.Long">1500</con1:property>
-          <con1:property propagates="true" key="rampUpDuration" type="java.lang.Long">1200</con1:property>
-          <con1:property propagates="true" key="rampDownDuration" type="java.lang.Long">1200</con1:property>
-          <con1:property propagates="true" key="peakDuration" type="java.lang.Long">300</con1:property>
-          <con1:property propagates="true" key="waitTime" type="java.lang.Long">1000</con1:property>
-        </con1:properties>
-        <con1:attributes>
-          <con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Ramp Sequence (VU)</con1:property>
-        </con1:attributes>
-        <con1:addons/>
-      </con1:component>
       <con1:component type="com.eviware.loadui.components.soapui.SoapUISamplerComponent" label="Load Suite:forgotPwd" id="88be932e-34f2-4c71-8283-675b57a953e2" category="Runners">
         <con1:properties>
           <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
@@ -602,8 +563,25 @@
         </con1:attributes>
         <con1:addons/>
       </con1:component>
-      <con1:connection outputTerminalId="00d77f49-e1d6-4a19-a1e0-fed624494cbb/outgoingTerminal" inputTerminalId="5a0c3c8a-355c-4123-8e31-be9949d21fbf/stateTerminal"/>
-      <con1:connection outputTerminalId="5a0c3c8a-355c-4123-8e31-be9949d21fbf/triggerTerminal" inputTerminalId="64ae033a-ccfd-47d4-acfa-670a46521192/triggerTerminal"/>
+      <con1:component type="com.eviware.loadui.impl.component.generators.RampSequenceVU" label="Ramp Sequence (VU) 1" id="2d0c1db6-4bf2-4f87-b17f-7d30bca40c77" category="Generators">
+        <con1:properties>
+          <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
+          <con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">true</con1:property>
+          <con1:property propagates="true" key="limitVU" type="java.lang.Long">9223372036854775807</con1:property>
+          <con1:property propagates="true" key="baseVU" type="java.lang.Long">1</con1:property>
+          <con1:property propagates="true" key="peakVU" type="java.lang.Long">200</con1:property>
+          <con1:property propagates="true" key="rampUpDuration" type="java.lang.Long">120</con1:property>
+          <con1:property propagates="true" key="rampDownDuration" type="java.lang.Long">120</con1:property>
+          <con1:property propagates="true" key="peakDuration" type="java.lang.Long">360</con1:property>
+          <con1:property propagates="true" key="waitTime" type="java.lang.Long">1000</con1:property>
+        </con1:properties>
+        <con1:attributes>
+          <con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Ramp Sequence (VU)</con1:property>
+        </con1:attributes>
+        <con1:addons/>
+      </con1:component>
+      <con1:connection outputTerminalId="00d77f49-e1d6-4a19-a1e0-fed624494cbb/outgoingTerminal" inputTerminalId="2d0c1db6-4bf2-4f87-b17f-7d30bca40c77/stateTerminal"/>
+      <con1:connection outputTerminalId="2d0c1db6-4bf2-4f87-b17f-7d30bca40c77/triggerTerminal" inputTerminalId="64ae033a-ccfd-47d4-acfa-670a46521192/triggerTerminal"/>
       <con1:connection outputTerminalId="64ae033a-ccfd-47d4-acfa-670a46521192/runningTerminal" inputTerminalId="4a026a75-3b83-4743-b488-3e8a8682c51d/triggerTerminal"/>
       <con1:connection outputTerminalId="4a026a75-3b83-4743-b488-3e8a8682c51d/runningTerminal" inputTerminalId="e6c2048d-b0a4-4b64-8c68-77100a53664f/triggerTerminal"/>
       <con1:connection outputTerminalId="e6c2048d-b0a4-4b64-8c68-77100a53664f/runningTerminal" inputTerminalId="c0a35d51-85c4-4ef1-bd51-14496fd9d438/triggerTerminal"/>
@@ -625,16 +603,11 @@
       <con1:connection outputTerminalId="5a6fb2da-d14e-40f8-a569-e03441fa1fda/runningTerminal" inputTerminalId="38b352ec-ef17-4131-a405-ba3782c3224f/triggerTerminal"/>
       <con1:connection outputTerminalId="38b352ec-ef17-4131-a405-ba3782c3224f/runningTerminal" inputTerminalId="82558504-3f69-472a-8339-dd6b036b3a2f/triggerTerminal"/>
       <con1:connection outputTerminalId="82558504-3f69-472a-8339-dd6b036b3a2f/runningTerminal" inputTerminalId="dcf79d69-df77-44e2-9a9c-947df595ac1a/triggerTerminal"/>
-      <con1:connection outputTerminalId="dcf79d69-df77-44e2-9a9c-947df595ac1a/runningTerminal" inputTerminalId="5a0c3c8a-355c-4123-8e31-be9949d21fbf/Sample Count"/>
+      <con1:connection outputTerminalId="dcf79d69-df77-44e2-9a9c-947df595ac1a/runningTerminal" inputTerminalId="2d0c1db6-4bf2-4f87-b17f-7d30bca40c77/Sample Count"/>
     </con1:scene>
     <con1:statistics>
       <con1:page title="DefaultLoadUIStatisticPage">
         <con1:chartGroup type="com.eviware.loadui.api.statistics.model.chart.line.LineChartView" title="" groupType="Monitors">
-          <con1:chart statisticHolder="3c393a8c-315c-4a08-8c94-69844261c6b9">
-            <con1:attributes>
-              <con1:property key="_CHART_segments">72:36:3c393a8c-315c-4a08-8c94-69844261c6b96:Memory16:Available MBytes4:main77:36:3c393a8c-315c-4a08-8c94-69844261c6b99:Processor16:% Processor Time6:_Total</con1:property>
-            </con1:attributes>
-          </con1:chart>
           <con1:attributes>
             <con1:property key="GroupId">eee7ad93-82e2-414b-ba91-e36874916ea0</con1:property>
           </con1:attributes>
