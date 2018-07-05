@@ -160,4 +160,3 @@ getAllTimers
 Delete-timer
 UpdateTimerCheck
 getAllTimers-for-appliance
-getAllTimers-account

@@ -14,7 +14,7 @@ Get-All-Privacy-Policies.xml
 Get-All-Terms-and-Conditions.xml
 Create-Location.xml
 Send-Invitation.xml
-getallinvitedmember.xml
+get-all-invited-member.xml
 Update-Location.xml
 get-location.xml
 Get-Location-by-AccountId.xml

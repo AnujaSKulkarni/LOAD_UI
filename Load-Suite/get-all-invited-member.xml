@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="4e00dd26-952c-4cce-be52-a31c046ab55a" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="get all invited member" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="7a3c1526-5c87-48c5-956f-a7f284e31d31fileName">getallinvitedmember</con:setting>
+    <con:setting id="2e3423e0-791f-4d18-9c0c-f12c849d9145fileName">getallinvitedmember</con:setting>
+    <con:setting id="4e00dd26-952c-4cce-be52-a31c046ab55afileName">get-all-invited-member</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="restrequest" name="get all invited member" id="302b67c9-d101-426e-a99b-9fc70288d663">
+    <con:settings/>
+    <con:config service="get all invited member" resourcePath="/members/${#Project#Account_ID_Load}" methodName="get all invited member" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="get all invited member" id="821703f0-a445-4d67-a927-940346ab5300" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:request/>
+        <con:originalUri>https://api-stg.whrcloud.com/api/v1/api/v1/members/6602</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="ba4c6ea9-8fcf-4ad1-a176-830688dc3ab1" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200,500</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <entry key="Authorization" value="Bearer ${access_token}" xmlns="http://eviware.com/soapui/config"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>Authorization</con:entry>
+        </con:parameterOrder>
+        <con:environmentSpec>
+          <con:entry environmentId="9fa788db-b731-492d-9afc-d02cd932f15a">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>3baf989e-8b38-4c2a-9112-95ddf253d4a5</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>4a8e6344-dea6-4afc-ba5f-3d6fbbf13b9f</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+</con:testCase>
