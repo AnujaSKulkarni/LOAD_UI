@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="ec445c4d-ef8c-457f-9db2-3990f3163ec2" activeEnvironment="Pre-Prod" name="Load Testing" resourceRoot="${projectDir}" defaultScriptLanguage="Groovy" soapui-version="5.3.0" abortOnError="false" runType="SEQUENTIAL" updated="2.2.0 20171026-0943" compositeProjectFormat="1.3" encryptionMode="Not encrypted" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project id="ec445c4d-ef8c-457f-9db2-3990f3163ec2" activeEnvironment="QA_Env" name="Load Testing" resourceRoot="${projectDir}" defaultScriptLanguage="Groovy" soapui-version="5.3.0" abortOnError="false" runType="SEQUENTIAL" updated="2.2.0 20171026-0943" compositeProjectFormat="1.3" encryptionMode="Not encrypted" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
   <con:entry key="Environment" value="Default"/>
@@ -696,16 +696,16 @@
       <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="getCountriesAndStates">
-      <con:endpoint authProfile="No Authorization" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://{{API-Connect}}</con:endpoint>
+      <con:endpoint authProfile="No Authorization" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="getallappliances_by_accountid">
-      <con:endpoint authProfile="No Authorization" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://{{API-Connect}}</con:endpoint>
+      <con:endpoint authProfile="No Authorization" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="Update_Password">
-      <con:endpoint authProfile="No Authorization" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://{{API-Connect}}</con:endpoint>
+      <con:endpoint authProfile="No Authorization" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="get all invited member">
-      <con:endpoint authProfile="No Authorization" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">${API-Connect}</con:endpoint>
     </con:service>
     <con:property>
       <con:name>Location</con:name>
@@ -753,7 +753,7 @@
     </con:property>
     <con:property>
       <con:name>API-Connect</con:name>
-      <con:value>https://api-test.whrcloud.com/api/v1</con:value>
+      <con:value>https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/wcloud-m2m-qa/api/v1</con:value>
     </con:property>
     <con:property>
       <con:name>Environment_Name</con:name>
@@ -761,7 +761,7 @@
     </con:property>
     <con:property>
       <con:name>Secure_auth</con:name>
-      <con:value>https://api-test.whrcloud.com</con:value>
+      <con:value>https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/wcloud-m2m-qa</con:value>
     </con:property>
     <con:property>
       <con:name>ADRS</con:name>
@@ -801,43 +801,43 @@
     </con:property>
     <con:property>
       <con:name>Account_ID_Load</con:name>
-      <con:value/>
+      <con:value>13808</con:value>
     </con:property>
     <con:property>
       <con:name>Role_ID_Load</con:name>
-      <con:value/>
+      <con:value>64</con:value>
     </con:property>
     <con:property>
       <con:name>Group_ID_Load</con:name>
-      <con:value/>
+      <con:value>5953</con:value>
     </con:property>
     <con:property>
       <con:name>Location_ID_Load</con:name>
-      <con:value/>
+      <con:value>723</con:value>
     </con:property>
     <con:property>
       <con:name>Client_Version_ID_Load</con:name>
-      <con:value/>
+      <con:value>428</con:value>
     </con:property>
     <con:property>
       <con:name>Client_Version_ID_Name_AppName_Load</con:name>
-      <con:value/>
+      <con:value>Client_Version_Name_Wed_Mar_21_15_45_17_IST_2018_6723995</con:value>
     </con:property>
     <con:property>
       <con:name>Client_Version_Load</con:name>
-      <con:value/>
+      <con:value>2.3.4</con:value>
     </con:property>
     <con:property>
       <con:name>Client_Platform_Load</con:name>
-      <con:value/>
+      <con:value>Automation</con:value>
     </con:property>
     <con:property>
       <con:name>Client_Version_Notice_ID_Load</con:name>
-      <con:value/>
+      <con:value>4</con:value>
     </con:property>
     <con:property>
       <con:name>Appliance_SAID_Load</con:name>
-      <con:value/>
+      <con:value>WPR333334UCD3</con:value>
     </con:property>
     <con:databaseConnectionContainer>
       <con:databaseConnection>

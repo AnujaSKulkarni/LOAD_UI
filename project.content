@@ -229,8 +229,8 @@ Load-Suite\Device-Registration.xml
 Load-Suite\multi-subscribe-for-opt--in-and-out.xml
 Load-Suite\PUSH-Notification.xml
 Load-Suite\Delete-Account.xml
-Load-Suite\Copy-of-Authorize-NEST-user.xml
-Load-Suite\Copy-of-UpdateUserNestPreference.xml
+Load-Suite\Authorize-NEST-user.xml
+Load-Suite\UpdateUserNestPreference.xml
 Load-Suite\Copy-of-Get-User-Nest-Preference.xml
 Load-Suite\Copy-of-Get-Nest-Structure.xml
 Load-Suite\Copy-of-Add-Rule.xml
